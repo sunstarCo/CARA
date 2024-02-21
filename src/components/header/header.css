@@ -7,18 +7,18 @@ header nav > ul {
   display: flex;
   position: relative;
 }
-header nav > ul li {
+header nav > ul > li {
   max-width: 300px;
-  text-align: center;
+  text-align: end;
   line-height: 36px;
-  font-weight: 400;
   padding: 4px;
+  padding: 56px 0;
   text-underline-position: under;
 }
 header nav ul a {
   display: block;
   color: #000;
-  font-weight: 700;
+  font-size: 24px;
 }
 
 header nav > ul > li.on > a,
@@ -32,6 +32,7 @@ header nav > ul > li:hover > a {
 header nav ul.depth_2 {
   height: 0;
   position: absolute;
+  top: 144px;
   z-index: 5;
   overflow: hidden;
   background: #fff;
@@ -45,7 +46,7 @@ header nav ul.depth_2 li {
 
 header nav ul.depth_2 li a {
   padding: 2px 40px 2px 16px;
-  font-weight: 400;
+  font-size: 16px;
   height: fit-content;
   text-wrap: nowrap;
 }

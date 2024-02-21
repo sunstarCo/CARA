@@ -1,5 +1,5 @@
 'use client';
-import React from 'react';
+import React, {useEffect, useState} from 'react';
 
 import '../header/header.css';
 
@@ -210,19 +210,39 @@ const menus = [
 
 function MainHeader() {
   const curPath = usePathname();
+  const [position, setPosition] = useState(curPath === '/' ? 0 : 100);
+
+  useEffect(() => {
+    function onScroll() {
+      if (curPath === '/') setPosition(window.scrollY);
+    }
+    if (curPath === '/') {
+      window.addEventListener('scroll', onScroll);
+      setPosition(0);
+    }
+    return () => {
+      if (curPath === '/') {
+        window.removeEventListener('scroll', onScroll);
+      }
+      setPosition(100);
+    };
+  }, [curPath]);
   return (
-    <header className="flex items-center justify-between w-full bg-gray-300 h-36 md:px-14">
+    <header
+      className={`flex items-center justify-between w-full border-b-2 h-36 md:px-14 transition-colors duration-500 ${
+        position > 70 && 'bg-white border-none'
+      }`}>
       <Link href={'/'} className="">
         <Image src={'/logo/logo(black).svg'} alt="" width={0} height={0} sizes="100" className="w-28 md:w-fit" />
       </Link>
-      <nav>
-        <ul className="flex gap-12">
+      <nav className="h-[144px]">
+        <ul className="flex items-end h-full gap-12">
           {menus.map((menu, i) => {
             return (
               <li key={i}>
                 <Link
                   href={menu.default_path}
-                  className={`${
+                  className={`font-dm_serif_display ${
                     curPath.includes(menu.menu.toLowerCase()) | (curPath === '/' && menu.menu === 'Home') && 'underline'
                   }`}>
                   {menu.menu}
@@ -230,7 +250,9 @@ function MainHeader() {
                 <ul className="depth_2">
                   {menu.sub_menu?.map((sub, i) => (
                     <li key={i}>
-                      <Link href={sub.path}>{sub.menu}</Link>
+                      <Link href={sub.path} className="font-playfair_display">
+                        {sub.menu}
+                      </Link>
                     </li>
                   ))}
                 </ul>

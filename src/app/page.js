@@ -1,3 +1,11 @@
+import Greetings from '@/components/main/Greetings';
+import MainBanner from '@/components/main/MainBanner';
+
 export default function Home() {
-  return <main className="flex flex-col items-center justify-between min-h-screen p-24">This is Main Page</main>;
+  return (
+    <main className="flex flex-col min-h-screen">
+      <MainBanner />
+      <Greetings />
+    </main>
+  );
 }
