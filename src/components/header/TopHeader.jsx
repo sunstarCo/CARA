@@ -4,7 +4,7 @@ import Image from 'next/image';
 
 function TopHeader() {
   return (
-    <section className="bg-[#151515] w-full h-12 flex items-center justify-center px-20 relative">
+    <section className="bg-[#151515] relative w-full h-12 flex items-center justify-center px-20">
       <div className="flex text-white gap-9">
         <Image src={'/icons/Los Angeles.svg'} alt="" sizes="100" width={0} height={0} className="w-fit" />
         <Image src={'/icons/blo.svg'} alt="" sizes="100" width={0} height={0} className="w-fit" />

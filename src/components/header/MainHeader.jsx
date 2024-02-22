@@ -229,11 +229,18 @@ function MainHeader() {
   }, [curPath]);
   return (
     <header
-      className={`flex items-center justify-between w-full border-b-2 h-36 md:px-14 transition-colors duration-500 ${
+      className={`flex fixed items-center justify-between w-full border-b border-[#d1bfb7] h-36 md:px-14 transition-colors duration-500 ${
         position > 70 && 'bg-white border-none'
       }`}>
       <Link href={'/'} className="">
-        <Image src={'/logo/logo(black).svg'} alt="" width={0} height={0} sizes="100" className="w-28 md:w-fit" />
+        <Image
+          src={`/logo/logo(${position > 70 ? 'black' : 'white'}).svg`}
+          alt=""
+          width={0}
+          height={0}
+          sizes="100"
+          className="w-28 md:w-40"
+        />
       </Link>
       <nav className="h-[144px]">
         <ul className="flex items-end h-full gap-12">
@@ -244,13 +251,15 @@ function MainHeader() {
                   href={menu.default_path}
                   className={`font-dm_serif_display ${
                     curPath.includes(menu.menu.toLowerCase()) | (curPath === '/' && menu.menu === 'Home') && 'underline'
-                  }`}>
+                  } ${position < 70 && 'text-[#f4efec]'}`}>
                   {menu.menu}
                 </Link>
                 <ul className="depth_2">
                   {menu.sub_menu?.map((sub, i) => (
                     <li key={i}>
-                      <Link href={sub.path} className="font-playfair_display">
+                      <Link
+                        href={sub.path}
+                        className={`font-playfair_display ${sub.path === curPath && 'text-[#e2c085]'}`}>
                         {sub.menu}
                       </Link>
                     </li>
@@ -261,9 +270,16 @@ function MainHeader() {
           })}
         </ul>
       </nav>
-      <div className="flex gap-2 text-white py-[17px] px-[21px] bg-[#bdab9d] rounded-[30px]">
-        <Image src={'/icons/call.svg'} alt="" sizes="100" width={0} height={0} className="w-fit" />
-        <p className="text-[13px] font-medium">855-212-9901</p>
+      <div className="text-[#2b2928]">
+        <div className={`flex gap-2  py-[17px] px-[19px] bg-[#bdab9d] ${position < 70 && 'hidden'} rounded-[30px]`}>
+          <Image src={'/icons/call.svg'} alt="" sizes="100" width={0} height={0} className="w-4" />
+          <p className="text-[16px] leading-4 font-medium">855-212-9901</p>
+        </div>
+        <div
+          className={`flex gap-2 text-black py-[17px] px-[19px] bg-white rounded-[30px] ${position > 70 && 'hidden'}`}>
+          <Image src={'/icons/call.svg'} alt="" sizes="100" width={0} height={0} className="w-4" />
+          <p className="text-[16px] leading-4 font-medium">855-212-9901</p>
+        </div>
       </div>
     </header>
   );
