@@ -5,34 +5,26 @@ header nav > ul {
 header nav > ul > li {
   max-width: 300px;
   text-align: end;
-  line-height: 36px;
+  line-height: 150%;
   padding: 4px;
-  padding: 52px 0;
-  text-underline-position: under;
+  padding: 40px 0;
 }
 header nav ul a {
   color: #000;
-  font-feature-settings: 'clig' off, 'liga' off;
-  font-family: 'DM Serif Display';
-  font-size: 24px;
-  font-style: normal;
-  font-weight: 400;
   line-height: normal;
   letter-spacing: 0.5px;
   text-transform: capitalize;
-  opacity: 0.87;
 }
 
 header nav > ul > li.on > a,
 header nav > ul > li:hover > a {
-  text-decoration: underline;
-  transition: all 0.5s ease;
+  border-bottom: 4px solid #bdb5a8;
 }
 
 header nav ul.depth_2 {
   height: 0;
   position: absolute;
-  top: 144px;
+  top: 80px;
   z-index: 5;
   overflow: hidden;
   background: #fff;
@@ -46,7 +38,6 @@ header nav ul.depth_2 li {
 
 header nav ul.depth_2 li a {
   padding: 2px 40px 2px 24px;
-  font-size: 16px;
   height: fit-content;
   text-wrap: nowrap;
 }
