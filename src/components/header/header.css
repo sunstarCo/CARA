@@ -1,0 +1,50 @@
+header nav > ul {
+  display: flex;
+  position: relative;
+}
+header nav > ul > li {
+  max-width: 300px;
+  text-align: end;
+  line-height: 150%;
+  padding: 4px;
+  padding: 40px 0;
+}
+header nav ul a {
+  color: #000;
+  line-height: normal;
+  letter-spacing: 0.5px;
+  text-transform: capitalize;
+}
+
+header nav > ul > li.on > a,
+header nav > ul > li:hover > a {
+  border-bottom: 4px solid #bdb5a8;
+}
+
+header nav ul.depth_2 {
+  height: 0;
+  position: absolute;
+  top: 80px;
+  z-index: 5;
+  overflow: hidden;
+  background: #fff;
+  transition: all 0.5s ease;
+  box-shadow: 0px 4px 30px 0px rgba(0, 0, 0, 0.1);
+}
+header nav ul.depth_2 li {
+  text-align: left;
+  height: fit-content;
+}
+
+header nav ul.depth_2 li a {
+  padding: 2px 40px 2px 24px;
+  height: fit-content;
+  text-wrap: nowrap;
+}
+
+header nav ul li:hover > .depth_2 {
+  height: fit-content;
+}
+header nav ul.depth_2 li:hover > a {
+  color: #e2c085;
+}

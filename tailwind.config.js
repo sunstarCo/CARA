@@ -9,10 +9,21 @@ module.exports = {
     extend: {
       backgroundImage: {
         'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
-        'gradient-conic':
-          'conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))',
+        'gradient-conic': 'conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))',
+      },
+      fontFamily: {
+        dm_serif_display: ['var(--font-dm_serif_display)'],
+        playfair_display: ['var(--font-playfair_display)'],
+      },
+      keyframes: {
+        headerColorChange: {
+          to: {backgroundColor: '#FFFFFF'},
+        },
+      },
+      animation: {
+        headerColorChange: 'headerColorChange 500ms ease-in-out forword',
       },
     },
   },
   plugins: [],
-}
+};
