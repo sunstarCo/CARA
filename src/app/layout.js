@@ -26,7 +26,7 @@ export default function RootLayout({children}) {
         <Header />
         {/* <div className="pt-[192px]">
         </div> */}
-        <div className="flex-1 w-full h-screen">{children}</div>
+        <div className="flex-1 w-full h-[cacl(100vh-148px)] pt-[148px]">{children}</div>
       </body>
     </html>
   );

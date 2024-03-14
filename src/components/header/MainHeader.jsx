@@ -1,5 +1,5 @@
 'use client';
-import React, {useEffect, useState} from 'react';
+import React from 'react';
 
 import '../header/header.css';
 
@@ -182,23 +182,23 @@ const menus = [
   },
   {
     menu: 'Before&After',
-    default_path: '/Before&After/Breast',
+    default_path: '/before&after',
     sub_menu: [
       {
         menu: 'Breast',
-        path: '/Before&After/Breast',
+        path: '/before&after/Breast',
       },
       {
         menu: 'Body',
-        path: '/Before&After/Body',
+        path: '/before&after/Body',
       },
       {
         menu: 'Face',
-        path: '/Before&After/Face',
+        path: '/before&after/Face',
       },
       {
         menu: 'Medspa',
-        path: '/Before&After/Medspa',
+        path: '/before&after/Medspa',
       },
     ],
   },
@@ -210,63 +210,48 @@ const menus = [
 
 function MainHeader() {
   const curPath = usePathname();
-  const [position, setPosition] = useState(curPath === '/' ? 0 : 100);
-
-  useEffect(() => {
-    function onScroll() {
-      if (curPath === '/') setPosition(window.scrollY);
-    }
-    if (curPath === '/') {
-      window.addEventListener('scroll', onScroll);
-      setPosition(0);
-    }
-    return () => {
-      if (curPath === '/') {
-        window.removeEventListener('scroll', onScroll);
-      }
-      setPosition(100);
-    };
-  }, [curPath]);
   return (
     <header
-      className={`flex fixed items-center justify-between w-full border-b border-[#d1bfb7] md:px-14 bg-white
+      className={`fixed w-full border-b border-[#d1bfb7] md:px-14 bg-white
       }`}>
-      <Link href={'/'} className="">
-        <Image src={`/logo/logo(black).svg`} alt="" width={0} height={0} sizes="100" className="w-28 md:w-40" />
-      </Link>
-      <nav className="h-[100px]">
-        <ul className="flex items-center h-full gap-12">
-          {menus.map((menu, i) => {
-            return (
-              <li key={i}>
-                <Link
-                  href={menu.default_path}
-                  className={`font-dm_serif_display text-lg ${
-                    curPath.includes(menu.menu.toLowerCase()) | (curPath === '/' && menu.menu === 'Home') &&
-                    'border-b-4 border-[#BDB5A8]'
-                  }`}>
-                  {menu.menu.toUpperCase()}
-                </Link>
-                <ul className="depth_2">
-                  {menu.sub_menu?.map((sub, i) => (
-                    <li key={i}>
-                      <Link
-                        href={sub.path}
-                        className={`font-playfair_display text-base ${sub.path === curPath && 'text-[#e2c085]'}`}>
-                        {sub.menu}
-                      </Link>
-                    </li>
-                  ))}
-                </ul>
-              </li>
-            );
-          })}
-        </ul>
-      </nav>
-      <div className="text-[#2b2928]">
-        <div className={`flex gap-2 text-black py-[17px] px-[19px] bg-[#EAE9E5] rounded-[30px]`}>
-          <Image src={'/icons/call.svg'} alt="" sizes="100" width={0} height={0} className="w-4" />
-          <p className="text-[16px] leading-4 font-medium">855-212-9901</p>
+      <div className="max-w-[1500px] flex items-center justify-between mx-auto">
+        <Link href={'/'} className="">
+          <Image src={`/logo/logo(black).svg`} alt="" width={0} height={0} sizes="100" className="w-28 md:w-40" />
+        </Link>
+        <nav className="h-[100px]">
+          <ul className="flex items-center h-full gap-12">
+            {menus.map((menu, i) => {
+              return (
+                <li key={i}>
+                  <Link
+                    href={menu.default_path}
+                    className={`font-dm_serif_display text-lg pb-2 ${
+                      curPath.includes(menu.menu.toLowerCase()) | (curPath === '/' && menu.menu === 'Home') &&
+                      'border-b-4 border-[#BDB5A8]'
+                    }`}>
+                    {menu.menu.toUpperCase()}
+                  </Link>
+                  <ul className="depth_2">
+                    {menu.sub_menu?.map((sub, i) => (
+                      <li key={i}>
+                        <Link
+                          href={sub.path}
+                          className={`font-playfair_display text-base ${sub.path === curPath && 'text-[#e2c085]'}`}>
+                          {sub.menu}
+                        </Link>
+                      </li>
+                    ))}
+                  </ul>
+                </li>
+              );
+            })}
+          </ul>
+        </nav>
+        <div className="text-[#2b2928]">
+          <div className={`flex gap-2 text-black py-[17px] px-[19px] bg-[#EAE9E5] rounded-[30px]`}>
+            <Image src={'/icons/call.svg'} alt="" sizes="100" width={0} height={0} className="w-4" />
+            <p className="text-[16px] leading-4 font-medium">855-212-9901</p>
+          </div>
         </div>
       </div>
     </header>
