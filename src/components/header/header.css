@@ -32,13 +32,13 @@ header nav ul.depth_2 {
   box-shadow: 0px 4px 30px 0px rgba(0, 0, 0, 0.1);
 }
 header nav ul.depth_2 li {
+  min-width: 200px;
   text-align: left;
   height: fit-content;
+  padding: 4px 40px 4px 24px;
 }
 
 header nav ul.depth_2 li a {
-  padding: 2px 40px 2px 24px;
-  height: fit-content;
   text-wrap: nowrap;
 }
 
