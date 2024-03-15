@@ -1,7 +1,9 @@
 import Doctor from '@/components/main/Doctor';
 import Greetings from '@/components/main/Greetings';
+import IntroProcedure from '@/components/main/IntroProcedure';
 import MainBanner from '@/components/main/MainBanner';
 import ProcedureSection from '@/components/main/ProcedureSection';
+import SingleReview from '@/components/main/SingleReview';
 
 export default function Home() {
   return (
@@ -10,7 +12,10 @@ export default function Home() {
       <Greetings />
       <Doctor />
       <ProcedureSection section="Breast" />
+      <SingleReview number={0} />
+      <IntroProcedure />
       <ProcedureSection section="Face&Nose" reverse />
+      <SingleReview number={1} />
       <ProcedureSection section="Body" />
     </main>
   );

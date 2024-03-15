@@ -18,7 +18,7 @@ const sections = {
     ],
   },
   'Face&Nose': {
-    title: 'FACE&NOSE',
+    title: 'FACE & NOSE',
     sub_title: 'Harmonize Your Facial Features',
     image: '/banner/main/Breastmain.png',
     desc: "When facial imperfections affect your self-esteem, we're here to assist you in realizing your cosmetic aspirations through our comprehensive range of facial surgery procedures, crafting a sophisticated elegance, seamless harmony, and enduring beauty.Employing cutting-edge surgical techniques, we enhance your innate features, infusing more allure, balance, and rejuvenation into your appearance through the latest innovations in cosmetic surgery and technology.",

@@ -23,7 +23,7 @@ function Doctor() {
   return (
     <div className="relative w-full h-[1280px] overflow-hidden">
       <div className="absolute top-0 left-0 flex">
-        <div className={`w-screen h-[1280px] relative flex justify-end`}>
+        <div className={`w-screen h-[1280px] relative flex justify-end px-16`}>
           <Image src={'/banner/main/DoctorPhoto1.png'} alt="" fill sizes="100" className="object-cover" />
           <div className="absolute flex flex-col  w-1/2 text-white">
             <div className="flex uppercase z-20 mt-40">
@@ -35,7 +35,7 @@ function Doctor() {
                       onClick={() => {
                         setActive(data.title);
                       }}>
-                      {data.title}
+                      {data.title.toUpperCase()}
                     </button>
                     {index !== doctorData.length - 1 && <div className="mx-14 w-[1px] h-6 bg-[#BDB5AA]" />}
                   </div>
@@ -44,7 +44,9 @@ function Doctor() {
             </div>
             <p className="mt-[140px] text-[64px] leading-normal">DAVID KHANG, MD</p>
             <div className="w-[100px] h-2 bg-[#D9D5CC] mt-10" />
-            <p className="text-[1.4rem] leading-loose mt-12">{doctorData.find(data => data.title === active).desc}</p>
+            <p className="text-[1.4rem] leading-loose mt-12 w-[85%]">
+              {doctorData.find(data => data.title === active).desc}
+            </p>
           </div>
         </div>
       </div>
