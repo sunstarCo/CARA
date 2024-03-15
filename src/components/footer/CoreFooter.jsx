@@ -18,7 +18,7 @@ function CoreFooter() {
           <Image src={logo} width={0} height={0} sizes="100" className="w-full" alt="로고" />
         </div>
         <div>
-          <p className="flex gap-[0.875rem] mb-10 text-nowrap">
+          <div className="flex gap-[0.875rem] mb-10 text-nowrap">
             {snsIcons.map(icon => {
               return (
                 <div key={icon} className="relative w-5 h-5">
@@ -26,7 +26,7 @@ function CoreFooter() {
                 </div>
               );
             })}
-          </p>
+          </div>
           <p className="text-[1.375rem] font-bold mb-2">WORKING HOURS</p>
           <p className="text-base leading-[1.875rem] font">
             Mon - Fri : 7am - 6pm <br /> Sat : 9am - 7pm, Sun : 9am - 6pm
