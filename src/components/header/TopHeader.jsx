@@ -30,11 +30,11 @@ function TopHeader() {
         <Image src={'/icons/San.svg'} alt="" sizes="100" width={0} height={0} className="w-fit" />
       </div>
       <div className="absolute top-0 right-0 flex items-center justify-end w-full h-full gap-6 pr-20">
-        <div className="flex gap-2 text-white">
+        <div className="flex gap-2 text-white items-center">
           <Image src={'/icons/country.svg'} alt="" sizes="100" width={0} height={0} className="w-fit" />
-          <div>
-            <p>English</p>
-          </div>
+          <p>English</p>
+          <Image src={'/icons/blo.svg'} alt="" sizes="100" width={0} height={0} className="w-fit" />
+          <p>Korean</p>
         </div>
       </div>
     </section>
