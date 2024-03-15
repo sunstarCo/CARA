@@ -15,6 +15,11 @@ module.exports = {
         dm_serif_display: ['var(--font-dm_serif_display)'],
         playfair_display: ['var(--font-playfair_display)'],
       },
+      colors: {
+        'main-beige': '#EAE9E5',
+        'sub-beige': '#BDB5A8',
+        'main-dark': '#302C29',
+      },
       keyframes: {
         headerColorChange: {
           to: {backgroundColor: '#FFFFFF'},
