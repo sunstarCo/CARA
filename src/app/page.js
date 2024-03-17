@@ -1,3 +1,4 @@
+import SelectDropdown from '@/components/contact/SelectDropdown';
 import Doctor from '@/components/main/Doctor';
 import Gallery from '@/components/main/Gallery';
 import Greetings from '@/components/main/Greetings';
@@ -21,6 +22,7 @@ export default function Home() {
       <ProcedureSection section="Body" />
       <PatientReview />
       <Gallery />
+      <SelectDropdown initialValue="선택" options={[1, 2, 3]} />
     </main>
   );
 }
