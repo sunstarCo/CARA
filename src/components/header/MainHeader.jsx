@@ -181,7 +181,7 @@ const menus = [
     ],
   },
   {
-    menu: 'Before&After',
+    menu: 'Before & After',
     default_path: '/before&after',
     sub_menu: [
       {

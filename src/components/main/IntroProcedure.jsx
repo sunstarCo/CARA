@@ -32,7 +32,13 @@ function IntroProcedure() {
     <div className="relative w-full h-[960px] overflow-hidden">
       <div className="absolute top-0 left-0 flex">
         <div className={`w-screen h-[960px] relative flex px-16`}>
-          <Image src={'/banner/main/IntroProcedureBG.png'} alt="" fill sizes="100" className="object-cover" />
+          <Image
+            src={'/banner/main/IntroProcedureBG.png'}
+            alt=""
+            fill
+            sizes="100"
+            className="object-cover object-top"
+          />
           <div className="absolute flex h-full">
             <p className=" w-1/2 text-white justify-center flex items-center text-[5rem] leading-normal h-full">
               {active.toUpperCase()}
