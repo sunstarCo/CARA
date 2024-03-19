@@ -212,13 +212,13 @@ function MainHeader() {
   const curPath = usePathname();
   return (
     <header
-      className={`fixed w-full border-b border-[#d1bfb7] md:px-14 bg-white
+      className={`fixed w-full border-b border-[#d1bfb7] px-4 md:px-14 max-xl:py-8 bg-white
       }`}>
       <div className="max-w-[1500px] flex items-center justify-between mx-auto">
         <Link href={'/'} className="">
-          <Image src={`/logo/logo(black).svg`} alt="" width={0} height={0} sizes="100" className="w-28 md:w-40" />
+          <Image src={`/logo/logo(black).svg`} alt="" width={0} height={0} sizes="100" className="w-40" />
         </Link>
-        <nav className="h-[100px]">
+        <nav className="h-[100px] max-xl:hidden">
           <ul className="flex items-center h-full gap-12">
             {menus.map((menu, i) => {
               return (

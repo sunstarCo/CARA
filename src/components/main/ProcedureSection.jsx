@@ -14,7 +14,7 @@ const sections = {
       {title: 'Breast Lift', path: '/breast/Breast-Lift'},
       {title: 'Breast Reduction', path: '/breast/Breast-Reduction'},
       {title: 'Male Breast Reduction', path: '/breast/Male-Breast_Reduction'},
-      {title: 'Breast Impant Removal', path: '/breast/Breast-Impant-Removal'},
+      {title: 'Breast Implant Removal', path: '/breast/Breast-Implant-Removal'},
     ],
   },
   'Face&Nose': {
@@ -46,7 +46,7 @@ const sections = {
 export default function ProcedureSection({section, reverse = false}) {
   const {title, sub_title, desc, links, image} = sections[section];
   return (
-    <div className="flex flex-col w-full relative pt-[140px] px-[182px] pb-[110px]">
+    <div className="flex flex-col w-full relative pt-[8.75rem] px-[2rem] 2xl:px-[11.375rem] pb-[6.875rem]">
       <Image
         src={'/logo/BG_logo.svg'}
         alt=""
@@ -55,51 +55,62 @@ export default function ProcedureSection({section, reverse = false}) {
         sizes="100"
         className="w-fit absolute bottom-0 right-0 -z-10"
       />
-      <div className="flex gap-[100px]">
-        {!reverse && <Image src={image} alt="" width={0} height={0} sizes="100" className="w-1/2 object-cover" />}
-        <div className="w-1/2">
-          <p className="leading-normal text-[64px] uppercase">{title}</p>
+      <div className="flex flex-col md:flex-row gap-10 lg:gap-[6.25rem]">
+        {!reverse && (
+          <Image src={image} alt="" width={0} height={0} sizes="100" className="w-full md:w-1/2 object-cover" />
+        )}
+        <div className="w-full md:w-1/2">
+          <p className="leading-normal text-[3rem] md:text-[4rem] uppercase">{title}</p>
           <div className="w-[100px] h-2 bg-[#D9D5CC] mt-10" />
           <p className="text-[1.75rem] leading-loose mt-12 uppercase">{sub_title}</p>
           <p className="text-2xl leading-loose mt-[0.625rem]">{desc}</p>
         </div>
-        {reverse && <Image src={image} alt="" width={0} height={0} sizes="100" className="w-1/2 object-cover" />}
+        {reverse && (
+          <Image src={image} alt="" width={0} height={0} sizes="100" className="w-full md:w-1/2 object-cover" />
+        )}
       </div>
 
-      <div className="flex flex-col mt-[110px] items-center gap-6">
+      <div className="flex flex-col mt-[6.875rem] items-center gap-6">
         {section === 'Breast' ? (
           <>
-            <div className="flex items-center">
-              <Link href={'/breast/Breast-Augmentation'} className="text-[26px] leading-normal">
+            <div className="flex items-center text-nowrap">
+              <Link href={'/breast/Breast-Augmentation'} className="text-[1.625rem] leading-normal text-wrap">
                 Breast Augmentation
               </Link>
-              <div className="mx-20 w-[1px] h-6 bg-[#BDB5AA]" />
-              <Link href={'/breast/Breast-Lift'} className="text-[26px] leading-normal">
+              <div className="mx-10 md:mx-20 w-[1px] h-6 bg-[#BDB5AA]" />
+              <Link href={'/breast/Breast-Lift'} className="text-[1.625rem] leading-normal">
                 Breast Lift
               </Link>
-              <div className="mx-20 w-[1px] h-6 bg-[#BDB5AA]" />
-              <Link href={'/breast/Breast-Reduction'} className="text-[26px] leading-normal">
+              <div className="mx-10 md:mx-20 w-[1px] h-6 bg-[#BDB5AA] max-sm:hidden" />
+              <Link href={'/breast/Breast-Reduction'} className="text-[1.625rem] leading-normal max-sm:hidden">
                 Breast Reduction
               </Link>
             </div>
             <div className="flex items-center">
-              <Link href={'/breast/Male-Breast-Reduction'} className="text-[26px] leading-normal">
+              <Link href={'/breast/Breast-Reduction'} className="text-[1.625rem] leading-normal sm:hidden">
+                Breast Reduction
+              </Link>
+            </div>
+            <div className="flex items-center text-center">
+              <Link href={'/breast/Male-Breast-Reduction'} className="text-[1.625rem] leading-normal ">
                 Male Breast Reduction
               </Link>
-              <div className="mx-20 w-[1px] h-6 bg-[#BDB5AA]" />
-              <Link href={'/breast/Breast-Impant-Removal'} className="text-[26px] leading-normal">
-                Breast Impant Removal
+              <div className="mx-10 md:mx-20 w-[1px] h-6 bg-[#BDB5AA]" />
+              <Link href={'/breast/Breast-Implant-Removal'} className="text-[1.625rem] leading-normal">
+                Breast Implant Removal
               </Link>
             </div>
           </>
         ) : (
-          <div className="flex items-center">
+          <div className="flex w-fit mx-auto max-sm:grid grid-cols-2 text-wrap text-center justify-center ">
             {links.map((link, index) => (
-              <div key={index + link.title} className="flex items-center">
-                <Link href={link.path} className="text-[26px] leading-normal">
+              <div key={index + link.title} className="flex items-center justify-center w-fit">
+                {index !== 0 && (
+                  <div className={`w-[1px] h-6 mx-6 md:mx-20 bg-[#BDB5AA] max-sm:${index === 2 && 'hidden'} `} />
+                )}
+                <Link href={link.path} className={`text-[1.625rem] leading-normal `}>
                   {link.title}
                 </Link>
-                {index !== links.length - 1 && <div className="mx-20 w-[1px] h-6 bg-[#BDB5AA]" />}
               </div>
             ))}
           </div>

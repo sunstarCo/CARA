@@ -21,15 +21,22 @@ const doctorData = [
 function Doctor() {
   const [active, setActive] = useState('Overview');
   return (
-    <div className="relative w-full h-[1280px] overflow-hidden">
+    <div className="relative w-full h-[67.5rem] overflow-hidden">
       <div className="absolute top-0 left-0 flex">
-        <div className={`w-screen h-[1280px] relative flex justify-end px-16`}>
-          <Image src={'/banner/main/DoctorPhoto1.png'} alt="" fill sizes="100" className="object-cover" />
-          <div className="absolute flex flex-col  w-1/2 text-white">
-            <div className="flex uppercase z-20 mt-40">
+        <div className={`w-screen h-[67.5rem] relative flex justify-end md:px-16`}>
+          <Image
+            src={'/banner/main/DoctorPhoto1.png'}
+            alt=""
+            fill
+            sizes="100"
+            className="object-cover object-left-top"
+          />
+          <div className="absolute flex flex-col px-4 xl:w-1/2 text-white">
+            <div className="flex uppercase z-20 mt-10 min-[400px]:mt-20 md:mt-40">
               {doctorData.map((data, index) => (
                 <div key={index}>
-                  <div className={`text-3xl flex text-center items-center leading-normal font-normal -tracking-tight `}>
+                  <div
+                    className={`text-2xl sm:text-3xl flex text-center items-center leading-normal font-normal -tracking-tight `}>
                     <button
                       className={`${active !== data.title && 'opacity-40'} px-2`}
                       onClick={() => {
@@ -37,14 +44,18 @@ function Doctor() {
                       }}>
                       {data.title.toUpperCase()}
                     </button>
-                    {index !== doctorData.length - 1 && <div className="mx-14 w-[1px] h-6 bg-[#BDB5AA]" />}
+                    {index !== doctorData.length - 1 && (
+                      <div className="mx-2 min-[400px]:mx-4 md:mx-14 w-[1px] h-6 bg-[#BDB5AA]" />
+                    )}
                   </div>
                 </div>
               ))}
             </div>
-            <p className="mt-[140px] text-[64px] leading-normal">DAVID KHANG, MD</p>
-            <div className="w-[100px] h-2 bg-[#D9D5CC] mt-10" />
-            <p className="text-[1.4rem] leading-loose mt-12 w-[85%]">
+            <p className="mt-6 min-[400px]:mt-[4rem] 2xl:mt-[8.75rem] text-[3rem] sm:text-[4rem] leading-normal">
+              DAVID KAHNG, MD
+            </p>
+            <div className="w-[6.25rem] h-2 bg-[#D9D5CC] mt-4 min-[400px]:mt-10" />
+            <p className="text-[1.4rem] leading-loose mt-4 min-[400px]:mt-12 lg:w-full 2xl:w-[85%]">
               {doctorData.find(data => data.title === active).desc}
             </p>
           </div>

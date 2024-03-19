@@ -86,7 +86,7 @@ function PatientReview() {
           className="w-10 h-10 bg-[#D9D5CC] flex items-center justify-center rounded-full">
           <Image src={'/logo/prev.svg'} alt="arrow left" width={0} height={0} sizes="100" className="w-fit" />
         </button>
-        <div className="container w-[1280px] overflow-hidden">
+        <div className="container w-[80rem] overflow-hidden">
           <div className="flex" ref={slideRef}>
             {slides.map((review, index) => (
               <div

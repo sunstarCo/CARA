@@ -31,7 +31,7 @@ function IntroProcedure() {
   return (
     <div className="relative w-full h-[960px] overflow-hidden">
       <div className="absolute top-0 left-0 flex">
-        <div className={`w-screen h-[960px] relative flex px-16`}>
+        <div className={`w-screen h-[960px] relative flex px-4 md:px-16`}>
           <Image
             src={'/banner/main/IntroProcedureBG.png'}
             alt=""
@@ -40,15 +40,15 @@ function IntroProcedure() {
             className="object-cover object-top"
           />
           <div className="absolute flex h-full">
-            <p className=" w-1/2 text-white justify-center flex items-center text-[5rem] leading-normal h-full">
+            <p className=" w-1/2 text-white justify-center flex items-center text-[5rem] leading-normal h-full max-lg:hidden">
               {active.toUpperCase()}
             </p>
-            <div className="flex flex-col w-1/2 text-white">
+            <div className="flex flex-col w-full lg:w-1/2 text-white">
               <div className="flex uppercase z-20 my-[6.25rem]">
                 {procedureData.map((data, index) => (
                   <div key={index}>
                     <div
-                      className={`text-3xl flex text-center items-center leading-normal font-normal -tracking-tight `}>
+                      className={`text-2xl sm:text-3xl flex text-center items-center leading-normal font-normal -tracking-tight `}>
                       <button
                         className={`${active !== data.title && 'opacity-40'} px-2`}
                         onClick={() => {
@@ -56,13 +56,15 @@ function IntroProcedure() {
                         }}>
                         {data.title.toUpperCase()}
                       </button>
-                      {index !== procedureData.length - 1 && <div className="mx-14 w-[1px] h-6 bg-[#BDB5AA]" />}
+                      {index !== procedureData.length - 1 && (
+                        <div className="mx-2 min-[400px]:mx-4 md:mx-14 w-[1px] h-6 bg-[#BDB5AA]" />
+                      )}
                     </div>
                   </div>
                 ))}
               </div>
-              <p className="text-[64px] leading-normal uppercase">{currentData.sub_title}</p>
-              <div className="w-[100px] h-2 bg-[#D9D5CC] mt-10" />
+              <p className="text-[4rem] leading-normal uppercase">{currentData.sub_title}</p>
+              <div className="w-[6.25rem] h-2 bg-[#D9D5CC] mt-10" />
               <p className="text-[1.375rem] leading-loose mt-[3.125rem] w-[80%]">{currentData.desc}</p>
               <Link
                 href={currentData.path}
