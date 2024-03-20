@@ -17,7 +17,7 @@ function TopHeader() {
   });
   return (
     <section
-      className={`bg-[#151515] relative w-full h-12 flex items-center justify-center px-20 transition-all ease-in-out duration-300 ${
+      className={`bg-[#151515] relative w-full h-12 flex items-center max-lg:hidden justify-center px-20 transition-all ease-in-out duration-300 ${
         scrollLocation > 70 && 'h-0 overflow-hidden'
       }`}>
       <div className="flex text-white gap-9">

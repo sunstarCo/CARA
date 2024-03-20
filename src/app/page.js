@@ -22,6 +22,7 @@ export default function Home() {
       <ProcedureSection section="Body" />
       <Spot />
       <PatientReview />
+      {/* <PatientReview /> */}
       <Gallery />
     </main>
   );
