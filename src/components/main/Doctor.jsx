@@ -31,12 +31,12 @@ function Doctor() {
             sizes="100"
             className="object-cover object-left-top"
           />
-          <div className="absolute flex flex-col px-4 xl:w-1/2 text-white">
-            <div className="flex uppercase z-20 mt-10 min-[400px]:mt-20 md:mt-40">
+          <div className="absolute flex flex-col px-8 xl:w-1/2 text-white">
+            <div className="flex uppercase z-20 mt-16 min-[400px]:mt-28 md:mt-40">
               {doctorData.map((data, index) => (
                 <div key={index}>
                   <div
-                    className={`text-2xl sm:text-3xl flex text-center items-center leading-normal font-normal -tracking-tight `}>
+                    className={`text-xl sm:text-3xl flex text-center items-center leading-normal font-normal -tracking-tight `}>
                     <button
                       className={`${active !== data.title && 'opacity-40'} px-2`}
                       onClick={() => {

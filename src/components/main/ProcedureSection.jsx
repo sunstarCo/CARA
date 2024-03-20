@@ -70,7 +70,7 @@ export default function ProcedureSection({section, reverse = false}) {
         )}
       </div>
 
-      <div className="flex flex-col mt-[6.875rem] items-center gap-6">
+      <div className="flex flex-col mt-[6.875rem] items-center gap-6 text-center">
         {section === 'Breast' ? (
           <>
             <div className="flex items-center text-nowrap">
@@ -87,22 +87,28 @@ export default function ProcedureSection({section, reverse = false}) {
               </Link>
             </div>
             <div className="flex items-center">
+              <Link href={'/breast/Male-Breast-Reduction'} className="text-[1.625rem] leading-normal max-sm:hidden">
+                Male Breast Reduction
+              </Link>
               <Link href={'/breast/Breast-Reduction'} className="text-[1.625rem] leading-normal sm:hidden">
                 Breast Reduction
               </Link>
-            </div>
-            <div className="flex items-center text-center">
-              <Link href={'/breast/Male-Breast-Reduction'} className="text-[1.625rem] leading-normal ">
+              <div className="mx-10 md:mx-20 w-[1px] h-6 bg-[#BDB5AA]" />
+              <Link href={'/breast/Male-Breast-Reduction'} className="text-[1.625rem] leading-normal sm:hidden">
                 Male Breast Reduction
               </Link>
-              <div className="mx-10 md:mx-20 w-[1px] h-6 bg-[#BDB5AA]" />
+              <Link href={'/breast/Breast-Implant-Removal'} className="text-[1.625rem] leading-normal max-sm:hidden">
+                Breast Implant Removal
+              </Link>
+            </div>
+            <div className="flex items-center">
               <Link href={'/breast/Breast-Implant-Removal'} className="text-[1.625rem] leading-normal">
                 Breast Implant Removal
               </Link>
             </div>
           </>
         ) : (
-          <div className="flex w-fit mx-auto max-sm:grid grid-cols-2 text-wrap text-center justify-center ">
+          <div className="flex w-fit mx-auto text-wrap text-center justify-center ">
             {links.map((link, index) => (
               <div key={index + link.title} className="flex items-center justify-center w-fit">
                 {index !== 0 && (

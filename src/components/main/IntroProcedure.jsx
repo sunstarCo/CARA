@@ -29,9 +29,9 @@ function IntroProcedure() {
   const [active, setActive] = useState('Rhinoplasty');
   const currentData = procedureData.find(data => data.title === active);
   return (
-    <div className="relative w-full h-[960px] overflow-hidden">
+    <div className="relative w-full h-[800px] lg:h-[960px] overflow-hidden">
       <div className="absolute top-0 left-0 flex">
-        <div className={`w-screen h-[960px] relative flex px-4 md:px-16`}>
+        <div className={`w-screen h-[800px] lg:h-[960px] relative flex`}>
           <Image
             src={'/banner/main/IntroProcedureBG.png'}
             alt=""
@@ -39,12 +39,12 @@ function IntroProcedure() {
             sizes="100"
             className="object-cover object-top"
           />
-          <div className="absolute flex h-full">
+          <div className="absolute flex h-full  px-4 md:px-16">
             <p className=" w-1/2 text-white justify-center flex items-center text-[5rem] leading-normal h-full max-lg:hidden">
               {active.toUpperCase()}
             </p>
             <div className="flex flex-col w-full lg:w-1/2 text-white">
-              <div className="flex uppercase z-20 my-[6.25rem]">
+              <div className="flex uppercase z-20 my-[4rem] sm:my-[6.25rem]">
                 {procedureData.map((data, index) => (
                   <div key={index}>
                     <div
@@ -63,12 +63,12 @@ function IntroProcedure() {
                   </div>
                 ))}
               </div>
-              <p className="text-[4rem] leading-normal uppercase">{currentData.sub_title}</p>
-              <div className="w-[6.25rem] h-2 bg-[#D9D5CC] mt-10" />
-              <p className="text-[1.375rem] leading-loose mt-[3.125rem] w-[80%]">{currentData.desc}</p>
+              <p className="text-[2.5rem] sm:text-[4rem] leading-normal uppercase">{currentData.sub_title}</p>
+              <div className="w-[6.25rem] h-2 bg-[#D9D5CC] my-4 sm:mt-10" />
+              <p className="text-[1.375rem] leading-loose sm:mt-[3.125rem] w-full md:w-[80%]">{currentData.desc}</p>
               <Link
                 href={currentData.path}
-                className="px-10 py-4 bg-[#BDB5AA] w-fit text-black text-xl leading-normal uppercase font-medium mt-[3.75rem]">
+                className="px-10 py-4 bg-[#BDB5AA] w-fit text-black text-xl leading-normal uppercase font-medium mt-8 sm:mt-[3.75rem]">
                 Learn More
               </Link>
             </div>
