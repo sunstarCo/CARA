@@ -6,7 +6,7 @@ import NavFooter from './NavFooter';
 
 function Footer() {
   return (
-    <div className="w-full">
+    <div className="flex flex-col w-full">
       <LocationFooter />
       <NavFooter />
       <CoreFooter />
