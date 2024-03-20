@@ -1,5 +1,7 @@
 import React from 'react';
 
+import ContactConsultation from '@/components/contact/ContactConsultation';
+
 export default function Page() {
-  return <div>Page</div>;
+  return <ContactConsultation />;
 }

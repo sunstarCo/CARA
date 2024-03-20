@@ -3,8 +3,10 @@ import Gallery from '@/components/main/Gallery';
 import Greetings from '@/components/main/Greetings';
 import IntroProcedure from '@/components/main/IntroProcedure';
 import MainBanner from '@/components/main/MainBanner';
+import PatientReview from '@/components/main/PatientReview';
 import ProcedureSection from '@/components/main/ProcedureSection';
 import SingleReview from '@/components/main/SingleReview';
+import Spot from '@/components/main/spot/Spot';
 
 export default function Home() {
   return (
@@ -18,6 +20,8 @@ export default function Home() {
       <ProcedureSection section="Face&Nose" reverse />
       <SingleReview number={1} />
       <ProcedureSection section="Body" />
+      <Spot />
+      <PatientReview />
       {/* <PatientReview /> */}
       <Gallery />
     </main>
