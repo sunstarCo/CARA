@@ -33,6 +33,20 @@ const reviews = [
 function PatientReview() {
   const slides = [reviews[reviews.length - 2], reviews[reviews.length - 1], ...reviews, reviews[0], reviews[1]];
   const [curSlide, setCurSlide] = useState(2);
+  const [numOfSlides, setNumOfSlides] = useState(window.innerWidth > 1300 ? 2 : 1);
+
+  useEffect(() => {
+    const handleResize = () => {
+      setNumOfSlides(window.innerWidth > 1300 ? 2 : 1);
+    };
+
+    window.addEventListener('resize', handleResize);
+
+    return () => {
+      window.removeEventListener('resize', handleResize);
+    };
+  }, []);
+
   const slideRef = useRef(null);
 
   const isThrottled = useRef(false);
@@ -49,13 +63,13 @@ function PatientReview() {
 
   const clickNextSlide = () => {
     throttleClick(() => {
-      setCurSlide(prev => prev + 2);
+      setCurSlide(prev => prev + numOfSlides);
     });
   };
 
   const clickPrevSlide = () => {
     throttleClick(() => {
-      setCurSlide(prev => prev - 2);
+      setCurSlide(prev => prev - numOfSlides);
     });
   };
 
@@ -80,17 +94,17 @@ function PatientReview() {
   return (
     <div className="pt-40 pb-[12.5rem] flex flex-col items-center">
       <div className="uppercase text-[3.125rem] leading-normal">Real Patient Review</div>
-      <div className="flex items-center gap-16 mt-[6.25rem]">
+      <div className="flex items-center gap-8 mt-[6.25rem]">
         <button
           onClick={clickPrevSlide}
           className="w-10 h-10 bg-[#D9D5CC] flex items-center justify-center rounded-full">
           <Image src={'/logo/prev.svg'} alt="arrow left" width={0} height={0} sizes="100" className="w-fit" />
         </button>
-        <div className="container w-[80rem] overflow-hidden">
+        <div className="container w-[76.875rem] overflow-hidden">
           <div className="flex" ref={slideRef}>
             {slides.map((review, index) => (
               <div
-                className={`card flex gap-[1.875rem] w-[36.875rem] ${index % 2 === 1 && 'ml-[6.25rem]'}`}
+                className={`card flex gap-[1.875rem] min-w-[36.875rem] ${index % 2 === 1 && 'ml-[3.125rem]'}`}
                 key={index}>
                 <div className="w-60 h-[17.5rem]">
                   <Image
