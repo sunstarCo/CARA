@@ -8,7 +8,7 @@ export default function CommonTopBanner({url, title, subtitle, contents}) {
   return (
     <div className="flex flex-col w-full 2xl:flex-row">
       <div className="relative py-[11.1875rem]  2xl:w-1/2 ">
-        <Image src={AboutCommonBannerBGDeco} alt="backgroundDecoration" fill className="object-cover" />
+        <Image src={AboutCommonBannerBGDeco} alt="backgroundDecoration" fill sizes="100" className="object-cover" />
         <div className="md:px-32 px-10 flex-col justify-center items-start gap-[0.625rem] ">
           <p className=" text-[#716B63] uppercase text-xl">HOME ·{url}</p>
           <h1 className="text-[3.125rem] uppercase leading-normal mb-[1.875rem]">
@@ -22,7 +22,7 @@ export default function CommonTopBanner({url, title, subtitle, contents}) {
         </div>
       </div>
       <div className="relative  min-h-[55rem] 2xl:w-1/2">
-        <Image src={AboutCommonImg} alt="doctorImage" fill className="object-cover" />
+        <Image src={AboutCommonImg} alt="doctorImage" fill sizes="100" className="object-cover" />
       </div>
     </div>
   );

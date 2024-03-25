@@ -32,12 +32,13 @@ const reviews = [
 
 function PatientReview() {
   const [curSlide, setCurSlide] = useState(0);
-  const [numOfSlides, setNumOfSlides] = useState(0);
+  const [numOfSlides, setNumOfSlides] = useState(2);
 
   useEffect(() => {
     const handleResize = () => {
       setNumOfSlides(window.innerWidth > 1300 ? 2 : 1);
     };
+    handleResize();
 
     window.addEventListener('resize', handleResize);
 
@@ -69,7 +70,7 @@ function PatientReview() {
         <button
           onClick={clickPrevSlide}
           className="w-10 h-10 bg-[#D9D5CC] flex items-center justify-center rounded-full max-sm:hidden">
-          <Image src={'/logo/prev.svg'} alt="arrow left" width={0} height={0} sizes="100" className="w-fit" />
+          <Image src={'/icons/prev.svg'} alt="arrow left" width={0} height={0} sizes="100" className="w-fit" />
         </button>
         <div className="flex">
           <div className={`card flex gap-[1.875rem] w-full xl:w-1/2`}>
@@ -152,12 +153,12 @@ function PatientReview() {
           <button
             onClick={clickPrevSlide}
             className="w-10 h-10 bg-[#D9D5CC] flex items-center justify-center rounded-full sm:hidden">
-            <Image src={'/logo/prev.svg'} alt="arrow left" width={0} height={0} sizes="100" className="w-fit" />
+            <Image src={'/icons/prev.svg'} alt="arrow left" width={0} height={0} sizes="100" className="w-fit" />
           </button>
           <button
             onClick={clickNextSlide}
             className="w-10 h-10 bg-[#D9D5CC] flex items-center justify-center rounded-full">
-            <Image src={'/logo/next.svg'} alt="arrow right" width={0} height={0} sizes="100" className="w-fit" />
+            <Image src={'/icons/next.svg'} alt="arrow right" width={0} height={0} sizes="100" className="w-fit" />
           </button>
         </div>
       </div>
