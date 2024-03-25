@@ -4,8 +4,8 @@ import Link from 'next/link';
 
 function NavFooter() {
   return (
-    <>
-      <div className="justify-between hidden px-8 font-bold md:flex py-9 bg-main-beige">
+    <div className=" bg-main-beige">
+      <div className="justify-between hidden px-8 font-bold md:flex py-9 max-w-[100rem] mx-auto">
         {menus.map(menu => {
           return (
             <Link key={menu.link} href={menu.link}>
@@ -14,7 +14,7 @@ function NavFooter() {
           );
         })}
       </div>
-    </>
+    </div>
   );
 }
 const menus = [

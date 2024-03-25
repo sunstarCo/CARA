@@ -24,7 +24,7 @@ function ContactBanner() {
               Consultation
             </h3>
             <div className="w-[6.25rem] h-2 bg-[#BDB5AA] mt-10 mb-[3.125rem]" />
-            <p className="text-xl sm:text-2xl leading-loose">
+            <p className="text-xl sm:text-2xl leading-loose sm:leading-loose">
               At CARA Plastic Surgery & Laser Center in Las Vegas, we understand that choosing the right cosmetic
               procedure is an important decision. We offer &ldquo;Free&rdquo; consultations to help you explore your
               options and determine the best approach to achieve your aesthetic goals.
