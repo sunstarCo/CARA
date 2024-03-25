@@ -40,10 +40,10 @@ function IntroProcedure() {
             className="object-cover object-top"
           />
           <div className="absolute flex h-full  px-4 md:px-16">
-            <p className=" w-1/2 text-white justify-center flex items-center text-[5rem] leading-normal h-full max-lg:hidden">
+            <p className=" w-1/2 text-white justify-center flex items-center text-[5rem] leading-normal h-full max-2xl:hidden">
               {active.toUpperCase()}
             </p>
-            <div className="flex flex-col w-full lg:w-1/2 text-white">
+            <div className="flex flex-col w-full 2xl:w-1/2 text-white">
               <div className="flex uppercase z-20 my-[4rem] sm:my-[6.25rem]">
                 {procedureData.map((data, index) => (
                   <div key={index}>
@@ -65,7 +65,7 @@ function IntroProcedure() {
               </div>
               <p className="text-[2.5rem] sm:text-[4rem] leading-normal uppercase">{currentData.sub_title}</p>
               <div className="w-[6.25rem] h-2 bg-[#D9D5CC] my-4 sm:mt-10" />
-              <p className="text-[1.375rem] leading-loose sm:mt-[3.125rem] w-full md:w-[80%]">{currentData.desc}</p>
+              <p className="text-[1.375rem] leading-loose sm:mt-[3.125rem] w-full">{currentData.desc}</p>
               <Link
                 href={currentData.path}
                 className="px-10 py-4 bg-[#BDB5AA] w-fit text-black text-xl leading-normal uppercase font-medium mt-8 sm:mt-[3.75rem]">

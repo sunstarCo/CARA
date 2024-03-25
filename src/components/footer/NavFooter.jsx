@@ -5,7 +5,7 @@ import Link from 'next/link';
 function NavFooter() {
   return (
     <>
-      <div className="justify-center hidden 2xl:flex font-bold py-9 gap-[7.5rem] bg-main-beige">
+      <div className="justify-between hidden px-8 font-bold md:flex py-9 bg-main-beige">
         {menus.map(menu => {
           return (
             <Link key={menu.link} href={menu.link}>

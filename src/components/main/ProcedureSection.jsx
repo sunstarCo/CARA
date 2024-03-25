@@ -73,48 +73,54 @@ export default function ProcedureSection({section, reverse = false}) {
       <div className="flex flex-col mt-[6.875rem] items-center gap-6 text-center">
         {section === 'Breast' ? (
           <>
-            <div className="flex items-center text-nowrap">
-              <Link href={'/breast/Breast-Augmentation'} className="text-[1.625rem] leading-normal text-wrap">
+            <div
+              className="flex items-center max-sm:gap-8 text-nowrap text-xl sm:text-[1.625rem] leading-normal
+">
+              <Link href={'/breast/Breast-Augmentation'} className=" text-wrap">
                 Breast Augmentation
               </Link>
-              <div className="mx-10 md:mx-20 w-[1px] h-6 bg-[#BDB5AA]" />
-              <Link href={'/breast/Breast-Lift'} className="text-[1.625rem] leading-normal">
+              <div className="mx-10 md:mx-20 w-[1px] h-6 max-sm:hidden bg-[#BDB5AA]" />
+              <Link href={'/breast/Breast-Lift'} className="">
                 Breast Lift
               </Link>
-              <div className="mx-10 md:mx-20 w-[1px] h-6 bg-[#BDB5AA] max-sm:hidden" />
-              <Link href={'/breast/Breast-Reduction'} className="text-[1.625rem] leading-normal max-sm:hidden">
+              <div className="mx-10 md:mx-20 w-[1px] h-6 max-sm:hidden bg-[#BDB5AA]" />
+              <Link href={'/breast/Breast-Reduction'} className=" max-sm:hidden">
                 Breast Reduction
               </Link>
             </div>
-            <div className="flex items-center">
-              <Link href={'/breast/Male-Breast-Reduction'} className="text-[1.625rem] leading-normal max-sm:hidden">
+            <div className="flex items-center max-sm:gap-8 text-xl sm:text-[1.625rem] leading-normal">
+              <Link href={'/breast/Male-Breast-Reduction'} className=" max-sm:hidden">
                 Male Breast Reduction
               </Link>
-              <Link href={'/breast/Breast-Reduction'} className="text-[1.625rem] leading-normal sm:hidden">
+              <Link href={'/breast/Breast-Reduction'} className=" sm:hidden">
                 Breast Reduction
               </Link>
-              <div className="mx-10 md:mx-20 w-[1px] h-6 bg-[#BDB5AA]" />
-              <Link href={'/breast/Male-Breast-Reduction'} className="text-[1.625rem] leading-normal sm:hidden">
+              <div className="mx-10 md:mx-20 w-[1px] h-6 max-sm:hidden bg-[#BDB5AA]" />
+              <Link href={'/breast/Male-Breast-Reduction'} className=" sm:hidden">
                 Male Breast Reduction
               </Link>
-              <Link href={'/breast/Breast-Implant-Removal'} className="text-[1.625rem] leading-normal max-sm:hidden">
+              <Link href={'/breast/Breast-Implant-Removal'} className=" max-sm:hidden">
                 Breast Implant Removal
               </Link>
             </div>
-            <div className="flex items-center">
-              <Link href={'/breast/Breast-Implant-Removal'} className="text-[1.625rem] leading-normal">
+            <div className="flex items-center text-xl sm:text-[1.625rem] leading-normal sm:hidden">
+              <Link href={'/breast/Breast-Implant-Removal'} className="">
                 Breast Implant Removal
               </Link>
             </div>
           </>
         ) : (
-          <div className="flex w-fit mx-auto text-wrap text-center justify-center ">
+          <div className="flex w-fit mx-auto text-center grid-cols-2 gap-8 max-lg:grid justify-center ">
             {links.map((link, index) => (
               <div key={index + link.title} className="flex items-center justify-center w-fit">
                 {index !== 0 && (
-                  <div className={`w-[1px] h-6 mx-6 md:mx-20 bg-[#BDB5AA] max-sm:${index === 2 && 'hidden'} `} />
+                  <div
+                    className={`w-[1px] h-6 mx-6 md:mx-20 bg-[#BDB5AA] max-lg:hidden max-sm:${
+                      index === 2 && 'hidden'
+                    } `}
+                  />
                 )}
-                <Link href={link.path} className={`text-[1.625rem] leading-normal `}>
+                <Link href={link.path} className={`text-xl sm:text-[1.625rem] leading-normal `}>
                   {link.title}
                 </Link>
               </div>

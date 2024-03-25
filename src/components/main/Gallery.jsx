@@ -17,7 +17,7 @@ function Gallery() {
       <div className="absolute top-0 left-0 flex">
         <div className={`w-screen h-[600px] sm:h-[940px] relative flex justify-end `}>
           <Image src={'/banner/main/GalleryBG.png'} alt="" fill sizes="100" className="object-cover object-top" />
-          <div className="absolute flex flex-col w-full sm:w-1/2 text-white px-8 sm:px-16">
+          <div className="absolute flex flex-col w-full lg:w-4/6 2xl:w-1/2  text-white px-8 sm:px-16">
             <div className="flex uppercase z-20 mt-24 sm:mt-[11.75rem]">
               <div className={`text-2xl sm:text-3xl flex text-center items-center leading-normal -tracking-tight `}>
                 BEFORE & AFTER

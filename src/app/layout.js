@@ -1,7 +1,6 @@
 import {DM_Serif_Display, Manrope, Playfair_Display} from 'next/font/google';
 
 import './globals.css';
-import Footer from '@/components/footer/Footer';
 import Header from '@/components/header/Header';
 
 // const inter = Inter({subsets: ['latin']});
@@ -28,7 +27,7 @@ export default function RootLayout({children}) {
         {/* <div className="pt-[192px]">
         </div> */}
         <div className="flex-1 w-full h-[cacl(100vh-8.875rem)] pt-[95px] lg:pt-[142px]">{children}</div>
-        <Footer />
+        {/* <Footer /> */}
       </body>
     </html>
   );

@@ -5,16 +5,17 @@ function Location({locationData, i}) {
   const adds = address.split('/');
   return (
     <>
-      <div className="text-center ">
-        <p className="lg:text-[1.75rem] text-3xl  mb-4 text-nowrap">{region}</p>
-        <p className="lg:text-xl text-2xl font-medium text-[#9D9892] mb-5">(855) 212-9901</p>
-        <div className="leading-[2.1375rem] text-nowrap text-xl lg:text-lg">
+      <div className="w-[18.75rem] text-center mx-auto">
+        <p className="text-[1.75rem] mb-4">{region}</p>
+        <p className="text-xl font-medium text-[#9D9892] mb-5">(855) 212-9901</p>
+        <div className="leading-[2.1375rem] text-lg">
           <p>{adds[0]}</p>
           <p>{adds[1]}</p>
           <p>{adds[2]}</p>
         </div>
       </div>
-      {i < 3 && <div className="xl:w-[1px] xl:h-40 h-[1px] w-52  bg-[#D9D5CC] mx-[3.75rem] my-8 xl:my-auto" />}
+      {i < 3 && <div className="w-[1px] h-40 bg-[#D9D5CC] mx-4 2xl:mx-[3.75rem] my-auto max-lg:hidden" />}
+      {i < 3 && <div className="w-[80%] h-[1px] mx-auto bg-[#D9D5CC] my-8 lg:hidden" />}
     </>
   );
 }

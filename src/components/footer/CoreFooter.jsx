@@ -6,7 +6,7 @@ import logo from '../../../public/logo/logo(black).svg';
 function CoreFooter() {
   return (
     <>
-      <div className="w-full flex flex-col md:flex-row gap-8 md:gap-0 md:justify-between 2xl:px-[11.3125rem] px-16   items-center bg-[#D9D5CC] py-20 md:py-40">
+      <div className="w-full flex flex-col gap-24 sm:gap-8 md:flex-row px-8 justify-between items-center bg-[#D9D5CC] py-20 md:py-40">
         <div>
           <p className="text-nowrap text-[1.375rem] font-bold mb-10">(855 212-9901)</p>
           <p className="text-[1.375rem] font-bold mb-2">ADDRESS</p>
@@ -34,9 +34,9 @@ function CoreFooter() {
         </div>
       </div>
       <div className="py-6 text-center text-white bg-main-dark">
-        <h1 className="text-base">
+        <h5 className="text-base">
           ⓒ CARA PLASTIC SURGERY & LASER CENTER. ALL RIGHTS RESERVED. WEB DESIGN & INTERNET MARKETING BY SUNSTAR
-        </h1>
+        </h5>
       </div>
     </>
   );
