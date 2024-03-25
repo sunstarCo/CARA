@@ -6,7 +6,7 @@ import logo from '../../../public/logo/logo(black).svg';
 function CoreFooter() {
   return (
     <>
-      <div className="w-full flex px-[11.375rem] justify-between items-center bg-[#D9D5CC] py-40">
+      <div className="w-full flex flex-col md:flex-row gap-8 md:gap-0 md:justify-between 2xl:px-[11.3125rem] px-16   items-center bg-[#D9D5CC] py-20 md:py-40">
         <div>
           <p className="text-nowrap text-[1.375rem] font-bold mb-10">(855 212-9901)</p>
           <p className="text-[1.375rem] font-bold mb-2">ADDRESS</p>
@@ -14,15 +14,15 @@ function CoreFooter() {
             Los Angeles, San Gabriel Valley <br /> Orange County, Landing
           </p>
         </div>
-        <div className="sm:w-[25rem] min-w-60 min-mx-80">
+        <div className="w-[20rem] sm:w-[20rem] lg:w-[25rem]">
           <Image src={logo} width={0} height={0} sizes="100" className="w-full" alt="로고" />
         </div>
         <div>
-          <div className="flex gap-[0.875rem] mb-10 text-nowrap">
+          <div className="flex  gap-[0.875rem] mb-10 text-nowrap">
             {snsIcons.map(icon => {
               return (
                 <div key={icon} className="relative w-5 h-5">
-                  <Image src={`icons/sns/${icon}.svg`} fill alt="facebookIcon" />
+                  <Image src={`/icons/sns/${icon}.svg`} fill alt={`${icon}icon`} />
                 </div>
               );
             })}
