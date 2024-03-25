@@ -10,7 +10,7 @@ import Spot from '@/components/main/spot/Spot';
 
 export default function Home() {
   return (
-    <main className="flex flex-col">
+    <div className="flex flex-col">
       <MainBanner />
       <Greetings />
       <Doctor />
@@ -23,6 +23,6 @@ export default function Home() {
       <Spot />
       <PatientReview />
       <Gallery />
-    </main>
+    </div>
   );
 }

@@ -1,5 +1,5 @@
 'use client';
-import React, {useEffect, useRef, useState} from 'react';
+import React, {useEffect, useState} from 'react';
 
 import Image from 'next/image';
 
@@ -31,9 +31,8 @@ const reviews = [
 ];
 
 function PatientReview() {
-  const slides = [reviews[reviews.length - 2], reviews[reviews.length - 1], ...reviews, reviews[0], reviews[1]];
-  const [curSlide, setCurSlide] = useState(2);
-  const [numOfSlides, setNumOfSlides] = useState(window.innerWidth > 1300 ? 2 : 1);
+  const [curSlide, setCurSlide] = useState(0);
+  const [numOfSlides, setNumOfSlides] = useState(0);
 
   useEffect(() => {
     const handleResize = () => {
@@ -47,113 +46,120 @@ function PatientReview() {
     };
   }, []);
 
-  const slideRef = useRef(null);
-
-  const isThrottled = useRef(false);
-
-  const throttleClick = func => {
-    if (!isThrottled.current) {
-      isThrottled.current = true;
-      func();
-      setTimeout(() => {
-        isThrottled.current = false;
-      }, 500);
-    }
-  };
-
   const clickNextSlide = () => {
-    throttleClick(() => {
-      setCurSlide(prev => prev + numOfSlides);
-    });
+    if (curSlide + numOfSlides >= reviews.length) {
+      setCurSlide(0);
+      return;
+    }
+    setCurSlide(prev => prev + numOfSlides);
   };
 
   const clickPrevSlide = () => {
-    throttleClick(() => {
-      setCurSlide(prev => prev - numOfSlides);
-    });
+    if (curSlide === 0) {
+      setCurSlide(reviews.length - numOfSlides);
+      return;
+    }
+    setCurSlide(prev => prev - numOfSlides);
   };
 
-  useEffect(() => {
-    slideRef.current.style.transform = `translateX(-${curSlide * 50}%)`;
-    slideRef.current.style.transition = 'all 0.5s ease';
-    if (curSlide <= 1) {
-      setTimeout(() => {
-        slideRef.current.style.transition = 'none';
-        slideRef.current.style.transform = `translateX(-${reviews.length * 50}%)`;
-        setCurSlide(reviews.length);
-      }, 550);
-    } else if (curSlide >= slides.length - 2) {
-      setTimeout(() => {
-        slideRef.current.style.transition = 'none';
-        slideRef.current.style.transform = `translateX(-100%)`;
-        setCurSlide(2);
-      }, 550);
-    }
-  }, [curSlide]);
-
   return (
-    <div className="pt-40 pb-[12.5rem] flex flex-col items-center">
+    <div className="pt-40 pb-[12.5rem] flex flex-col items-center px-6">
       <div className="uppercase text-[3.125rem] leading-normal">Real Patient Review</div>
-      <div className="flex items-center gap-8 mt-[6.25rem]">
+      <div className="flex flex-col sm:flex-row justify-center w-full items-center gap-16 mt-[6.25rem] px-4">
         <button
           onClick={clickPrevSlide}
-          className="w-10 h-10 bg-[#D9D5CC] flex items-center justify-center rounded-full">
+          className="w-10 h-10 bg-[#D9D5CC] flex items-center justify-center rounded-full max-sm:hidden">
           <Image src={'/logo/prev.svg'} alt="arrow left" width={0} height={0} sizes="100" className="w-fit" />
         </button>
-        <div className="container w-[76.875rem] overflow-hidden">
-          <div className="flex" ref={slideRef}>
-            {slides.map((review, index) => (
-              <div
-                className={`card flex gap-[1.875rem] min-w-[36.875rem] ${index % 2 === 1 && 'ml-[3.125rem]'}`}
-                key={index}>
-                <div className="w-60 h-[17.5rem]">
-                  <Image
-                    src={review.image}
-                    alt="patient"
-                    width={0}
-                    height={0}
-                    sizes="100"
-                    className="w-full object-cover"
-                  />
-                </div>
-                <div className="w-[20rem]">
-                  <div className="flex justify-between">
-                    <div>
-                      <p className="text-3xl font-bold">{review.name}</p>
-                      <div className="flex">
-                        {[...Array(5)].map((_, index) => (
-                          <Image
-                            key={index}
-                            src={'/logo/star.svg'}
-                            alt="star icon"
-                            width={0}
-                            height={0}
-                            sizes="100"
-                            className="w-fit"
-                          />
-                        ))}
-                      </div>
-                    </div>
-                    <Image
-                      src={'/logo/quote.svg'}
-                      alt="quote icon"
-                      width={0}
-                      height={0}
-                      sizes="100"
-                      className="w-fit"
-                    />
+        <div className="flex">
+          <div className={`card flex gap-[1.875rem] w-full xl:w-1/2`}>
+            <div className="max-sm:min-w-[20vw] sm:w-60 max-sm:max-h-[15rem]">
+              <Image
+                src={reviews[curSlide].image}
+                alt="patient"
+                width={0}
+                height={0}
+                sizes="100"
+                className="w-full object-cover"
+              />
+            </div>
+            <div className="max-w-[20rem]">
+              <div className="flex justify-between">
+                <div>
+                  <p className="text-3xl font-bold">{reviews[curSlide].name}</p>
+                  <div className="flex">
+                    {[...Array(5)].map((_, index) => (
+                      <Image
+                        key={index}
+                        src={'/logo/star.svg'}
+                        alt="star icon"
+                        width={0}
+                        height={0}
+                        sizes="100"
+                        className="w-fit"
+                      />
+                    ))}
                   </div>
-                  <p className="mt-[1.875rem] leading-loose text-xl">{review.comment}</p>
                 </div>
+                <Image
+                  src={'/logo/quote.svg'}
+                  alt="quote icon"
+                  width={0}
+                  height={0}
+                  sizes="100"
+                  className="w-14 sm:w-fit"
+                />
               </div>
-            ))}
+              <p className="mt-[1.875rem] leading-loose text-xl ">{reviews[curSlide].comment}</p>
+            </div>
+          </div>
+          <div className={`card flex gap-[1.875rem] w-1/2 ml-[3.125rem] max-xl:hidden`}>
+            <div className="w-60 h-[17.5rem]">
+              <Image
+                src={reviews[curSlide + 1]?.image || reviews[0]?.image}
+                alt="patient"
+                width={0}
+                height={0}
+                sizes="100"
+                className="w-full object-cover"
+              />
+            </div>
+            <div className="max-w-[20rem]">
+              <div className="flex justify-between">
+                <div>
+                  <p className="text-3xl font-bold">{reviews[curSlide + 1]?.name}</p>
+                  <div className="flex">
+                    {[...Array(5)].map((_, index) => (
+                      <Image
+                        key={index}
+                        src={'/logo/star.svg'}
+                        alt="star icon"
+                        width={0}
+                        height={0}
+                        sizes="100"
+                        className="w-fit"
+                      />
+                    ))}
+                  </div>
+                </div>
+                <Image src={'/logo/quote.svg'} alt="quote icon" width={0} height={0} sizes="100" className="w-fit" />
+              </div>
+              <p className="mt-[1.875rem] leading-loose text-xl">{reviews[curSlide + 1]?.comment}</p>
+            </div>
           </div>
         </div>
-        <button
-          onClick={clickNextSlide}
-          className="w-10 h-10 bg-[#D9D5CC] flex items-center justify-center rounded-full">
-          <Image src={'/logo/next.svg'} alt="arrow right" width={0} height={0} sizes="100" className="w-fit" />
-        </button>
+        <div className="flex gap-8">
+          <button
+            onClick={clickPrevSlide}
+            className="w-10 h-10 bg-[#D9D5CC] flex items-center justify-center rounded-full sm:hidden">
+            <Image src={'/logo/prev.svg'} alt="arrow left" width={0} height={0} sizes="100" className="w-fit" />
+          </button>
+          <button
+            onClick={clickNextSlide}
+            className="w-10 h-10 bg-[#D9D5CC] flex items-center justify-center rounded-full">
+            <Image src={'/logo/next.svg'} alt="arrow right" width={0} height={0} sizes="100" className="w-fit" />
+          </button>
+        </div>
       </div>
     </div>
   );
