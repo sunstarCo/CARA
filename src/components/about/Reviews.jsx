@@ -89,7 +89,7 @@ function Reviews() {
             setReviews(review_data.slice((curPage - 2) * pageSize, (curPage - 1) * pageSize));
             setCurPage(curPage - 1);
           }}
-          className="text-[1.25rem] font-medium flex gap-5 uppercase">
+          className="text-[1.25rem] font-medium flex items-center gap-5 uppercase">
           <Image src="/icons/prev.svg" width={32} height={32} alt="arrow left" />
           previous
         </button>
@@ -102,9 +102,9 @@ function Reviews() {
             setReviews(review_data.slice(curPage * pageSize, (curPage + 1) * pageSize));
             setCurPage(curPage + 1);
           }}
-          className="text-[1.25rem] font-medium flex gap-5 uppercase">
-          <Image src="/icons/next.svg" width={32} height={32} alt="arrow right" />
+          className="text-[1.25rem] font-medium flex items-center gap-5 uppercase">
           next
+          <Image src="/icons/next.svg" width={32} height={32} alt="arrow right" />
         </button>
       </div>
     </div>
@@ -116,8 +116,8 @@ function ReviewCard({review}) {
     <div>
       <p className="text-[1.375rem] leading-loose">{review.comment}</p>
       <div className="flex justify-between mt-5 text-xl leading-loose font-medium">
-        <div className="flex">
-          <Image src="/icons/comment.svg" width={36} height={36} alt="speech bubble" />
+        <div className="flex gap-2">
+          <Image src="/icons/comment.svg" width={36} height={'36'} alt="speech bubble" className="object-cover " />
           <p className="">{review.name}</p>
         </div>
         <p className="text-[#9D9892]">{review.date}</p>

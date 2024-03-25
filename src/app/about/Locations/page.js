@@ -19,7 +19,7 @@ export default function Page() {
       <LocationSection />
       <AboutSecondBanner
         mainDesc="Embark on your aesthetic journey/
-with confidence at Cara Plastic Surgery & Laser Center./Schedule a consultationtoday and let us help/you reveal the best version of yourself."
+with confidence at Cara Plastic Surgery & Laser Center./Schedule a consultation today and let us help/you reveal the best version of yourself."
       />
     </div>
   );
