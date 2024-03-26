@@ -65,7 +65,7 @@ function PatientReview() {
 
   return (
     <div className="pt-40 pb-[12.5rem] flex flex-col items-center px-6">
-      <div className="uppercase text-[3.125rem] leading-normal">Real Patient Review</div>
+      <div className="uppercase text-[3.125rem] leading-normal font-trajan">Real Patient Review</div>
       <div className="flex flex-col sm:flex-row justify-center w-full items-center gap-16 mt-[6.25rem] px-4">
         <button
           onClick={clickPrevSlide}
@@ -87,7 +87,7 @@ function PatientReview() {
             <div className="max-w-[20rem]">
               <div className="flex justify-between">
                 <div>
-                  <p className="text-3xl font-bold">{reviews[curSlide].name}</p>
+                  <p className="text-3xl font-bold font-trajan">{reviews[curSlide].name}</p>
                   <div className="flex">
                     {[...Array(5)].map((_, index) => (
                       <Image
@@ -128,7 +128,7 @@ function PatientReview() {
             <div className="max-w-[20rem]">
               <div className="flex justify-between">
                 <div>
-                  <p className="text-3xl font-bold">{reviews[curSlide + 1]?.name}</p>
+                  <p className="text-3xl font-bold font-trajan">{reviews[curSlide + 1]?.name}</p>
                   <div className="flex">
                     {[...Array(5)].map((_, index) => (
                       <Image

@@ -40,7 +40,7 @@ function IntroProcedure() {
             className="object-cover object-top"
           />
           <div className="absolute flex h-full  px-4 md:px-16">
-            <p className=" w-1/2 text-white justify-center flex items-center text-[5rem] leading-normal h-full max-2xl:hidden">
+            <p className=" w-1/2 text-white justify-center flex items-center text-[5rem] leading-normal h-full max-2xl:hidden font-trajan">
               {active.toUpperCase()}
             </p>
             <div className="flex flex-col w-full 2xl:w-1/2 text-white">
@@ -50,7 +50,7 @@ function IntroProcedure() {
                     <div
                       className={`text-2xl sm:text-3xl flex text-center items-center leading-normal font-normal -tracking-tight `}>
                       <button
-                        className={`${active !== data.title && 'opacity-40'} px-2`}
+                        className={`${active !== data.title && 'opacity-40'} px-2 font-trajan`}
                         onClick={() => {
                           setActive(data.title);
                         }}>
@@ -63,12 +63,14 @@ function IntroProcedure() {
                   </div>
                 ))}
               </div>
-              <p className="text-[2.5rem] sm:text-[4rem] leading-normal uppercase">{currentData.sub_title}</p>
+              <p className="text-[2.5rem] sm:text-[4rem] leading-normal uppercase font-trajan">
+                {currentData.sub_title}
+              </p>
               <div className="w-[6.25rem] h-2 bg-[#D9D5CC] my-4 sm:mt-10" />
               <p className="text-[1.375rem] leading-loose sm:mt-[3.125rem] w-full">{currentData.desc}</p>
               <Link
                 href={currentData.path}
-                className="px-10 py-4 bg-[#BDB5AA] w-fit text-black text-xl leading-normal uppercase font-medium mt-8 sm:mt-[3.75rem]">
+                className="px-10 py-4 bg-[#BDB5AA] w-fit text-black text-xl leading-normal uppercase font-medium mt-8 sm:mt-[3.75rem] ">
                 Learn More
               </Link>
             </div>

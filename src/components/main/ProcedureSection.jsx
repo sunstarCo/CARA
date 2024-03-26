@@ -60,9 +60,9 @@ export default function ProcedureSection({section, reverse = false}) {
           <Image src={image} alt="" width={0} height={0} sizes="100" className="w-full md:w-1/2 object-cover" />
         )}
         <div className="w-full md:w-1/2">
-          <p className="leading-normal text-[3rem] md:text-[4rem] uppercase">{title}</p>
+          <p className="leading-normal text-[3rem] md:text-[4rem] uppercase font-trajan">{title}</p>
           <div className="w-[100px] h-2 bg-[#D9D5CC] mt-10" />
-          <p className="text-[1.75rem] leading-loose mt-12 uppercase">{sub_title}</p>
+          <p className="text-[1.75rem] leading-loose mt-12 uppercase font-trajan">{sub_title}</p>
           <p className="text-2xl leading-loose mt-[0.625rem]">{desc}</p>
         </div>
         {reverse && (
@@ -70,7 +70,7 @@ export default function ProcedureSection({section, reverse = false}) {
         )}
       </div>
 
-      <div className="flex flex-col mt-[6.875rem] items-center gap-6 text-center">
+      <div className="flex flex-col mt-[6.875rem] items-center gap-6 text-center font-trajan">
         {section === 'Breast' ? (
           <>
             <div

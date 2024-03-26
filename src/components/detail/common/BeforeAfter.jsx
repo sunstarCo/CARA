@@ -6,11 +6,20 @@ import Image from 'next/image';
 function BeforeAfter({images_data}) {
   const [curPage, setCurPage] = useState(1);
   const [pageSize, setPageSize] = useState(3);
-  const [images, setImages] = useState(images_data.slice(0, pageSize));
+  const [images, setImages] = useState(null);
 
   useEffect(() => {
     const handleResize = () => {
-      setPageSize(window.innerWidth > 1300 ? 3 : 1);
+      setPageSize(() => {
+        let page_size = 3;
+        if (window.innerWidth < 500) {
+          page_size = 1;
+        } else if (window.innerWidth < 1024) {
+          page_size = 2;
+        }
+        setImages(images_data.slice(0, page_size));
+        return page_size;
+      });
     };
     handleResize();
 
@@ -48,17 +57,17 @@ function BeforeAfter({images_data}) {
           className="w-10 h-10 bg-[#D9D5CC] flex items-center justify-center rounded-full max-sm:hidden">
           <Image src={'/icons/prev.svg'} alt="arrow left" width={0} height={0} sizes="100" className="w-fit" />
         </button>
-        <div className="flex w-[80%]">
+        <div className="flex w-[95%] md:w-[80%] justify-center">
           <div className={`card flex gap-10`}>
-            {images.map((image, index) => (
-              <div key={index} className=" relative">
+            {images?.map((image, index) => (
+              <div key={index} className="w-full">
                 <Image
                   src={image.image}
                   alt="patient"
                   width={492}
                   height={279}
                   sizes="100"
-                  className="w-fit object-cover"
+                  className="w-full object-cover"
                 />
                 <div className="absolute top-0 text-white font-semibold">{image.id}</div>
               </div>

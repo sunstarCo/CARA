@@ -38,7 +38,7 @@ function Doctor() {
                   <div
                     className={`text-xl sm:text-3xl flex text-center items-center leading-normal font-normal -tracking-tight `}>
                     <button
-                      className={`${active !== data.title && 'opacity-40'} px-2`}
+                      className={`${active !== data.title && 'opacity-40'} px-2 font-trajan`}
                       onClick={() => {
                         setActive(data.title);
                       }}>
@@ -51,7 +51,7 @@ function Doctor() {
                 </div>
               ))}
             </div>
-            <p className="mt-6 min-[400px]:mt-[4rem] 2xl:mt-[8.75rem] text-[3rem] sm:text-[4rem] leading-normal">
+            <p className="mt-6 min-[400px]:mt-[4rem] 2xl:mt-[8.75rem] text-[3rem] sm:text-[4rem] leading-normal font-trajan">
               DAVID KAHNG, MD
             </p>
             <div className="w-[6.25rem] h-2 bg-[#D9D5CC] mt-4 min-[400px]:mt-10" />

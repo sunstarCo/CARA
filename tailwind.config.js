@@ -14,6 +14,7 @@ module.exports = {
       fontFamily: {
         dm_serif_display: ['var(--font-dm_serif_display)'],
         playfair_display: ['var(--font-playfair_display)'],
+        trajan: 'Trajan Pro',
       },
       colors: {
         'main-beige': '#EAE9E5',

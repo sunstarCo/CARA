@@ -19,7 +19,7 @@ function ContactBanner() {
             className="object-cover object-top"
           />
           <div className="absolute max-w-[80rem] w-full px-8 2xl:px-64 flex justify-start flex-col">
-            <h3 className="uppercase text-4xl sm:text-[4rem] leading-normal ">
+            <h3 className="uppercase text-4xl sm:text-[4rem] leading-normal font-trajan">
               Schedule a <br />
               Consultation
             </h3>
