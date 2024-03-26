@@ -1,10 +1,12 @@
 import React from 'react';
 
+import BreastSample from '../../../../public/detailpage/breast/BreastAugmentationImg.png';
+
+import CommonTopBanner from '@/components/common/banner/CommonTopBanner';
 import BeforeAfter from '@/components/detail/common/BeforeAfter';
 import CenterSection from '@/components/detail/common/CenterSection';
 import Section1 from '@/components/detail/common/Section1';
 import WhyChoose from '@/components/detail/WhyChoose';
-
 const images_data = [
   {
     id: 1,
@@ -45,6 +47,12 @@ export default function Page() {
     "Breast augmentation is a suitable option for individuals who desire to enhance the size of their breasts for various reasons. Whether you have always felt self-conscious about the size of your breasts, experienced changes due to pregnancy or weight loss, or simply want to achieve a more balanced and proportionate figure, breast augmentation could be the solution you've been looking for.";
   return (
     <div>
+      <CommonTopBanner
+        url="breast"
+        img={BreastSample}
+        title="Breast Augmentation"
+        contents="Breast augmentation is a transformative procedure designed to enhance the size and shape of your breasts, providing a boost in confidence and a renewed sense of femininity."
+      />
       <Section1
         desc={section1_desc}
         title={'What is Breast Augmentation?'}
