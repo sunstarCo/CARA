@@ -29,52 +29,46 @@ function IntroProcedure() {
   const [active, setActive] = useState('Rhinoplasty');
   const currentData = procedureData.find(data => data.title === active);
   return (
-    <div className="relative w-full h-[800px] lg:h-[960px] overflow-hidden">
-      <div className="absolute top-0 left-0 flex">
-        <div className={`w-screen h-[800px] lg:h-[960px] relative flex`}>
-          <Image
-            src={'/banner/main/IntroProcedureBG.png'}
-            alt=""
-            fill
-            sizes="100"
-            className="object-cover object-top"
-          />
-          <div className="absolute flex h-full  px-4 md:px-16">
-            <p className=" w-1/2 text-white justify-center flex items-center text-[5rem] leading-normal h-full max-2xl:hidden font-trajan">
-              {active.toUpperCase()}
-            </p>
-            <div className="flex flex-col w-full 2xl:w-1/2 text-white">
-              <div className="flex uppercase z-20 my-[4rem] sm:my-[6.25rem]">
-                {procedureData.map((data, index) => (
-                  <div key={index}>
-                    <div
-                      className={`text-2xl sm:text-3xl flex text-center items-center leading-normal font-normal -tracking-tight `}>
-                      <button
-                        className={`${active !== data.title && 'opacity-40'} px-2 font-trajan`}
-                        onClick={() => {
-                          setActive(data.title);
-                        }}>
-                        {data.title.toUpperCase()}
-                      </button>
-                      {index !== procedureData.length - 1 && (
-                        <div className="mx-2 min-[400px]:mx-4 md:mx-14 w-[1px] h-6 bg-[#BDB5AA]" />
-                      )}
-                    </div>
-                  </div>
-                ))}
+    <div className="relative w-full overflow-hidden py-20 sm:py-40">
+      <Image
+        src={'/banner/main/IntroProcedureBG.png'}
+        alt=""
+        fill
+        sizes="100"
+        className="object-cover object-top -z-10"
+      />
+      <div className="flex h-full px-4 md:px-16 items-center">
+        <p className=" w-1/2 text-white justify-center flex items-center text-[5rem] leading-normal h-full max-2xl:hidden font-trajan">
+          {active.toUpperCase()}
+        </p>
+        <div className="flex flex-col w-full 2xl:w-1/2 text-white">
+          <div className="flex uppercase z-20 mb-[4rem] sm:mb-[6.25rem]">
+            {procedureData.map((data, index) => (
+              <div key={index}>
+                <div
+                  className={`text-lg sm:text-3xl flex text-center items-center leading-normal font-normal -tracking-tight `}>
+                  <button
+                    className={`${active !== data.title && 'opacity-40'} px-2 font-trajan`}
+                    onClick={() => {
+                      setActive(data.title);
+                    }}>
+                    {data.title.toUpperCase()}
+                  </button>
+                  {index !== procedureData.length - 1 && (
+                    <div className="mx-2 min-[400px]:mx-4 md:mx-14 w-[1px] h-6 bg-[#BDB5AA]" />
+                  )}
+                </div>
               </div>
-              <p className="text-[2.5rem] sm:text-[4rem] leading-normal uppercase font-trajan">
-                {currentData.sub_title}
-              </p>
-              <div className="w-[6.25rem] h-2 bg-[#D9D5CC] my-4 sm:mt-10" />
-              <p className="text-[1.375rem] leading-loose sm:mt-[3.125rem] w-full">{currentData.desc}</p>
-              <Link
-                href={currentData.path}
-                className="px-10 py-4 bg-[#BDB5AA] w-fit text-black text-xl leading-normal uppercase font-medium mt-8 sm:mt-[3.75rem] ">
-                Learn More
-              </Link>
-            </div>
+            ))}
           </div>
+          <p className="text-[2.5rem] sm:text-[4rem] leading-normal uppercase font-trajan">{currentData.sub_title}</p>
+          <div className="w-[6.25rem] h-2 bg-[#D9D5CC] my-4 sm:mt-10" />
+          <p className="text-[1.375rem] leading-loose sm:mt-[3.125rem] w-full">{currentData.desc}</p>
+          <Link
+            href={currentData.path}
+            className="px-10 py-4 bg-[#BDB5AA] w-fit text-black text-xl leading-normal uppercase font-medium mt-8 sm:mt-[3.75rem] ">
+            Learn More
+          </Link>
         </div>
       </div>
     </div>

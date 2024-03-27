@@ -73,9 +73,7 @@ export default function ProcedureSection({section, reverse = false}) {
       <div className="flex flex-col mt-[6.875rem] items-center gap-6 text-center font-trajan">
         {section === 'Breast' ? (
           <>
-            <div
-              className="flex items-center max-sm:gap-8 text-nowrap text-xl sm:text-[1.625rem] leading-normal
-">
+            <div className="flex items-center max-sm:gap-8 text-nowrap text-xl sm:text-[1.625rem] leading-normal">
               <Link href={'/breast/Breast-Augmentation'} className=" text-wrap">
                 Breast Augmentation
               </Link>
@@ -110,12 +108,12 @@ export default function ProcedureSection({section, reverse = false}) {
             </div>
           </>
         ) : (
-          <div className="flex w-fit mx-auto text-center grid-cols-2 gap-8 max-lg:grid justify-center ">
+          <div className="flex w-fit mx-auto grid-cols-2 gap-8 max-lg:grid justify-center ">
             {links.map((link, index) => (
-              <div key={index + link.title} className="flex items-center justify-center w-fit">
+              <div key={index + link.title} className="flex items-center justify-center">
                 {index !== 0 && (
                   <div
-                    className={`w-[1px] h-6 mx-6 md:mx-20 bg-[#BDB5AA] max-lg:hidden max-sm:${
+                    className={`w-[1px] h-6 mx-6 md:mx-16 bg-[#BDB5AA] max-lg:hidden max-sm:${
                       index === 2 && 'hidden'
                     } `}
                   />
