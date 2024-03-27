@@ -39,6 +39,29 @@ const images_data = [
   },
 ];
 
+const card_data = [
+  {
+    title: 'Targeted FatReduction',
+    desc: 'Liposuction allows forprecise targeting of specific areas, enabling the removal of stubborn fatdeposits that may be resistant to traditional weight loss methods.',
+  },
+  {
+    title: 'EnhancedBody Contour',
+    desc: 'Achieve a moresculpted and defined physique, enhancing your natural curves and proportions.',
+  },
+  {
+    title: 'Improved Confidence',
+    desc: 'Liposuction can lead toa boost in self-esteem and body confidence as you enjoy the results of aslimmer and more contoured appearance.',
+  },
+  {
+    title: 'Minimally Invasive',
+    desc: 'Our advanced liposuctiontechniques ensure minimal scarring and a quicker recovery compared totraditional surgical procedures.',
+  },
+  {
+    title: 'Long-lasting Results',
+    desc: 'While maintaining a healthylifestyle is essential, the results of liposuction are long-lasting, providingenduring improvements to your body contours.',
+  },
+];
+
 export default function Page() {
   const whyChoose_desc =
     'At Cara Plastic Surgery & Laser Center Las Vegas, ourboard-certified surgeons are committed to delivering exceptional results with apatient-centric approach. We tailor each liposuction procedure to the uniqueneeds and goals of our clients, ensuring a personalized and satisfyingexperience. Schedule a consultation today to discuss yourliposuction goals with our expert surgeons. Let us help you sculpt your idealsilhouette and unlock a more confident and empowered version of yourself.';
@@ -104,8 +127,12 @@ export default function Page() {
           </ul>
         </div>
       </CenterSection>
-
-      <CardContainer />
+      <CardContainer
+        title={
+          'If you have areas ofpersistent fat that hinder your body goals, liposuction can be a suitablesolution to achieve the contours you desire.'
+        }
+        cardData={card_data}
+      />
       <BeforeAfter images_data={images_data} />
       <WhyChoose desc={whyChoose_desc} />
     </div>
