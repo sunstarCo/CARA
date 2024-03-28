@@ -236,7 +236,7 @@ function MainHeader() {
                       <li key={i}>
                         <Link
                           href={sub.path}
-                          className={`font-trajan font-bold text-sm ${sub.path === curPath && 'text-[#e2c085]'}`}>
+                          className={`font-trajan font-bold text-base ${sub.path === curPath && 'text-[#e2c085]'}`}>
                           {sub.menu}
                         </Link>
                       </li>

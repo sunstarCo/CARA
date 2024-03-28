@@ -63,14 +63,14 @@ function BeforeAfter({images_data}) {
             {images?.map((image, index) => (
               <div key={index} className="w-full">
                 <Image
-                  src={image.image}
+                  src={image}
                   alt="patient"
                   width={492}
                   height={279}
                   sizes="100"
-                  className="w-full object-cover"
+                  priority
+                  className="w-full h-auto object-cover"
                 />
-                <div className="absolute top-0 text-white font-semibold">{image.id}</div>
               </div>
             ))}
           </div>

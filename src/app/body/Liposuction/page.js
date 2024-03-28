@@ -2,44 +2,15 @@ import React from 'react';
 
 import AboutSecondBanner from '@/components/about/AboutSecondBanner';
 import CommonTopBanner from '@/components/common/banner/CommonTopBanner';
-import CardContainer from '@/components/detail/body/CardContainer';
 import BeforeAfter from '@/components/detail/common/BeforeAfter';
-import CenterSection from '@/components/detail/common/CenterSection';
+import CardContainer from '@/components/detail/common/CardContainer';
 import Section1 from '@/components/detail/common/Section1';
-import WhyChoose from '@/components/detail/WhyChoose';
+import WhoNeeds from '@/components/detail/common/WhoNeeds';
+import WhyChoose from '@/components/detail/common/WhyChoose';
 
-const images_data = [
-  {
-    id: 1,
-    image: '/B&A/example.jpg',
-  },
-  {
-    id: 2,
-    image: '/B&A/example.jpg',
-  },
-  {
-    id: 3,
-    image: '/B&A/example.jpg',
-  },
-  {
-    id: 4,
-    image: '/B&A/example.jpg',
-  },
-  {
-    id: 5,
-    image: '/B&A/example.jpg',
-  },
-  {
-    id: 6,
-    image: '/B&A/example.jpg',
-  },
-  {
-    id: 7,
-    image: '/B&A/example.jpg',
-  },
-];
+const images_data = ['/B&A/example.jpg', '/B&A/example.jpg', '/B&A/example.jpg', '/B&A/example.jpg'];
 
-const card_data = [
+const benefits = [
   {
     title: 'Targeted FatReduction',
     desc: 'Liposuction allows forprecise targeting of specific areas, enabling the removal of stubborn fatdeposits that may be resistant to traditional weight loss methods.',
@@ -87,7 +58,7 @@ export default function Page() {
         title={'What is Liposuction?'}
         img={'/detailpage/liposuction/liposuction_what_is.png'}
       />
-      <CenterSection title={'who needs liposuction?'} desc={section2_desc}>
+      <WhoNeeds title={'who needs liposuction?'} desc={section2_desc}>
         <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 lg:gap-16 mt-6 text-start text-[#808683]">
           <ul className="flex flex-col gap-2">
             <li className="flex items-center gap-4">
@@ -126,12 +97,12 @@ export default function Page() {
             </li>
           </ul>
         </div>
-      </CenterSection>
+      </WhoNeeds>
       <CardContainer
         title={
           'If you have areas ofpersistent fat that hinder your body goals, liposuction can be a suitablesolution to achieve the contours you desire.'
         }
-        cardData={card_data}
+        benefits={benefits}
       />
       <BeforeAfter images_data={images_data} />
       <WhyChoose desc={whyChoose_desc} />

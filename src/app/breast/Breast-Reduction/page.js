@@ -3,43 +3,15 @@ import React from 'react';
 import BreastSample from '../../../../public/detailpage/breast/BreastAugmentationImg.png';
 
 import CommonTopBanner from '@/components/common/banner/CommonTopBanner';
-import CardContainer from '@/components/detail/body/CardContainer';
 import BeforeAfter from '@/components/detail/common/BeforeAfter';
-import CenterSection from '@/components/detail/common/CenterSection';
+import CardContainer from '@/components/detail/common/CardContainer';
 import Section1 from '@/components/detail/common/Section1';
-import WhyChoose from '@/components/detail/WhyChoose';
-const images_data = [
-  {
-    id: 1,
-    image: '/B&A/example.jpg',
-  },
-  {
-    id: 2,
-    image: '/B&A/example.jpg',
-  },
-  {
-    id: 3,
-    image: '/B&A/example.jpg',
-  },
-  {
-    id: 4,
-    image: '/B&A/example.jpg',
-  },
-  {
-    id: 5,
-    image: '/B&A/example.jpg',
-  },
-  {
-    id: 6,
-    image: '/B&A/example.jpg',
-  },
-  {
-    id: 7,
-    image: '/B&A/example.jpg',
-  },
-];
+import WhoNeeds from '@/components/detail/common/WhoNeeds';
+import WhyChoose from '@/components/detail/common/WhyChoose';
 
-const card_data = [
+const images_data = ['/B&A/example.jpg', '/B&A/example.jpg', '/B&A/example.jpg', '/B&A/example.jpg'];
+
+const benefits = [
   {
     title: 'Pain Relief',
     desc: 'Alleviate back, neck, and shoulder pain associated with the strain of large breasts, contributing to improved daily comfort.',
@@ -82,8 +54,8 @@ export default function Page() {
         title={'What is Breast Reduction?'}
         img={'/detailpage/liposuction/liposuction_what_is.png'}
       />
-      <CenterSection title={'Who Needs Breast Reduction?'} desc={whoNeeds} />
-      <CardContainer title={'Benefits of Breast Reduction'} cardData={card_data} />
+      <WhoNeeds title={'Who Needs Breast Reduction?'} desc={whoNeeds} />
+      <CardContainer title={'Benefits of Breast Reduction'} benefits={benefits} />
       <BeforeAfter images_data={images_data} />
       <WhyChoose desc={whyChoose_desc} />
     </div>

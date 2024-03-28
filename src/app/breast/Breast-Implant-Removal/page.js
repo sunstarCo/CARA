@@ -4,39 +4,11 @@ import BreastSample from '../../../../public/detailpage/breast/BreastAugmentatio
 
 import CommonTopBanner from '@/components/common/banner/CommonTopBanner';
 import BeforeAfter from '@/components/detail/common/BeforeAfter';
-import CenterSection from '@/components/detail/common/CenterSection';
 import Section1 from '@/components/detail/common/Section1';
-import WhyChoose from '@/components/detail/WhyChoose';
-const images_data = [
-  {
-    id: 1,
-    image: '/B&A/example.jpg',
-  },
-  {
-    id: 2,
-    image: '/B&A/example.jpg',
-  },
-  {
-    id: 3,
-    image: '/B&A/example.jpg',
-  },
-  {
-    id: 4,
-    image: '/B&A/example.jpg',
-  },
-  {
-    id: 5,
-    image: '/B&A/example.jpg',
-  },
-  {
-    id: 6,
-    image: '/B&A/example.jpg',
-  },
-  {
-    id: 7,
-    image: '/B&A/example.jpg',
-  },
-];
+import WhoNeeds from '@/components/detail/common/WhoNeeds';
+import WhyChoose from '@/components/detail/common/WhyChoose';
+
+const images_data = ['/B&A/example.jpg', '/B&A/example.jpg', '/B&A/example.jpg', '/B&A/example.jpg'];
 
 export default function Page() {
   const whyChoose_desc =
@@ -58,7 +30,7 @@ export default function Page() {
         title={'What is breast Implant Removal?'}
         img={'/detailpage/liposuction/liposuction_what_is.png'}
       />
-      <CenterSection title={'Who Needs Breast Implant Removal?'} desc={section2_desc} />
+      <WhoNeeds title={'Who Needs Breast Implant Removal?'} desc={section2_desc} />
       {/* <CardContainer /> */}
       <BeforeAfter images_data={images_data} />
       <WhyChoose desc={whyChoose_desc} />

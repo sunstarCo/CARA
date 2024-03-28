@@ -2,44 +2,15 @@ import React from 'react';
 
 import AboutSecondBanner from '@/components/about/AboutSecondBanner';
 import CommonTopBanner from '@/components/common/banner/CommonTopBanner';
-import CardContainer from '@/components/detail/body/CardContainer';
 import BeforeAfter from '@/components/detail/common/BeforeAfter';
-import CenterSection from '@/components/detail/common/CenterSection';
+import CardContainer from '@/components/detail/common/CardContainer';
 import Section1 from '@/components/detail/common/Section1';
-import WhyChoose from '@/components/detail/WhyChoose';
+import WhoNeeds from '@/components/detail/common/WhoNeeds';
+import WhyChoose from '@/components/detail/common/WhyChoose';
 
-const images_data = [
-  {
-    id: 1,
-    image: '/B&A/example.jpg',
-  },
-  {
-    id: 2,
-    image: '/B&A/example.jpg',
-  },
-  {
-    id: 3,
-    image: '/B&A/example.jpg',
-  },
-  {
-    id: 4,
-    image: '/B&A/example.jpg',
-  },
-  {
-    id: 5,
-    image: '/B&A/example.jpg',
-  },
-  {
-    id: 6,
-    image: '/B&A/example.jpg',
-  },
-  {
-    id: 7,
-    image: '/B&A/example.jpg',
-  },
-];
+const images_data = ['/B&A/example.jpg', '/B&A/example.jpg', '/B&A/example.jpg', '/B&A/example.jpg'];
 
-const card_data = [
+const benefits = [
   {
     title: 'Abdominal Tightening',
     desc: 'Tummy Tuck surgery tightensweakened abdominal muscles, providing a firmer and more sculpted midsection.',
@@ -74,7 +45,7 @@ export default function Page() {
       />
       <AboutSecondBanner mainDesc="The naturalprocesses of pregnancy, weight loss, and aging often lead to the development ofloose, sagging skin, and weakened muscles in the abdominal region. Whentraditional methods such as diet and exercise prove ineffective, a Tummy Tuckin Las Vegas emerges as a transformative solution to help you attain thedesired stomach appearance." />
       <Section1 desc={whatIs} title={'What is Tummy Tuck?'} img={'/detailpage/liposuction/liposuction_what_is.png'} />
-      <CenterSection title={'who needs Tummy Tuck?'} desc={whoNeeds}>
+      <WhoNeeds title={'who needs Tummy Tuck?'} desc={whoNeeds}>
         <div className="flex flex-col mt-12 text-start text-[#808683]">
           <ul className="flex flex-col gap-8">
             <li className="flex items-center gap-4">
@@ -97,12 +68,12 @@ export default function Page() {
             </li>
           </ul>
         </div>
-      </CenterSection>
+      </WhoNeeds>
       <CardContainer
         title={
           'If you find yourself dealing with any of these concerns, aTummy Tuck at Cara Plastic Surgery & Laser Center Las Vegas may be thesolution to help you achieve a more youthful and revitalized abdominal contour.'
         }
-        cardData={card_data}
+        benefits={benefits}
       />
       <BeforeAfter images_data={images_data} />
       <WhyChoose desc={whyChoose_desc} />

@@ -5,8 +5,6 @@ import ContactBanner from '@/components/contact/ContactBanner';
 import Footer from '@/components/footer/Footer';
 import Header from '@/components/header/Header';
 
-// const inter = Inter({subsets: ['latin']});
-
 const dm_serif_display = DM_Serif_Display({
   subsets: ['latin'],
   display: 'swap',
