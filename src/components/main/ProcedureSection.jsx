@@ -60,9 +60,9 @@ export default function ProcedureSection({section, reverse = false}) {
           <Image src={image} alt="" width={0} height={0} sizes="100" className="w-full md:w-1/2 object-cover" />
         )}
         <div className="w-full md:w-1/2">
-          <p className="leading-normal text-[3rem] md:text-[4rem] uppercase">{title}</p>
+          <p className="leading-normal text-[3rem] md:text-[4rem] uppercase font-trajan">{title}</p>
           <div className="w-[100px] h-2 bg-[#D9D5CC] mt-10" />
-          <p className="text-[1.75rem] leading-loose mt-12 uppercase">{sub_title}</p>
+          <p className="text-[1.75rem] leading-loose mt-12 uppercase font-trajan">{sub_title}</p>
           <p className="text-2xl leading-loose mt-[0.625rem]">{desc}</p>
         </div>
         {reverse && (
@@ -70,12 +70,10 @@ export default function ProcedureSection({section, reverse = false}) {
         )}
       </div>
 
-      <div className="flex flex-col mt-[6.875rem] items-center gap-6 text-center">
+      <div className="flex flex-col mt-[6.875rem] items-center gap-6 text-center font-trajan">
         {section === 'Breast' ? (
           <>
-            <div
-              className="flex items-center max-sm:gap-8 text-nowrap text-xl sm:text-[1.625rem] leading-normal
-">
+            <div className="flex items-center max-sm:gap-8 text-nowrap text-xl sm:text-[1.625rem] leading-normal">
               <Link href={'/breast/Breast-Augmentation'} className=" text-wrap">
                 Breast Augmentation
               </Link>
@@ -110,12 +108,12 @@ export default function ProcedureSection({section, reverse = false}) {
             </div>
           </>
         ) : (
-          <div className="flex w-fit mx-auto text-center grid-cols-2 gap-8 max-lg:grid justify-center ">
+          <div className="flex w-fit mx-auto grid-cols-2 gap-8 max-lg:grid justify-center ">
             {links.map((link, index) => (
-              <div key={index + link.title} className="flex items-center justify-center w-fit">
+              <div key={index + link.title} className="flex items-center justify-center">
                 {index !== 0 && (
                   <div
-                    className={`w-[1px] h-6 mx-6 md:mx-20 bg-[#BDB5AA] max-lg:hidden max-sm:${
+                    className={`w-[1px] h-6 mx-6 md:mx-16 bg-[#BDB5AA] max-lg:hidden max-sm:${
                       index === 2 && 'hidden'
                     } `}
                   />

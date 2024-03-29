@@ -1,4 +1,4 @@
-import {DM_Serif_Display, Manrope, Playfair_Display} from 'next/font/google';
+import {DM_Serif_Display, Playfair_Display} from 'next/font/google';
 
 import './globals.css';
 import ContactBanner from '@/components/contact/ContactBanner';
@@ -14,7 +14,6 @@ const dm_serif_display = DM_Serif_Display({
   weight: '400',
 });
 const playfair_display = Playfair_Display({subsets: ['latin'], display: 'swap', variable: '--font-playfair_display'});
-const manrope = Manrope({subsets: ['latin']});
 
 export const metadata = {
   title: 'CARA',
@@ -24,7 +23,10 @@ export const metadata = {
 export default function RootLayout({children}) {
   return (
     <html lang="en">
-      <body className={`${manrope.className} ${dm_serif_display.variable} ${playfair_display.variable} min-h-screen`}>
+      <head>
+        <link href="https://fonts.cdnfonts.com/css/trajan-pro?styles=17675,17676" rel="stylesheet" />
+      </head>
+      <body className={` ${dm_serif_display.variable} ${playfair_display.variable} min-h-screen`}>
         <Header />
         {/* <div className="pt-[192px]">
         </div> */}

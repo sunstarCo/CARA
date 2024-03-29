@@ -9,8 +9,8 @@ function CoreFooter() {
       <div className="w-full  bg-[#D9D5CC] py-20 md:py-40">
         <div className="flex flex-col gap-24 md:flex-row px-8 justify-between items-center max-w-[100rem] mx-auto">
           <div>
-            <p className="text-nowrap text-[1.375rem] font-bold mb-10">(855 212-9901)</p>
-            <p className="text-[1.375rem] font-bold mb-2">ADDRESS</p>
+            <p className="text-nowrap text-[1.375rem] font-bold mb-10 font-trajan">(855 212-9901)</p>
+            <p className="text-[1.375rem] font-bold mb-2 font-trajan">ADDRESS</p>
             <p className="text-base leading-[1.875rem] font">
               Los Angeles, San Gabriel Valley <br /> Orange County, Landing
             </p>
@@ -28,7 +28,7 @@ function CoreFooter() {
                 );
               })}
             </div>
-            <p className="text-[1.375rem] font-bold mb-2">WORKING HOURS</p>
+            <p className="text-[1.375rem] font-bold mb-2 font-trajan">WORKING HOURS</p>
             <p className="text-base leading-[1.875rem] font">
               Mon - Fri : 7am - 6pm <br /> Sat : 9am - 7pm, Sun : 9am - 6pm
             </p>

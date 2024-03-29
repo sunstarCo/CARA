@@ -2,15 +2,25 @@
 import React, {useEffect, useState} from 'react';
 
 import Image from 'next/image';
+import Link from 'next/link';
 
 function BeforeAfter({images_data}) {
   const [curPage, setCurPage] = useState(1);
   const [pageSize, setPageSize] = useState(3);
-  const [images, setImages] = useState(images_data.slice(0, pageSize));
+  const [images, setImages] = useState(null);
 
   useEffect(() => {
     const handleResize = () => {
-      setPageSize(window.innerWidth > 1300 ? 3 : 1);
+      setPageSize(() => {
+        let page_size = 3;
+        if (window.innerWidth < 500) {
+          page_size = 1;
+        } else if (window.innerWidth < 1024) {
+          page_size = 2;
+        }
+        setImages(images_data.slice(0, page_size));
+        return page_size;
+      });
     };
     handleResize();
 
@@ -38,27 +48,27 @@ function BeforeAfter({images_data}) {
   };
 
   return (
-    <div className="flex flex-col justify-center items-center px-8 py-[8.75rem]">
-      <h3 className="uppercase text-[2.5rem] leading-normal">Before & After</h3>
+    <div className="flex flex-col justify-center items-center px-8 py-20 sm:py-[8.75rem]">
+      <h3 className="uppercase text-[2.5rem] leading-normal font-trajan">Before & After</h3>
       <div className="w-[6.25rem] h-2 bg-[#BDB5AA] my-[3.125rem]" />
-      <div className="flex flex-col sm:flex-row justify-center w-full items-center gap-10 mt-[6.25rem] px-4 ">
+      <div className="flex flex-col sm:flex-row justify-center w-full items-center gap-10 mt-10 sm:mt-[6.25rem] px-4 ">
         <button
           disabled={curPage === 1}
           onClick={clickPrevSlide}
           className="w-10 h-10 bg-[#D9D5CC] flex items-center justify-center rounded-full max-sm:hidden">
           <Image src={'/icons/prev.svg'} alt="arrow left" width={0} height={0} sizes="100" className="w-fit" />
         </button>
-        <div className="flex w-[80%]">
+        <div className="flex w-[95%] md:w-[80%] justify-center">
           <div className={`card flex gap-10`}>
-            {images.map((image, index) => (
-              <div key={index} className=" relative">
+            {images?.map((image, index) => (
+              <div key={index} className="w-full">
                 <Image
                   src={image.image}
                   alt="patient"
                   width={492}
                   height={279}
                   sizes="100"
-                  className="w-fit object-cover"
+                  className="w-full object-cover"
                 />
                 <div className="absolute top-0 text-white font-semibold">{image.id}</div>
               </div>
@@ -80,6 +90,11 @@ function BeforeAfter({images_data}) {
           </button>
         </div>
       </div>
+      <Link
+        href={'/before&after'}
+        className="px-10 py-4 bg-[#d9d5cc] uppercase leading-loose font-medium text-xl mt-20">
+        view gallery
+      </Link>
     </div>
   );
 }

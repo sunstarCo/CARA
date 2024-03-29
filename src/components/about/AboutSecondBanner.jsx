@@ -4,7 +4,7 @@ export default function AboutSecondBanner({mainDesc, subDesc}) {
   return (
     <div className="py-[8.75rem] bg-[url('/banner/about/BGDeco.png')] bg-cover md:px-32 px-8 xl:px-[16.375rem]">
       <div className="w-full flex flex-col items-center justify-center">
-        <div className="text-center text-wrap">
+        <div className="text-center text-wrap font-trajan">
           {mainDesc.split('/').map(word => {
             return (
               <p key={word} className="text-[2.5rem] sm:text-[3.125rem] uppercase mt-4">

@@ -35,11 +35,12 @@ header nav ul.depth_2 li {
   min-width: 200px;
   text-align: left;
   height: fit-content;
-  padding: 4px 40px 4px 24px;
+  padding: 14px 16px;
 }
 
 header nav ul.depth_2 li a {
   text-wrap: nowrap;
+  line-height: 1.5;
 }
 
 header nav ul li:hover > .depth_2 {

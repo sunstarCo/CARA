@@ -6,7 +6,7 @@ function Greetings() {
   return (
     <div className="w-full bg-[url('/banner/main/BGDeco.png')] py-16 sm:py-[8.75rem] px-8 sm:px-[11.25rem] flex flex-col gap-10 sm:flex-row items-center justify-around bg-no-repeat bg-cover">
       <div className="w-full sm:w-[80%]">
-        <p className="text-[2rem] sm:text-[3.25rem] uppercase sm:leading-normal">
+        <p className="text-[2rem] sm:text-[3.25rem] uppercase sm:leading-normal font-trajan">
           <span className="text-[3rem] sm:text-[5rem]">D</span>
           iscover the Expertise of
           <br className="max-sm:hidden" /> Dr. David Kahng

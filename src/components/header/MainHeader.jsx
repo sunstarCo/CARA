@@ -214,18 +214,18 @@ function MainHeader() {
     <header
       className={`fixed w-full border-b border-[#d1bfb7] px-4 md:px-14 max-xl:py-8 bg-white
       }`}>
-      <div className="max-w-[1500px] flex items-center justify-between mx-auto">
+      <div className="max-w-[1600px] flex items-center justify-between mx-auto">
         <Link href={'/'} className="">
-          <Image src={`/logo/logo(black).svg`} alt="" width={0} height={0} sizes="100" className="w-40" />
+          <Image src={`/logo/logo(black).svg`} alt="" width={0} height={0} sizes="100" className="min-w-40" />
         </Link>
         <nav className="h-[100px] max-xl:hidden">
-          <ul className="flex items-center h-full gap-12">
+          <ul className="flex items-center h-full w-[65vw] max-w-[1150px] justify-between text-nowrap">
             {menus.map((menu, i) => {
               return (
                 <li key={i}>
                   <Link
                     href={menu.default_path}
-                    className={`font-dm_serif_display text-lg pb-2 ${
+                    className={`font-trajan font-bold text-lg pb-2 ${
                       curPath.includes(menu.menu.toLowerCase()) | (curPath === '/' && menu.menu === 'Home') &&
                       'border-b-4 border-[#BDB5A8]'
                     }`}>
@@ -236,7 +236,7 @@ function MainHeader() {
                       <li key={i}>
                         <Link
                           href={sub.path}
-                          className={`font-playfair_display text-base ${sub.path === curPath && 'text-[#e2c085]'}`}>
+                          className={`font-trajan font-bold text-sm ${sub.path === curPath && 'text-[#e2c085]'}`}>
                           {sub.menu}
                         </Link>
                       </li>
@@ -250,7 +250,7 @@ function MainHeader() {
         <div className="text-[#2b2928]">
           <div className={`flex gap-2 text-black py-[17px] px-[19px] bg-[#EAE9E5] rounded-[30px]`}>
             <Image src={'/icons/call.svg'} alt="" sizes="100" width={0} height={0} className="w-4" />
-            <p className="text-[16px] leading-4 font-medium">855-212-9901</p>
+            <p className="text-[16px] leading-4 font-medium text-nowrap">855-212-9901</p>
           </div>
         </div>
       </div>
