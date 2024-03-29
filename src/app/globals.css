@@ -4,10 +4,10 @@
 
 @layer components {
   .contact_input {
-    @apply text-lg placeholder:text-[#9D9893]  placeholder:font-medium outline-none    h-[3.25rem] font-medium leading-[2.1375rem] pl-5;
+    @apply text-lg placeholder:text-[#9D9893] opacity-90  placeholder:font-medium outline-none h-[3.25rem] font-medium leading-[2.1375rem];
   }
   .contact_input_half {
-    @apply sm:w-[48%] w-full;
+    @apply md:w-[48%]  w-full;
   }
   .contact_input_full {
     @apply w-full;
