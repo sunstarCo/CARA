@@ -2,6 +2,7 @@
 import React, {useEffect, useState} from 'react';
 
 import Image from 'next/image';
+import Link from 'next/link';
 
 function TopHeader() {
   const [scrollLocation, setScrollLocation] = useState(0);
@@ -34,7 +35,13 @@ function TopHeader() {
           <Image src={'/icons/country.svg'} alt="" sizes="100" width={0} height={0} className="w-fit" />
           <p>English</p>
           <Image src={'/icons/blo.svg'} alt="" sizes="100" width={0} height={0} className="w-fit" />
-          <p>Korean</p>
+          <Link
+            href={'https://www.caraplasticsurgery.com/about/korean-patients/'}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="">
+            Korean
+          </Link>
         </div>
       </div>
     </section>

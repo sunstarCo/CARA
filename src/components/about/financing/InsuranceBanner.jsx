@@ -11,7 +11,7 @@ export default function InsuranceBanner() {
       </div>
       <div className=" py-[6.25rem]  bg-[#EAE9E5] 2xl:w-1/2 ">
         <div className="  md:px-32 px-10 flex-col justify-center items-start gap-[0.625rem] ">
-          <h1 className="text-[3.125rem] uppercase leading-normal mb-[1.875rem]">
+          <h1 className="text-[3.125rem]  leading-normal mb-[1.875rem] font-trajan">
             <p>
               Accepted
               <br />

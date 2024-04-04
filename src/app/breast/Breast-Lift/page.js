@@ -3,43 +3,15 @@ import React from 'react';
 import BreastSample from '../../../../public/detailpage/breast/BreastAugmentationImg.png';
 
 import CommonTopBanner from '@/components/common/banner/CommonTopBanner';
-import CardContainer from '@/components/detail/body/CardContainer';
 import BeforeAfter from '@/components/detail/common/BeforeAfter';
-import CenterSection from '@/components/detail/common/CenterSection';
+import CardContainer from '@/components/detail/common/CardContainer';
 import Section1 from '@/components/detail/common/Section1';
-import WhyChoose from '@/components/detail/WhyChoose';
-const images_data = [
-  {
-    id: 1,
-    image: '/B&A/example.jpg',
-  },
-  {
-    id: 2,
-    image: '/B&A/example.jpg',
-  },
-  {
-    id: 3,
-    image: '/B&A/example.jpg',
-  },
-  {
-    id: 4,
-    image: '/B&A/example.jpg',
-  },
-  {
-    id: 5,
-    image: '/B&A/example.jpg',
-  },
-  {
-    id: 6,
-    image: '/B&A/example.jpg',
-  },
-  {
-    id: 7,
-    image: '/B&A/example.jpg',
-  },
-];
+import WhoNeeds from '@/components/detail/common/WhoNeeds';
+import WhyChoose from '@/components/detail/common/WhyChoose';
 
-const card_data = [
+const images_data = ['/B&A/example.jpg', '/B&A/example.jpg', '/B&A/example.jpg', '/B&A/example.jpg'];
+
+const benefits = [
   {
     title: 'Youthful Contours',
     desc: 'Achieve a rejuvenated and more youthful breast contour by lifting and reshaping sagging breasts.',
@@ -78,8 +50,8 @@ export default function Page() {
         contents="The Breast Lift page at Cara Plastic Surgery& Laser Center Las Vegas offers a specialized approach to rejuvenating and enhancing the natural beauty of your breasts through the transformative procedure known as mastopexy."
       />
       <Section1 desc={whatIs} title={'What is Breast Lift?'} img={'/detailpage/liposuction/liposuction_what_is.png'} />
-      <CenterSection title={'Who Needs Breast Lift?'} desc={whoNeeds} />
-      <CardContainer title={'Benefits of Breast Lift'} cardData={card_data} />
+      <WhoNeeds title={'Who Needs Breast Lift?'} desc={whoNeeds} />
+      <CardContainer title={'Benefits of Breast Lift'} benefits={benefits} />
       <BeforeAfter images_data={images_data} />
       <WhyChoose desc={whyChoose_desc} />
     </div>

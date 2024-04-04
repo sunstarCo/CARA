@@ -1,11 +1,14 @@
+'use client';
 import React from 'react';
 
 import Image from 'next/image';
 import Link from 'next/link';
 
+import {useObserver} from '@/hooks/useObserver';
+
 const sections = {
   Breast: {
-    title: 'BREAST',
+    title: 'Breast',
     sub_title: 'Refine Your Silhouette',
     image: '/banner/main/Breastmain.png',
     desc: 'Crafting the Perfect Contour Under the skilled hands of Dr. Kahng, our breast procedures are meticulously executed, employing state-of-the-art surgical techniques in breast augmentation, lifts, and a comprehensive array of surgeries aimed at enhancing body balance and harmony, which extends to specialized procedures like breast reconstruction.',
@@ -18,7 +21,7 @@ const sections = {
     ],
   },
   'Face&Nose': {
-    title: 'FACE & NOSE',
+    title: 'Face & Nose',
     sub_title: 'Harmonize Your Facial Features',
     image: '/banner/main/Breastmain.png',
     desc: "When facial imperfections affect your self-esteem, we're here to assist you in realizing your cosmetic aspirations through our comprehensive range of facial surgery procedures, crafting a sophisticated elegance, seamless harmony, and enduring beauty.Employing cutting-edge surgical techniques, we enhance your innate features, infusing more allure, balance, and rejuvenation into your appearance through the latest innovations in cosmetic surgery and technology.",
@@ -30,7 +33,7 @@ const sections = {
     ],
   },
   Body: {
-    title: 'BODY',
+    title: 'Body',
     sub_title: 'Refine Your Figure',
     image: '/banner/main/Breastmain.png',
     desc: 'Patients entrust us to reshape, rejuvenate, and elevate body contours using cutting-edge techniques and technologies, encompassing a prominent array of Asian plastic surgery procedures for our Las Vegas clientele. If you seek complete satisfaction with your body, Dr. Kahng is the expert you should reach out to.',
@@ -45,8 +48,14 @@ const sections = {
 
 export default function ProcedureSection({section, reverse = false}) {
   const {title, sub_title, desc, links, image} = sections[section];
+  const animate = reverse ? 'animate-show_move_left' : 'animate-show_move_right';
+  const {domRef, isVisible} = useObserver();
   return (
-    <div className="flex flex-col w-full relative pt-[8.75rem] px-[2rem] 2xl:px-[11.375rem] pb-[6.875rem]">
+    <div
+      ref={domRef}
+      className={`flex flex-col items-center justify-center relative pt-[8.75rem] pb-[6.875rem] opacity-0 transition-all ${
+        isVisible && animate
+      }`}>
       <Image
         src={'/logo/BG_logo.svg'}
         alt=""
@@ -55,21 +64,25 @@ export default function ProcedureSection({section, reverse = false}) {
         sizes="100"
         className="w-fit absolute bottom-0 right-0 -z-10"
       />
-      <div className="flex flex-col md:flex-row gap-10 lg:gap-[6.25rem]">
-        {!reverse && (
-          <Image src={image} alt="" width={0} height={0} sizes="100" className="w-full md:w-1/2 object-cover" />
-        )}
-        <div className="w-full md:w-1/2">
-          <p className="leading-normal text-[3rem] md:text-[4rem] uppercase font-trajan">{title}</p>
+      <div
+        className={`flex flex-col ${
+          reverse ? 'md:flex-row-reverse' : 'md:flex-row'
+        } gap-10 lg:gap-[6.25rem] items-center justify-center w-full`}>
+        <Image
+          src={image}
+          alt=""
+          width={760}
+          height={720}
+          sizes="100"
+          className="w-full md:w-1/2 max-w-[760px] object-cover"
+        />
+        <div className="max-w-[680px] w-full">
+          <p className="leading-normal text-[3rem] md:text-54px font-trajan">{title}</p>
           <div className="w-[100px] h-2 bg-[#D9D5CC] mt-10" />
-          <p className="text-[1.75rem] leading-loose mt-12 uppercase font-trajan">{sub_title}</p>
-          <p className="text-2xl leading-loose mt-[0.625rem]">{desc}</p>
+          <p className="text-2xl leading-loose mt-12 font-trajan">{sub_title}</p>
+          <p className="text-xl leading-loose mt-[0.625rem] font-light tracking-[0.5px]">{desc}</p>
         </div>
-        {reverse && (
-          <Image src={image} alt="" width={0} height={0} sizes="100" className="w-full md:w-1/2 object-cover" />
-        )}
       </div>
-
       <div className="flex flex-col mt-[6.875rem] items-center gap-6 text-center font-trajan">
         {section === 'Breast' ? (
           <>

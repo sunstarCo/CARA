@@ -8,11 +8,17 @@ export default function CommonTopBanner({url, title, subtitle, contents, img}) {
   return (
     <div className="flex flex-col w-full 2xl:flex-row">
       <div className="relative py-[11.1875rem]  2xl:w-1/2 ">
-        <Image src={AboutCommonBannerBGDeco} alt="backgroundDecoration" fill sizes="100" className="object-cover" />
-        <div className="md:px-32 px-10 flex-col justify-center items-start gap-[0.625rem] ">
+        <Image
+          src={AboutCommonBannerBGDeco}
+          alt="backgroundDecoration"
+          fill
+          sizes="100"
+          className="object-cover -z-10"
+        />
+        <div className="md:px-32 px-10 flex-col justify-center items-start gap-[0.625rem] max-w-[1100px] ml-auto ">
           <div className="flex flex-col gap-[0.625rem] mb-10">
-            <p className=" text-[#716B63] uppercase text-xl">HOME ·{url}</p>
-            <h1 className="text-[3.125rem] uppercase leading-normal ">
+            <p className=" text-[#716B63] text-xl font-trajan">Home · {url}</p>
+            <h1 className="text-[3.125rem] font-trajan leading-normal">
               {title.split('/').map(word => {
                 return <p key={word}>{word}</p>;
               })}

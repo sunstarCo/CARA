@@ -3,6 +3,8 @@ import React, {useState} from 'react';
 
 import Image from 'next/image';
 
+import {useObserver} from '@/hooks/useObserver';
+
 const doctorData = [
   {
     title: 'Overview',
@@ -20,6 +22,7 @@ const doctorData = [
 
 function Doctor() {
   const [active, setActive] = useState('Overview');
+  const {isVisible, domRef} = useObserver();
   return (
     <div className="relative w-full overflow-hidden py-20 md:py-40">
       <Image
@@ -30,18 +33,17 @@ function Doctor() {
         className="object-cover object-left-top -z-10"
       />
       <div className={`flex justify-end md:px-16`}>
-        <div className="flex flex-col px-8 2xl:w-1/2 text-white">
-          <div className="flex uppercase z-20">
+        <div className="flex flex-col text-white max-w-[766px] px-8">
+          <div className="flex">
             {doctorData.map((data, index) => (
               <div key={index}>
-                <div
-                  className={`text-lg sm:text-3xl flex text-center items-center leading-normal font-normal -tracking-tight `}>
+                <div className={`text-xl sm:text-3xl flex text-center items-center leading-normal font-normal`}>
                   <button
-                    className={`${active !== data.title && 'opacity-40'} px-2 font-trajan`}
+                    className={`${active !== data.title && 'opacity-40'} font-trajan`}
                     onClick={() => {
                       setActive(data.title);
                     }}>
-                    {data.title.toUpperCase()}
+                    {data.title}
                   </button>
                   {index !== doctorData.length - 1 && (
                     <div className="mx-2 min-[400px]:mx-4 md:mx-14 w-[1px] h-6 bg-[#BDB5AA]" />
@@ -50,11 +52,16 @@ function Doctor() {
               </div>
             ))}
           </div>
-          <p className="mt-6 min-[400px]:mt-[4rem] 2xl:mt-[8.75rem] text-[3rem] sm:text-[4rem] leading-normal font-trajan">
-            DAVID KAHNG, MD
+          <p
+            ref={domRef}
+            className="mt-6 min-[400px]:mt-[4rem] 2xl:mt-[8.75rem] text-[3rem] sm:text-[4rem] leading-normal font-trajan">
+            David Kahng, MD
           </p>
           <div className="w-[6.25rem] h-2 bg-[#D9D5CC] mt-4 min-[400px]:mt-10" />
-          <p className="text-[1.4rem] leading-loose mt-4 min-[400px]:mt-12 lg:w-full 2xl:w-[85%]">
+          <p
+            className={`opacity-0 text-[1.4rem] leading-loose mt-4 min-[400px]:mt-12 w-full ${
+              isVisible && 'animate-show_move_top'
+            } transition-opacity`}>
             {doctorData.find(data => data.title === active).desc}
           </p>
         </div>

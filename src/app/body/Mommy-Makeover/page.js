@@ -2,44 +2,15 @@ import React from 'react';
 
 import AboutSecondBanner from '@/components/about/AboutSecondBanner';
 import CommonTopBanner from '@/components/common/banner/CommonTopBanner';
-import CardContainer from '@/components/detail/body/CardContainer';
 import BeforeAfter from '@/components/detail/common/BeforeAfter';
-import CenterSection from '@/components/detail/common/CenterSection';
+import CardContainer from '@/components/detail/common/CardContainer';
 import Section1 from '@/components/detail/common/Section1';
-import WhyChoose from '@/components/detail/WhyChoose';
+import WhoNeeds from '@/components/detail/common/WhoNeeds';
+import WhyChoose from '@/components/detail/common/WhyChoose';
 
-const images_data = [
-  {
-    id: 1,
-    image: '/B&A/example.jpg',
-  },
-  {
-    id: 2,
-    image: '/B&A/example.jpg',
-  },
-  {
-    id: 3,
-    image: '/B&A/example.jpg',
-  },
-  {
-    id: 4,
-    image: '/B&A/example.jpg',
-  },
-  {
-    id: 5,
-    image: '/B&A/example.jpg',
-  },
-  {
-    id: 6,
-    image: '/B&A/example.jpg',
-  },
-  {
-    id: 7,
-    image: '/B&A/example.jpg',
-  },
-];
+const images_data = ['/B&A/example.jpg', '/B&A/example.jpg', '/B&A/example.jpg', '/B&A/example.jpg'];
 
-const card_data = [
+const benefits = [
   {
     title: 'Holistic Restoration',
     desc: 'Mommy Makeover soffer a customized and holistic approach to address various concerns in onesurgery, saving time and minimizing downtime.',
@@ -78,7 +49,7 @@ export default function Page() {
         title={'What is Mommy Makeover?'}
         img={'/detailpage/liposuction/liposuction_what_is.png'}
       />
-      <CenterSection title={'who needs Mommy Makeover?'}>
+      <WhoNeeds title={'who needs Mommy Makeover?'}>
         <ul className="flex flex-col lg:flex-row gap-16 mt-16">
           <li className="flex flex-col items-center gap-4 w-[90%] lg:w-[30%] mx-auto">
             <h4 className="text-[1.75rem] leading-normal font-trajan">Mothers Seeking Restoration</h4>
@@ -103,8 +74,8 @@ export default function Page() {
             </p>
           </li>
         </ul>
-      </CenterSection>
-      <CardContainer title={'Key Benefits of a Mommy Makeover'} cardData={card_data} />
+      </WhoNeeds>
+      <CardContainer title={'Key Benefits of a Mommy Makeover'} benefits={benefits} />
       <BeforeAfter images_data={images_data} />
       <WhyChoose desc={whyChoose_desc} />
     </div>

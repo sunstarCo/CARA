@@ -233,10 +233,16 @@ function MainHeader() {
                   </Link>
                   <ul className="depth_2">
                     {menu.sub_menu?.map((sub, i) => (
-                      <li key={i}>
+                      <li
+                        key={i}
+                        className={`border-b-[2px] ${
+                          sub.path === curPath ? ' border-[#BCB5AB] bg-[#f4f3ef]' : 'border-white'
+                        }`}>
                         <Link
                           href={sub.path}
-                          className={`font-trajan font-bold text-sm ${sub.path === curPath && 'text-[#e2c085]'}`}>
+                          className={`font-trajan font-bold text-base ${
+                            sub.path === curPath ? 'text-[#302C29]' : 'text-[#585451]'
+                          }`}>
                           {sub.menu}
                         </Link>
                       </li>

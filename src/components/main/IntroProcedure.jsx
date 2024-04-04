@@ -37,22 +37,21 @@ function IntroProcedure() {
         sizes="100"
         className="object-cover object-top -z-10"
       />
-      <div className="flex h-full px-4 md:px-16 items-center">
-        <p className=" w-1/2 text-white justify-center flex items-center text-[5rem] leading-normal h-full max-2xl:hidden font-trajan">
-          {active.toUpperCase()}
+      <div className="flex h-full px-4 md:px-16 max-w-[2100px] mx-auto">
+        <p className="w-1/2 text-white flex justify-start px-12 text-54px leading-normal -translate-y-1/3 h-full max-2xl:hidden font-trajan">
+          {active}
         </p>
-        <div className="flex flex-col w-full 2xl:w-1/2 text-white">
-          <div className="flex uppercase z-20 mb-[4rem] sm:mb-[6.25rem]">
+        <div className="flex flex-col max-w-[766px] text-white">
+          <div className="flex  z-20 mb-[4rem] sm:mb-[6.25rem]">
             {procedureData.map((data, index) => (
               <div key={index}>
-                <div
-                  className={`text-lg sm:text-3xl flex text-center items-center leading-normal font-normal -tracking-tight `}>
+                <div className={`text-lg sm:text-3xl flex text-center items-center leading-normal font-normal`}>
                   <button
-                    className={`${active !== data.title && 'opacity-40'} px-2 font-trajan`}
+                    className={`${active !== data.title && 'opacity-40'} font-trajan`}
                     onClick={() => {
                       setActive(data.title);
                     }}>
-                    {data.title.toUpperCase()}
+                    {data.title}
                   </button>
                   {index !== procedureData.length - 1 && (
                     <div className="mx-2 min-[400px]:mx-4 md:mx-14 w-[1px] h-6 bg-[#BDB5AA]" />
@@ -61,12 +60,12 @@ function IntroProcedure() {
               </div>
             ))}
           </div>
-          <p className="text-[2.5rem] sm:text-[4rem] leading-normal uppercase font-trajan">{currentData.sub_title}</p>
+          <p className="text-[2.5rem] sm:text-54px leading-normal font-trajan">{currentData.sub_title}</p>
           <div className="w-[6.25rem] h-2 bg-[#D9D5CC] my-4 sm:mt-10" />
-          <p className="text-[1.375rem] leading-loose sm:mt-[3.125rem] w-full">{currentData.desc}</p>
+          <p className="text-xl leading-loose sm:mt-[3.125rem] w-full tracking-[0.5px]">{currentData.desc}</p>
           <Link
             href={currentData.path}
-            className="px-10 py-4 bg-[#BDB5AA] w-fit text-black text-xl leading-normal uppercase font-medium mt-8 sm:mt-[3.75rem] ">
+            className="px-10 py-4 bg-[#BDB5AA] w-fit text-black text-xl leading-normal  font-medium mt-8 sm:mt-[3.75rem] ">
             Learn More
           </Link>
         </div>

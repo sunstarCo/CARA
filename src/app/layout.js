@@ -1,19 +1,11 @@
-import {DM_Serif_Display, Playfair_Display} from 'next/font/google';
+import {Outfit} from 'next/font/google';
 
 import './globals.css';
 import ContactBanner from '@/components/contact/ContactBanner';
 import Footer from '@/components/footer/Footer';
 import Header from '@/components/header/Header';
 
-// const inter = Inter({subsets: ['latin']});
-
-const dm_serif_display = DM_Serif_Display({
-  subsets: ['latin'],
-  display: 'swap',
-  variable: '--font-dm_serif_display',
-  weight: '400',
-});
-const playfair_display = Playfair_Display({subsets: ['latin'], display: 'swap', variable: '--font-playfair_display'});
+const outpit = Outfit({subsets: ['latin'], display: 'swap'});
 
 export const metadata = {
   title: 'CARA',
@@ -24,9 +16,15 @@ export default function RootLayout({children}) {
   return (
     <html lang="en">
       <head>
+        <script
+          defer
+          src="https://connect.podium.com/widget.js#ORG_TOKEN=24659e29-032e-42bd-9ade-29bf1f4c99df"
+          id="podium-widget"
+          data-organization-api-token="24659e29-032e-42bd-9ade-29bf1f4c99df"
+        />
         <link href="https://fonts.cdnfonts.com/css/trajan-pro?styles=17675,17676" rel="stylesheet" />
       </head>
-      <body className={` ${dm_serif_display.variable} ${playfair_display.variable} min-h-screen`}>
+      <body className={`${outpit.className} min-h-screen`}>
         <Header />
         {/* <div className="pt-[192px]">
         </div> */}

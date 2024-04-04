@@ -2,44 +2,15 @@ import React from 'react';
 
 import AboutSecondBanner from '@/components/about/AboutSecondBanner';
 import CommonTopBanner from '@/components/common/banner/CommonTopBanner';
-import CardContainer from '@/components/detail/body/CardContainer';
 import BeforeAfter from '@/components/detail/common/BeforeAfter';
-import CenterSection from '@/components/detail/common/CenterSection';
+import CardContainer from '@/components/detail/common/CardContainer';
 import Section1 from '@/components/detail/common/Section1';
-import WhyChoose from '@/components/detail/WhyChoose';
+import WhoNeeds from '@/components/detail/common/WhoNeeds';
+import WhyChoose from '@/components/detail/common/WhyChoose';
 
-const images_data = [
-  {
-    id: 1,
-    image: '/B&A/example.jpg',
-  },
-  {
-    id: 2,
-    image: '/B&A/example.jpg',
-  },
-  {
-    id: 3,
-    image: '/B&A/example.jpg',
-  },
-  {
-    id: 4,
-    image: '/B&A/example.jpg',
-  },
-  {
-    id: 5,
-    image: '/B&A/example.jpg',
-  },
-  {
-    id: 6,
-    image: '/B&A/example.jpg',
-  },
-  {
-    id: 7,
-    image: '/B&A/example.jpg',
-  },
-];
+const images_data = ['/B&A/example.jpg', '/B&A/example.jpg', '/B&A/example.jpg', '/B&A/example.jpg'];
 
-const card_data = [
+const benefits = [
   {
     title: 'Natural-Looking Results',
     desc: "Using your body'sown fat ensures a more natural and harmonious enhancement, avoiding the use ofimplants.",
@@ -82,7 +53,7 @@ export default function Page() {
         title={'What is Brazilian Butt Lift?'}
         img={'/detailpage/liposuction/liposuction_what_is.png'}
       />
-      <CenterSection title={'Who Can Benefit from a Brazilian ButtLift?'} desc={whoNeeds}>
+      <WhoNeeds title={'Who Can Benefit from a Brazilian ButtLift?'} desc={whoNeeds}>
         <div className="flex flex-col mt-12 text-start text-[#808683]">
           <ul className="flex flex-col gap-8">
             <li className="flex items-center gap-4">
@@ -103,12 +74,12 @@ export default function Page() {
             </li>
           </ul>
         </div>
-      </CenterSection>
+      </WhoNeeds>
       <CardContainer
         title={
           "Whether you're looking to enhance your curves, achieve amore youthful appearance, or address asymmetry, the Brazilian Butt Lift can betailored to meet your unique aesthetic goals."
         }
-        cardData={card_data}
+        benefits={benefits}
       />
       <BeforeAfter images_data={images_data} />
       <WhyChoose desc={whyChoose_desc} />
