@@ -65,7 +65,7 @@ function PatientReview() {
 
   return (
     <div className="pt-40 pb-[12.5rem] flex flex-col items-center px-6">
-      <div className="uppercase text-[3.125rem] leading-normal font-trajan">Real Patient Review</div>
+      <div className=" text-[3.125rem] leading-normal font-trajan">Real Patient Review</div>
       <div className="flex flex-col sm:flex-row justify-center w-full items-center gap-16 mt-[6.25rem] px-4">
         <button
           onClick={clickPrevSlide}

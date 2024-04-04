@@ -4,7 +4,7 @@ export default function DivideBoxCard({info}) {
   const {title, desc} = info;
   return (
     <div className="max-w-[47.375rem] bg-white  flex gap-10 flex-col mx-auto px-8 lg:px-20 py-[6.25rem]">
-      <div className="text-4xl  text-[#1C1815] leading-normal text-center uppercase">
+      <div className="text-4xl text-[#1C1815] leading-normal text-center font-trajan">
         {title.split('/').map(word => {
           return <p key={word}>{word}</p>;
         })}

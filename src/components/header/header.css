@@ -46,6 +46,8 @@ header nav ul.depth_2 li a {
 header nav ul li:hover > .depth_2 {
   height: fit-content;
 }
-header nav ul.depth_2 li:hover > a {
-  color: #e2c085;
+header nav ul.depth_2 li:hover {
+  color: #302c29;
+  background-color: #f4f3ef;
+  border-bottom: 2px solid #bdb5a8;
 }

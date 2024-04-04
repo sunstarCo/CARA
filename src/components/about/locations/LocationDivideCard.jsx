@@ -5,9 +5,9 @@ export default function LocationDivideCard({info, i}) {
   return (
     <div className="max-w-[47.375rem] bg-white text-white bg-opacity-20  flex gap-10 flex-col mx-auto px-8 lg:px-20 py-[6.25rem]">
       <div className="text-3xl text-white bg-[rgb(48,44,41)] leading-normal w-[3.125rem] mx-auto h-[3.125rem] text-center">
-        <p>{i}</p>
+        <p>{i + 1}</p>
       </div>
-      <div className="text-4xl leading-normal text-center uppercase">
+      <div className="text-3xl leading-normal text-center font-trajan">
         {title.split('/').map(word => {
           return <p key={word}>{word}</p>;
         })}

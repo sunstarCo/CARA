@@ -14,7 +14,7 @@ function WhoNeedNose({title, subtitle, desc}) {
       />
       <div className={`flex justify-end `}>
         <div className="flex flex-col w-full lg:w-4/6 2xl:w-1/2 px-8 sm:px-16">
-          <p className="text-[2.5rem] sm:text-[3.125rem] leading-normal font-trajan uppercase">{title}</p>
+          <p className="text-[2.5rem] sm:text-[3.125rem] leading-normal font-trajan ">{title}</p>
           <p
             className={`text-xl sm:text-2xl text-center mt-[0.625rem] text-[#808683] flex items-center leading-normal -tracking-tight font-trajan`}>
             {subtitle}

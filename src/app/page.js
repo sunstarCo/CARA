@@ -17,9 +17,9 @@ export default function Home() {
       <ProcedureSection section="Breast" />
       <SingleReview number={0} />
       <IntroProcedure />
-      <ProcedureSection section="Face&Nose" reverse />
+      <ProcedureSection section="Face&Nose" />
       <SingleReview number={1} />
-      <ProcedureSection section="Body" />
+      <ProcedureSection section="Body" reverse />
       <Spot />
       <PatientReview />
       <Gallery />

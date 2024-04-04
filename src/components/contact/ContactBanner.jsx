@@ -16,9 +16,9 @@ function ContactBanner() {
         sizes="100"
         className="object-cover object-top -z-10"
       />
-      <div className={`flex items-center text-white`}>
+      <div className={`flex items-center text-white max-w-[2100px] mx-auto `}>
         <div className="max-w-[80rem] w-full px-8 2xl:px-64 flex justify-start ite flex-col">
-          <h3 className="uppercase text-4xl sm:text-[4rem] leading-normal font-trajan">
+          <h3 className=" text-4xl sm:text-[4rem] leading-normal font-trajan">
             Schedule a <br />
             Consultation
           </h3>
@@ -30,7 +30,7 @@ function ContactBanner() {
           </p>
           <Link
             href={'/contact'}
-            className="uppercase mt-[3.125rem] text-[#302c29] text-lg sm:text-xl sm:leading-loose font-medium bg-[#EAE9E5] px-10 py-4 w-fit">
+            className=" mt-[3.125rem] text-[#302c29] text-lg sm:text-xl sm:leading-loose font-medium bg-[#EAE9E5] px-10 py-4 w-fit uppercase">
             Schedule a Free Consultation
           </Link>
         </div>

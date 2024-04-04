@@ -8,8 +8,8 @@ export default function Page() {
   return (
     <div>
       <CommonTopBanner
-        url="about"
-        title="why choose cara"
+        url="About"
+        title="Why Choose Cara"
         contents="Dr. David Kahng stands as a plastic surgeon with a global perspective.Having traversed the world, he has garnered professional insights into thelatest advancements in modern plastic surgery techniques in both the USA andSouth Korea. His wealth of experience and expertise in executingcosmetic and reconstructive surgeries has positioned him as one of the mosthighly sought-after professionals in his field."
       />
       <AboutSecondBanner

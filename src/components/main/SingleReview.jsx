@@ -20,9 +20,9 @@ function SingleReview({number = 0}) {
   return (
     <div className="bg-[#EAE9E5] flex flex-col items-center py-24 text-2xl ">
       <Image src={'/logo/quote.svg'} alt="quote icon" width={0} height={0} sizes="100" className="w-fit" />
-      <p className="w-[90%] sm:w-[70%] my-5 leading-loose tracking-[1px] text-center">{comment}</p>
+      <p className="max-w-[1244px] my-5 leading-loose tracking-[0.5px] text-center text-22px font-light">{comment}</p>
       <div className="flex gap-2">
-        <p className="font-bold leading-loose tracking-wide">{name}</p>
+        <p className="font-bold leading-loose tracking-[0.5px]">{name}</p>
         <div className="flex">
           {[...Array(5)].map((_, index) => (
             <Image

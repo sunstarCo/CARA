@@ -89,7 +89,7 @@ function Reviews() {
             setReviews(review_data.slice((curPage - 2) * pageSize, (curPage - 1) * pageSize));
             setCurPage(curPage - 1);
           }}
-          className="text-[1.25rem] font-medium flex items-center gap-5 uppercase">
+          className="text-[1.25rem] font-medium flex items-center gap-5 ">
           <Image src="/icons/prev.svg" width={32} height={32} alt="arrow left" />
           previous
         </button>
@@ -102,7 +102,7 @@ function Reviews() {
             setReviews(review_data.slice(curPage * pageSize, (curPage + 1) * pageSize));
             setCurPage(curPage + 1);
           }}
-          className="text-[1.25rem] font-medium flex items-center gap-5 uppercase">
+          className="text-[1.25rem] font-medium flex items-center gap-5 ">
           next
           <Image src="/icons/next.svg" width={32} height={32} alt="arrow right" />
         </button>

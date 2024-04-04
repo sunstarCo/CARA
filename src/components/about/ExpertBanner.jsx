@@ -1,21 +1,29 @@
+'use client';
 import React from 'react';
 
 import Image from 'next/image';
 
 import DoctorImg from '../../../public/banner/about/AboutMeetTheDoctorImg.png';
+
+import {useObserver} from '@/hooks/useObserver';
+
 export default function ExpertBanner() {
+  const {isVisible, domRef} = useObserver();
   return (
-    <div className="flex flex-col w-full 2xl:flex-row">
-      <div className="relative min-h-[63.6875rem] 2xl:w-1/2">
-        <Image src={DoctorImg} alt="doctorImage" fill className="object-cover" />
+    <div className="flex flex-col w-full 2xl:flex-row overflow-hidden">
+      <div className="relative 2xl:w-1/2">
+        <Image src={DoctorImg} alt="doctorImage" fill className="object-cover object-top" />
       </div>
-      <div className=" py-[6.25rem]  bg-[#EAE9E5] 2xl:w-1/2 ">
-        <div className="  md:px-32 px-10 flex-col justify-center items-start gap-[0.625rem] ">
-          <h1 className="text-[3.125rem] uppercase leading-normal mb-[1.875rem]">
-            <p>EXPERTISE</p>
+      <div ref={domRef} className={`py-[6.25rem]  bg-[#EAE9E5] 2xl:w-1/2 `}>
+        <div
+          className={`md:px-32 px-10 flex-col justify-center items-start gap-[0.625rem] ${
+            isVisible && 'animate-show_move_left'
+          }`}>
+          <h1 className="text-[3.125rem]  leading-normal mb-[1.875rem] font-trajan">
+            <p>Expertise</p>
           </h1>
           <div className="w-[6.25rem] h-2 mb-10 bg-[#9D9892]"></div>
-          <p className="text-xl leading-[2.375rem] ">
+          <p className="text-xl leading-[2.375rem] max-w-[800px]">
             Dr. Kahng has devotedhis life to the intricate art of Plastic & Reconstructive Surgery,specializing in both
             cosmetic and reconstructive procedures. His practice spansthe entire spectrum of aesthetic surgeries for the
             face and body, encompassingreconstructive treatments such as breast cancer reconstruction,

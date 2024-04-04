@@ -49,7 +49,7 @@ function BeforeAfter({images_data}) {
 
   return (
     <div className="flex flex-col justify-center items-center px-8 py-20 sm:py-[8.75rem]">
-      <h3 className="uppercase text-[2.5rem] leading-normal font-trajan">Before & After</h3>
+      <h3 className=" text-[2.5rem] leading-normal font-trajan">Before & After</h3>
       <div className="w-[6.25rem] h-2 bg-[#BDB5AA] my-[3.125rem]" />
       <div className="flex flex-col sm:flex-row justify-center w-full items-center gap-10 mt-10 sm:mt-[6.25rem] px-4 ">
         <button
@@ -90,9 +90,7 @@ function BeforeAfter({images_data}) {
           </button>
         </div>
       </div>
-      <Link
-        href={'/before&after'}
-        className="px-10 py-4 bg-[#d9d5cc] uppercase leading-loose font-medium text-xl mt-20">
+      <Link href={'/before&after'} className="px-10 py-4 bg-[#d9d5cc]  leading-loose font-medium text-xl mt-20">
         view gallery
       </Link>
     </div>
