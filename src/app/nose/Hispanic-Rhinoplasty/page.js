@@ -1,5 +1,58 @@
 import React from 'react';
 
+import CommonTopBanner from '@/components/common/banner/CommonTopBanner';
+import CardContainer from '@/components/detail/common/CardContainer';
+import WhyChoose from '@/components/detail/common/WhyChoose';
+import NoseBeforeAfter from '@/components/detail/nose/NoseBeforeAfter';
+import WhoNeedNose from '@/components/detail/nose/WhoNeedNose';
+
+const benefits = [
+  {
+    title: 'Preservation of Ethnic Identity',
+    desc: 'Hispanic rhinoplasty respects and celebrates the distinctive nasal characteristics of individuals of Hispanic descent, ensuring that ethnic features are preserved while enhancing overall facial aesthetics.',
+  },
+  {
+    title: 'Improved Facial Harmony',
+    desc: 'Our skilled surgeons specialize in creating noses that complement and enhance your facial features, achieving a balanced and harmonious appearance that maintains your cultural identity.',
+  },
+  {
+    title: 'Increased Confidence',
+    desc: 'By achieving your desired nasal contour, Hispanic rhinoplasty can boost your self-esteem and confidence, allowing you to feel more comfortable and proud of your appearance.',
+  },
+  {
+    title: 'Customized Results',
+    desc: 'Each Hispanic rhinoplasty procedure is tailored to meet your unique anatomical needs and aesthetic preferences, ensuring natural-looking and satisfying outcomes that align with your cultural heritage.',
+  },
+];
+
 export default function Page() {
-  return <div>Page</div>;
+  const whyChoose_desc =
+    'Las Vegas, our team of experienced surgeons is dedicated to providing personalized care and natural-looking results tailored to your unique needs. Contact us today to schedule a free consultation and discover how Hispanic rhinoplasty can help you achieve a nose that celebrates your cultural heritage and enhances your natural beauty.';
+  // const whatIs = `Rhinoplasty, commonly referred to as a "nose job," is a surgical procedure aimed at reshaping the nose to improve its appearance and function. Whether you're seeking to refine the size, shape, or symmetry of your nose, rhinoplasty offers a tailored solution to enhance your overall facial aesthetics. This procedure can address a variety of concerns, including a prominent nasal hump, wide nostrils, or a drooping nasal tip.`;
+  const whoNeeds = [
+    'Desire to refine the shape, size, or projection of their nose while celebrating their Hispanic heritage.',
+    'Seek to enhance facial balance and harmony by addressing nasal asymmetry or disproportion.',
+    'Experience functional issues such as nasal obstruction, breathing difficulties, or septal deviation.',
+    'Have undergone previous rhinoplasty surgery and require revision to address unsatisfactory results or complications.',
+  ];
+  return (
+    <div>
+      <CommonTopBanner
+        url="nose"
+        title="Hispanic Rhinoplasty"
+        subtitle="Celebrating Your Cultural Heritage"
+        contents="Las Vegas, we understand the importance of preserving your cultural heritage while enhancing your natural beauty. Our Hispanic rhinoplasty services are designed to meet the unique aesthetic goals and cultural preferences of individuals of Hispanic descent. Let us help you achieve a nose that celebrates your heritage while enhancing your overall facial harmony."
+      />
+      {/* <Intro  /> */}
+      {/* <Section1 desc={whatIs} title={'What is Rhinoplasty?'} img={'/detailpage/liposuction/liposuction_what_is.png'} /> */}
+      <CardContainer title={'Benefits of Hispanic Rhinoplasty'} benefits={benefits} />
+      <WhoNeedNose
+        title={'Who Needs Hispanic Rhinoplasty?'}
+        subtitle={'Hispanic Rhinoplasty may be suitable for individuals who'}
+        desc={whoNeeds}
+      />
+      <NoseBeforeAfter />
+      <WhyChoose desc={whyChoose_desc} />
+    </div>
+  );
 }
