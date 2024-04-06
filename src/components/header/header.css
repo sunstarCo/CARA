@@ -31,23 +31,24 @@ header nav ul.depth_2 {
   transition: all 0.5s ease;
   box-shadow: 0px 4px 30px 0px rgba(0, 0, 0, 0.1);
 }
-header nav ul.depth_2 li {
+header nav ul.depth_2 a {
   min-width: 200px;
   text-align: left;
   height: fit-content;
   padding: 14px 16px;
-}
-
-header nav ul.depth_2 li a {
   text-wrap: nowrap;
   line-height: 1.5;
+  border-bottom: 2px solid white;
 }
 
 header nav ul li:hover > .depth_2 {
   height: fit-content;
 }
-header nav ul.depth_2 li:hover {
+
+header nav ul.depth_2 a.on,
+header nav ul.depth_2 a:hover {
   color: #302c29;
   background-color: #f4f3ef;
+  transition: all 0.3s ease;
   border-bottom: 2px solid #bdb5a8;
 }
