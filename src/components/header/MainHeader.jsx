@@ -7,7 +7,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 import {usePathname} from 'next/navigation';
 
-const menus = [
+export const menus = [
   {
     menu: 'Home',
     default_path: '/',
@@ -208,44 +208,43 @@ const menus = [
   },
 ];
 
-function MainHeader() {
+function MainHeader({clickMenu, isOpen}) {
   const curPath = usePathname();
   return (
     <header
-      className={`fixed w-full border-b border-[#d1bfb7] px-4 md:px-14 max-xl:py-8 bg-white
+      className={`fixed w-full border-b border-[#d1bfb7] px-4 lg:px-8 bg-white
       }`}>
       <div className="max-w-[1600px] flex items-center justify-between mx-auto">
         <Link href={'/'} className="">
-          <Image src={`/logo/logo(black).svg`} alt="" width={0} height={0} sizes="100" className="min-w-40" />
+          <Image
+            src={`/logo/logo(black).svg`}
+            alt=""
+            width={0}
+            height={0}
+            sizes="100"
+            className="min-w-32 xl:min-w-40"
+          />
         </Link>
-        <nav className="h-[100px] max-xl:hidden">
-          <ul className="flex items-center h-full w-[65vw] max-w-[1150px] justify-between text-nowrap">
+        <nav className="h-[100px] max-lg:hidden">
+          <ul className="flex items-center h-full max-w-[1150px] gap-4 xl:gap-8 text-nowrap">
             {menus.map((menu, i) => {
               return (
-                <li key={i}>
-                  <Link
-                    href={menu.default_path}
-                    className={`font-trajan font-bold text-lg pb-2 ${
-                      curPath.includes(menu.menu.toLowerCase()) | (curPath === '/' && menu.menu === 'Home') &&
-                      'border-b-4 border-[#BDB5A8]'
-                    }`}>
+                <li
+                  key={i}
+                  className={`${
+                    curPath.includes(menu.menu.toLowerCase()) | (curPath === '/' && menu.menu === 'Home') && 'on'
+                  }`}>
+                  <Link href={menu.default_path} className={`font-trajan font-bold 2xl:text-lg pb-2 `}>
                     {menu.menu.toUpperCase()}
                   </Link>
-                  <ul className="depth_2">
+                  <ul className="depth_2 flex flex-col">
                     {menu.sub_menu?.map((sub, i) => (
-                      <li
+                      <Link
                         key={i}
-                        className={`border-b-[2px] ${
-                          sub.path === curPath ? ' border-[#BCB5AB] bg-[#f4f3ef]' : 'border-white'
-                        }`}>
-                        <Link
-                          href={sub.path}
-                          className={`font-trajan font-bold text-base ${
-                            sub.path === curPath ? 'text-[#302C29]' : 'text-[#585451]'
-                          }`}>
-                          {sub.menu}
-                        </Link>
-                      </li>
+                        href={sub.path}
+                        className={`font-trajan font-bold xl:text-lg border-b-2 ${sub.path === curPath && 'on'}`}>
+                        {sub.menu}
+                      </Link>
                     ))}
                   </ul>
                 </li>
@@ -253,12 +252,28 @@ function MainHeader() {
             })}
           </ul>
         </nav>
-        <div className="text-[#2b2928]">
+        <div className="text-[#2b2928] max-lg:hidden">
           <div className={`flex gap-2 text-black py-[17px] px-[19px] bg-[#EAE9E5] rounded-[30px]`}>
             <Image src={'/icons/call.svg'} alt="" sizes="100" width={0} height={0} className="w-4" />
             <p className="text-[16px] leading-4 font-medium text-nowrap">855-212-9901</p>
           </div>
         </div>
+        <button onClick={clickMenu} className="flex gap-4 text-center items-center py-10 font-trajan text-lg lg:hidden">
+          Menu
+          <div className="space-y-[5px] -translate-y-[10%]">
+            <div
+              className={`w-7 h-[2px] bg-black rounded-sm transition-all duration-300 ${
+                isOpen && 'rotate-45 origin-top-left'
+              }`}
+            />
+            <div className={`w-7 h-[2px] bg-black rounded-sm transition-color ${isOpen && 'opacity-0'}`} />
+            <div
+              className={`w-7 h-[2px] bg-black rounded-sm transition-all duration-300 ${
+                isOpen && '-rotate-45 origin-bottom-left'
+              }`}
+            />
+          </div>
+        </button>
       </div>
     </header>
   );

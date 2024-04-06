@@ -43,6 +43,6 @@ function CoreFooter() {
     </>
   );
 }
-const snsIcons = ['insta', 'facebook', 'youtube', 'yelp', 'kakao', 'wechat', 'tictoc'];
+export const snsIcons = ['insta', 'facebook', 'youtube', 'yelp', 'kakao', 'wechat', 'tictoc'];
 
 export default CoreFooter;

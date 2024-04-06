@@ -53,7 +53,7 @@ export default function ProcedureSection({section, reverse = false}) {
   return (
     <div
       ref={domRef}
-      className={`flex flex-col items-center justify-center relative pt-[8.75rem] pb-[6.875rem] opacity-0 transition-all ${
+      className={`flex flex-col items-center justify-center relative pt-[8.75rem] px-8 pb-[6.875rem] opacity-0 transition-all ${
         isVisible && animate
       }`}>
       <Image
