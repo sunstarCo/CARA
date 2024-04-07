@@ -235,7 +235,7 @@ function MainHeader({clickMenu, isOpen}) {
                     curPath.includes(menu.menu.toLowerCase()) | (curPath === '/' && menu.menu === 'Home') && 'on'
                   }`}>
                   <Link href={menu.default_path} className={`font-trajan font-bold 2xl:text-lg pb-2 `}>
-                    {menu.menu.toUpperCase()}
+                    {menu.menu}
                   </Link>
                   <ul className="depth_2 flex flex-col">
                     {menu.sub_menu?.map((sub, i) => (

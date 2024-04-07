@@ -32,7 +32,7 @@ function Doctor() {
         sizes="100"
         className="object-cover object-left-top -z-10"
       />
-      <div className={`flex justify-end md:px-16`}>
+      <div className={`flex justify-end md:px-16 max-w-[1700px] mx-auto`}>
         <div className="flex flex-col text-white max-w-[766px] px-8">
           <div className="flex">
             {doctorData.map((data, index) => (

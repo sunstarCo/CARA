@@ -1,18 +1,28 @@
 'use client';
 import React from 'react';
 
+import Image from 'next/image';
+
 import DivideBoxCard from './DivideBoxCard';
 
 import {useObserver} from '@/hooks/useObserver';
 export default function DivideBoxBanner() {
   const {isVisible, domRef} = useObserver();
   return (
-    <div className="bg-[url('/banner/about/AboutDivideBoxDeco.png')] bg-cover">
+    <div className="relative w-full overflow-hidden bg-[#EAE9E5]">
+      <Image
+        src={'/banner/about/AboutDivideBoxDeco.png'}
+        alt=""
+        fill
+        sizes="80"
+        priority
+        className="object-cover object-left-top"
+      />
       <div
         ref={domRef}
         className={`${
           isVisible && 'animate-show_move_top'
-        }  opacity-0 grid 2xl:grid-cols-2 px-8 md:px-[11.375rem] py-40 max-w-[2100px] mx-auto`}>
+        }  opacity-0 grid 2xl:grid-cols-2 px-8 md:px-[11.375rem] gap-12 py-40 max-w-[2100px] mx-auto`}>
         {info.map(item => (
           <DivideBoxCard key={item.title} info={item} />
         ))}

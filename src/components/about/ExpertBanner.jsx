@@ -14,16 +14,16 @@ export default function ExpertBanner() {
       <div className="relative 2xl:w-1/2">
         <Image src={DoctorImg} alt="doctorImage" fill className="object-cover object-top" />
       </div>
-      <div ref={domRef} className={`py-[6.25rem]  bg-[#EAE9E5] 2xl:w-1/2 `}>
+      <div ref={domRef} className={`py-[6.25rem]  bg-[#9D9892] 2xl:w-1/2 text-white`}>
         <div
           className={`md:px-32 px-10 flex-col justify-center items-start gap-[0.625rem] ${
             isVisible && 'animate-show_move_left'
           }`}>
-          <h1 className="text-[3.125rem]  leading-normal mb-[1.875rem] font-trajan">
+          <h1 className="text-48px leading-normal mb-[1.875rem] font-trajan">
             <p>Expertise</p>
           </h1>
-          <div className="w-[6.25rem] h-2 mb-10 bg-[#9D9892]"></div>
-          <p className="text-xl leading-[2.375rem] max-w-[800px]">
+          <div className="w-[6.25rem] h-2 mb-10 bg-[#EAE9E5]"></div>
+          <p className="text-lg font-light leading-[2.375rem] max-w-[800px]">
             Dr. Kahng has devotedhis life to the intricate art of Plastic & Reconstructive Surgery,specializing in both
             cosmetic and reconstructive procedures. His practice spansthe entire spectrum of aesthetic surgeries for the
             face and body, encompassingreconstructive treatments such as breast cancer reconstruction,
