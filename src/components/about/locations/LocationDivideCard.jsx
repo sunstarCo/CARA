@@ -12,7 +12,7 @@ export default function LocationDivideCard({info, i}) {
           return <p key={word}>{word}</p>;
         })}
       </div>
-      <p className="text-xl text-center  leading-[2.375rem]">{desc}</p>
+      <p className="text-xl text-center leading-[1.8]">{desc}</p>
     </div>
   );
 }

@@ -9,9 +9,9 @@ export default function InsuranceBanner() {
       <div className="relative min-h-[63.6875rem] 2xl:w-1/2">
         <Image src={InsuranceImage} alt="doctorImage" fill className="object-cover" />
       </div>
-      <div className=" py-[6.25rem]  bg-[#EAE9E5] 2xl:w-1/2 ">
-        <div className="  md:px-32 px-10 flex-col justify-center items-start gap-[0.625rem] ">
-          <h1 className="text-[3.125rem]  leading-normal mb-[1.875rem] font-trajan">
+      <div className="py-[6.25rem] bg-[#EAE9E5] 2xl:w-1/2 ">
+        <div className="md:px-32 px-10 flex-col justify-center items-start gap-[0.625rem] ">
+          <h1 className="text-48px leading-normal mb-[1.875rem] font-trajan">
             <p>
               Accepted
               <br />

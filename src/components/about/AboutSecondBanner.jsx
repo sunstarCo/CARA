@@ -15,7 +15,7 @@ export default function AboutSecondBanner({mainDesc, subDesc}) {
           <div className="text-center text-wrap font-trajan">
             {mainDesc.split('/').map(word => {
               return (
-                <p key={word} className="text-[2.5rem] sm:text-[2.5rem] mt-4">
+                <p key={word} className="text-[2.5rem] sm:text-4xl mt-4">
                   {word}
                 </p>
               );
@@ -23,7 +23,9 @@ export default function AboutSecondBanner({mainDesc, subDesc}) {
           </div>
         )}
         <div ref={domRef} className="w-[6.25rem] h-2 bg-[#BDB5AA] mt-10 mb-[3.125rem]" />
-        {subDesc && <sub className="text-2xl leading-[2.8125rem] text-center">{subDesc}</sub>}
+        {subDesc && (
+          <sub className="text-xl font-light leading-[2.8125rem] text-center max-w-[1400px] mx-auto">{subDesc}</sub>
+        )}
       </div>
     </div>
   );
