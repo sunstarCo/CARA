@@ -26,6 +26,7 @@ module.exports = {
         '54px': '3.375rem',
         base: '1.25rem', // 20px
         '22px': '1.4rem',
+        '32px': '2rem',
       },
       keyframes: {
         show: {

@@ -5,7 +5,7 @@ import ContactBanner from '@/components/contact/ContactBanner';
 import Footer from '@/components/footer/Footer';
 import Header from '@/components/header/Header';
 
-const outpit = Outfit({subsets: ['latin'], display: 'swap'});
+const outpit = Outfit({subsets: ['latin'], display: 'swap', weight: '300'});
 
 export const metadata = {
   title: 'CARA',
