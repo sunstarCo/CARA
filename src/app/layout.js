@@ -1,6 +1,7 @@
-import {Outfit} from 'next/font/google';
-
 import './globals.css';
+import {Outfit} from 'next/font/google';
+import Script from 'next/script';
+
 import ContactBanner from '@/components/contact/ContactBanner';
 import Footer from '@/components/footer/Footer';
 import Header from '@/components/header/Header';
@@ -17,19 +18,53 @@ export default function RootLayout({children}) {
   return (
     <html lang="en">
       <head>
-        <script
+        <Script
           defer
           src="https://connect.podium.com/widget.js#ORG_TOKEN=24659e29-032e-42bd-9ade-29bf1f4c99df"
           id="podium-widget"
           data-organization-api-token="24659e29-032e-42bd-9ade-29bf1f4c99df"
         />
+        {/* <Script
+          id="podium"
+          strategy="lazyOnload"
+          dangerouslySetInnerHTML={{
+            __html: `function insertJS() {
+            let body = window.parent.document.body;
+            let jsScriptNode = document.createElement('script');
+            jsScriptNode.setAttribute('type', 'text/javascript');
+            jsScriptNode.setAttribute(
+              'src',
+              'https://connect.podium.com/widget.js#ORG_TOKEN=24659e29-032e-42bd-9ade-29bf1f4c99df',
+            );
+            jsScriptNode.setAttribute('id', 'podium-widget');
+            jsScriptNode.setAttribute('data-organization-api-token', '24659e29-032e-42bd-9ade-29bf1f4c99df');
+            body.appendChild(jsScriptNode);
+          }
+
+          let start = Date.now();
+          let interval = 9;
+      
+          function main() {
+            var body = document.body;
+            if (body) {
+              insertJS();
+            } else if (Date.now() - start > 10000) {
+              return null;
+            } else {
+              setTimeout(function () {
+                main();
+              }, interval);
+              interval *= 2;
+            }
+          }
+          main();`,
+          }}
+        /> */}
         <link href="https://fonts.cdnfonts.com/css/trajan-pro?styles=17675,17676" rel="stylesheet" />
       </head>
       <body className={`${outpit.className} min-h-screen`}>
         <Header />
-        {/* <div className="pt-[192px]">
-        </div> */}
-        <div className="flex-1 w-full h-[cacl(100vh-8.875rem)] pt-[95px] lg:pt-[142px]">{children}</div>
+        <div className="flex-1 w-full h-[cacl(100vh-8.875rem)] pt-[81px] lg:pt-[142px]">{children}</div>
         <ContactBanner />
         <Footer />
       </body>

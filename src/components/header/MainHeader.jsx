@@ -262,13 +262,13 @@ function MainHeader({clickMenu, isOpen}) {
           Menu
           <div className="space-y-[5px] -translate-y-[10%]">
             <div
-              className={`w-7 h-[2px] bg-black rounded-sm transition-all duration-300 ${
+              className={`w-6 h-[2px] bg-black rounded-sm transition-all duration-300 ${
                 isOpen && 'rotate-45 origin-top-left'
               }`}
             />
-            <div className={`w-7 h-[2px] bg-black rounded-sm transition-color ${isOpen && 'opacity-0'}`} />
+            <div className={`w-6 h-[2px] bg-black rounded-sm transition-color ${isOpen && 'opacity-0'}`} />
             <div
-              className={`w-7 h-[2px] bg-black rounded-sm transition-all duration-300 ${
+              className={`w-6 h-[2px] bg-black rounded-sm transition-all duration-300 ${
                 isOpen && '-rotate-45 origin-bottom-left'
               }`}
             />
