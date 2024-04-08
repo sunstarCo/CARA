@@ -2,7 +2,7 @@ import React from 'react';
 
 import Image from 'next/image';
 
-function WhoNeedNose({title, subtitle, desc}) {
+function WhoNeedNose({title, subtitle, desc, sub_font = false}) {
   return (
     <div className="relative w-full overflow-hidden py-24 sm:py-[10rem] px-8">
       <Image
@@ -16,7 +16,9 @@ function WhoNeedNose({title, subtitle, desc}) {
         <div className="flex flex-col w-full max-w-[780px]">
           <p className="text-[2.5rem] sm:text-48px leading-normal font-trajan ">{title}</p>
           <p
-            className={`text-xl sm:text-2xl mt-[0.625rem] text-[#585451] flex items-center leading-normal -tracking-tight font-trajan`}>
+            className={`text-xl sm:text-2xl mt-[0.625rem] text-[#585451] flex items-center leading-normal -tracking-tight ${
+              !sub_font && 'font-trajan'
+            }`}>
             {subtitle}
           </p>
           <div className="w-[100px] h-2 bg-[#9D9892] mt-10" />
