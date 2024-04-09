@@ -66,11 +66,16 @@ function PatientReview() {
   return (
     <div className="pt-40 pb-[12.5rem] flex flex-col items-center px-6">
       <div className=" text-[3.125rem] leading-normal font-trajan">Real Patient Review</div>
-      <div className="flex flex-col sm:flex-row justify-center w-full items-center gap-16 mt-[6.25rem] px-4">
-        <button
-          onClick={clickPrevSlide}
-          className="w-10 h-10 bg-[#D9D5CC] flex items-center justify-center rounded-full max-sm:hidden">
-          <Image src={'/icons/prev.svg'} alt="arrow left" width={0} height={0} sizes="100" className="w-fit" />
+      <div className="flex flex-col sm:flex-row justify-center w-full items-center gap-12 mt-[6.25rem] px-4">
+        <button onClick={clickPrevSlide}>
+          <Image
+            src={'/icons/prev.svg'}
+            alt="arrow left"
+            width={0}
+            height={0}
+            sizes="100"
+            className="min-w-10 min-h-10 bg-[#D9D5CC] flex items-center justify-center max-sm:hidden"
+          />
         </button>
         <div className="flex">
           <div className={`card flex gap-[1.875rem] w-full xl:w-1/2`}>
@@ -150,15 +155,25 @@ function PatientReview() {
           </div>
         </div>
         <div className="flex gap-8">
-          <button
-            onClick={clickPrevSlide}
-            className="w-10 h-10 bg-[#D9D5CC] flex items-center justify-center rounded-full sm:hidden">
-            <Image src={'/icons/prev.svg'} alt="arrow left" width={0} height={0} sizes="100" className="w-fit" />
+          <button onClick={clickPrevSlide}>
+            <Image
+              src={'/icons/prev.svg'}
+              alt="arrow left"
+              width={0}
+              height={0}
+              sizes="100"
+              className="min-w-10 min-h-10 bg-[#D9D5CC] flex items-center justify-center sm:hidden"
+            />
           </button>
-          <button
-            onClick={clickNextSlide}
-            className="w-10 h-10 bg-[#D9D5CC] flex items-center justify-center rounded-full">
-            <Image src={'/icons/next.svg'} alt="arrow right" width={0} height={0} sizes="100" className="w-fit" />
+          <button onClick={clickNextSlide}>
+            <Image
+              src={'/icons/next.svg'}
+              alt="arrow right"
+              width={0}
+              height={0}
+              sizes="100"
+              className="min-w-10 min-h-10 bg-[#D9D5CC] flex items-center justify-center"
+            />
           </button>
         </div>
       </div>

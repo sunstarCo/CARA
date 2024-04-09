@@ -7,7 +7,7 @@ import AboutCommonImg from '../../../../public/banner/about/AboutCommonImg.png';
 export default function CommonTopBanner({url, title, subtitle, contents, img}) {
   return (
     <div className="flex flex-col w-full xl:flex-row">
-      <div className="relative py-[11.1875rem]  xl:w-1/2 ">
+      <div className="relative pt-[11.1875rem] pb-20 xl:w-1/2 min-h-[57rem]">
         <Image
           src={AboutCommonBannerBGDeco}
           alt="backgroundDecoration"
@@ -29,8 +29,8 @@ export default function CommonTopBanner({url, title, subtitle, contents, img}) {
           <p className="text-2xl leading-[2.6875rem] ">{contents}</p>
         </div>
       </div>
-      <div className="relative  min-h-[55rem] xl:w-1/2 hidden  xl:block">
-        <Image src={img || AboutCommonImg} alt="doctorImage" fill sizes="100" className="object-cover " />
+      <div className="relative min-h-[57rem] w-full xl:w-1/2">
+        <Image src={img || AboutCommonImg} alt="doctorImage" fill sizes="100" className="object-cover" />
       </div>
     </div>
   );

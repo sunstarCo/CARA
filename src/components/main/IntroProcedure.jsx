@@ -37,7 +37,7 @@ function IntroProcedure() {
         sizes="100"
         className="object-cover object-top -z-10"
       />
-      <div className="flex h-full px-4 md:px-16 max-w-[2100px] mx-auto">
+      <div className="flex h-full px-4 md:px-16 max-w-[1700px] mx-auto">
         <p className="w-1/2 text-white flex justify-start px-12 text-54px leading-normal -translate-y-1/3 h-full max-2xl:hidden font-trajan">
           {active}
         </p>
