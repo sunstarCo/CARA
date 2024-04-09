@@ -10,7 +10,7 @@ const sections = {
   Breast: {
     title: 'Breast',
     sub_title: 'Refine Your Silhouette',
-    image: '/banner/main/Breastmain.png',
+    image: '/banner/main/BreastMain.png',
     desc: 'Crafting the Perfect Contour Under the skilled hands of Dr. Kahng, our breast procedures are meticulously executed, employing state-of-the-art surgical techniques in breast augmentation, lifts, and a comprehensive array of surgeries aimed at enhancing body balance and harmony, which extends to specialized procedures like breast reconstruction.',
     links: [
       {title: 'Breast Augmentation', path: '/breast/Breast-Augmentation'},
@@ -23,7 +23,7 @@ const sections = {
   'Face&Nose': {
     title: 'Face & Nose',
     sub_title: 'Harmonize Your Facial Features',
-    image: '/banner/main/Breastmain.png',
+    image: '/banner/main/BreastMain.png',
     desc: "When facial imperfections affect your self-esteem, we're here to assist you in realizing your cosmetic aspirations through our comprehensive range of facial surgery procedures, crafting a sophisticated elegance, seamless harmony, and enduring beauty.Employing cutting-edge surgical techniques, we enhance your innate features, infusing more allure, balance, and rejuvenation into your appearance through the latest innovations in cosmetic surgery and technology.",
     links: [
       {title: 'Rhinoplasty', path: '/nose/Rhinoplasty'},
@@ -35,7 +35,7 @@ const sections = {
   Body: {
     title: 'Body',
     sub_title: 'Refine Your Figure',
-    image: '/banner/main/Breastmain.png',
+    image: '/banner/main/BreastMain.png',
     desc: 'Patients entrust us to reshape, rejuvenate, and elevate body contours using cutting-edge techniques and technologies, encompassing a prominent array of Asian plastic surgery procedures for our Las Vegas clientele. If you seek complete satisfaction with your body, Dr. Kahng is the expert you should reach out to.',
     links: [
       {title: 'Liposuction', path: '/body/Liposuction'},
