@@ -15,7 +15,7 @@ export default function CommonTopBanner({url, title, subtitle, contents, img}) {
           sizes="100"
           className="object-cover -z-10"
         />
-        <div className="md:px-32 px-10 flex-col justify-center items-start gap-[0.625rem] max-w-[1100px] ml-auto ">
+        <div className="md:px-32 px-10 flex-col justify-center items-start gap-[0.625rem] max-w-[1100px] mx-auto ">
           <div className="flex flex-col gap-[0.625rem] mb-10">
             <p className=" text-[#716B63] text-xl font-trajan">Home · {url}</p>
             <h1 className="text-[3.125rem] font-trajan leading-normal">
