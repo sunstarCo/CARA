@@ -77,7 +77,7 @@ export default function ContactForm() {
           {errors.email && <ContactFormErr>{errors.email.message}</ContactFormErr>}
         </div>
       </div>
-      <input type="text" placeholder="How did you hear about us?" className="pl-5 contact_input contact_input_full" />
+
       <div className={`relative ${errors.interest && `border border-red-600`}`}>
         <select
           name="interest"
@@ -123,8 +123,8 @@ export default function ContactForm() {
         cols="30"
         rows="8"
         {...register('comments')}
-        className="text-lg font-medium opacity-90 leading-[2.1375rem] outline-none pl-5 contact_input_full"
-        placeholder="Comments / Questions"></textarea>
+        className="pt-3 text-lg font-medium opacity-90 leading-[2.1375rem] outline-none pl-5 contact_input_full"
+        placeholder="Message"></textarea>
 
       <label htmlFor="accptTerms" required className="flex items-center gap-4 text-lg font-medium text-white">
         <input id="accptTerms" required type="checkbox" className="w-[1.875rem] h-[1.875rem] " />I accept the Terms of
