@@ -1,5 +1,11 @@
 import React from 'react';
 
+import GallerySection from '@/components/gallery/GallerySection';
+
 export default function Page() {
-  return <div>before&after</div>;
+  return (
+    <>
+      <GallerySection sort="main" />
+    </>
+  );
 }
