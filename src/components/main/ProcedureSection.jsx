@@ -74,7 +74,7 @@ export default function ProcedureSection({section, reverse = false}) {
           width={760}
           height={720}
           sizes="100"
-          className="w-full md:w-1/2 min-w-[400px] max-w-[760px] object-cover"
+          className="w-full md:w-1/2 md:min-w-[400px] max-w-[760px] object-cover"
         />
         <div className="max-w-[680px] w-full">
           <p className="leading-normal text-[3rem] md:text-54px font-trajan">{title}</p>
@@ -86,7 +86,7 @@ export default function ProcedureSection({section, reverse = false}) {
       <div className="flex flex-col mt-[6.875rem] items-center gap-6 text-center font-trajan">
         {section === 'Breast' ? (
           <>
-            <div className="flex items-center max-sm:gap-8 text-nowrap text-xl sm:text-[1.625rem] leading-normal">
+            <div className="flex items-center max-sm:gap-8 text-nowrap text-xl sm:text-22px leading-normal">
               <Link href={'/breast/Breast-Augmentation'} className=" text-wrap">
                 Breast Augmentation
               </Link>
@@ -99,7 +99,7 @@ export default function ProcedureSection({section, reverse = false}) {
                 Breast Reduction
               </Link>
             </div>
-            <div className="flex items-center max-sm:gap-8 text-xl sm:text-[1.625rem] leading-normal">
+            <div className="flex items-center max-sm:gap-8 text-xl sm:text-22px leading-normal">
               <Link href={'/breast/Male-Breast-Reduction'} className=" max-sm:hidden">
                 Male Breast Reduction
               </Link>
@@ -114,7 +114,7 @@ export default function ProcedureSection({section, reverse = false}) {
                 Breast Implant Removal
               </Link>
             </div>
-            <div className="flex items-center text-xl sm:text-[1.625rem] leading-normal sm:hidden">
+            <div className="flex items-center text-xl sm:text-22px leading-normal sm:hidden">
               <Link href={'/breast/Breast-Implant-Removal'} className="">
                 Breast Implant Removal
               </Link>
@@ -131,7 +131,7 @@ export default function ProcedureSection({section, reverse = false}) {
                     } `}
                   />
                 )}
-                <Link href={link.path} className={`text-xl sm:text-[1.625rem] leading-normal `}>
+                <Link href={link.path} className={`text-xl sm:text-22px leading-normal `}>
                   {link.title}
                 </Link>
               </div>
