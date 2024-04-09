@@ -22,9 +22,9 @@ function CoreFooter() {
             <div className="flex  gap-[0.875rem] mb-10 text-nowrap">
               {snsIcons.map(icon => {
                 return (
-                  <div key={icon} className="relative w-5 h-5">
-                    <Image src={`/icons/sns/${icon}.svg`} fill alt={`${icon}icon`} />
-                  </div>
+                  <a href={icon.link} role="button" target="_blank" key={icon.sns} className="relative w-5 h-5">
+                    <Image src={`/icons/sns/${icon.sns}.svg`} fill alt={`${icon.sns}icon`} />
+                  </a>
                 );
               })}
             </div>
@@ -43,6 +43,14 @@ function CoreFooter() {
     </>
   );
 }
-export const snsIcons = ['insta', 'facebook', 'youtube', 'yelp', 'kakao', 'wechat', 'tictoc'];
+const snsIcons = [
+  {sns: 'insta', link: 'https://www.instagram.com/caraplasticsurgery/'},
+  {sns: 'facebook', link: 'https://www.facebook.com/caraplasticsurgerycenter/?ref=page_internal'},
+  {sns: 'youtube', link: 'https://www.youtube.com/channel/UCUaecNgJPbHBiDlJB5CeTuQ/videos'},
+  {sns: 'yelp', link: 'https://www.yelp.com/biz/cara-plastic-surgery-and-laser-center-los-angeles-2'},
+  {sns: 'kakao', link: 'https://pf.kakao.com/_bFiDd'},
+  {sns: 'wechat', link: 'https://www.datocms-assets.com/59206/1645483716-qr-code.jpeg'},
+  {sns: 'tictoc', link: 'https://www.tiktok.com/@caraplasticsurgery'},
+];
 
 export default CoreFooter;
