@@ -9,10 +9,18 @@ import Header from '@/components/header/Header';
 const outpit = Outfit({subsets: ['latin'], display: 'swap', weight: '300'});
 
 export const metadata = {
+  metadataBase: new URL('https://cara-nu.vercel.app'),
   title: 'CARA',
-  description: 'CARA Plastic Surgery & Laser Center',
+  description:
+    'CARA Plastic Surgery & Laser Center is a premier destination for aesthetic enhancement in Orange County, Los Angeles, and Las Vegas. Dr. David Kahng is a highly skilled plastic surgeon who specializes in cosmetic and reconstructive surgery.',
   icons: {
     icon: '/logo/favicon.png',
+  },
+  openGraph: {
+    title: 'CARA | ABOUT',
+    description:
+      'CARA Plastic Surgery & Laser Center is a premier destination for aesthetic enhancement in Orange County, Los Angeles, and Las Vegas. Dr. David Kahng is a highly skilled plastic surgeon who specializes in cosmetic and reconstructive surgery.',
+    images: 'banner/about/AboutCommonImg.png',
   },
 };
 
