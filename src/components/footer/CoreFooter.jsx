@@ -2,16 +2,16 @@ import React from 'react';
 
 import Image from 'next/image';
 
-import logo from '../../../public/logo/logo(black).svg';
+import logo from '../../../public/logo/logo_new.svg';
 function CoreFooter() {
   return (
     <>
       <div className="w-full  bg-[#D9D5CC] py-20 md:py-40">
-        <div className="flex flex-col gap-24 md:flex-row px-8 justify-between items-center max-w-[100rem] mx-auto">
-          <div>
+        <div className="flex flex-col gap-16 md:gap-24 md:flex-row px-8 justify-between items-center max-w-[100rem] mx-auto">
+          <div className="max-md:text-center">
             <p className="text-nowrap text-[1.375rem] font-bold mb-10 font-trajan">(855 212-9901)</p>
             <p className="text-[1.375rem] font-bold mb-2 font-trajan">ADDRESS</p>
-            <p className="text-base leading-[1.875rem] font">
+            <p className="text-base leading-[1.875rem]">
               Los Angeles, San Gabriel Valley <br /> Orange County, Landing
             </p>
           </div>
@@ -19,17 +19,17 @@ function CoreFooter() {
             <Image src={logo} width={0} height={0} sizes="100" className="w-full" alt="로고" />
           </div>
           <div>
-            <div className="flex  gap-[0.875rem] mb-10 text-nowrap">
+            <div className="flex gap-[0.875rem] mb-12 text-nowrap max-md:justify-center max-md:-translate-y-8">
               {snsIcons.map(icon => {
                 return (
-                  <a href={icon.link} role="button" target="_blank" key={icon.sns} className="relative w-5 h-5">
+                  <a href={icon.link} role="button" target="_blank" key={icon.sns} className="relative w-6 h-6">
                     <Image src={`/icons/sns/${icon.sns}.svg`} fill alt={`${icon.sns}icon`} />
                   </a>
                 );
               })}
             </div>
             <p className="text-[1.375rem] font-bold mb-2 font-trajan">WORKING HOURS</p>
-            <p className="text-base leading-[1.875rem] font">
+            <p className="text-base leading-[1.875rem]">
               Mon - Fri : 7am - 6pm <br /> Sat : 9am - 7pm, Sun : 9am - 6pm
             </p>
           </div>
