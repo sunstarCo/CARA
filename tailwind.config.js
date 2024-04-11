@@ -34,15 +34,15 @@ module.exports = {
           '100%': {opacity: 1},
         },
         show_move_right: {
-          '0%': {opacity: 0, transform: 'translateX(-10%)'},
+          '0%': {opacity: 0, transform: 'translateX(-4rem)'},
           '100%': {opacity: 1, transform: 'translateX(0)'},
         },
         show_move_left: {
-          '0%': {opacity: 0, transform: 'translateX(10%)'},
+          '0%': {opacity: 0, transform: 'translateX(4rem)'},
           '100%': {opacity: 1, transform: 'translateX(0)'},
         },
         show_move_top: {
-          '0%': {opacity: 0, transform: 'translateY(10%)'},
+          '0%': {opacity: 0, transform: 'translateY(4rem)'},
           '100%': {opacity: 1, transform: 'translateY(0)'},
         },
       },
