@@ -30,7 +30,7 @@ const info = [
   },
   {
     title: 'Personalized Approach',
-    desc: 'Your unique needs andaspirations are our priority. We work closely with you to create a customizedtreatment plan that aligns with your goals. The sequence of locations forservices is Las Vegas first, Los Angeles, Buena Park, and San Gabriel.',
+    desc: 'Your unique needs andaspirations are our priority. We work closely with you to create a customizedtreatment plan that aligns with your goals. The sequence of locations forservices is Las Vegas first, Los Angeles, Buena Park, and San Gabriel Valley.',
   },
   {
     title: 'Comfortable Facilities',
