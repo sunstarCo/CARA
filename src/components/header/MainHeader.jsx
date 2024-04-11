@@ -237,7 +237,7 @@ function MainHeader({clickMenu, isOpen}) {
                   <Link href={menu.default_path} className={`font-trajan font-bold 2xl:text-lg pb-2 `}>
                     {menu.menu}
                   </Link>
-                  <ul className="depth_2 flex flex-col">
+                  <ul className="flex flex-col depth_2">
                     {menu.sub_menu?.map((sub, i) => (
                       <Link
                         key={i}
@@ -255,7 +255,9 @@ function MainHeader({clickMenu, isOpen}) {
         <div className="text-[#2b2928] max-lg:hidden ">
           <div className={`flex gap-2 text-black py-[17px] px-[19px] bg-[#EAE9E5] rounded-[30px]`}>
             <Image src={'/icons/call.svg'} alt="" sizes="100" width={0} height={0} className="w-4" />
-            <p className="text-[16px] leading-4 font-medium text-nowrap">855-212-9901</p>
+            <Link href={'contact'} className="text-[16px] leading-4 font-medium text-nowrap">
+              855-212-9901
+            </Link>
           </div>
         </div>
         <button onClick={clickMenu} className="flex gap-4 items-end py-4 font-trajan text-lg lg:hidden px-4">

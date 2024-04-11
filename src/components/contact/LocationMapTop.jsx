@@ -6,7 +6,7 @@ import ContactLoctionImg1 from '../../../public/detailpage/contactus/ContactMap1
 export default function LocationMapTop() {
   return (
     <div>
-      <p className="pt-10 text-5xl text-center md:pt-48 pb-14">LOS ANGELES & ORANGE COUNTY & SAN GABRIEL</p>
+      <p className="pt-10 text-5xl text-center md:pt-48 pb-14">LOS ANGELES & ORANGE COUNTY & SAN GABRIEL VALLEY</p>
       <Image
         src={ContactLoctionImg1}
         width={1560}
