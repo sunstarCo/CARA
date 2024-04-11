@@ -182,23 +182,23 @@ export const menus = [
   },
   {
     menu: 'Before & After',
-    default_path: '/before&after',
+    default_path: '/Before&After',
     sub_menu: [
       {
         menu: 'Breast',
-        path: '/before&after/Breast',
+        path: '/Before&After/Breast',
       },
       {
         menu: 'Body',
-        path: '/before&after/Body',
+        path: '/Before&After/Body',
       },
       {
         menu: 'Face',
-        path: '/before&after/Face',
+        path: '/Before&After/Face',
       },
       {
         menu: 'Medspa',
-        path: '/before&after/Medspa',
+        path: '/Before&After/Medspa',
       },
     ],
   },
