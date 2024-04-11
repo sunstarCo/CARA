@@ -1,10 +1,12 @@
-import React, {useState} from 'react';
+import React, {useEffect, useRef, useState} from 'react';
 
 import Image from 'next/image';
 import Link from 'next/link';
 
 import {menus} from './MainHeader';
 import {snsIcons} from '../footer/CoreFooter';
+
+import {useLockBodyScroll} from '@/hooks';
 
 function MenuList({menu, clickMenu}) {
   const [isOpenSubmenu, setIsOpenSubmenu] = useState(false);
@@ -17,14 +19,18 @@ function MenuList({menu, clickMenu}) {
             {menu.menu}
           </Link>
         </div>
-        {sub_menu && <button onClick={() => setIsOpenSubmenu(prev => !prev)}>{isOpenSubmenu ? '▲' : '▼'}</button>}
+        {sub_menu && (
+          <button className="flex-1 text-end" onClick={() => setIsOpenSubmenu(prev => !prev)}>
+            {isOpenSubmenu ? '▲' : '▼'}
+          </button>
+        )}
       </div>
       {isOpenSubmenu && (
-        <ul className="my-2">
+        <ul className="flex flex-col gap-3 my-2">
           {sub_menu.map((sub, i) => (
-            <li key={i} className="my-2">
+            <li key={i} className="w-full">
               <div onClick={clickMenu}>
-                <Link href={sub.path} className="px-4 text-lg">
+                <Link href={sub.path} className="block w-full pl-4 text-lg text-start">
                   {sub.menu}
                 </Link>
               </div>
@@ -37,8 +43,18 @@ function MenuList({menu, clickMenu}) {
 }
 
 function MoblieHeader({clickMenu}) {
+  const {lockScroll, unlockScroll} = useLockBodyScroll();
+  const menu = useRef(null);
+
+  useEffect(() => {
+    lockScroll();
+    return () => unlockScroll();
+  }, []);
+
   return (
-    <div className="bg-[#e5e5e5] w-screen md:w-[600px] h-screen pt-[95px] lg:pt-[142px] ml-auto">
+    <div
+      ref={menu}
+      className="bg-[#e5e5e5] w-screen md:w-[600px] h-screen py-[95px] lg:py-[142px] ml-auto overflow-y-scroll">
       <ul className="flex flex-col items-start gap-6 p-10 xl:gap-8">
         {menus.map((menu, i) => {
           return <MenuList key={i} menu={menu} clickMenu={clickMenu} />;

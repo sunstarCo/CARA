@@ -11,7 +11,9 @@ const outpit = Outfit({subsets: ['latin'], display: 'swap', weight: '300'});
 export const metadata = {
   title: 'CARA',
   description: 'CARA Plastic Surgery & Laser Center',
-  image: '/logo.png',
+  icons: {
+    icon: '/logo/favicon.png',
+  },
 };
 
 export default function RootLayout({children}) {
@@ -45,7 +47,7 @@ export default function RootLayout({children}) {
           let interval = 9;
       
           function main() {
-            var body = document.body;
+            let body = document.body;
             if (body) {
               insertJS();
             } else if (Date.now() - start > 10000) {

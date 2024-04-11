@@ -10,7 +10,7 @@ const sections = {
   Breast: {
     title: 'Breast',
     sub_title: 'Refine Your Silhouette',
-    image: '/banner/main/Breastmain.png',
+    image: '/banner/main/BreastMain.png',
     desc: 'Crafting the Perfect Contour Under the skilled hands of Dr. Kahng, our breast procedures are meticulously executed, employing state-of-the-art surgical techniques in breast augmentation, lifts, and a comprehensive array of surgeries aimed at enhancing body balance and harmony, which extends to specialized procedures like breast reconstruction.',
     links: [
       {title: 'Breast Augmentation', path: '/breast/Breast-Augmentation'},
@@ -23,7 +23,7 @@ const sections = {
   'Face&Nose': {
     title: 'Face & Nose',
     sub_title: 'Harmonize Your Facial Features',
-    image: '/banner/main/Breastmain.png',
+    image: '/banner/main/BreastMain.png',
     desc: "When facial imperfections affect your self-esteem, we're here to assist you in realizing your cosmetic aspirations through our comprehensive range of facial surgery procedures, crafting a sophisticated elegance, seamless harmony, and enduring beauty.Employing cutting-edge surgical techniques, we enhance your innate features, infusing more allure, balance, and rejuvenation into your appearance through the latest innovations in cosmetic surgery and technology.",
     links: [
       {title: 'Rhinoplasty', path: '/nose/Rhinoplasty'},
@@ -35,7 +35,7 @@ const sections = {
   Body: {
     title: 'Body',
     sub_title: 'Refine Your Figure',
-    image: '/banner/main/Breastmain.png',
+    image: '/banner/main/BreastMain.png',
     desc: 'Patients entrust us to reshape, rejuvenate, and elevate body contours using cutting-edge techniques and technologies, encompassing a prominent array of Asian plastic surgery procedures for our Las Vegas clientele. If you seek complete satisfaction with your body, Dr. Kahng is the expert you should reach out to.',
     links: [
       {title: 'Liposuction', path: '/body/Liposuction'},
@@ -74,7 +74,7 @@ export default function ProcedureSection({section, reverse = false}) {
           width={760}
           height={720}
           sizes="100"
-          className="w-full md:w-1/2 min-w-[400px] max-w-[760px] object-cover"
+          className="w-full md:w-1/2 md:min-w-[400px] max-w-[760px] object-cover"
         />
         <div className="max-w-[680px] w-full">
           <p className="leading-normal text-[3rem] md:text-54px font-trajan">{title}</p>
@@ -86,7 +86,7 @@ export default function ProcedureSection({section, reverse = false}) {
       <div className="flex flex-col mt-[6.875rem] items-center gap-6 text-center font-trajan">
         {section === 'Breast' ? (
           <>
-            <div className="flex items-center max-sm:gap-8 text-nowrap text-xl sm:text-[1.625rem] leading-normal">
+            <div className="flex items-center max-sm:gap-8 text-nowrap text-xl sm:text-22px leading-normal">
               <Link href={'/breast/Breast-Augmentation'} className=" text-wrap">
                 Breast Augmentation
               </Link>
@@ -99,7 +99,7 @@ export default function ProcedureSection({section, reverse = false}) {
                 Breast Reduction
               </Link>
             </div>
-            <div className="flex items-center max-sm:gap-8 text-xl sm:text-[1.625rem] leading-normal">
+            <div className="flex items-center max-sm:gap-8 text-xl sm:text-22px leading-normal">
               <Link href={'/breast/Male-Breast-Reduction'} className=" max-sm:hidden">
                 Male Breast Reduction
               </Link>
@@ -114,7 +114,7 @@ export default function ProcedureSection({section, reverse = false}) {
                 Breast Implant Removal
               </Link>
             </div>
-            <div className="flex items-center text-xl sm:text-[1.625rem] leading-normal sm:hidden">
+            <div className="flex items-center text-xl sm:text-22px leading-normal sm:hidden">
               <Link href={'/breast/Breast-Implant-Removal'} className="">
                 Breast Implant Removal
               </Link>
@@ -131,7 +131,7 @@ export default function ProcedureSection({section, reverse = false}) {
                     } `}
                   />
                 )}
-                <Link href={link.path} className={`text-xl sm:text-[1.625rem] leading-normal `}>
+                <Link href={link.path} className={`text-xl sm:text-22px leading-normal `}>
                   {link.title}
                 </Link>
               </div>
