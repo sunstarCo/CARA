@@ -43,7 +43,7 @@ function CoreFooter() {
     </>
   );
 }
-const snsIcons = [
+export const snsIcons = [
   {sns: 'insta', link: 'https://www.instagram.com/caraplasticsurgery/'},
   {sns: 'facebook', link: 'https://www.facebook.com/caraplasticsurgerycenter/?ref=page_internal'},
   {sns: 'youtube', link: 'https://www.youtube.com/channel/UCUaecNgJPbHBiDlJB5CeTuQ/videos'},

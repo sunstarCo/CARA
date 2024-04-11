@@ -1,12 +1,14 @@
 import React from 'react';
 
 function Location({locationData, i}) {
-  const {region, address} = locationData;
+  const {region, address, url} = locationData;
   const adds = address.split('/');
   return (
     <>
       <div className="w-[18.75rem] text-center mx-auto">
-        <p className="text-[1.75rem] mb-4 font-trajan">{region}</p>
+        <a href={url} target="_blank" className="text-[1.75rem] mb-4 font-trajan">
+          {region}
+        </a>
         <p className="text-xl font-medium text-[#9D9892] mb-5">(855) 212-9901</p>
         <div className="leading-[2.1375rem] text-lg">
           <p>{adds[0]}</p>
