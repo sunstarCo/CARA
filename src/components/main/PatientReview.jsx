@@ -97,7 +97,7 @@ function PatientReview() {
                     {[...Array(5)].map((_, index) => (
                       <Image
                         key={index}
-                        src={'/logo/star.svg'}
+                        src={'/icons/star.svg'}
                         alt="star icon"
                         width={0}
                         height={0}
@@ -138,7 +138,7 @@ function PatientReview() {
                     {[...Array(5)].map((_, index) => (
                       <Image
                         key={index}
-                        src={'/logo/star.svg'}
+                        src={'/icons/star.svg'}
                         alt="star icon"
                         width={0}
                         height={0}

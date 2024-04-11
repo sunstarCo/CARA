@@ -182,23 +182,23 @@ export const menus = [
   },
   {
     menu: 'Before & After',
-    default_path: '/before&after',
+    default_path: '/Before&After',
     sub_menu: [
       {
         menu: 'Breast',
-        path: '/before&after/Breast',
+        path: '/Before&After/Breast',
       },
       {
         menu: 'Body',
-        path: '/before&after/Body',
+        path: '/Before&After/Body',
       },
       {
         menu: 'Face',
-        path: '/before&after/Face',
+        path: '/Before&After/Face',
       },
       {
         menu: 'Medspa',
-        path: '/before&after/Medspa',
+        path: '/Before&After/Medspa',
       },
     ],
   },
@@ -216,14 +216,7 @@ function MainHeader({clickMenu, isOpen}) {
       }`}>
       <div className="max-lg:h-[80px]  max-w-[1600px] flex items-center justify-between mx-auto">
         <Link href={'/'} className="">
-          <Image
-            src={`/logo/logo(black).svg`}
-            alt=""
-            width={0}
-            height={0}
-            sizes="100"
-            className="min-w-32 xl:min-w-40"
-          />
+          <Image src={`/logo/logo_new.svg`} alt="" width={0} height={0} sizes="100" className="min-w-32 xl:min-w-40" />
         </Link>
         <nav className="h-[100px] max-lg:hidden">
           <ul className="flex items-center h-full max-w-[1150px] gap-4 xl:gap-8 text-nowrap">

@@ -5,7 +5,7 @@ import Location from './Location';
 function LocationFooter() {
   return (
     <>
-      <div className="flex flex-col lg:flex-row justify-center py-16 md:py-[10.6875rem]">
+      <div className="flex flex-col lg:flex-row justify-center py-16 md:py-[9rem] max-w-[2100px] w-full mx-auto">
         {locations.map((data, i) => {
           return <Location key={data.region} locationData={data} i={i}></Location>;
         })}
