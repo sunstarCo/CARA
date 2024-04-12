@@ -7,14 +7,16 @@ export default function GalleryDetailPN({surgeryInfo}) {
   const imgArr = [...Array(surgeryInfo.quantity)];
   const [imgs, setImgs] = useState(imgArr.slice(0, pageSize));
   return (
-    <div className="px-8 max-w-[90rem] grid grid-cols-3 gap-3 w-full">
-      {imgs.map((review, index) => (
-        <Fragment key={index}>
-          <GalleryDetailPNCard title={surgeryInfo.surgery} count={index + 1} />
-          {/* {index !== imgs.length - 1 && <hr className="my-10" />} */}
-        </Fragment>
-      ))}
-      <div className="flex justify-between mt-24">
+    <div className="flex flex-col items-center gap-10 mt-5">
+      <div className=" px-8 max-w-[98rem] justify-center grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3  gap-5 w-full">
+        {imgs.map((review, index) => (
+          <Fragment key={index}>
+            <GalleryDetailPNCard title={surgeryInfo.surgery} count={index + 1} />
+            {/* {index !== imgs.length - 1 && <hr className="my-10" />} */}
+          </Fragment>
+        ))}
+      </div>
+      <div className="flex mb-24 gap-60">
         <button
           disabled={curPage === 1}
           onClick={() => {
@@ -48,9 +50,5 @@ export default function GalleryDetailPN({surgeryInfo}) {
 
 function GalleryDetailPNCard({title, count}) {
   const filePath = `/banner/gallery/${title.toLowerCase().replaceAll(' ', '-')}/${count}.jpg`;
-  return (
-    <div>
-      <Image alt="surgeryBeforeAfterImg" width={493} height={280} src={filePath} />
-    </div>
-  );
+  return <Image alt="surgeryBeforeAfterImg" className="h-56 mx-auto" width={493} height={225} src={filePath} />;
 }
