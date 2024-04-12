@@ -10,7 +10,7 @@ export default function GalleryLink({item, title}) {
     <div className="">
       <Link
         className="text-[#585451] flex justify-between py-4 border-b text-lg font-light"
-        href={`/before&after/${item.split(' ').join('-')}`}>
+        href={`/Before&After/${item.split(' ').join('-')}`}>
         <span>{item}</span>
         <Image alt="linkIcon" src={nextIcon} width={24} height={24} />
       </Link>
