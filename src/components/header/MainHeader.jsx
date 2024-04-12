@@ -253,7 +253,7 @@ function MainHeader({clickMenu, isOpen}) {
             </Link>
           </div>
         </div>
-        <button onClick={clickMenu} className="flex gap-4 items-end py-4 font-trajan text-lg lg:hidden px-4">
+        <button onClick={clickMenu} className="flex items-end gap-4 px-4 py-4 text-lg font-trajan lg:hidden">
           Menu
           <div className={`flex flex-col ${isOpen ? 'gap-[15px]' : 'gap-[5px]'}  p-1`}>
             <div
