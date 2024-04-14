@@ -30,7 +30,7 @@ function ContactBanner() {
           </p>
           <Link
             href={'/contact'}
-            className=" mt-[3.125rem] text-[#302c29] text-lg sm:text-xl sm:leading-loose font-semibold bg-[#EAE9E5] px-10 py-4 w-fit uppercase">
+            className="mt-[3.125rem] text-[#302c29] sm:text-xl sm:leading-loose font-semibold bg-[#EAE9E5] text-center px-4 min-[350px]:px-10 py-4 w-fit uppercase">
             Schedule a Free Consultation
           </Link>
         </div>

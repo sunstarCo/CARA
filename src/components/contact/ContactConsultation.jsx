@@ -9,8 +9,8 @@ export default function ContactConsultation() {
       <div className="lg:w-[50%] h-full w-full bg-[url('/ContactScheduleBG.png')] bg-cover flex justify-center items-center">
         <ContactForm />
       </div>
-      <div className="flex flex-col  lg:w-[50%] py-10 md:py-36 px-3 lg:px-[7.5rem] items-center   md:h-full justify-center ">
-        <div className="text-[3.375rem] w-full text-start leading-normal ">
+      <div className="flex flex-col lg:w-[50%] py-10 md:py-36 px-3 lg:px-[7.5rem] items-center   md:h-full justify-center ">
+        <div className="text-48px w-full text-start leading-normal font-trajan pt-10">
           <p>SCHEDULE A</p>
           <p>CONSULTATION</p>
           <div className="bg-[#BDB5AA] w-[6.25rem] h-2 my-10"></div>
