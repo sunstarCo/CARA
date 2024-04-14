@@ -1,5 +1,5 @@
 'use client';
-import React from 'react';
+import React, {Fragment} from 'react';
 
 import Image from 'next/image';
 import Link from 'next/link';
@@ -86,38 +86,35 @@ export default function ProcedureSection({section, reverse = false}) {
       <div className="flex flex-col mt-[6.875rem] items-center gap-6 text-center font-trajan">
         {section === 'Breast' ? (
           <>
-            <div className="flex items-center max-sm:gap-8 text-nowrap text-xl sm:text-22px leading-normal">
-              <Link href={'/breast/Breast-Augmentation'} className=" text-wrap">
-                Breast Augmentation
-              </Link>
-              <div className="mx-10 md:mx-20 w-[1px] h-6 max-sm:hidden bg-[#BDB5AA]" />
-              <Link href={'/breast/Breast-Lift'} className="">
-                Breast Lift
-              </Link>
-              <div className="mx-10 md:mx-20 w-[1px] h-6 max-sm:hidden bg-[#BDB5AA]" />
-              <Link href={'/breast/Breast-Reduction'} className=" max-sm:hidden">
-                Breast Reduction
-              </Link>
+            <div className="flex items-center max-sm:gap-8 text-nowrap text-xl sm:text-22px leading-normal max-sm:hidden">
+              {links.slice(0, 3).map((link, index) => (
+                <Fragment key={index + link.title}>
+                  <Link href={link.path} className={`text-wrap hover:text-[#BDB5AA] transition-colors`}>
+                    {link.title}
+                  </Link>
+                  {index !== 2 && <div className="mx-10 md:mx-20 w-[1px] h-6 bg-[#BDB5AA]" />}
+                </Fragment>
+              ))}
             </div>
-            <div className="flex items-center max-sm:gap-8 text-xl sm:text-22px leading-normal">
-              <Link href={'/breast/Male-Breast-Reduction'} className=" max-sm:hidden">
-                Male Breast Reduction
-              </Link>
-              <Link href={'/breast/Breast-Reduction'} className=" sm:hidden">
-                Breast Reduction
-              </Link>
-              <div className="mx-10 md:mx-20 w-[1px] h-6 max-sm:hidden bg-[#BDB5AA]" />
-              <Link href={'/breast/Male-Breast-Reduction'} className=" sm:hidden">
-                Male Breast Reduction
-              </Link>
-              <Link href={'/breast/Breast-Implant-Removal'} className=" max-sm:hidden">
-                Breast Implant Removal
-              </Link>
+            <div className="flex items-center gap-8 text-22px leading-normal max-sm:hidden">
+              {links.slice(3, 5).map((link, index) => (
+                <Fragment key={index + link.title}>
+                  <Link href={link.path} className={`text-wrap hover:text-[#BDB5AA] transition-colors `}>
+                    {link.title}
+                  </Link>
+                  {index !== 1 && <div className="mx-10 md:mx-20 w-[1px] h-6 bg-[#BDB5AA]" />}
+                </Fragment>
+              ))}
             </div>
-            <div className="flex items-center text-xl sm:text-22px leading-normal sm:hidden">
-              <Link href={'/breast/Breast-Implant-Removal'} className="">
-                Breast Implant Removal
-              </Link>
+            <div className="flex items-center flex-col text-22px gap-4 leading-normal sm:hidden">
+              {links.map((link, index) => (
+                <Fragment key={index + link.title}>
+                  <Link href={link.path} className={`text-wrap hover:text-[#BDB5AA] transition-colors`}>
+                    {link.title}
+                  </Link>
+                  {index !== 4 && <div className="h-2 w-2 bg-[#BDB5AA] rounded-full" />}
+                </Fragment>
+              ))}
             </div>
           </>
         ) : (
@@ -131,7 +128,9 @@ export default function ProcedureSection({section, reverse = false}) {
                     } `}
                   />
                 )}
-                <Link href={link.path} className={`text-xl sm:text-22px leading-normal `}>
+                <Link
+                  href={link.path}
+                  className={`text-xl sm:text-22px leading-normal hover:text-[#BDB5AA] transition-colors`}>
                   {link.title}
                 </Link>
               </div>

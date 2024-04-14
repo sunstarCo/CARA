@@ -16,15 +16,15 @@ function Gallery() {
         width={0}
         height={0}
         sizes="100"
-        className="w-fit absolute bottom-0 left-0 max-lg:hidden"
+        className="absolute bottom-0 left-0 w-fit max-lg:hidden"
       />
       <Image src={'/banner/main/GalleryBG.png'} alt="" fill sizes="100" className="object-cover object-top -z-10" />
       <div
         className={`flex justify-end max-w-[2100px] mx-auto transition-all opacity-0 ${
           isVisible && 'animate-show_move_top'
         }`}>
-        <div className="flex flex-col w-full lg:w-4/6 2xl:w-1/2  text-white px-8 sm:px-16">
-          <div className="flex  z-20">
+        <div className="flex flex-col w-full px-8 text-white lg:w-4/6 2xl:w-1/2 sm:px-16">
+          <div className="z-20 flex">
             <div
               className={`text-2xl sm:text-3xl flex text-center items-center leading-normal -tracking-tight font-trajan`}>
               Before & After
@@ -38,7 +38,7 @@ function Gallery() {
             balance.
           </p>
           <Link
-            href={'/before&after'}
+            href={'/Before&After'}
             className="px-10 py-4 bg-[#EAE9E5] w-fit text-black text-xl leading-normal  font-medium mt-[3.75rem] uppercase">
             View All Gallery
           </Link>

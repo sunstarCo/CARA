@@ -214,7 +214,7 @@ function MainHeader({clickMenu, isOpen}) {
     <header
       className={`fixed w-full border-b border-[#d1bfb7] px-4 lg:px-8 bg-white
       }`}>
-      <div className="max-lg:h-[80px]  max-w-[1600px] flex items-center justify-between mx-auto">
+      <div className="max-lg:h-[80px] max-w-[1600px] flex items-center justify-between gap-2 mx-auto">
         <Link href={'/'} className="">
           <Image src={`/logo/logo_new.svg`} alt="" width={0} height={0} sizes="100" className="min-w-32 xl:min-w-40" />
         </Link>
@@ -248,22 +248,24 @@ function MainHeader({clickMenu, isOpen}) {
         <div className="text-[#2b2928] max-lg:hidden ">
           <div className={`flex gap-2 text-black py-[17px] px-[19px] bg-[#EAE9E5] rounded-[30px]`}>
             <Image src={'/icons/call.svg'} alt="" sizes="100" width={0} height={0} className="w-4" />
-            <Link href={'contact'} className="text-[16px] leading-4 font-medium text-nowrap">
+            <Link href={'/contact'} className="leading-4 font-medium text-nowrap">
               855-212-9901
             </Link>
           </div>
         </div>
-        <button onClick={clickMenu} className="flex gap-4 items-end py-4 font-trajan text-lg lg:hidden px-4">
+        <button onClick={clickMenu} className="flex items-end gap-4 px-4 py-4 text-lg font-trajan lg:hidden">
           Menu
-          <div className={`flex flex-col ${isOpen ? 'gap-[15px]' : 'gap-[5px]'}  p-1`}>
+          <div className={`flex flex-col ${isOpen ? 'gap-[15px]' : 'gap-[5px]'} p-1`}>
             <div
-              className={`w-[25px] h-[2px] bg-black rounded-sm transition-all duration-300 ${
+              className={`w-[25px] min-h-[2px] bg-black rounded-sm transition-all duration-300 ${
                 isOpen && 'rotate-45 origin-top-left'
               }`}
             />
-            <div className={`w-[25px] h-[2px] bg-black rounded-sm transition-color ${isOpen && 'opacity-0 hidden'}`} />
             <div
-              className={`w-[25px] h-[2px] bg-black rounded-sm transition-all duration-300 ${
+              className={`w-[25px] min-h-[2px] bg-black rounded-sm transition-color ${isOpen && 'opacity-0 hidden'}`}
+            />
+            <div
+              className={`w-[25px] min-h-[2px] bg-black rounded-sm transition-all duration-300 ${
                 isOpen && '-rotate-45 origin-bottom-left'
               }`}
             />

@@ -18,25 +18,29 @@ export default function GalleryDetailMain({title}) {
   const handleSelectChange = event => {
     const selectedSurgery = event.target.value;
     if (selectedSurgery == title) return;
-    router.push(`/before&after/${selectedSurgery.replaceAll(' ', '-')}`);
+    router.push(`/Before&After/${selectedSurgery.replaceAll(' ', '-')}`);
   };
 
   return (
     <div className="w-full">
       <div className="flex justify-between w-full px-5">
-        <select onChange={handleSelectChange} name="surgery" id="surgery" className=" contact_input half">
-          <option value="" className="" selected>
+        <select
+          onChange={handleSelectChange}
+          name="surgery"
+          id="surgery"
+          className="px-3  contact_input half bg-[#D9D5CC]">
+          <option value="" className="bg-white" selected>
             {title}
           </option>
           {menus.map(item => {
             return (
-              <option value={item.surgery} key={item.surgery}>
+              <option value={item.surgery} className="bg-white" key={item.surgery}>
                 {item.surgery}
               </option>
             );
           })}
         </select>
-        <Link href={'/before&after'} className="flex items-center gap-2 text-base">
+        <Link href={'/Before&After'} className="flex items-center gap-2 text-base">
           <Image alt="prevIcon" src={prevIcon} width={20} height={17}></Image>
           <span>Back to Gallery</span>
         </Link>
@@ -50,7 +54,7 @@ const surgeryInfo = [
   {sort: 'breast', surgery: 'Asian Breast Augmentation', quantity: 16},
   {sort: 'breast', surgery: 'Breast Augmentation', quantity: 9},
   {sort: 'breast', surgery: 'Breast Lift', quantity: 0},
-  {sort: 'body', sutgery: 'Liposuction', quantity: 0},
+  {sort: 'body', surgery: 'Liposuction', quantity: 0},
   {sort: 'body', surgery: 'Tummy Tuck', quantity: 0},
   {sort: 'body', surgery: 'Brazilian Butt Lift', quantity: 9},
   {sort: 'face', surgery: 'Rhinoplasty', quantity: 52},
