@@ -11,7 +11,7 @@ function MainBanner() {
           <div className={`w-screen h-[calc(100vh-8.875rem)] relative flex justify-center items-center`}>
             <Image src={'/banner/main/MainBanner.jpg'} alt="" fill sizes="100" className="object-cover" priority />
             <div className="absolute text-white transition-opacity animate-show">
-              <div className="text-4xl font-normal leading-normal text-center lg:text-7xl -tracking-tight ">
+              <div className="text-4xl font-normal leading-normal text-center lg:text-5xl 2xl:text-7xl -tracking-tight ">
                 <p>A Leading of Plastic Sergeon</p>
                 <p>in Las Vegas / Los Angeles</p>
               </div>
