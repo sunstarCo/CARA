@@ -6,7 +6,7 @@ import ContactLoctionImg2 from '../../../public/detailpage/contactus/ContactMap2
 export default function LocationMapBottom() {
   return (
     <div>
-      <p className="pt-10 text-5xl text-center md:pt-36 pb-14">LAS VEGAS</p>
+      <p className="pt-10 text-48px text-center md:pt-36 pb-14 font-trajan">LAS VEGAS</p>
       <Image
         src={ContactLoctionImg2}
         width={1560}
