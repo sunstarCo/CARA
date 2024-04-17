@@ -19,7 +19,7 @@ export default function GalleryModal({imageUrl, onClose}) {
           <span>&times;</span>
         </button>
         <div className="p-4 bg-white">
-          <Image src={imageUrl} alt="Large Image" width={800} height={600} />
+          <Image src={imageUrl} alt="before&after Image" width={800} height={600} />
         </div>
       </div>
     </div>
