@@ -4,12 +4,6 @@ import AboutSecondBanner from '@/components/about/AboutSecondBanner';
 import DivideBoxBanner from '@/components/about/why-choose-cara/DivideBoxBanner';
 import CommonTopBanner from '@/components/common/banner/CommonTopBanner';
 
-export const metadata = {
-  title: 'CARA | ABOUT',
-  description:
-    'CARA Plastic Surgery & Laser Center is a premier destination for aesthetic enhancement in Orange County, Los Angeles, and Las Vegas. Dr. David Kahng is a highly skilled plastic surgeon who specializes in cosmetic and reconstructive surgery.',
-};
-
 export default function Page() {
   return (
     <div>

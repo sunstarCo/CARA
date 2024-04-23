@@ -29,6 +29,21 @@ const benefits = [
   },
 ];
 
+const whoNeedsContents = [
+  {
+    title: 'Mothers Seeking Restoration',
+    desc: 'If you’ve experienced changes such as sagging breasts, stretched abdominal muscles, or stubborn pockets of fat post-pregnancy, a Mommy Makeover can help restore your body to its pre-pregnancy state.',
+  },
+  {
+    title: 'Those Dealing with Multiple Concerns',
+    desc: 'If you have multiple areas of concern, such as both breasts and the abdominal region, a Mommy Makeover allows for a comprehensive solution in a single procedure.',
+  },
+  {
+    title: 'Women Wanting a Confidence Boost',
+    desc: 'Pregnancy and childbirth are beautiful experiences, but they can impact your confidence. A Mommy Makeover not only addresses physical changes but also aims to boost your self-esteem and restore confidence in your appearance.',
+  },
+];
+
 export default function Page() {
   const whyChoose_desc =
     'Dr. DavidKahng at Cara Plastic Surgery & Laser Center Las Vegas brings artistry andskill to every Mommy Makeover procedure. Our commitment is to help you restorenot just your body but also your confidence, embracing the beauty that comeswith motherhood. Schedule aconsultation today to discuss your Mommy Makeover goals and embark on thejourney to reclaiming your body and confidence in Las Vegas.';
@@ -50,29 +65,13 @@ export default function Page() {
         img={'/detailpage/liposuction/liposuction_what_is.png'}
       />
       <WhoNeeds title={'who needs Mommy Makeover?'}>
-        <ul className="flex flex-col lg:flex-row gap-16 mt-16">
-          <li className="flex flex-col items-center gap-4 w-[90%] lg:w-[30%] mx-auto">
-            <h4 className="text-[1.75rem] leading-normal font-trajan">Mothers Seeking Restoration</h4>
-            <p className="text-xl leading-loose mt-2 px-8 max-w-[1200px] mx-auto">
-              If you&apos;ve experienced changes such as sagging breasts, stretched abdominal muscles, orstubborn
-              pockets of fat post-pregnancy, a Mommy Makeover can help restore yourbody to its pre-pregnancy state.
-            </p>
-          </li>
-          <li className="flex flex-col items-center gap-4 w-[90%] lg:w-[30%] mx-auto">
-            <h4 className="text-[1.75rem] leading-normal font-trajan">Those Dealing with Multiple Concerns</h4>
-            <p className="text-xl leading-loose mt-2 px-8 max-w-[1200px] mx-auto">
-              If youhave multiple areas of concern, such as both breasts and the abdominal region,a Mommy Makeover
-              allows for a comprehensive solution in a single procedure.
-            </p>
-          </li>
-          <li className="flex flex-col items-center gap-4 w-[90%] lg:w-[30%] mx-auto">
-            <h4 className="text-[1.75rem] leading-normal font-trajan">Women Wanting a Confidence Boost</h4>
-            <p className="text-xl leading-loose mt-2 px-8 max-w-[1200px] mx-auto">
-              Pregnancyand childbirth are beautiful experiences, but they can impact your confidence.A Mommy Makeover
-              not only addresses physical changes but also aims to boostyour self-esteem and restore confidence in your
-              appearance.
-            </p>
-          </li>
+        <ul className="flex flex-col lg:flex-row gap-16 mt-16 text-white">
+          {whoNeedsContents.map((content, index) => (
+            <li key={index} className="flex flex-col items-center gap-4 w-[90%] lg:w-[30%] mx-auto py-10 bg-[#363636]">
+              <h4 className="text-[1.75rem] leading-normal font-trajan">{content.title}</h4>
+              <p className="text-xl leading-loose mt-2 px-8 max-w-[1200px] mx-auto">{content.desc}</p>
+            </li>
+          ))}
         </ul>
       </WhoNeeds>
       <CardContainer title={'Key Benefits of a Mommy Makeover'} benefits={benefits} />

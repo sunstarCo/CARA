@@ -69,12 +69,7 @@ export default function Page() {
           </ul>
         </div>
       </WhoNeeds>
-      <CardContainer
-        title={
-          'If you find yourself dealing with any of these concerns, aTummy Tuck at Cara Plastic Surgery & Laser Center Las Vegas may be thesolution to help you achieve a more youthful and revitalized abdominal contour.'
-        }
-        benefits={benefits}
-      />
+      <CardContainer title={'Benefits of Tummy Tuck'} benefits={benefits} />
       <BeforeAfter images_data={images_data} />
       <WhyChoose desc={whyChoose_desc} />
     </div>

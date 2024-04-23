@@ -4,7 +4,7 @@ import Image from 'next/image';
 
 function Section1({img, desc, title, reverse = false, benefits, no_bg = false}) {
   return (
-    <div className="relative py-[6.25rem] px-8">
+    <div className="relative py-[6.25rem] px-8 mx-auto w-fit">
       {no_bg || (
         <Image
           src="/logo/BG_logo.svg"
@@ -15,13 +15,12 @@ function Section1({img, desc, title, reverse = false, benefits, no_bg = false}) 
           className="w-fit absolute bottom-0 right-0 -z-10"
         />
       )}
-
-      <div className="flex flex-col justify-center items-center lg:flex-row gap-[6.25rem] max-w-[1556px] mx-auto">
+      <div className="flex flex-col-reverse justify-center items-center lg:flex-row gap-10 sm:gap-[6.25rem] max-w-[1556px] mx-auto">
         {!reverse && (
           <Image src={img} width={766} height={800} sizes="100" className="lg:w-1/2 object-cover" alt="why-choose" />
         )}
-        <div className="lg:w-1/2">
-          <h3 className=" text-[3.125rem] leading-normal font-trajan">{title}</h3>
+        <div className="lg:w-1/2 flex-col items-center lg:items-start">
+          <h3 className="text-4xl sm:text-48px leading-normal font-trajan">{title}</h3>
           <div className="h-2 w-[6.25rem] bg-[#BDB5AA] mt-10 mb-[3.125rem]" />
           <p className="text-xl leading-loose">{desc}</p>
           {benefits && (

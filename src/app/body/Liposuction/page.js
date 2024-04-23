@@ -58,7 +58,7 @@ export default function Page() {
         title={'What is Liposuction?'}
         img={'/detailpage/liposuction/liposuction_what_is.png'}
       />
-      <WhoNeeds title={'who needs liposuction?'} desc={section2_desc}>
+      <WhoNeeds title={'Who Needs Liposuction?'} desc={section2_desc}>
         <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 lg:gap-16 mt-6 text-start text-[#808683]">
           <ul className="flex flex-col gap-2">
             <li className="flex items-center gap-4">
@@ -98,12 +98,7 @@ export default function Page() {
           </ul>
         </div>
       </WhoNeeds>
-      <CardContainer
-        title={
-          'If you have areas ofpersistent fat that hinder your body goals, liposuction can be a suitablesolution to achieve the contours you desire.'
-        }
-        benefits={benefits}
-      />
+      <CardContainer title={'Benefits of Liposuction'} benefits={benefits} />
       <BeforeAfter images_data={images_data} />
       <WhyChoose desc={whyChoose_desc} />
     </div>

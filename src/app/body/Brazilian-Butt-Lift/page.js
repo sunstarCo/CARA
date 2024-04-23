@@ -75,12 +75,7 @@ export default function Page() {
           </ul>
         </div>
       </WhoNeeds>
-      <CardContainer
-        title={
-          "Whether you're looking to enhance your curves, achieve amore youthful appearance, or address asymmetry, the Brazilian Butt Lift can betailored to meet your unique aesthetic goals."
-        }
-        benefits={benefits}
-      />
+      <CardContainer title={'Benefits of Brazilian Butt Lift'} benefits={benefits} />
       <BeforeAfter images_data={images_data} />
       <WhyChoose desc={whyChoose_desc} />
     </div>

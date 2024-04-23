@@ -253,19 +253,19 @@ function MainHeader({clickMenu, isOpen}) {
             </Link>
           </div>
         </div>
-        <button onClick={clickMenu} className="flex items-end gap-4 px-4 py-4 text-lg font-trajan lg:hidden">
+        <button onClick={clickMenu} className="flex items-end gap-4 py-4 text-lg font-trajan lg:hidden">
           Menu
-          <div className={`flex flex-col ${isOpen ? 'gap-[15px]' : 'gap-[5px]'} p-1`}>
+          <div className={`flex flex-col w-fit ${isOpen ? 'gap-[14px]' : 'gap-[6px]'} p-1`}>
             <div
-              className={`w-[25px] min-h-[2px] bg-black rounded-sm transition-all duration-300 ${
+              className={`w-[24px] min-h-[2px] bg-black rounded-sm transition-all duration-300 ${
                 isOpen && 'rotate-45 origin-top-left'
               }`}
             />
             <div
-              className={`w-[25px] min-h-[2px] bg-black rounded-sm transition-color ${isOpen && 'opacity-0 hidden'}`}
+              className={`w-[24px] min-h-[2px] bg-black rounded-sm transition-color ${isOpen && 'opacity-0 hidden'}`}
             />
             <div
-              className={`w-[25px] min-h-[2px] bg-black rounded-sm transition-all duration-300 ${
+              className={`w-[24px] min-h-[2px] bg-black rounded-sm transition-all duration-300 ${
                 isOpen && '-rotate-45 origin-bottom-left'
               }`}
             />
