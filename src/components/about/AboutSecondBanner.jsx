@@ -3,7 +3,7 @@ import React, {Fragment} from 'react';
 
 import {useObserver} from '@/hooks/useObserver';
 
-export default function AboutSecondBanner({mainDesc, subDesc, contents}) {
+export default function AboutSecondBanner({mainDesc, subDesc, contents, longText = false}) {
   const {isVisible, domRef} = useObserver();
   return (
     <div className="py-16 md:py-[8.75rem] bg-[url('/banner/about/BGDeco.png')] bg-cover bg-center px-8 md:px-32 2xl:px-[16.375rem]">
@@ -28,16 +28,16 @@ export default function AboutSecondBanner({mainDesc, subDesc, contents}) {
           </div>
         ) : (
           <>
-            <div className="text-center text-4xl text-wrap font-trajan leading-normal">
+            <div className="text-center text-3xl leading-loose text-wrap ">
               {mainDesc.split('/').map(word => {
                 return (
-                  <p key={word} className={`${subDesc && 'sm:text-4xl'}`}>
+                  <p key={word} className={`${!longText && 'text-4xl font-trajan leading-normal'}`}>
                     {word}
                   </p>
                 );
               })}
             </div>
-            <div ref={domRef} className="w-[6.25rem] h-2 bg-[#BDB5AA] mt-10 mb-[3.125rem]" />
+            <div ref={domRef} className={`w-[6.25rem] h-2 bg-[#BDB5AA] mt-10 mb-[3.125rem] ${longText && 'hidden'}`} />
             {subDesc && (
               <sub className="text-xl font-light leading-[2.8125rem] text-center max-w-[1400px] mx-auto">{subDesc}</sub>
             )}

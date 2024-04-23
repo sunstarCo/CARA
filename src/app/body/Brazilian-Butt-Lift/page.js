@@ -44,8 +44,9 @@ export default function Page() {
         contents="Achieve a fuller andshapelier buttocks with our Brazilian Butt Lift procedure. Using your body'sown fat, we can sculpt and enhance your buttocks for a natural-looking andlifted appearance. Our surgeons focus on creating harmonious proportions,ensuring beautiful and balanced results."
       />
       <AboutSecondBanner
+        longText
         mainDesc={
-          "In today'sera, many women aspire to enhance the allure of their derriere. The BrazilianButt Lift (BBL) is increasingly becoming a popular choice for buttocksaugmentation, offering a less invasive option with several notable advantages.At Cara Plastic Surgery & Laser Center Las Vegas, our skilled plasticsurgeons specialize in Brazilian Butt Lift procedures performed in anAAAASF-accredited facility. This accreditation ensures the highest standards ofsafety and comfort for our valued patients."
+          "In today's era, many women aspire to enhance the allure of their derriere. The Brazilian Butt Lift (BBL) is increasingly becoming a popular choice for buttocks augmentation, offering a less invasive option with several notable advantages. At Cara Plastic Surgery & Laser Center Las Vegas, our skilled plastic surgeons specialize in Brazilian Butt Lift procedures performed in an AAAASF-accredited facility. This accreditation ensures the highest standards of safety and comfort for our valued patients."
         }
       />
       <Section1

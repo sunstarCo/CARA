@@ -90,7 +90,9 @@ function BeforeAfter({images_data}) {
           </button>
         </div>
       </div>
-      <Link href={'/Before&After'} className="px-10 py-4 bg-[#d9d5cc]  leading-loose font-medium text-xl mt-20">
+      <Link
+        href={'/Before&After'}
+        className="px-10 py-4 bg-[#d9d5cc] uppercase leading-loose font-semibold text-xl mt-20">
         view gallery
       </Link>
     </div>

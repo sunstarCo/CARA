@@ -58,7 +58,10 @@ export default function Page() {
         subtitle="Restore Your Body After Pregnancy"
         contents="Motherhood is abeautiful journey, but it can take a toll on your body. Our Mommy Makeover combines various procedures tailored to address post-pregnancy changes. Frombreast enhancement and tummy tucks to liposuction, we can help you reclaim yourpre-pregnancy body and feel rejuvenated."
       />
-      <AboutSecondBanner mainDesc="The naturalprocesses of pregnancy, weight loss, and aging often lead to the development ofloose, sagging skin, and weakened muscles in the abdominal region. Whentraditional methods such as diet and exercise prove ineffective, a Mommy Makeoverin Las Vegas emerges as a transformative solution to help you attain thedesired stomach appearance." />
+      <AboutSecondBanner
+        longText
+        mainDesc="The natural processes of pregnancy, weight loss, and aging often lead to the development of loose, sagging skin, and weakened muscles in the abdominal region. Whentraditional methods such as diet and exercise prove ineffective, a Mommy Makeoverin Las Vegas emerges as a transformative solution to help you attain thedesired stomach appearance."
+      />
       <Section1
         desc={whatIs}
         title={'What is Mommy Makeover?'}
