@@ -1,20 +1,40 @@
-import React, {Fragment, useState} from 'react';
+import React, {useState} from 'react';
 
 import Image from 'next/image';
+
+import GalleryModal from './GalleryModal';
 export default function GalleryDetailPN({surgeryInfo}) {
   const [curPage, setCurPage] = useState(1);
   const pageSize = 9;
   const imgArr = [...Array(surgeryInfo.quantity)];
+  const [showModal, setShowModal] = useState(false);
+  const [selectedImage, setSelectedImage] = useState('');
   const [imgs, setImgs] = useState(imgArr.slice(0, pageSize));
+  const handleImageClick = imageUrl => {
+    setSelectedImage(imageUrl);
+    setShowModal(true);
+  };
 
+  const closeModal = () => {
+    setShowModal(false);
+    setSelectedImage('');
+  };
   return (
     <div className="flex flex-col items-center gap-10 mt-5">
       <div className=" px-8 max-w-[98rem] justify-center grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3  gap-5 w-full">
         {imgs.map((_, index) => (
-          <Fragment key={index}>
+          <div
+            key={index}
+            onClick={() =>
+              handleImageClick(
+                `/banner/gallery/${surgeryInfo.surgery.toLowerCase().replaceAll(' ', '-')}/${
+                  (index + 1) * curPage
+                }.jpg`,
+              )
+            }>
             <GalleryDetailPNCard title={surgeryInfo.surgery} count={(index + 1) * curPage} />
             {/* {index !== imgs.length - 1 && <hr className="my-10" />} */}
-          </Fragment>
+          </div>
         ))}
       </div>
       <div className="flex mb-24 gap-60">
@@ -45,6 +65,7 @@ export default function GalleryDetailPN({surgeryInfo}) {
           <Image src="/icons/next.svg" width={32} height={32} alt="arrow right" />
         </button>
       </div>
+      {showModal && <GalleryModal imageUrl={selectedImage} onClose={closeModal} />}
     </div>
   );
 }

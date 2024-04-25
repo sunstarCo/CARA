@@ -54,12 +54,12 @@ function Doctor() {
           </div>
           <p
             ref={domRef}
-            className="mt-6 min-[400px]:mt-[4rem] 2xl:mt-[8.75rem] text-[3rem] sm:text-[4rem] leading-normal font-trajan">
+            className="mt-6 min-[400px]:mt-[4rem] 2xl:mt-[6.75rem] text-[3rem] sm:text-[4rem] leading-normal font-trajan">
             David Kahng, MD
           </p>
           <div className="w-[6.25rem] h-2 bg-[#D9D5CC] mt-4 min-[400px]:mt-10" />
           <p
-            className={`opacity-0 text-[1.4rem] leading-loose mt-4 min-[400px]:mt-12 w-full ${
+            className={`opacity-0 text-[1.4rem] leading-loose min-h-[500px] mt-4 min-[400px]:mt-12 w-full ${
               isVisible && 'animate-show_move_top'
             } transition-opacity`}>
             {doctorData.find(data => data.title === active).desc}
