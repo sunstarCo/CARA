@@ -49,14 +49,11 @@ function BeforeAfter({images_data}) {
 
   return (
     <div className="flex flex-col justify-center items-center px-8 py-20 sm:py-[8.75rem]">
-      <h3 className="leading-normal  text-48px font-trajan">Before & After</h3>
+      <h3 className="leading-normal text-4xl sm:text-48px font-trajan">Before & After</h3>
       <div className="w-[6.25rem] h-2 bg-[#BDB5AA] my-[3.125rem]" />
       <div className="flex flex-col sm:flex-row justify-center w-full items-center gap-10 mt-10 sm:mt-[6.25rem] px-4 ">
-        <button
-          disabled={curPage === 1}
-          onClick={clickPrevSlide}
-          className="w-10 h-10 bg-[#D9D5CC] flex items-center justify-center rounded-full max-sm:hidden">
-          <Image src={'/icons/prev.svg'} alt="arrow left" width={0} height={0} sizes="100" className="w-fit" />
+        <button disabled={curPage === 1} onClick={clickPrevSlide} className="max-sm:hidden">
+          <Image src={'/icons/prev.svg'} alt="arrow left" width={30} height={30} sizes="100" className="w-12" />
         </button>
         <div className="flex w-[95%] md:w-[80%] justify-center">
           <div className={`card flex gap-10`}>
@@ -76,21 +73,17 @@ function BeforeAfter({images_data}) {
           </div>
         </div>
         <div className="flex gap-8">
-          <button
-            disabled={curPage === 1}
-            onClick={clickPrevSlide}
-            className="w-10 h-10 bg-[#D9D5CC] flex items-center justify-center rounded-full sm:hidden">
-            <Image src={'/icons/prev.svg'} alt="arrow left" width={0} height={0} sizes="100" className="w-fit" />
+          <button disabled={curPage === 1} onClick={clickPrevSlide} className="sm:hidden">
+            <Image src={'/icons/prev.svg'} alt="arrow left" width={30} height={30} sizes="100" className="w-12" />
           </button>
-          <button
-            disabled={curPage === Math.ceil(images_data.length / pageSize)}
-            onClick={clickNextSlide}
-            className="w-10 h-10 bg-[#D9D5CC] flex items-center justify-center rounded-full">
-            <Image src={'/icons/next.svg'} alt="arrow right" width={0} height={0} sizes="100" className="w-fit" />
+          <button disabled={curPage === Math.ceil(images_data.length / pageSize)} onClick={clickNextSlide} className="">
+            <Image src={'/icons/next.svg'} alt="arrow right" width={30} height={30} sizes="100" className="w-12" />
           </button>
         </div>
       </div>
-      <Link href={'/Before&After'} className="px-10 py-4 bg-[#d9d5cc]  leading-loose font-medium text-xl mt-20">
+      <Link
+        href={'/Before&After'}
+        className="px-10 py-4 bg-[#d9d5cc] uppercase leading-loose font-semibold text-xl mt-20">
         view gallery
       </Link>
     </div>

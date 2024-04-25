@@ -2,9 +2,9 @@ import React from 'react';
 
 export default function AboutPaymentSecondBanner() {
   return (
-    <div className=" py-[8.75rem]  bg-[url('/banner/about/BGDeco.png')] bg-cover">
+    <div className="py-20 sm:py-[8.75rem]  bg-[url('/banner/about/BGDeco.png')] bg-cover">
       <div className="w-full md:px-32 px-10 xl:px-[16.375rem] flex flex-col items-center">
-        <main className="text-center text-[2.5rem]  lg:text-nowrap break-keep font-trajan">
+        <main className="text-center text-4xl sm:text-[2.5rem]  lg:text-nowrap break-keep font-trajan">
           <p className="">For informational purposes only, you can access the</p>
           <p className="">federalCenters for Medicare and Medicaid Services (CMS)</p>
           <p className="">

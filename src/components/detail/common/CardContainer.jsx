@@ -14,13 +14,13 @@ function CardContainer({title, benefits, theme = 'default'}) {
         className={`object-cover object-left-top ${isDark && 'hidden'}`}
       />
       <div className={`flex flex-col items-center py-20 sm:py-40`}>
-        <h3 className="text-48px leading-normal text-center max-w-[85%] font-trajan">{title}</h3>
+        <h3 className="text-4xl sm:text-48px leading-normal text-center max-w-[85%] font-trajan">{title}</h3>
         <div className="w-[6.25rem] h-2 bg-[#9d9892] my-16" />
-        <div className="grid sm:grid-cols-2 justify-center gap-10 w-[85%]">
+        <div className="grid sm:grid-cols-2 justify-center gap-10 w-[85%] max-w-[1800px]">
           {benefits.slice(0, 4).map((data, index) => (
             <div
               key={index}
-              className={`text-center p-4 sm:p-[3.75rem] relative ${
+              className={`text-center p-6 sm:p-[3.75rem] relative ${
                 isDark ? 'bg-[#302C29] bg-opacity-80 text-white' : 'bg-white'
               }`}>
               <Image
@@ -41,7 +41,7 @@ function CardContainer({title, benefits, theme = 'default'}) {
         </div>
         {benefits[4] && (
           <div
-            className={`text-center p-[3.75rem] w-[85%] mt-10 relative  ${
+            className={`text-center p-6 sm:p-[3.75rem] w-[85%] mt-10 relative  ${
               isDark ? 'bg-[#302C29] bg-opacity-80 text-white' : 'bg-white'
             }`}>
             <Image
