@@ -85,8 +85,9 @@ export default function ContactForm() {
             required: 'Field is required.',
           })}
           id="interest"
-          className="w-full pl-5 contact_input contact_input_full">
-          <option value="" className="text-[#9D9893]" disabled selected>
+          className="w-full pl-5 contact_input contact_input_full"
+          defaultValue={''}>
+          <option value="" className="text-[#9D9893]" disabled>
             Procedure of interest?*
           </option>
           {interestArr.map(item => {
@@ -106,8 +107,9 @@ export default function ContactForm() {
             required: 'Field is required.',
           })}
           id="location"
-          className="w-full pl-5 contact_input contact_input_full">
-          <option className="text-[#9D9893]" value="" disabled selected>
+          className="w-full pl-5 contact_input contact_input_full"
+          defaultValue={''}>
+          <option className="text-[#9D9893]" value="" disabled>
             Preferred Location?*
           </option>
           <option value="LAS VEGAS">LAS VEGAS</option>

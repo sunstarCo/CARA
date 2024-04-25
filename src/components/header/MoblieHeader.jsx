@@ -54,7 +54,7 @@ function MoblieHeader({clickMenu}) {
   return (
     <div
       ref={menu}
-      className="bg-[#e5e5e5] w-screen md:w-[600px] h-screen py-[95px] lg:py-[142px] ml-auto overflow-y-scroll">
+      className="bg-[#e5e5e5] w-screen md:w-[600px] h-screen py-[95px] lg:py-[142px] ml-auto overflow-y-scroll lg:hidden">
       <ul className="flex flex-col items-start gap-6 p-10 xl:gap-8">
         {menus.map((menu, i) => {
           return <MenuList key={i} menu={menu} clickMenu={clickMenu} />;
