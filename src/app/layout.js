@@ -20,6 +20,9 @@ export async function generateMetadata() {
     metadataBase: new URL('https://https://cara-nu.vercel.app/'),
     description: METADATA[mainTitle.toUpperCase()]?.description || METADATA.DEFAULT.description,
     image: METADATA[mainTitle.toUpperCase()]?.image || METADATA.DEFAULT.image,
+    icons: {
+      icon: '/logo/favicon.png',
+    },
     openGraph: {
       title: `${subTitle || mainTitle} | CARA`,
       description: METADATA[mainTitle.toUpperCase()]?.description || METADATA.DEFAULT.description,
