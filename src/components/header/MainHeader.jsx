@@ -235,7 +235,7 @@ function MainHeader({clickMenu, isOpen}) {
                       <Link
                         key={i}
                         href={sub.path}
-                        className={`font-trajan font-bold xl:text-lg border-b-2 ${sub.path === curPath && 'on'}`}>
+                        className={`font-trajan font-bold  border-b-2 ${sub.path === curPath && 'on'}`}>
                         {sub.menu}
                       </Link>
                     ))}
