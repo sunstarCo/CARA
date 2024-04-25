@@ -5,35 +5,42 @@ import ContactForm from './ContactForm';
 
 export default function ContactConsultation() {
   return (
-    <div className="flex flex-col lg:flex-row items-center justify-center w-full lg:h-[57.5rem]">
-      <div className="lg:w-[50%] h-full w-full bg-[url('/ContactScheduleBG.png')] bg-cover flex justify-center items-center">
+    <div className="flex  flex-col lg:flex-row items-center justify-center w-full lg:h-[70.5rem]">
+      <div className="lg:w-[50%] flex-col lg:flex-row h-full w-full bg-[url('/ContactScheduleBG.png')] bg-cover flex justify-center items-center">
+        <div className="lg:hidden leading-normal pt-5 text-[2.5rem] sm:text-48px text-start font-trajan text-white">
+          <p className="whitespace-nowrap">SCHEDULE A</p>
+          <p>CONSULTATION</p>
+          <div className="bg-[#BDB5AA] w-[6.25rem] mx-auto h-2 my-10"></div>
+        </div>
         <ContactForm />
       </div>
-      <div className="flex flex-col lg:w-[50%] py-10 md:py-36 px-3 lg:px-[7.5rem] items-center   md:h-full justify-center ">
-        <div className="text-48px w-full text-start leading-normal font-trajan pt-10">
-          <p>SCHEDULE A</p>
-          <p>CONSULTATION</p>
-          <div className="bg-[#BDB5AA] w-[6.25rem] h-2 my-10"></div>
-        </div>
-        <div className="flex flex-col justify-start w-full text-start">
-          <p className="text-[1.75rem] leading-[3.325rem]">HOURS:</p>
-          {Hours.map(item => {
-            return (
-              <div key={item.location} className="">
-                <p className="text-xl leading-[2.375rem]">{item.location}</p>
-                <div className="">
-                  {item.hours.map(item => {
-                    return (
-                      <div key={item.id} className="flex justify-between font-light text-[#9D9892] text-lg">
-                        <span className="leading-[2.1375rem]">{item.day}</span>
-                        <span>{item.hour}</span>
-                      </div>
-                    );
-                  })}
+      <div className="flex flex-col w-1/2 px-2 py-16 lg:py-36">
+        <div className="w-full mx-auto items-center md:h-full max-w-[600px] lg:px-12">
+          <div className="w-full leading-normal hidden lg:block text-[2.5rem] sm:text-48px text-start font-trajan ">
+            <p className="whitespace-nowrap">SCHEDULE A</p>
+            <p>CONSULTATION</p>
+            <div className="bg-[#BDB5AA] w-[6.25rem] h-2 my-10"></div>
+          </div>
+          <div className="flex flex-col justify-start w-full text-start">
+            <p className="text-[1.75rem] leading-[3.325rem]">HOURS:</p>
+            {Hours.map(item => {
+              return (
+                <div key={item.location} className="">
+                  <p className="text-xl leading-[2.375rem]">{item.location}</p>
+                  <div className="">
+                    {item.hours.map(item => {
+                      return (
+                        <div key={item.id} className="flex justify-between font-light gap-6 text-[#9D9892] text-lg">
+                          <span className="leading-[2.1375rem]">{item.day}</span>
+                          <span className="text-nowrap">{item.hour}</span>
+                        </div>
+                      );
+                    })}
+                  </div>
                 </div>
-              </div>
-            );
-          })}
+              );
+            })}
+          </div>
         </div>
       </div>
     </div>
