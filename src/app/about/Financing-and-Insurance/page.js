@@ -11,11 +11,11 @@ export default function Page() {
       <CommonTopBanner
         url="About"
         title="FINANCING &/INSURANCE"
-        contents="If you arecontemplating plastic surgery, a cosmetic enhancement, or a non-surgicaltreatment, we offer viable financing options to make your desired treatmentaccessible and achievable."
+        contents="Whether you are contemplating plastic surgery, a cosmetic enhancement, or a non-surgical treatment, we offer viable financing options to make your desired treatment accessible and achievable."
       />
       <AboutSecondBanner
-        mainDesc="We strongly believe that having/the procedure you desire when you need it/cansignificantly enhance your quality of life."
-        subDesc="Our flexible financing options aredesigned to allow you to undergo your chosen treatment or procedure without theburden of financial stress. While some procedures may be covered, either whollyor partially, by your health insurance, it's important to note that manycosmetic procedures are not covered. Discover more about your options throughan email consultation or an in-person discussion with our team."
+        mainDesc="We strongly believe that having/the procedure you desire when you need it can significantly enhance your quality of life."
+        subDesc="Our flexible financing options are designed to allow you to undergo your chosen treatment or procedure without the burden of financial stress. While some procedures may be covered, either wholly or partially, by your health insurance, it's important to note that many cosmetic procedures are not covered. Discover more about your options through an email consultation or an in-person discussion with our team."
       />
       <CreditBanner />
       <InsuranceBanner />

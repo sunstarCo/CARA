@@ -15,7 +15,7 @@ export default function Page() {
       <CommonTopBanner
         url="About"
         title="Special Offers &/promotions"
-        contents="Explorethe latest specials and promotions at Cara Plastic Surgery. Our enticingpromotions are updated monthly, so make sure to check back regularly todiscover our newest offerings."
+        contents="Explore the latest specials and promotions at Cara Plastic Surgery. Our amazing promotions are updated monthly, so make sure to check back regularly to discover our newest offerings."
       />
       <AboutSecondBanner mainDesc="Specials & /Promotions" subDesc="" />
       <div className="flex flex-col items-center w-full">
