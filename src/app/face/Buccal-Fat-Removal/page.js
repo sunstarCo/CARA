@@ -14,12 +14,12 @@ const images_data = ['/B&A/example.jpg', '/B&A/example.jpg', '/B&A/example.jpg',
 
 const benefits = [
   {
-    title: 'Refined Facial Contours',
+    title: 'Refined Facial Contour',
     desc: 'Buccal fat removal can sculpt the cheeks and create a more defined facial appearance by reducing excess fat in the lower cheeks.',
   },
   {
     title: 'Enhanced Cheekbones',
-    desc: 'Achieve a more sculpted and angular look by revealing your natural cheekbone structure and defining facial contours.',
+    desc: 'Achieve a more sculpted and angular look by defining facial contours and revealing your natural cheekbone structure.',
   },
   {
     title: 'Youthful Appearance',
@@ -33,7 +33,7 @@ const benefits = [
 
 export default function Page() {
   const what_is =
-    'Buccal fat removal, also known as cheek reduction surgery, is a cosmetic procedure designed to slim the cheeks and define facial contours by removing excess fat pads from the lower cheeks. This technique targets the buccal fat pad, which can contribute to a round or chubby facial appearance, and creates a more sculpted and angular facial contour. Buccal fat removal offers a permanent solution to achieve a slimmer and more defined facial profile.';
+    'Buccal fat removal, also known as cheek reduction surgery, is a cosmetic procedure designed to slim down the cheeks and define facial contours by removing excess fat pads from the lower cheeks. This technique targets the buccal fat pad, which can contribute to a round or chubby facial appearance, and instead creates a more sculpted and angular facial contour. Buccal fat removal offers a permanent solution to achieve a slimmer and more defined facial profile.';
   const who_needs =
     "Buccal fat removal is an ideal option for individuals who are bothered by excess fullness in the lower cheeks, creating a round or chubby facial appearance. Whether you're seeking to achieve a more sculpted facial contour, define your cheekbones, or enhance your natural beauty, our skilled surgeons can customize the procedure to meet your specific needs and aesthetic goals.";
   const whyChoose_desc =

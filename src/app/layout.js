@@ -1,4 +1,5 @@
 import './globals.css';
+
 import {Outfit} from 'next/font/google';
 import {headers} from 'next/headers';
 import Script from 'next/script';
@@ -15,19 +16,19 @@ export async function generateMetadata() {
   const headerPathname = headersList.get('x-pathname') || '';
   const [_, mainTitle, subTitle] = headerPathname.split('/');
 
-  return {
+  const meta_data = {
     title: headerPathname === '/' ? 'CARA' : `${subTitle || mainTitle} | CARA`,
-    metadataBase: new URL('https://https://cara-nu.vercel.app/'),
     description: METADATA[mainTitle.toUpperCase()]?.description || METADATA.DEFAULT.description,
     image: METADATA[mainTitle.toUpperCase()]?.image || METADATA.DEFAULT.image,
+  };
+
+  return {
+    ...meta_data,
+    metadataBase: new URL('https://https://cara-nu.vercel.app/'),
     icons: {
       icon: '/logo/favicon.png',
     },
-    openGraph: {
-      title: `${subTitle || mainTitle} | CARA`,
-      description: METADATA[mainTitle.toUpperCase()]?.description || METADATA.DEFAULT.description,
-      image: METADATA[mainTitle.toUpperCase()]?.image || METADATA.DEFAULT.image,
-    },
+    openGraph: meta_data,
   };
 }
 

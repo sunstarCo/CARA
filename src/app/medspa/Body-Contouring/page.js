@@ -33,7 +33,7 @@ export default function Page() {
       benefits: [
         'Achieves sustainable weight loss and improved overall health.',
         'Customized plan based on your unique needs and goals.',
-        'Provides ongoing support and guidance to help you stay on track.',
+        'Receive ongoing support and guidance to help you stay on track.',
       ],
     },
   };
@@ -50,7 +50,7 @@ export default function Page() {
       />
       <Intro
         title={'Body Contouring'}
-        desc={`At CARA Plastic Surgery & Laser Center, we offer innovative body contouring treatments to help you achieve the sculpted physique you desire. Explore our selection of cutting-edge procedures below to learn more about each option and discover how they can help you achieve your aesthetic goals.`}
+        desc={`At CARA Plastic Surgery & Laser Center, we offer innovative body contouring treatments to help you achieve the sculpted physique you desire. Explore our selection of state-of-the-art procedures below to learn more about each option and discover how they can help you achieve your aesthetic goals.`}
       />
       <Section1
         desc={what_is.Inmode_BodyFX.desc}
