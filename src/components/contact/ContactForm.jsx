@@ -16,7 +16,7 @@ export default function ContactForm() {
     formState: {isSubmitting, isSubmitted, errors},
   } = useForm();
   return (
-    <form onSubmit={handleSubmit(onSubmit)} className="w-[47.875rem] flex flex-col gap-4 p-[4.5rem]">
+    <form onSubmit={handleSubmit(onSubmit)} className="w-full lg:w-[47.875rem] flex flex-col gap-4  p-[4.5rem]">
       <div className="flex flex-col justify-between gap-4 md:gap-0 md:flex-row">
         <div className={`relative contact_input contact_input_half ${errors.firstName && `border border-red-600`}`}>
           <input
