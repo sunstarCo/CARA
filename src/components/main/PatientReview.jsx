@@ -8,25 +8,21 @@ const reviews = [
     name: 'Belli Smith1',
     comment:
       'Centuries but also the leap into electronic typesetting,established fact that a reader will bdistracted the readable content.',
-    image: '/reviews/patient1.png',
   },
   {
     name: 'Belli Smith2',
     comment:
       'Centuries but also the leap into electronic typesetting,established fact that a reader will bdistracted the readable content.',
-    image: '/reviews/patient2.png',
   },
   {
     name: 'Belli Smith3',
     comment:
       'Centuries but also the leap into electronic typesetting,established fact that a reader will bdistracted the readable content.',
-    image: '/reviews/patient1.png',
   },
   {
     name: 'Belli Smith4',
     comment:
       'Centuries but also the leap into electronic typesetting,established fact that a reader will bdistracted the readable content.',
-    image: '/reviews/patient2.png',
   },
 ];
 
@@ -81,7 +77,7 @@ function PatientReview() {
           <div className={`card flex gap-[1.875rem] w-full xl:w-1/2`}>
             <div className="max-sm:min-w-[20vw] sm:w-60 max-sm:max-h-[15rem]">
               <Image
-                src={reviews[curSlide].image}
+                src={reviews[curSlide].image || '/reviews/user_profile_default.png'}
                 alt="patient"
                 width={0}
                 height={0}
@@ -122,7 +118,7 @@ function PatientReview() {
           <div className={`card flex gap-[1.875rem] w-1/2 ml-[3.125rem] max-xl:hidden`}>
             <div className="w-60 h-[17.5rem]">
               <Image
-                src={reviews[curSlide + 1]?.image || reviews[0]?.image}
+                src={reviews[curSlide + 1]?.image || reviews[0]?.image || '/reviews/user_profile_default.png'}
                 alt="patient"
                 width={0}
                 height={0}
