@@ -1,5 +1,6 @@
 import React from 'react';
 
+import AboutSecondBanner from '@/components/about/AboutSecondBanner';
 import CommonTopBanner from '@/components/common/banner/CommonTopBanner';
 import CardContainer from '@/components/detail/common/CardContainer';
 import WhyChoose from '@/components/detail/common/WhyChoose';
@@ -27,8 +28,7 @@ const benefits = [
 
 export default function Page() {
   const whyChoose_desc =
-    'Las Vegas, our experienced team is committed to providing expert care and achieving optimal results for our patients undergoing revision rhinoplasty. Contact us today to schedule a free consultation and take the first step towards restoring confidence and refining your nasal aesthetics with revision rhinoplasty.';
-  // const whatIs = `Rhinoplasty, commonly referred to as a "nose job," is a surgical procedure aimed at reshaping the nose to improve its appearance and function. Whether you're seeking to refine the size, shape, or symmetry of your nose, rhinoplasty offers a tailored solution to enhance your overall facial aesthetics. This procedure can address a variety of concerns, including a prominent nasal hump, wide nostrils, or a drooping nasal tip.`;
+    'Las Vegas, our experienced team is committed to providing expert care and achieving optimal results for our patients who choose to undergo revision rhinoplasty. Contact us today to schedule a free consultation and take the first step towards restoring confidence and refining your nasal aesthetics with revision rhinoplasty.';
   const whoNeeds = [
     'Have undergone previous rhinoplasty surgery and are dissatisfied with the outcomes or experience complications such as asymmetry, irregularities, or breathing difficulties.',
     'Seek to address functional issues such as nasal obstruction, septal deviation, or collapse of nasal valves that have not been adequately corrected by previous surgeries.',
@@ -39,11 +39,15 @@ export default function Page() {
       <CommonTopBanner
         url="nose"
         title="Revision Rhinoplasty"
-        subtitle="Restoring Confidence, Refining Results"
-        contents="Dr. David Kahng specializes in revision rhinoplasty to address unsatisfactory results or complications from previous nose surgeries. We understand the frustration and disappointment that can accompany suboptimal outcomes, and our experienced team is dedicated to restoring your confidence and refining your nasal aesthetics."
+        subtitle="Restoring Confidence, Refining Results at CARA Las Vegas"
+        contents="If you are dissatisfied with the outcome of a prior rhinoplasty procedure, it is imperative to seek the expertise of a skilled surgeon for corrective measures. With his knowledge and experience, Dr. Kahng possesses the necessary proficiency to address complications arising from previous surgeries. He will be able to restore optimal nasal function and ultimately ensure your satisfaction with the results."
       />
-      {/* <Intro  /> */}
-      {/* <Section1 desc={whatIs} title={'What is Rhinoplasty?'} img={'/detailpage/liposuction/liposuction_what_is.png'} /> */}
+      <AboutSecondBanner
+        mainDesc={
+          'Dr. David Kahng specializes in revision rhinoplasty to address unsatisfactory results or complications from previous nose surgeries. We understand the frustration and disappointment that can accompany suboptimal outcomes, and our experienced team is dedicated to restoring your confidence and refining your nasal aesthetics, providing you with the excellent service that you deserve.'
+        }
+        longText
+      />
       <CardContainer title={'Benefits of Revision Rhinoplasty'} benefits={benefits} />
       <WhoNeedNose
         title={'Who Needs Revision Rhinoplasty?'}

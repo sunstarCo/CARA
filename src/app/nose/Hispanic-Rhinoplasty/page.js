@@ -3,6 +3,7 @@ import React from 'react';
 import CommonTopBanner from '@/components/common/banner/CommonTopBanner';
 import CardContainer from '@/components/detail/common/CardContainer';
 import WhyChoose from '@/components/detail/common/WhyChoose';
+import Intro from '@/components/detail/nose/Intro';
 import NoseBeforeAfter from '@/components/detail/nose/NoseBeforeAfter';
 import WhoNeedNose from '@/components/detail/nose/WhoNeedNose';
 
@@ -17,7 +18,7 @@ const benefits = [
   },
   {
     title: 'Increased Confidence',
-    desc: 'By achieving your desired nasal contour, Hispanic rhinoplasty can boost your self-esteem and confidence, allowing you to feel more comfortable and proud of your appearance.',
+    desc: 'By achieving your desired nasal contour, Hispanic rhinoplasty can boost your self-esteem and confidence, allowing you to feel more comfortable with and proud of your appearance.',
   },
   {
     title: 'Customized Results',
@@ -28,7 +29,6 @@ const benefits = [
 export default function Page() {
   const whyChoose_desc =
     'Las Vegas, our team of experienced surgeons is dedicated to providing personalized care and natural-looking results tailored to your unique needs. Contact us today to schedule a free consultation and discover how Hispanic rhinoplasty can help you achieve a nose that celebrates your cultural heritage and enhances your natural beauty.';
-  // const whatIs = `Rhinoplasty, commonly referred to as a "nose job," is a surgical procedure aimed at reshaping the nose to improve its appearance and function. Whether you're seeking to refine the size, shape, or symmetry of your nose, rhinoplasty offers a tailored solution to enhance your overall facial aesthetics. This procedure can address a variety of concerns, including a prominent nasal hump, wide nostrils, or a drooping nasal tip.`;
   const whoNeeds = [
     'Desire to refine the shape, size, or projection of their nose while celebrating their Hispanic heritage.',
     'Seek to enhance facial balance and harmony by addressing nasal asymmetry or disproportion.',
@@ -41,10 +41,14 @@ export default function Page() {
         url="nose"
         title="Hispanic Rhinoplasty"
         subtitle="Celebrating Your Cultural Heritage"
-        contents="Las Vegas, we understand the importance of preserving your cultural heritage while enhancing your natural beauty. Our Hispanic rhinoplasty services are designed to meet the unique aesthetic goals and cultural preferences of individuals of Hispanic descent. Let us help you achieve a nose that celebrates your heritage while enhancing your overall facial harmony."
+        contents="Dr. Kahng specializes in customizing every rhinoplasty procedure to suit the distinct ethnic and cultural backgrounds of his patients. Throughout the process, he can address specific concerns regarding the nose's size or shape, all while preserving your cultural identity and working with you to determine the best care."
       />
-      {/* <Intro  /> */}
-      {/* <Section1 desc={whatIs} title={'What is Rhinoplasty?'} img={'/detailpage/liposuction/liposuction_what_is.png'} /> */}
+      <Intro
+        title={'Hispanic Rhinoplasty in Las Vegas'}
+        desc={
+          'Las Vegas, we understand the importance of preserving your cultural heritage while enhancing your natural beauty. Our Hispanic rhinoplasty services are designed to meet the unique aesthetic goals and cultural preferences of individuals of Hispanic descent. Let us help you achieve a nose that celebrates your heritage while enhancing your overall facial harmony.'
+        }
+      />
       <CardContainer title={'Benefits of Hispanic Rhinoplasty'} benefits={benefits} />
       <WhoNeedNose
         title={'Who Needs Hispanic Rhinoplasty?'}

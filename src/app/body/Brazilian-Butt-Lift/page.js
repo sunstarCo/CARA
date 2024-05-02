@@ -13,27 +13,34 @@ const images_data = ['/B&A/example.jpg', '/B&A/example.jpg', '/B&A/example.jpg',
 const benefits = [
   {
     title: 'Natural-Looking Results',
-    desc: "Using your body'sown fat ensures a more natural and harmonious enhancement, avoiding the use ofimplants.",
+    desc: "Using your body's own fat ensures a more natural and harmonious enhancement, avoiding the use of implants.",
   },
   {
     title: 'Dual Benefit of Liposuction',
-    desc: 'The liposuctionprocess not only sculpts donor areas but also allows for targeted fat removal,further enhancing body contours.',
+    desc: 'The liposuction process not only sculpts donor areas but also allows for targeted fat removal, further enhancing body contours.',
   },
   {
     title: 'Increased Fullness and Lift',
-    desc: 'Achieve a fuller,lifted, and more youthful appearance of the buttocks, enhancing overall bodyproportions.',
+    desc: 'Achieve a fuller, lifted, and more youthful appearance of the buttocks, enhancing overall body proportions.',
   },
   {
     title: 'Long-Lasting Results',
-    desc: 'The Brazilian ButtLift provides enduring results, as the injected fat establishes a lastingpresence in the augmented area.',
+    desc: 'The Brazilian Butt Lift provides enduring results, as the injected fat establishes a lasting presence in the augmented area.',
   },
+];
+
+const whoHave = [
+  'Desire fuller and shapelier buttocks',
+  'Wish to improve the proportions and symmetry of their lower body',
+  'Seek a natural and long-lasting enhancement',
+  'Have sufficient donor fat for the liposuction process',
 ];
 
 export default function Page() {
   const whyChoose_desc =
-    'At Cara Plastic Surgery & Laser Center Las Vegas, ourplastic surgeons prioritize your safety, comfort, and satisfaction. With afocus on artistic precision, we aim to provide you with the beautifullysculpted curves you desire, enhancing your confidence and overall well-being. Schedule a consultation todayto discuss your Brazilian Butt Lift goals with our expert surgeons and embarkon the journey to a more confident and enhanced silhouette.';
+    'At Cara Plastic Surgery & Laser Center Las Vegas, our plastic surgeons prioritize your safety, comfort, and satisfaction. With a focus on artistic precision, we aim to provide you with the beautifully sculpted curves you desire, enhancing your confidence and overall well-being. Schedule a consultation today to discuss your Brazilian Butt Lift goals with our expert surgeons and embark on the journey to a more confident and enhanced silhouette.';
   const whatIs =
-    "TheBrazilian Butt Lift is a transformative cosmetic procedure designed to enhancethe shape and volume of the buttocks using your body's own fat. During theprocedure, excess fat is harvested from areas such as the abdomen, flanks, orthighs through liposuction. This fat is then purified and strategicallyinjected into the buttocks, creating a fuller, lifted, and more youthfulappearance.";
+    "The Brazilian Butt Lift is a transformative cosmetic procedure designed to enhance the shape and volume of the buttocks using your body's own fat. During the procedure, excess fat is harvested from areas such as the abdomen, flanks, or thighs through liposuction. This fat is then purified and strategically injected into the buttocks, creating a fuller, lifted, and more youthful appearance.";
   const whoNeeds = 'A Brazilian Butt Lift is ideal for individuals who';
   return (
     <div>
@@ -41,7 +48,7 @@ export default function Page() {
         url="body"
         title="Brazilian Butt Lift"
         subtitle="Enhance Your Curves"
-        contents="Achieve a fuller andshapelier buttocks with our Brazilian Butt Lift procedure. Using your body'sown fat, we can sculpt and enhance your buttocks for a natural-looking andlifted appearance. Our surgeons focus on creating harmonious proportions,ensuring beautiful and balanced results."
+        contents="Achieve fuller and shapelier buttocks with our Brazilian Butt Lift procedure. Using your body's own fat, we can sculpt and enhance your buttocks for a natural-looking and lifted appearance. Our surgeons focus on creating harmonious proportions, ensuring beautiful and balanced results."
       />
       <AboutSecondBanner
         longText
@@ -57,22 +64,12 @@ export default function Page() {
       <WhoNeeds title={'Who Can Benefit from a Brazilian ButtLift?'} desc={whoNeeds}>
         <div className="flex flex-col mt-12 text-start text-[#808683]">
           <ul className="flex flex-col gap-8">
-            <li className="flex items-center gap-4">
-              <div className="min-w-[0.625rem] min-h-[0.625rem] bg-[#9D9892]" />
-              <p className="text-xl ">Desire a fuller and shapelier buttocks</p>
-            </li>
-            <li className="flex items-center gap-4">
-              <div className="min-w-[0.625rem] min-h-[0.625rem] bg-[#9D9892]" />
-              <p className="text-xl ">Wish to improve the proportions and symmetry oftheir lower body</p>
-            </li>
-            <li className="flex items-center gap-4">
-              <div className="min-w-[0.625rem] min-h-[0.625rem] bg-[#9D9892]" />
-              <p className="text-xl ">Seek a natural and long-lasting enhancement</p>
-            </li>
-            <li className="flex items-center gap-4">
-              <div className="min-w-[0.625rem] min-h-[0.625rem] bg-[#9D9892]" />
-              <p className="text-xl ">Have sufficient donor fat for the liposuctionprocess</p>
-            </li>
+            {whoHave.map((who, index) => (
+              <li key={index} className="flex items-center gap-4">
+                <div className="min-w-[0.625rem] min-h-[0.625rem] bg-[#9D9892]" />
+                <p className="text-xl">{who}</p>
+              </li>
+            ))}
           </ul>
         </div>
       </WhoNeeds>

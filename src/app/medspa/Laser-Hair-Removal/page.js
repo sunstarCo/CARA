@@ -12,7 +12,7 @@ export default function Page() {
   const what_is = {
     Alma_Soprano_ICE: {
       title: 'Alma Soprano Ice',
-      desc: 'The Alma Soprano ICE is a revolutionary laser hair removal system that utilizes advanced diode laser technology to safely and effectively remove unwanted hair from virtually any part of the body. This innovative system combines cutting-edge technology with a unique cooling mechanism to ensure maximum comfort and safety during treatment.',
+      desc: 'The Alma Soprano ICE is a revolutionary laser hair removal system that utilizes advanced diode laser technology to safely and effectively remove unwanted hair from virtually any part of the body. This innovative system combines innovative technology with a unique cooling mechanism to ensure maximum comfort and safety during treatment.',
       benefits: [
         `Effective on all skin types, including tanned and dark skin.`,
         'Virtually painless treatment with built-in cooling technology.',

@@ -114,14 +114,14 @@ function Reviews() {
 
 function ReviewCard({review}) {
   return (
-    <div>
-      <p className="text-xl leading-loose">{review.comment}</p>
-      <div className="text-xl flex justify-between mt-5 leading-loose font-semibold">
+    <div className="text-xl leading-loose text-[#585451]">
+      <p>{review.comment}</p>
+      <div className="flex justify-between mt-5 font-semibold">
         <div className="flex gap-2">
           <Image src="/icons/comment.svg" width={36} height={'36'} alt="speech bubble" className="object-cover " />
           <p>{review.name}</p>
         </div>
-        <p className="text-[#9D9892]">{review.date}</p>
+        <p className="text-[#9D9892] text-lg">{review.date}</p>
       </div>
     </div>
   );
