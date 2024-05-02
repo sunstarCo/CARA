@@ -28,7 +28,7 @@ export default function AboutSecondBanner({mainDesc, subDesc, contents, longText
           </div>
         ) : (
           <>
-            <div className="text-center text-3xl leading-loose text-wrap ">
+            <div className="text-3xl leading-loose text-center text-wrap ">
               {mainDesc.split('/').map(word => {
                 return (
                   <p key={word} className={`${!longText && 'text-4xl font-trajan leading-normal'}`}>
@@ -39,7 +39,9 @@ export default function AboutSecondBanner({mainDesc, subDesc, contents, longText
             </div>
             <div ref={domRef} className={`w-[6.25rem] h-2 bg-[#BDB5AA] mt-10 mb-[3.125rem] ${longText && 'hidden'}`} />
             {subDesc && (
-              <sub className="text-xl font-light leading-[2.8125rem] text-center max-w-[1400px] mx-auto">{subDesc}</sub>
+              <sub className="text-xl font-light leading-[2.8125rem] text-center max-w-[1400px] mx-auto">
+                {subDesc.includes('/') ? subDesc.split('/').map(a => <p key={a}>{a}</p>) : subDesc}
+              </sub>
             )}
           </>
         )}

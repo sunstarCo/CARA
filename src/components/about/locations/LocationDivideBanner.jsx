@@ -22,18 +22,18 @@ export default function LocationDivideBanner() {
 const info = [
   {
     title: 'Experienced Professionals',
-    desc: 'Nestled in the beautiful San Gabriel Valley,our facility provides a serene environment for your cosmetic procedures.Experience the perfect blend of natural beauty and personalized care.',
+    desc: 'Our team of board-certified surgeons and skilled professionals is dedicated to providing you with the highest quality care and results.',
   },
   {
-    title: 'Cutting-edge Technology',
-    desc: 'We utilize the latest advancements in plastic surgery and laser treatments to ensure optimaloutcomes for our patients.',
+    title: 'State-of-the-art Technology',
+    desc: 'We utilize the latest advancements in plastic surgery and laser treatments to ensure optimal outcomes for our patients.',
   },
   {
     title: 'Personalized Approach',
-    desc: 'Your unique needs andaspirations are our priority. We work closely with you to create a customizedtreatment plan that aligns with your goals. The sequence of locations forservices is Las Vegas first, Los Angeles, Buena Park, and San Gabriel Valley.',
+    desc: 'Your unique needs and goals are our priority. We work closely with you to create a customized treatment plan that aligns with your vision. That plan may include a sequence of visits, first to our Las Vegas location, then Los Angeles, Buena Park, and finally concluding in our San Gabriel office',
   },
   {
-    title: 'Comfortable Facilities',
-    desc: 'Each of our locations is designed to provide a comfortable and welcoming atmosphere,ensuring a positive and stress-free experience.',
+    title: 'Quality Facilities',
+    desc: 'Each of our locations is designed to provide a comfortable and welcoming atmosphere, ensuring a positive and stress-free experience.',
   },
 ];

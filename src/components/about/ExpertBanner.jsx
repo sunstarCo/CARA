@@ -10,7 +10,7 @@ import {useObserver} from '@/hooks/useObserver';
 export default function ExpertBanner() {
   const {isVisible, domRef} = useObserver();
   return (
-    <div className="flex flex-col w-full 2xl:flex-row overflow-hidden">
+    <div className="flex flex-col w-full overflow-hidden 2xl:flex-row">
       <div className="relative 2xl:w-1/2">
         <Image src={DoctorImg} alt="doctorImage" fill className="object-cover object-top" />
       </div>
@@ -24,18 +24,16 @@ export default function ExpertBanner() {
           </h1>
           <div className="w-[6.25rem] h-2 mb-10 bg-[#EAE9E5]"></div>
           <p className="text-lg font-light leading-[2.375rem] max-w-[800px]">
-            Dr. Kahng has devotedhis life to the intricate art of Plastic & Reconstructive Surgery,specializing in both
-            cosmetic and reconstructive procedures. His practice spansthe entire spectrum of aesthetic surgeries for the
-            face and body, encompassingreconstructive treatments such as breast cancer reconstruction,
-            burnreconstruction, body contouring after significant weight loss, and handsurgery. Serving as the medical
-            director for the Grossman Burn Center in SantaAna from 2009-2012, Dr. Kahng managed minor to severe burn
-            cases and oversawthe day-to-day operations of the burn center. Understandingthe importance of
-            comprehensiveness in Plastic & Reconstructive surgery,Dr. Kahng firmly believes in practicing and
-            comprehending every aspect of thefield. As a Korean-American, he possesses a natural eye for Asian
-            aestheticsurgery, backed by extensive training with Korean board-certified plasticsurgeons in South Korea.
-            Renowned in the United States, Dr. Kahng iscelebrated for his expertise in Asian plastic surgery,
-            specializing in AsianEyelid, Asian Rhinoplasty, and Asian Facelift surgery. Holding a certificatefrom
-            2008-2018, he also demonstrates a keen eye for treating non-Asian patientsin the greater Los Angeles area.
+            Dedicated to achieving excellence across every aspect of his plastic surgery practice, Dr. Kahng finds
+            fulfillment in providing outcomes that enhance patients&apos; comfort with their appearance. Dr. Kahng
+            blends refined medical expertise with artistic flair to create cosmetic enhancements that seamlessly blend
+            with natural aesthetics, earning him national acclaim for his expertise and compassionate care. <br /> Dr.
+            Kahng has devoted his life to the intricate art of Plastic & Reconstructive Surgery, specializing in both
+            cosmetic and reconstructive procedures. His practice spans the entire spectrum of aesthetic surgeries for
+            the face and body, encompassing reconstructive treatments such as breast cancer reconstruction, burn
+            reconstruction, and body contouring after significant weight loss. His wealth of expertise comes partially
+            from serving as the medical director for the Grossman Burn Center in Santa Ana from 2009-2012, where he
+            managed minor to severe burn cases and oversaw the day-to-day operations of the burn center.
           </p>
         </div>
       </div>

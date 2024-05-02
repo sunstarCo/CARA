@@ -20,11 +20,11 @@ export default function InsuranceBanner() {
           </h1>
           <div className="w-[6.25rem] h-2 mb-10 bg-[#9D9892]"></div>
           <p className="text-xl leading-[2.375rem] mb-10">
-            For the convenienceof our patients, we strive to accommodate as many insurance plans as possibleas an
-            out-of-network provider. We are dedicated to working closely with you andyour insurance plan, recognizing
-            that coverage can vary significantly dependingon your specific plan and the state of its origin. Our team is
-            delighted toassess your insurance benefits and determine coverage for specific procedures.Among the commonly
-            accepted insurance plans as an out-of-network provider are:
+            For the convenience of our patients, we strive to accommodate as many insurance plans as possible as an
+            out-of-network provider. We are dedicated to working closely with you and your insurance plan, recognizing
+            that coverage can vary significantly depending on your specific plan and the state of its origin. Our team
+            will be delighted to assess your insurance benefits and determine coverage for specific procedures. Among
+            the commonly accepted insurance plans as an out-of-network provider are:
           </p>
           <ul>
             <li className="flex items-center gap-2 text-xl leading-[2.375rem] font-medium text-[#585451]">
