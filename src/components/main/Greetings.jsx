@@ -32,12 +32,17 @@ function Greetings() {
           A leader in plastic and reconstructive surgery
         </p>
         <p className="mt-8 sm:mt-12 text-xl leading-loose max-w-[1280px]">
-          With a lifelong commitment to the realms of plastic and reconstructive surgery, Dr. David Kahng leads the way
-          in transforming lives. <br className="max-2xl:hidden" /> At Cara Plastic Surgery, his dedicated practice, he
-          welcomes patients seeking both cosmetic enhancements and reconstructive solutions.
+          Dr. David Kahng has dedicated a significant portion of his life to the disciplines of plastic and
+          reconstructive surgery. <br className="max-2xl:hidden" /> At Cara Plastic Surgery, his practice caters to
+          patients seeking both cosmetic enhancements and reconstructive procedures.
           <br className="max-2xl:hidden" />
           Driven by a passion to merge his meticulous eye for detail with the noble endeavor of aiding others, he has
           chosen this field as his calling.
+          <br className="max-2xl:hidden" />
+          His decision to specialize in this field stems from his desire to utilize his keen attention to detail in
+          order to make a meaningful impact on other&apos;s lives. When you choose to work with Dr. Kahng, you&apos;re
+          collaborating with a frontrunner in the field, distinguished not only by his extensive training but also by
+          his distinctive, global viewpoint that informs every procedure he undertakes.
         </p>
       </div>
     </div>

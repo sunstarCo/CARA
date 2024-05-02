@@ -9,7 +9,7 @@ export default function Page() {
       <CommonTopBanner
         url="About"
         title="Notice Of Open/Payments Database"
-        contents="CaraPlastic Surgery is committed to transparency and compliance. As part of thiscommitment, we want to inform our patients that certain payments made to ourpractitioners may be publicly disclosed in the Open Payments Database, asmandated by federal regulations, providing transparency regarding financialrelationships within the healthcare industry."
+        contents="Cara Plastic Surgery is committed to transparency and compliance. As part of this commitment, we want to inform our patients that payments worth over ten dollars ($10) made to our practitioners may be publicly disclosed in the Open Payments Database, as mandated by federal regulations, providing transparency regarding financial relationships within the healthcare industry. This data is used solely for informational purposes, and you can find a link here (https://openpaymentsdata.cms.gov/) to the federal Centers for Medicare and Medicaid Services, Open Payments web page."
       />
       <AboutPaymentSecondBanner />
     </div>

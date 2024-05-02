@@ -9,9 +9,9 @@ import {useObserver} from '@/hooks/useObserver';
 const sections = {
   Breast: {
     title: 'Breast',
-    sub_title: 'Refine Your Silhouette',
+    sub_title: '',
     image: '/banner/main/BreastMain.png',
-    desc: 'Crafting the Perfect Contour Under the skilled hands of Dr. Kahng, our breast procedures are meticulously executed, employing state-of-the-art surgical techniques in breast augmentation, lifts, and a comprehensive array of surgeries aimed at enhancing body balance and harmony, which extends to specialized procedures like breast reconstruction.',
+    desc: 'Under the skilled hands of Dr. Kahng, our breast procedures are meticulously executed, employing state-of-the-art surgical techniques in breast augmentation, lifts, and a comprehensive array of surgeries aimed at enhancing body balance and harmony, which extends to specialized procedures such as breast reconstruction.',
     links: [
       {title: 'Breast Augmentation', path: '/breast/Breast-Augmentation'},
       {title: 'Breast Lift', path: '/breast/Breast-Lift'},
@@ -62,7 +62,7 @@ export default function ProcedureSection({section, reverse = false}) {
         width={0}
         height={0}
         sizes="100"
-        className="w-fit absolute bottom-0 right-0 -z-10"
+        className="absolute bottom-0 right-0 w-fit -z-10"
       />
       <div
         className={`flex flex-col ${
@@ -79,14 +79,14 @@ export default function ProcedureSection({section, reverse = false}) {
         <div className="max-w-[680px] w-full">
           <p className="leading-normal text-[3rem] md:text-54px font-trajan">{title}</p>
           <div className="w-[100px] h-2 bg-[#D9D5CC] mt-10" />
-          <p className="text-2xl leading-loose mt-12 font-trajan">{sub_title}</p>
+          <p className="mt-12 text-2xl leading-loose font-trajan">{sub_title}</p>
           <p className="text-xl leading-loose mt-[0.625rem] font-light tracking-[0.5px]">{desc}</p>
         </div>
       </div>
       <div className="flex flex-col mt-[6.875rem] items-center gap-6 text-center font-trajan">
         {section === 'Breast' ? (
           <>
-            <div className="flex items-center max-sm:gap-8 text-nowrap text-xl sm:text-22px leading-normal max-sm:hidden">
+            <div className="flex items-center text-xl leading-normal max-sm:gap-8 text-nowrap sm:text-22px max-sm:hidden">
               {links.slice(0, 3).map((link, index) => (
                 <Fragment key={index + link.title}>
                   <Link href={link.path} className={`text-wrap hover:text-[#BDB5AA] transition-colors`}>
@@ -96,7 +96,7 @@ export default function ProcedureSection({section, reverse = false}) {
                 </Fragment>
               ))}
             </div>
-            <div className="flex items-center gap-8 text-22px leading-normal max-sm:hidden">
+            <div className="flex items-center gap-8 leading-normal text-22px max-sm:hidden">
               {links.slice(3, 5).map((link, index) => (
                 <Fragment key={index + link.title}>
                   <Link href={link.path} className={`text-wrap hover:text-[#BDB5AA] transition-colors `}>
@@ -106,7 +106,7 @@ export default function ProcedureSection({section, reverse = false}) {
                 </Fragment>
               ))}
             </div>
-            <div className="flex items-center flex-col text-22px gap-4 leading-normal sm:hidden">
+            <div className="flex flex-col items-center gap-4 leading-normal text-22px sm:hidden">
               {links.map((link, index) => (
                 <Fragment key={index + link.title}>
                   <Link href={link.path} className={`text-wrap hover:text-[#BDB5AA] transition-colors`}>
@@ -118,7 +118,7 @@ export default function ProcedureSection({section, reverse = false}) {
             </div>
           </>
         ) : (
-          <div className="flex w-fit mx-auto grid-cols-2 gap-8 max-lg:grid justify-center ">
+          <div className="flex justify-center grid-cols-2 gap-8 mx-auto w-fit max-lg:grid ">
             {links.map((link, index) => (
               <div key={index + link.title} className="flex items-center justify-center">
                 {index !== 0 && (
