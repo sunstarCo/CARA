@@ -16,29 +16,29 @@ const locations = [
   {
     id: 'LasVegas',
     region: 'Las Vegas (NV)',
-    address: 'Spring Mountain/5808 Rd. #10/Las Vegas NV 89146',
+    address: '5808 Spring Mountain Rd #106, Las Vegas, NV 89146',
     explain:
-      'Indulgein the vibrant energy of Las Vegas as you undergo transformative plasticsurgery procedures. Our Las Vegas location combines the excitement of the citywith the expertise of our skilled team.',
+      'Indulge in the vibrant energy of Las Vegas as you receive transformative plastic surgery procedures. Our Las Vegas location combines the excitement of the city with the expertise of our skilled team.',
   },
   {
     id: 'LosAngeles',
     region: 'Los Angeles (CA)',
-    address: 'Serrano Medical Building/4220 W. 3rd St. #102/Los Angeles, CA 90020',
+    address: 'Serrano Medical Building, 4220 W. 3rd St. #102, Los Angeles, CA 90020',
     explain:
-      'Immerseyourself in the glamor of the City of Angels while undergoing top-notch plasticsurgery services. Our Los Angeles location at the Serrano Medical Building isequipped to cater to all your aesthetic needs.',
+      'Immerse yourself in the glamor of the City of Angels while receiving top-notch plastic surgery services. Our Los Angeles location at the Serrano Medical Building is equipped to cater to all your aesthetic needs.',
   },
   {
     id: 'OrangeCounty',
-    region: 'Orange County (CA)',
-    address: 'Village Circle on the beach/5161 Beach Blvd. #A/Buena Park, CA 90621',
+    region: 'Buena Park - Orange County (CA)',
+    address: 'Village Circle on the Beach, 5161 Beach Blvd. #A, Buena Park, CA 90621',
     explain:
-      'Escape to the picturesque surroundings ofOrange County while rejuvenating your appearance at our Buena Park location.Discover the intersection of cutting-edge treatments and beachside tranquility.',
+      'Escape to the picturesque surroundings of Orange County while achieving your aesthetic ideals at our Buena Park location. Discover the intersection of innovative treatments and a tranquil atmosphere.',
   },
   {
     id: 'SanGabriel',
-    region: 'San Gabriel (CA)',
-    address: 'San Gabriel Valley/1320 E Las Tunas Dr. #201/San Gabriel, CA 91776',
+    region: 'San Gabriel Valley (CA)',
+    address: '1320 E Las Tunas Dr. #201, San Gabriel, CA 91776',
     explain:
-      'Nestled in the beautiful San Gabriel Valley,our facility provides a serene environment for your cosmetic procedures.Experience the perfect blend of natural beauty and personalized care.',
+      'Nestled in the beautiful San Gabriel Valley, our facility provides a serene environment for your cosmetic procedures. Experience the perfect blend of natural beauty and personalized care.',
   },
 ];

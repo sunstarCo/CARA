@@ -45,12 +45,12 @@ export default function Page() {
         url="Face"
         img={BreastSample}
         title="Face Lift"
-        contents="Facial structures vary across ethnicities, highlighting the significance of seeking an facelift plastic surgeon in Las Vegas for optimal results. Not all surgeons possess the expertise and understanding required to achieve the most aesthetically pleasing enhancements in an facelift procedure. Consult with Dr. Kahng, renowned as one of the most experienced plastic surgeons in Orange County/Los Angeles/Las Vegas, to learn more about your options."
+        contents="Facial structures vary across ethnicities, a factor that makes seeking a culturally informed facelift plastic surgeon in Las Vegas extremely important. Not all surgeons possess the expertise and understanding required to achieve the most aesthetically pleasing enhancements in a facelift procedure. Consult with Dr. Kahng, renowned as one of the most experienced plastic surgeons in Orange County/Los Angeles/Las Vegas, to learn more about your options."
       />
       <Intro
         title={'Face Lift'}
         desc={
-          "If you're looking to turn back the hands of time and restore a more youthful appearance to your face, our face lift surgery might be the solution you've been searching for."
+          "If you're looking to turn back the hands of time and restore a more youthful appearance to your face, face lift surgery might be the solution you've been searching for."
         }
       />
       <Section1 desc={what_is} title={'What is Face Lift?'} img={'/detailpage/liposuction/liposuction_what_is.png'} />

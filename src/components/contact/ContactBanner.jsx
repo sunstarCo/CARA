@@ -14,7 +14,7 @@ function ContactBanner() {
         alt=""
         fill
         sizes="100"
-        className="object-cover object-right-top -z-10"
+        className="object-cover object-right-top -z-10 "
       />
       <div className={`flex items-center text-white max-w-[2100px] mx-auto `}>
         <div className="max-w-[80rem] w-full px-8 2xl:px-64 flex justify-start ite flex-col">

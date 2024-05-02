@@ -13,19 +13,19 @@ const images_data = ['/B&A/example.jpg', '/B&A/example.jpg', '/B&A/example.jpg',
 const benefits = [
   {
     title: 'Holistic Restoration',
-    desc: 'Mommy Makeover soffer a customized and holistic approach to address various concerns in onesurgery, saving time and minimizing downtime.',
+    desc: 'Mommy Makeovers offer a customized and holistic approach to address various concerns in one surgery, saving time and minimizing downtime.',
   },
   {
     title: 'Breast Enhancement',
-    desc: 'Restore volume and firmness to the breasts with procedures like breast augmentation, lift, orreduction, tailored to your aesthetic goals.',
+    desc: 'Restore volume and firmness to the breasts with procedures like breast augmentation, lift, or reduction, tailored to your aesthetic goals.',
   },
   {
     title: 'Abdominal Refinement',
-    desc: 'Tighten abdominalmuscles, remove excess skin, and achieve a flatter tummy with procedures like atummy tuck.',
+    desc: 'Tighten abdominal muscles, remove excess skin, and achieve a flatter tummy with procedures like a tummy tuck.',
   },
   {
     title: 'Targeted Fat Reduction',
-    desc: 'Liposuction can beincluded to address stubborn fat deposits in areas such as the hips, thighs, orbuttocks.',
+    desc: 'Liposuction can be included to address stubborn fat deposits in areas such as the hips, thighs, or buttocks.',
   },
 ];
 
@@ -46,21 +46,20 @@ const whoNeedsContents = [
 
 export default function Page() {
   const whyChoose_desc =
-    'Dr. DavidKahng at Cara Plastic Surgery & Laser Center Las Vegas brings artistry andskill to every Mommy Makeover procedure. Our commitment is to help you restorenot just your body but also your confidence, embracing the beauty that comeswith motherhood. Schedule aconsultation today to discuss your Mommy Makeover goals and embark on thejourney to reclaiming your body and confidence in Las Vegas.';
+    'Dr. David Kahng at Cara Plastic Surgery & Laser Center Las Vegas brings artistry and skill to every Mommy Makeover procedure. Our commitment is to help you restore not just your body but also your confidence, embracing the beauty that comes with motherhood. Schedule a consultation today to discuss your Mommy Makeover goals and embark on the journey to reclaiming your body and confidence in Las Vegas.';
   const whatIs =
-    'A MommyMakeover is a comprehensive set of procedures tailored to address the physicalchanges that often accompany pregnancy and breastfeeding. Dr. David Kahngcombines surgical techniques to enhance the breasts, abdomen, and other areas,providing a holistic approach to rejuvenating your post-pregnancy body.';
-  // const whoNeeds = 'A Mommy Makeover is ideal for';
+    'A Mommy Makeover is a comprehensive set of procedures tailored to address the physical changes that often accompany pregnancy and breastfeeding. Dr. David Kahng combines surgical techniques to enhance the breasts, abdomen, and other areas, providing a holistic approach to rejuvenating your post-pregnancy body.';
   return (
     <div>
       <CommonTopBanner
         url="body"
         title="Mommy Makeover"
         subtitle="Restore Your Body After Pregnancy"
-        contents="Motherhood is abeautiful journey, but it can take a toll on your body. Our Mommy Makeover combines various procedures tailored to address post-pregnancy changes. Frombreast enhancement and tummy tucks to liposuction, we can help you reclaim yourpre-pregnancy body and feel rejuvenated."
+        contents="Motherhood is a beautiful journey, but it can take a toll on your body. Our Mommy Makeover combines various procedures tailored to address post-pregnancy changes. From breast enhancement and tummy tucks to liposuction, we can help you reclaim your pre-pregnancy body and feel rejuvenated."
       />
       <AboutSecondBanner
         longText
-        mainDesc="The natural processes of pregnancy, weight loss, and aging often lead to the development of loose, sagging skin, and weakened muscles in the abdominal region. Whentraditional methods such as diet and exercise prove ineffective, a Mommy Makeoverin Las Vegas emerges as a transformative solution to help you attain thedesired stomach appearance."
+        mainDesc="Embracing motherhood is a joyous and fulfilling experience, yet it often comes with significant changes to the body. Many new mothers find themselves grappling with the physical toll that pregnancy and breastfeeding can take. At Cara Plastic Surgery & Laser Center Las Vegas, Dr. David Kahng specializes in mommy makeovers with artistry and skill, offering a transformative solution to help you regain a firm and youthful appearance after the beautiful journey of childbearing."
       />
       <Section1
         desc={whatIs}

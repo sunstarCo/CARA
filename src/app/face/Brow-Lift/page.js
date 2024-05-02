@@ -27,7 +27,7 @@ const benefits = [
   },
   {
     title: 'Boosted Confidence',
-    desc: 'Enjoy newfound confidence and self-assurance as you see a more vibrant and rejuvenated reflection in the mirror.',
+    desc: 'Enjoy newfound confidence and self-assurance as you see a more vibrant and refreshed reflection in the mirror.',
   },
 ];
 
@@ -44,19 +44,19 @@ export default function Page() {
       <CommonTopBanner
         url="Face"
         img={BreastSample}
-        title="Blow Lift"
-        contents="Endoscopic surgery offers a pathway to rejuvenating the overall facial appearance by repositioning the brow, resulting in a more youthful and refreshed look. This procedure avoids the need for cutting or shaving hair and has the potential to revitalize your entire appearance."
+        title="Brow Lift"
+        contents="Endoscopic surgery offers a pathway to rejuvenating your overall facial appearance by repositioning the brow, resulting in a more youthful and refreshed look. This procedure avoids the need for cutting or shaving hair and has the potential to revitalize your entire appearance."
       />
       <Intro
-        title={'Blow Lift'}
+        title={'Brow Lift'}
         desc={
           "At CARA Plastic Surgery & Laser Center Las Vegas, we specialize in helping you achieve your aesthetic goals with precision and expertise. If you're seeking to rejuvenate your appearance and restore a more youthful, lifted brow, our brow lift surgery may be the ideal solution for you."
         }
       />
-      <Section1 desc={what_is} title={'What is Blow Lift?'} img={'/detailpage/liposuction/liposuction_what_is.png'} />
-      <CardContainer title={'Benefits of Blow Lift'} benefits={benefits} theme="dark" />
+      <Section1 desc={what_is} title={'What is Brow Lift?'} img={'/detailpage/liposuction/liposuction_what_is.png'} />
+      <CardContainer title={'Benefits of Brow Lift'} benefits={benefits} theme="dark" />
       <BeforeAfter images_data={images_data} />
-      <AboutSecondBanner mainDesc="Who Can Benefit from Blow Lift?" subDesc={who_needs} />
+      <AboutSecondBanner mainDesc="Who Can Benefit from Brow Lift?" subDesc={who_needs} />
       <WhyChoose desc={whyChoose_desc} />
     </>
   );

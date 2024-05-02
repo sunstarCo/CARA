@@ -37,6 +37,19 @@ export default function Page() {
         'Provides natural-looking results that last for several months.',
       ],
     },
+    kybella: {
+      title: 'Kybella',
+      desc: 'Kybella is an FDA-approved injectable treatment used to reduce excess fat under the chin, also known as submental fat or a "double chin." It contains synthetic deoxycholic acid, a naturally occurring molecule in the body that aids in the breakdown and absorption of dietary fat. When injected into the fat beneath the chin, Kybella works to destroy fat cells, resulting in a more defined jawline and improved facial profile. This non-surgical treatment offers an effective way to address stubborn fat deposits in the submental area without the need for invasive surgery.',
+      benefits: [
+        'Reduction of excess fat under the chin.',
+        'Improved definition of the jawline and facial profile.',
+        'Non-surgical approach to addressing submental fat.',
+        'Customizable treatment for individual needs.',
+        'Minimal downtime and recovery compared to surgical options.',
+        'Long-lasting results with proper maintenance.',
+        'Enhancement of overall facial aesthetics and self-confidence.',
+      ],
+    },
     sculptra: {
       title: 'Sculptra',
       desc: 'Sculptra is a unique injectable treatment that stimulates collagen production in the skin, helping to restore volume and improve skin texture over time. It is made from poly-L-lactic acid, a biocompatible and biodegradable substance.',
@@ -113,6 +126,13 @@ export default function Page() {
       <AboutSecondBanner contents={extraDesc.restylane} />
       <Section1
         reverse
+        desc={what_is.kybella.desc}
+        title={`What is ${what_is.kybella.title}?`}
+        img={'/detailpage/liposuction/liposuction_what_is.png'}
+        benefits={what_is.kybella.benefits}
+        no_bg
+      />
+      <Section1
         desc={what_is.sculptra.desc}
         title={`What is ${what_is.sculptra.title}?`}
         img={'/detailpage/liposuction/liposuction_what_is.png'}

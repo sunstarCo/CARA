@@ -18,11 +18,11 @@ const benefits = [
   },
   {
     title: 'Improved Posture',
-    desc: 'Experience enhanced posture and physical comfort with more proportionate breast size, promoting overall musculoskeletal well-being.',
+    desc: 'Experience enhanced posture and physical comfort with a more proportionate breast size, promoting overall musculoskeletal well-being.',
   },
   {
     title: 'Emotional Well-being',
-    desc: 'Breast reduction often leads to a boost in self-esteem and body confidence, positively impacting mental well-being and overall quality of life.',
+    desc: 'Breast reduction often leads to a boost in self-esteem and body confidence, positively impacting emotional well-being and overall quality of life.',
   },
   {
     title: 'Increased Physical Activity',
@@ -30,17 +30,17 @@ const benefits = [
   },
   {
     title: 'Clothing Comfort',
-    desc: 'Find greater ease in selecting and fitting into a broader range of clothing styles after achieving a more balanced and proportionate breast size, enhancing overall wardrobe options.',
+    desc: 'Find greater ease in selecting and fitting into a broader range of clothing styles after achieving a more balanced and proportionate breast size, increasing overall wardrobe options.',
   },
 ];
 
 export default function Page() {
   const whyChoose_desc =
-    "At Cara Plastic Surgery & Laser Center LasVegas, our dedicated surgeons prioritize your comfort, safety, and satisfaction throughout the breast reduction journey. Our commitment to excellence is reflected in our utilization of cutting-edge techniques to deliver results that not only address physical discomfort but also enhance your overall quality of life. If you're considering breast reduction or have questions about the procedure, we invite you to contact us for a personalized consultation. Discover the possibilities and embark on a path to greater physical and emotional well-being with Cara Plastic Surgery & Laser Center Las Vegas";
+    "At Cara Plastic Surgery & Laser Center Las Vegas, our dedicated surgeons prioritize your comfort, safety, and satisfaction throughout the breast reduction journey. Our commitment to excellence is reflected in our utilization of state-of-the-art techniques to deliver results that not only address physical discomfort but also enhance your overall quality of life. If you're considering breast reduction or have questions about the procedure, we invite you to contact us for a personalized consultation. Discover the possibilities and embark on a path to greater physical and emotional well-being with Cara Plastic Surgery & Laser Center Las Vegas";
   const whatIs =
-    'Breast reduction involves the surgical removal of excess fat, glandular tissue, and skin to reduce the size and volume of the breasts. This procedure is meticulously performed by our experienced surgeon to alleviate physical discomfort and enhance overall well-being, resulting in a more balanced and harmonious breast appearance. Our advanced techniques ensure optimal results, prioritizing both functionality and aesthetic satisfaction.';
+    'Breast reduction involves the surgical removal of excess fat, glandular tissue, and skin to reduce the size and volume of the breasts. This procedure is meticulously performed by our experienced surgeons to alleviate physical discomfort and enhance overall well-being, resulting in a more balanced and harmonious breast appearance. Our advanced techniques ensure optimal results, prioritizing both functionality and aesthetic satisfaction.';
   const whoNeeds =
-    'Breast reduction is an ideal option for individuals facing physical and emotional challenges due to disproportionately large breasts. If you experience issues such as persistent back pain, neck pain, shoulder grooving from bra straps, or difficulty finding proper fitting clothing, our breast reduction procedure can offer significant relief. This transformative surgery is also suitable for those seeking to enhance their quality of life by achieving a more proportionate and balanced silhouette.';
+    'Breast reduction is an ideal option for individuals facing physical and emotional challenges due to disproportionately large breasts. If you experience issues such as persistent back pain, neck pain, shoulder grooving from bra straps, or difficulty finding properly fitting clothing, our breast reduction procedure can offer significant relief. This transformative surgery is also suitable for those seeking to enhance their quality of life by achieving a more proportionate and balanced silhouette.';
   return (
     <div>
       <CommonTopBanner

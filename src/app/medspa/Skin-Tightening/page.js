@@ -69,7 +69,7 @@ export default function Page() {
       />
       <Intro
         title={'Skin Tightening'}
-        desc={`At CARA Plastic Surgery & Laser Center Las Vegas, we offer advanced skin tightening treatments to help you achieve firmer, smoother, and more youthful-looking skin. Explore our selection of cutting-edge technologies below to learn more about each option and discover how they can help you achieve your aesthetic goals.`}
+        desc={`At CARA Plastic Surgery & Laser Center Las Vegas, we offer advanced skin tightening treatments to help you achieve firmer, smoother, and more youthful-looking skin. Explore our selection of innovative technologies below to learn more about each option and discover how they can help you achieve your aesthetic goals.`}
       />
       <Section1
         desc={what_is.ultherapy.desc}

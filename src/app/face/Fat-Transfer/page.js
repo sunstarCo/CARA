@@ -33,7 +33,7 @@ const benefits = [
 
 export default function Page() {
   const what_is =
-    'Fat transfer, also known as fat grafting or fat injection, is an advanced cosmetic procedure designed to address volume loss and enhance contours by relocating fat from one area of the body to another. This cutting-edge technique involves harvesting excess fat through gentle liposuction, purifying it, and strategically injecting it into areas that lack volume or require enhancement, such as the face, breasts, or buttocks.';
+    'Fat transfer, also known as fat grafting or fat injection, is an advanced cosmetic procedure designed to address volume loss and enhance contours by relocating fat from one area of the body to another. This innovative technique involves harvesting excess fat through gentle liposuction, purifying it, and strategically injecting it into areas that lack volume or require enhancement, such as the face, breasts, or buttocks.';
   const who_needs =
     'Fat transfer is an ideal option for individuals seeking to address volume loss, contour irregularities, or asymmetry in various areas of the body. Whether you desire fuller cheeks, rejuvenated hands, or enhanced curves, our experienced surgeons can customize a fat transfer procedure to suit your unique goals and preferences, helping you achieve a naturally beautiful and rejuvenated appearance.';
   const whyChoose_desc =
@@ -45,7 +45,7 @@ export default function Page() {
         url="Face"
         img={BreastSample}
         title="Fat Transfer"
-        contents="Our patients inquire about fat transfer, an innovative advancement in safe and natural plastic surgery. Unlike synthetic fillers, this procedure involves extracting, purifying, and injecting your own fat into facial areas to enhance volume, firmness, and contours. Fat transfer offers longer-lasting results compared to fillers."
+        contents="Many of our patients inquire about fat transfer, an innovative advancement in safe and natural plastic surgery. Unlike synthetic fillers, this procedure involves extracting, purifying, and injecting your own fat into facial areas to enhance volume, firmness, and contours. Fat transfer offers longer-lasting results compared to fillers."
       />
       <Intro
         title={'Fat Transfer'}
