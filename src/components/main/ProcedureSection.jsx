@@ -22,7 +22,7 @@ const sections = {
   },
   'Face&Nose': {
     title: 'Face & Nose',
-    sub_title: 'Harmonize Your Facial Features',
+    sub_title: '',
     image: '/banner/main/BreastMain.png',
     desc: "When facial imperfections affect your self-esteem, we're here to assist you in realizing your cosmetic aspirations through our comprehensive range of facial surgery procedures, crafting a sophisticated elegance, seamless harmony, and enduring beauty.Employing cutting-edge surgical techniques, we enhance your innate features, infusing more allure, balance, and rejuvenation into your appearance through the latest innovations in cosmetic surgery and technology.",
     links: [
@@ -34,7 +34,7 @@ const sections = {
   },
   Body: {
     title: 'Body',
-    sub_title: 'Refine Your Figure',
+    sub_title: '',
     image: '/banner/main/BreastMain.png',
     desc: 'Patients entrust us to reshape, rejuvenate, and elevate body contours using cutting-edge techniques and technologies, encompassing a prominent array of Asian plastic surgery procedures for our Las Vegas clientele. If you seek complete satisfaction with your body, Dr. Kahng is the expert you should reach out to.',
     links: [
