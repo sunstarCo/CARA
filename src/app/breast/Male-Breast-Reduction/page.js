@@ -36,7 +36,7 @@ const benefits = [
 
 export default function Page() {
   const whyChoose_desc =
-    "At Cara Plastic Surgery & Laser Center LasVegas, our dedicated surgeons prioritize your comfort, safety, and satisfaction throughout the male breast reduction journey. Utilizing state-of-the-art techniques, we aim to deliver results that not only address physical discomfort but also enhance your overall quality of life. If you're considering male breast reduction or have questions about the procedure, contact us for a personalized consultation. Explore the possibilities and embark on a path to greater physical and emotional well-being with Cara Plastic Surgery & Laser Center Las Vegas.";
+    "At Cara Plastic Surgery & Laser Center LasVegas, our dedicated surgeons prioritize your comfort, safety, and satisfaction throughout the male breast reduction journey. Utilizing state-of-the-art techniques, we aim to deliver results that not only address physical discomfort but also enhance your overall quality of life. /If you're considering male breast reduction or have questions about the procedure, contact us for a personalized consultation. Explore the possibilities and embark on a path to greater physical and emotional well-being with Cara Plastic Surgery & Laser Center Las Vegas.";
   const whatIs =
     'Gynecomastia is characterized by the enlargement of male breast tissue. Our male breast reduction procedure involves the surgical removal of excess fat, glandular tissue, and skin, utilizing advanced techniques to ensure optimal results. This targeted approach is designed to restore confidence and comfort, providing a more sculpted and masculine chest appearance.';
   const whoNeeds =

@@ -35,7 +35,7 @@ const benefits = [
 
 export default function Page() {
   const whyChoose_desc =
-    "At Cara Plastic Surgery & Laser Center Las Vegas, our commitment is to provide a personalized and supportive experience throughout your breast augmentation journey. Our skilled surgeons prioritize your safety, comfort, and satisfaction, utilizing state-of-the-art techniques to ensure optimal results. If you're considering breast augmentation or have questions about the procedure, contact us today to schedule a consultation. Discover the possibilities and embark on the path to a more confident and enhanced self with Cara Plastic Surgery & Laser Center Las Vegas.";
+    "At Cara Plastic Surgery & Laser Center Las Vegas, our commitment is to provide a personalized and supportive experience throughout your breast augmentation journey. Our skilled surgeons prioritize your safety, comfort, and satisfaction, utilizing state-of-the-art techniques to ensure optimal results. /If you're considering breast augmentation or have questions about the procedure, contact us today to schedule a consultation. Discover the possibilities and embark on the path to a more confident and enhanced self with Cara Plastic Surgery & Laser Center Las Vegas.";
   const whatIs =
     'Breast augmentation, also known as augmentation mammoplasty, is a cosmetic surgical procedure aimed at increasing the size, fullness, and symmetry of the breasts. This is typically achieved through the use of implants placed either behind the breast tissue or beneath the chest muscle. At Cara Plastic Surgery & Laser Center Las Vegas, our board-certified plastic surgeons employ advanced techniques and FDA-approved implants to ensure natural-looking and proportionate results.';
   const whoNeeds =
