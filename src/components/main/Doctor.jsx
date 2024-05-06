@@ -59,9 +59,9 @@ function Doctor() {
           </p>
           <div className="w-[6.25rem] h-2 bg-[#D9D5CC] mt-4 min-[400px]:mt-10" />
           <p
-            className={`opacity-0 text-[1.4rem] leading-loose min-h-[500px] mt-4 min-[400px]:mt-12 w-full ${
-              isVisible && 'animate-show_move_top'
-            } transition-opacity`}>
+            className={`opacity-0 text-[1.4rem] ${
+              active === 'Philosophy' ? 'leading-relaxed' : 'leading-loose'
+            } min-h-[530px] mt-4 min-[400px]:mt-12 w-full ${isVisible && 'animate-show_move_top'} transition-opacity`}>
             {doctorData.find(data => data.title === active).desc}
           </p>
         </div>

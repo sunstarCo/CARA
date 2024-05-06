@@ -22,7 +22,13 @@ function Section1({img, desc, title, reverse = false, benefits, no_bg = false}) 
         <div className="lg:w-1/2 flex flex-col items-center lg:items-start">
           <h3 className="text-4xl max-sm:text-center sm:text-48px leading-normal font-trajan">{title}</h3>
           <div className="h-2 w-[6.25rem] bg-[#BDB5AA] mt-10 mb-[3.125rem]" />
-          <p className="text-xl leading-loose">{desc}</p>
+          {desc.split('/').map(word => {
+            return (
+              <p key={word} className="text-xl leading-loose">
+                {word}
+              </p>
+            );
+          })}
           {benefits && (
             <div className="mt-[3.125rem]">
               <p className="text-32px leading-loose font-trajan">Benefits:</p>

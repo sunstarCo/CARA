@@ -1,12 +1,11 @@
 import React from 'react';
 
 import Image from 'next/image';
-
-import logo from '../../../public/logo/logo_new.svg';
+import Link from 'next/link';
 function CoreFooter() {
   return (
     <>
-      <div className="w-full  bg-[#D9D5CC] py-20 md:py-40">
+      <div className="w-full bg-[#D9D5CC] py-20 md:py-40">
         <div className="flex flex-col gap-16 md:gap-24 md:flex-row px-8 justify-between items-center max-w-[100rem] mx-auto">
           <div className="max-md:text-center">
             <p className="text-nowrap text-[1.375rem] font-bold mb-10 font-trajan">(855 212-9901)</p>
@@ -15,10 +14,17 @@ function CoreFooter() {
               Los Angeles, San Gabriel Valley <br /> Orange County, Landing
             </p>
           </div>
-          <div className="w-[20rem] sm:w-[20rem] lg:w-[25rem]">
-            <Image src={logo} width={0} height={0} sizes="100" className="w-full" alt="로고" />
-          </div>
-          <div>
+          <Link href={'/'} className="">
+            <Image
+              src={`/logo/logo(black).svg`}
+              alt=""
+              width={0}
+              height={0}
+              sizes="100"
+              className="min-w-56 sm:w-60 lg:min-w-72 xl:min-w-96"
+            />
+          </Link>
+          <div className="text-nowrap">
             <div className="flex gap-[0.875rem] mb-12 text-nowrap max-md:justify-center max-md:-translate-y-8">
               {snsIcons.map(icon => {
                 return (
