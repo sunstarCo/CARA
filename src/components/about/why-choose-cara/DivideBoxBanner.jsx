@@ -38,7 +38,7 @@ const info = [
   },
   {
     title: 'Customize:/Tailored Aesthetic Program',
-    desc: 'Recognizing your uniqueness and individual aesthetic concerns, we adopt a personalized approach to crafting a customized treatment plan for your face or body, whether for cosmetic or reconstructive purposes. Our goal is not just to enhance your appearance but to elevate your life experience through personalized care.',
+    desc: 'Beyond the procedure itself, your plastic surgery consultation stands out as one of the most crucial stages of the entire process. Dr. Kahng prioritizes establishing trust and rapport with his patients, and this foundational relationship commences with the very first consultation—a friendly, informative encounter serving as an introduction between you and Dr. Kahng. During this consultation, Dr. Kahng will attentively address your inquiries and concerns, facilitating a thorough assessment to ascertain whether you are an ideal candidate for your desired procedure. Collaboratively, you can discuss and explore various options to fulfill your aesthetic aspirations.',
   },
   {
     title: 'Pioneering:/Cutting-Edge Technology and Advanced Equipment',
