@@ -29,11 +29,11 @@ const benefits = [
 
 export default function Page() {
   const whyChoose_desc =
-    'At Cara Plastic Surgery & Laser Center LasVegas, we are dedicated to providing personalized and compassionate care throughout the breast implant removal journey. Our surgeons prioritize safety, comfort, and satisfaction, utilizing advanced techniques for optimal and natural-looking results. If you are considering breast implant removal or have questions about the procedure, we invite you to contact us for a consultation. Explore the possibilities and make informed decisions about your breast health and aesthetics with Cara Plastic Surgery & Laser Center in LasVegas.';
+    'At Cara Plastic Surgery & Laser Center LasVegas, we are dedicated to providing personalized and compassionate care throughout the breast implant removal journey. Our surgeons prioritize safety, comfort, and satisfaction, utilizing advanced techniques for optimal and natural-looking results. /If you are considering breast implant removal or have questions about the procedure, we invite you to contact us for a consultation. Explore the possibilities and make informed decisions about your breast health and aesthetics with Cara Plastic Surgery & Laser Center in LasVegas.';
   const whatIs =
     "Breast implant removal is a surgical procedure focused on the extraction of breast implants. Whether you're seeking a change in your breast augmentation, experiencing issues with your implants, or considering a lifestyle adjustment, our skilled surgeons at Cara Plastic Surgery & Laser Center ensure a meticulous removal process. We utilize advanced techniques to prioritize safety and precision.";
   const whoNeeds =
-    "Breast augmentation is a suitable option for individuals who desire to enhance the size of their breasts for various reasons. Whether you have always felt self-conscious about the size of your breasts, experienced changes due to pregnancy or weight loss, or simply want to achieve a more balanced and proportionate figure, breast augmentation could be the solution you've been looking for.";
+    'This procedure is suitable for individuals desiring a change in breast augmentation, those experiencing issues with their implants, or those considering lifestyle adjustments. Additionally, breast implant removal is an option for individuals with medical concerns related to their implants. Our surgeons assess each case individually to determine the most appropriate approach for unique needs.';
   return (
     <div>
       <CommonTopBanner

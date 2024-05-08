@@ -5,24 +5,40 @@ import Image from 'next/image';
 
 const reviews = [
   {
-    name: 'Belli Smith1',
-    comment:
-      'Centuries but also the leap into electronic typesetting,established fact that a reader will bdistracted the readable content.',
+    name: 'Alma U',
+    date: '9/29/23',
+    review:
+      'Wonderful facial, service and recommendations were great. The whole experience was professional & relaxing. Great service performed by Lauren. Thank you Lauren she was great!',
   },
   {
-    name: 'Belli Smith2',
-    comment:
-      'Centuries but also the leap into electronic typesetting,established fact that a reader will bdistracted the readable content.',
+    name: 'Naomi L.',
+    date: '3/19/22',
+    review:
+      "I've been a customer for past 6 months. professional service and friendly stuff! Love my botox result. Highly recommend this place.",
   },
   {
-    name: 'Belli Smith3',
-    comment:
-      'Centuries but also the leap into electronic typesetting,established fact that a reader will bdistracted the readable content.',
+    name: 'Olivia P',
+    date: '9/22/2022',
+    review:
+      "Very good experienced on Botox, I've been here for skincare and injections for longtime. The place is very clean and stuffs very professional and nice! Highly recommended!!!",
   },
   {
-    name: 'Belli Smith4',
-    comment:
-      'Centuries but also the leap into electronic typesetting,established fact that a reader will bdistracted the readable content.',
+    name: 'Tiffany C',
+    date: '3/19/2022',
+    review:
+      'Very nice environment and staffs. I consulted skin treatments. They aim at your problem and give you ideas of how different treatments work each way.',
+  },
+  {
+    name: 'Anna Z.',
+    date: '10/3/2021',
+    review:
+      'I am so grateful to Dr.David Kahng and all the wonderful staff. They are so kind, so helpful, so thoughtful. My procedures are done efficiently and effectively. I would happily refer anyone to their office.',
+  },
+  {
+    name: 'Chengy I.',
+    date: '10/2/2021',
+    review:
+      'Dr David Kahng is an excellent doctor!! He is so patient, works carefully with precision, checks in on you after your surgery, and overall makes you feel comfortable.',
   },
 ];
 
@@ -73,7 +89,7 @@ function PatientReview() {
             className="min-w-10 min-h-10 bg-[#D9D5CC] flex items-center justify-center max-sm:hidden"
           />
         </button>
-        <div className="flex">
+        <div className="flex min-h-[360px]">
           <div className={`card flex gap-[1.875rem] w-full xl:w-1/2`}>
             <div className="max-sm:min-w-[20vw] sm:w-60 max-sm:max-h-[15rem]">
               <Image
@@ -112,7 +128,7 @@ function PatientReview() {
                   className="w-14 sm:w-fit"
                 />
               </div>
-              <p className="mt-[1.875rem] leading-loose text-xl ">{reviews[curSlide].comment}</p>
+              <p className="mt-[1.875rem] leading-loose text-xl ">{reviews[curSlide].review}</p>
             </div>
           </div>
           <div className={`card flex gap-[1.875rem] w-1/2 ml-[3.125rem] max-xl:hidden`}>
@@ -146,7 +162,7 @@ function PatientReview() {
                 </div>
                 <Image src={'/logo/quote.svg'} alt="quote icon" width={0} height={0} sizes="100" className="w-fit" />
               </div>
-              <p className="mt-[1.875rem] leading-loose text-xl">{reviews[curSlide + 1]?.comment}</p>
+              <p className="mt-[1.875rem] leading-loose text-xl">{reviews[curSlide + 1]?.review}</p>
             </div>
           </div>
         </div>
