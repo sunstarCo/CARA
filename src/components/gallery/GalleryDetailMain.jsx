@@ -53,9 +53,9 @@ export default function GalleryDetailMain({title}) {
 const surgeryInfo = [
   {sort: 'breast', surgery: 'Asian Breast Augmentation', quantity: 16},
   {sort: 'breast', surgery: 'Breast Augmentation', quantity: 9},
-  {sort: 'breast', surgery: 'Breast Lift', quantity: 0},
+  {sort: 'breast', surgery: 'Breast Lift', quantity: 10},
   {sort: 'body', surgery: 'Liposuction', quantity: 0},
-  {sort: 'body', surgery: 'Tummy Tuck', quantity: 0},
+  {sort: 'body', surgery: 'Tummy Tuck', quantity: 6},
   {sort: 'body', surgery: 'Brazilian Butt Lift', quantity: 9},
   {sort: 'face', surgery: 'Rhinoplasty', quantity: 52},
   {sort: 'face', surgery: 'Chin Augmentation', quantity: 0},
