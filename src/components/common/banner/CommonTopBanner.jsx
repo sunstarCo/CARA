@@ -5,7 +5,17 @@ import Image from 'next/image';
 import AboutCommonBannerBGDeco from '../../../../public/banner/about/AboutCommonBannerBGDeco.png';
 import AboutCommonImg from '../../../../public/banner/about/AboutCommonImg.png';
 
-export default function CommonTopBanner({url, title, subtitle, contents, children, img}) {
+export default function CommonTopBanner({url, title, subtitle, contents, children, img, imgAlign = 'center'}) {
+  switch (imgAlign) {
+    case 'left':
+      imgAlign = 'object-left';
+      break;
+    case 'right':
+      imgAlign = 'object-right';
+      break;
+    default:
+      imgAlign = 'center';
+  }
   return (
     <div className="flex flex-col w-full xl:flex-row">
       <div className="relative py-16 md:pt-[11.1875rem] md:pb-20 xl:w-1/2 xl:min-h-[57rem]">
@@ -31,7 +41,7 @@ export default function CommonTopBanner({url, title, subtitle, contents, childre
         </div>
       </div>
       <div className="relative min-h-[57rem] max-xl:hidden xl:w-1/2">
-        <Image src={img || AboutCommonImg} alt="doctorImage" fill sizes="100" className="object-cover" />
+        <Image src={img || AboutCommonImg} alt="doctorImage" fill sizes="100" className={`object-cover ${imgAlign}`} />
       </div>
     </div>
   );

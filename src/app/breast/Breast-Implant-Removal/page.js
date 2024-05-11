@@ -1,6 +1,6 @@
 import React from 'react';
 
-import BreastSample from '../../../../public/detailpage/breast/BreastAugmentationImg.png';
+import BreastSample from '../../../../public/detailpage/breast/BreastAugmentationImg.jpg';
 
 import CommonTopBanner from '@/components/common/banner/CommonTopBanner';
 import CardContainer from '@/components/detail/common/CardContainer';
@@ -42,11 +42,7 @@ export default function Page() {
         title="Breast Implant Removal"
         contents="Welcome to Cara Plastic Surgery & Laser Center Las Vegas, where we specialize in breast implant removal procedures tailored to meet individual needs. Our breast implant removal, or explantation services are designed to address changes in preference, lifestyle adjustments, and medical considerations, providing a safe and precise solution."
       />
-      <Section1
-        desc={whatIs}
-        title={'What is breast Implant Removal?'}
-        img={'/detailpage/liposuction/liposuction_what_is.png'}
-      />
+      <Section1 desc={whatIs} title={'What is breast Implant Removal?'} img={'/detailpage/breast/breastImg1.jpg'} />
       <WhoNeeds title={'Who Needs Breast Implant Removal?'} desc={whoNeeds} />
       <CardContainer title={'Benefits of Breast Implant Removal'} benefits={benefits} />
       <WhyChoose desc={whyChoose_desc} />

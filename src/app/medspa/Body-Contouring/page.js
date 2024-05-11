@@ -1,6 +1,6 @@
 import React from 'react';
 
-import BreastSample from '../../../../public/detailpage/breast/BreastAugmentationImg.png';
+import BreastSample from '../../../../public/detailpage/breast/BreastAugmentationImg.jpg';
 
 import CommonTopBanner from '@/components/common/banner/CommonTopBanner';
 import Section1 from '@/components/detail/common/Section1';

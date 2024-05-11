@@ -42,6 +42,7 @@ export default function Page() {
         title="Asian Rhinoplasty"
         subtitle="Achieving Natural Facial Harmony, CARA Las Vegas"
         contents="Many individuals of Asian descent choose to change their nose's size and shape, often desiring adjustments to achieve a more harmonious and appealing facial appearance. Dr. Kahng is renowned for his exceptional skill in performing Asian rhinoplasty, crafting results that seamlessly enhance the overall facial structure while maintaining a natural aesthetic."
+        img={'/detailpage/nose/AsianRhinoplasty1.jpg'}
       />
       <Intro
         title={'Asian Rhinoplasty in Las Vegas'}

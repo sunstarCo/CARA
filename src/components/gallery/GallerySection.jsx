@@ -1,5 +1,8 @@
 import GalleryCard from './GalleryCard';
-import BrastImg from '../../../public/banner/gallery/GalleryCardImg.png';
+import BodyImg from '../../../public/banner/gallery/card-main/Body.jpg';
+import BrastImg from '../../../public/banner/gallery/card-main/Breast.jpg';
+import FaceImg from '../../../public/banner/gallery/card-main/Face.jpg';
+import MedspaImg from '../../../public/banner/gallery/card-main/Medspa.jpg';
 
 export default function GallerySection({sort}) {
   return (
@@ -31,16 +34,16 @@ export const menus = [
   {
     title: 'BODY',
     sub: ['Liposuction', 'Tummy Tuck', 'Brazilian Butt Lift'],
-    img: BrastImg,
+    img: BodyImg,
   },
   {
     title: 'FACE',
     sub: ['Rhinoplasty', 'Chin Augmentation', 'Face Lift', 'Lower Blepharoplasty'],
-    img: BrastImg,
+    img: FaceImg,
   },
   {
     title: 'MEDSPA',
     sub: ['Filler', 'Laser Resurfacing', 'Thread Lift'],
-    img: BrastImg,
+    img: MedspaImg,
   },
 ];

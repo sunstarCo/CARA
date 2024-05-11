@@ -7,6 +7,7 @@ import {useRouter} from 'next/navigation';
 
 import GalleryDetailPN from './GalleryDetailPN';
 import prevIcon from '../../../public/icons/prevBtn.svg';
+
 export default function GalleryDetailMain({title}) {
   const router = useRouter();
   const surgery = surgeryInfo.find(item => item.surgery == title);
@@ -23,13 +24,13 @@ export default function GalleryDetailMain({title}) {
 
   return (
     <div className="w-full">
-      <div className="flex justify-between w-full px-5">
+      <div className="flex justify-between max-[360px]:justify-center w-full px-5">
         <select
           onChange={handleSelectChange}
           name="surgery"
           id="surgery"
-          className="px-3  contact_input half bg-[#D9D5CC]">
-          <option value="" className="bg-white" selected>
+          className="px-3 contact_input half bg-[#D9D5CC]">
+          <option defaultValue={title} className="bg-white">
             {title}
           </option>
           {menus.map(item => {
@@ -40,9 +41,9 @@ export default function GalleryDetailMain({title}) {
             );
           })}
         </select>
-        <Link href={'/Before&After'} className="flex items-center gap-2 text-base">
+        <Link href={'/Before&After'} className="flex items-center gap-2 max-[360px]:hidden">
           <Image alt="prevIcon" src={prevIcon} width={20} height={17}></Image>
-          <span>Back to Gallery</span>
+          <span className="sm:text-base text-center">Back to Gallery</span>
         </Link>
       </div>
       <GalleryDetailPN surgeryInfo={surgery} />
@@ -53,9 +54,9 @@ export default function GalleryDetailMain({title}) {
 const surgeryInfo = [
   {sort: 'breast', surgery: 'Asian Breast Augmentation', quantity: 16},
   {sort: 'breast', surgery: 'Breast Augmentation', quantity: 9},
-  {sort: 'breast', surgery: 'Breast Lift', quantity: 0},
+  {sort: 'breast', surgery: 'Breast Lift', quantity: 10},
   {sort: 'body', surgery: 'Liposuction', quantity: 0},
-  {sort: 'body', surgery: 'Tummy Tuck', quantity: 0},
+  {sort: 'body', surgery: 'Tummy Tuck', quantity: 6},
   {sort: 'body', surgery: 'Brazilian Butt Lift', quantity: 9},
   {sort: 'face', surgery: 'Rhinoplasty', quantity: 52},
   {sort: 'face', surgery: 'Chin Augmentation', quantity: 0},

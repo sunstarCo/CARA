@@ -47,9 +47,10 @@ export default function Page() {
         title="Liposuction"
         subtitle="Sculpt Your Silhouette"
         contents="Say goodbye to stubborn pockets of fat that resist diet and exercise. Liposuction at Cara Plastic Surgery & Laser Center Las Vegas is a minimally invasive procedure that precisely targets and removes excess fat, revealing a more contoured and refined figure. Whether you're looking to trim your waistline or sculpt your thighs, our skilled surgeons can customize liposuction to meet your unique goals."
+        img={'/detailpage/body/Liposuction1.jpg'}
       />
       <AboutSecondBanner mainDesc="Liposuction is a transformative procedure designed to remove stubborn pockets of fat, providing a more sculpted and refined appearance." />
-      <Section1 desc={whatIs} title={'What is Liposuction?'} img={'/detailpage/liposuction/liposuction_what_is.png'} />
+      <Section1 desc={whatIs} title={'What is Liposuction?'} img={'/detailpage/body/Liposuction2.jpg'} />
       <WhoNeeds title={'Who Needs Liposuction?'} desc={whoNeeds}>
         <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 lg:gap-16 mt-6 text-start text-[#808683]">
           <ul className="flex flex-col gap-2">

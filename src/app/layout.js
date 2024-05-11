@@ -17,7 +17,10 @@ export async function generateMetadata() {
   const [_, mainTitle, subTitle] = headerPathname.split('/');
 
   const meta_data = {
-    title: headerPathname === '/' ? 'CARA Plastic Surgery' : `${subTitle || mainTitle} | CARA`.replaceAll('-', ' '),
+    title:
+      headerPathname === '/'
+        ? 'CARA Plastic Surgery'
+        : `${subTitle || mainTitle} | CARA Plastic Surgery`.replaceAll('-', ' '),
     description: METADATA[mainTitle.toUpperCase()]?.description || METADATA.DEFAULT.description,
     image: METADATA[mainTitle.toUpperCase()]?.image || METADATA.DEFAULT.image,
   };
