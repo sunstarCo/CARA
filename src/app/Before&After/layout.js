@@ -1,6 +1,6 @@
 import React from 'react';
 
-import GalleryTopBannerImg from '../../../public/banner/gallery/GalleryTopBannerImg.png';
+import GalleryTopBannerImg from '../../../public/banner/gallery/GalleryTopBannerImg.jpg';
 
 import CommonTopBanner from '@/components/common/banner/CommonTopBanner';
 

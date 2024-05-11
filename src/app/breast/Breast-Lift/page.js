@@ -1,6 +1,6 @@
 import React from 'react';
 
-import BreastSample from '../../../../public/detailpage/breast/BreastAugmentationImg.png';
+import BreastSample from '../../../../public/detailpage/breast/BreastAugmentationImg.jpg';
 
 import CommonTopBanner from '@/components/common/banner/CommonTopBanner';
 import BeforeAfter from '@/components/detail/common/BeforeAfter';
@@ -49,7 +49,7 @@ export default function Page() {
         title="Breast Lift"
         contents="The Breast Lift page at Cara Plastic Surgery& Laser Center Las Vegas offers a specialized approach to rejuvenating and enhancing the natural beauty of your breasts through the transformative procedure known as mastopexy."
       />
-      <Section1 desc={whatIs} title={'What is Breast Lift?'} img={'/detailpage/liposuction/liposuction_what_is.png'} />
+      <Section1 desc={whatIs} title={'What is Breast Lift?'} img={'/detailpage/breast/breastImg1.jpg'} />
       <WhoNeeds title={'Who Needs Breast Lift?'} desc={whoNeeds} />
       <CardContainer title={'Benefits of Breast Lift'} benefits={benefits} />
       <BeforeAfter images_data={images_data} />

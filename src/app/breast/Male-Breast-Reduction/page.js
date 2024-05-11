@@ -1,6 +1,7 @@
 import React from 'react';
 
-import BreastSample from '../../../../public/detailpage/breast/BreastAugmentationImg.png';
+import maleBreast_TopBanner from '../../../../public/detailpage/breast/MaleBreast1.jpg';
+import maleBreast_WhatIs from '../../../../public/detailpage/breast/MaleBreast2.jpg';
 
 import CommonTopBanner from '@/components/common/banner/CommonTopBanner';
 import BeforeAfter from '@/components/detail/common/BeforeAfter';
@@ -45,15 +46,12 @@ export default function Page() {
     <div>
       <CommonTopBanner
         url="breast"
-        img={BreastSample}
+        img={maleBreast_TopBanner}
+        imgAlign="right"
         title="Male Breast Reduction"
         contents="At Cara Plastic Surgery & Laser Center Las Vegas, we offer comprehensive solutions for breast reduction, including specialized procedures for male breast reduction, or gynecomastia. Our male breast reduction, or gynecomastia surgery, is a transformative solution to reduce excess breast tissue and restore a masculine chest contour."
       />
-      <Section1
-        desc={whatIs}
-        title={'What is Male Breast Reduction?'}
-        img={'/detailpage/liposuction/liposuction_what_is.png'}
-      />
+      <Section1 desc={whatIs} title={'What is Male Breast Reduction?'} img={maleBreast_WhatIs} />
       <WhoNeeds title={'Who Needs Male Breast Reduction?'} desc={whoNeeds} />
       <CardContainer title={'Benefits of Male Breast Reduction'} benefits={benefits} />
       <BeforeAfter images_data={images_data} />

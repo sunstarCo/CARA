@@ -11,11 +11,11 @@ function Gallery() {
   return (
     <div ref={domRef} className="relative w-full overflow-hidden py-24 sm:py-[11.75rem]">
       <Image
-        src={'/banner/main/GalleryBG.png'}
+        src={'/banner/main/GalleryBG.jpg'}
         alt=""
         fill
         sizes="100"
-        className="object-cover object-left-top -z-10"
+        className="object-cover object-left-top max-sm:opacity-40 -z-10"
       />
       <div className="bg-white opacity-10 w-full h-full absolute top-0 left-0 -z-10" />
       <div
@@ -31,7 +31,7 @@ function Gallery() {
           </div>
           <p className="mt-5 text-[2.5rem] sm:text-54px leading-normal font-trajan">View Our Gallery</p>
           <div className="w-[100px] h-2 bg-[#9D9892] mt-10" />
-          <p className="text-xl leading-loose mt-12 w-full sm:w-[85%]">
+          <p className="text-xl leading-loose mt-[3.125rem] w-full sm:w-[85%] max-w-[560px] tracking-wide">
             Renowned for his mastery of state-of-the-art techniques and technology, Dr. Kahng is celebrated in the field
             of Korean Plastic Surgery in Los Angeles and beyond for his ability to achieve symmetry, harmony, and
             balance.

@@ -3,7 +3,7 @@ import React from 'react';
 
 import Image from 'next/image';
 
-import DoctorImg from '../../../public/banner/about/AboutMeetTheDoctorImg.png';
+import DoctorImg from '../../../public/banner/about/DoctorExpertise.jpg';
 
 import {useObserver} from '@/hooks/useObserver';
 
