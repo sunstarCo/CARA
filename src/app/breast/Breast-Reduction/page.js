@@ -1,6 +1,6 @@
 import React from 'react';
 
-import BreastSample from '../../../../public/detailpage/breast/BreastAugmentationImg.png';
+import BreastSample from '../../../../public/detailpage/breast/BreastAugmentationImg.jpg';
 
 import CommonTopBanner from '@/components/common/banner/CommonTopBanner';
 import BeforeAfter from '@/components/detail/common/BeforeAfter';
@@ -49,11 +49,7 @@ export default function Page() {
         title="Breast Reduction"
         contents="At Cara Plastic Surgery & Laser Center in Las Vegas, our breast reduction procedures are designed to provide effective relief from the challenges associated with overly large breasts. Reduction mammoplasty, commonly known as breast reduction, is a surgical solution aimed at achieving a more proportionate and comfortable breast size."
       />
-      <Section1
-        desc={whatIs}
-        title={'What is Breast Reduction?'}
-        img={'/detailpage/liposuction/liposuction_what_is.png'}
-      />
+      <Section1 desc={whatIs} title={'What is Breast Reduction?'} img={'/detailpage/breast/breastImg1.jpg'} />
       <WhoNeeds title={'Who Needs Breast Reduction?'} desc={whoNeeds} />
       <CardContainer title={'Benefits of Breast Reduction'} benefits={benefits} />
       <BeforeAfter images_data={images_data} />

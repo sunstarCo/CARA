@@ -41,6 +41,7 @@ export default function Page() {
         title="Revision Rhinoplasty"
         subtitle="Restoring Confidence, Refining Results at CARA Las Vegas"
         contents="If you are dissatisfied with the outcome of a prior rhinoplasty procedure, it is imperative to seek the expertise of a skilled surgeon for corrective measures. With his knowledge and experience, Dr. Kahng possesses the necessary proficiency to address complications arising from previous surgeries. He will be able to restore optimal nasal function and ultimately ensure your satisfaction with the results."
+        img={'/detailpage/nose/AsianRhinoplasty2.jpg'}
       />
       <AboutSecondBanner
         mainDesc={

@@ -56,20 +56,17 @@ export default function Page() {
         title="Mommy Makeover"
         subtitle="Restore Your Body After Pregnancy"
         contents="Motherhood is a beautiful journey, but it can take a toll on your body. Our Mommy Makeover combines various procedures tailored to address post-pregnancy changes. From breast enhancement and tummy tucks to liposuction, we can help you reclaim your pre-pregnancy body and feel rejuvenated."
+        img={'/detailpage/body/Liposuction1.jpg'}
       />
       <AboutSecondBanner
         longText
         mainDesc="Embracing motherhood is a joyous and fulfilling experience, yet it often comes with significant changes to the body. Many new mothers find themselves grappling with the physical toll that pregnancy and breastfeeding can take. At Cara Plastic Surgery & Laser Center Las Vegas, Dr. David Kahng specializes in mommy makeovers with artistry and skill, offering a transformative solution to help you regain a firm and youthful appearance after the beautiful journey of childbearing."
       />
-      <Section1
-        desc={whatIs}
-        title={'What is Mommy Makeover?'}
-        img={'/detailpage/liposuction/liposuction_what_is.png'}
-      />
+      <Section1 desc={whatIs} title={'What is Mommy Makeover?'} img={'/detailpage/body/Mommy-Makeover.jpg'} />
       <WhoNeeds title={'who needs Mommy Makeover?'}>
         <ul className="flex flex-col lg:flex-row gap-16 mt-16 text-white">
           {whoNeedsContents.map((content, index) => (
-            <li key={index} className="flex flex-col items-center gap-4 w-[90%] lg:w-[30%] mx-auto py-10 bg-[#363636]">
+            <li key={index} className="flex flex-col items-center gap-4 w-[90%] lg:w-[30%] mx-auto py-10 bg-[#626262]">
               <h4 className="text-[1.75rem] leading-normal font-trajan">{content.title}</h4>
               <p className="text-xl leading-loose mt-2 px-8 max-w-[1200px] mx-auto">{content.desc}</p>
             </li>

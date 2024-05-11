@@ -49,12 +49,13 @@ export default function Page() {
         title="Tummy Tuck"
         subtitle="Flatten and Tighten Your Abdomen"
         contents="Regain a flat and firm abdomen with a Tummy Tuck procedure. Pregnancy, weight fluctuations, and aging can lead to excess skin and weakened muscles. Our Tummy Tuck surgery tightens abdominal muscles and removes excess skin, resulting in a smoother, more toned midsection. Rediscover confidence in your appearance and embrace a revitalized silhouette."
+        img={'/detailpage/body/Tummy-Tuck1.jpg'}
       />
       <AboutSecondBanner
         longText
         mainDesc="The natural processes of pregnancy, weight loss, and aging often lead to the development of loose, sagging skin, and weakened muscles in the abdominal region. When traditional methods such as diet and exercise prove ineffective, a Tummy Tuck in Las Vegas emerges as a transformative solution to help you attain the desired stomach appearance."
       />
-      <Section1 desc={whatIs} title={'What is Tummy Tuck?'} img={'/detailpage/liposuction/liposuction_what_is.png'} />
+      <Section1 desc={whatIs} title={'What is Tummy Tuck?'} img={'/detailpage/body/Tummy-Tuck2.jpg'} />
       <WhoNeeds title={'who needs Tummy Tuck?'} desc={whoNeeds}>
         <div className="flex flex-col mt-12 text-start text-[#808683]">
           <ul className="flex flex-col gap-8">

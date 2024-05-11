@@ -1,6 +1,6 @@
 import React from 'react';
 
-import BreastSample from '../../../../public/detailpage/breast/BreastAugmentationImg.png';
+import BreastSample from '../../../../public/detailpage/breast/BreastAugmentationImg.jpg';
 
 import CommonTopBanner from '@/components/common/banner/CommonTopBanner';
 import BeforeAfter from '@/components/detail/common/BeforeAfter';
@@ -48,11 +48,7 @@ export default function Page() {
         title="Breast Augmentation"
         contents="Breast augmentation is a transformative procedure designed to enhance the size and shape of your breasts, providing a boost in confidence and a renewed sense of femininity."
       />
-      <Section1
-        desc={whatIs}
-        title={'What is Breast Augmentation?'}
-        img={'/detailpage/liposuction/liposuction_what_is.png'}
-      />
+      <Section1 desc={whatIs} title={'What is Breast Augmentation?'} img={'/detailpage/breast/breastImg1.jpg'} />
       <WhoNeeds title={'Who Needs Breast Augmentation?'} desc={whoNeeds} />
       <CardContainer title={'Benefits of Breast augmentation'} benefits={benefits} />
       <BeforeAfter images_data={images_data} />

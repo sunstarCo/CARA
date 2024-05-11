@@ -1,7 +1,5 @@
 import React from 'react';
 
-import BreastSample from '../../../../public/detailpage/breast/BreastAugmentationImg.png';
-
 import AboutSecondBanner from '@/components/about/AboutSecondBanner';
 import CommonTopBanner from '@/components/common/banner/CommonTopBanner';
 import BeforeAfter from '@/components/detail/common/BeforeAfter';
@@ -43,7 +41,7 @@ export default function Page() {
     <>
       <CommonTopBanner
         url="Face"
-        img={BreastSample}
+        img="/detailpage/face/FaceCommon.jpg"
         title="Brow Lift"
         contents="Endoscopic surgery offers a pathway to rejuvenating your overall facial appearance by repositioning the brow, resulting in a more youthful and refreshed look. This procedure avoids the need for cutting or shaving hair and has the potential to revitalize your entire appearance."
       />
@@ -53,7 +51,7 @@ export default function Page() {
           "At CARA Plastic Surgery & Laser Center Las Vegas, we specialize in helping you achieve your aesthetic goals with precision and expertise. If you're seeking to rejuvenate your appearance and restore a more youthful, lifted brow, our brow lift surgery may be the ideal solution for you."
         }
       />
-      <Section1 desc={what_is} title={'What is Brow Lift?'} img={'/detailpage/liposuction/liposuction_what_is.png'} />
+      <Section1 desc={what_is} title={'What is Brow Lift?'} img="/detailpage/face/LowerEyelid.jpg" />
       <CardContainer title={'Benefits of Brow Lift'} benefits={benefits} theme="dark" />
       <BeforeAfter images_data={images_data} />
       <AboutSecondBanner mainDesc="Who Can Benefit from Brow Lift?" subDesc={who_needs} />

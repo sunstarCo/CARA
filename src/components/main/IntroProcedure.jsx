@@ -31,7 +31,7 @@ function IntroProcedure() {
   return (
     <div className="relative w-full overflow-hidden py-20 sm:py-40">
       <Image
-        src={'/banner/main/IntroProcedureBG.png'}
+        src={'/banner/main/IntroProcedure.jpg'}
         alt=""
         fill
         sizes="100"
