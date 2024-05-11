@@ -1,7 +1,5 @@
 import React from 'react';
 
-import BreastSample from '../../../../public/detailpage/breast/BreastAugmentationImg.jpg';
-
 import AboutSecondBanner from '@/components/about/AboutSecondBanner';
 import CommonTopBanner from '@/components/common/banner/CommonTopBanner';
 import BeforeAfter from '@/components/detail/common/BeforeAfter';
@@ -43,17 +41,16 @@ export default function Page() {
     <>
       <CommonTopBanner
         url="Face"
-        img={BreastSample}
+        img="/detailpage/face/FaceLift.jpg"
         title="Face Lift"
         contents="Facial structures vary across ethnicities, a factor that makes seeking a culturally informed facelift plastic surgeon in Las Vegas extremely important. Not all surgeons possess the expertise and understanding required to achieve the most aesthetically pleasing enhancements in a facelift procedure. Consult with Dr. Kahng, renowned as one of the most experienced plastic surgeons in Orange County/Los Angeles/Las Vegas, to learn more about your options."
       />
       <Intro
-        title={'Face Lift'}
         desc={
           "If you're looking to turn back the hands of time and restore a more youthful appearance to your face, face lift surgery might be the solution you've been searching for."
         }
       />
-      <Section1 desc={what_is} title={'What is Face Lift?'} img={'/detailpage/liposuction/liposuction_what_is.png'} />
+      <Section1 desc={what_is} title={'What is Face Lift?'} img="/detailpage/face/LowerEyelid.jpg" />
       <CardContainer title={'Benefits of Face Lift'} benefits={benefits} theme="dark" />
       <BeforeAfter images_data={images_data} />
       <AboutSecondBanner mainDesc="Who Can Benefit from Face Lift?" subDesc={who_needs} />

@@ -1,7 +1,5 @@
 import React from 'react';
 
-import BreastSample from '../../../../public/detailpage/breast/BreastAugmentationImg.jpg';
-
 import AboutSecondBanner from '@/components/about/AboutSecondBanner';
 import CommonTopBanner from '@/components/common/banner/CommonTopBanner';
 import BeforeAfter from '@/components/detail/common/BeforeAfter';
@@ -43,7 +41,7 @@ export default function Page() {
     <>
       <CommonTopBanner
         url="Face"
-        img={BreastSample}
+        img="/detailpage/face/Chin-Augmentation.jpg"
         title="Chin Augmentation"
         contents="Every aspect of the face contributes to achieving facial harmony. A receding chin can detract from your profile's attractiveness and create a sense of disproportion among other features. Chin augmentation surgery offers a solution to enhance your facial appearance, restoring balance, harmony, and aesthetic appeal."
       />
@@ -53,11 +51,7 @@ export default function Page() {
           "A balanced and defined chin can greatly enhance your facial profile, enabling you to exude confidence and symmetry. If you're looking to achieve a more proportionate and harmonious appearance, consider chin augmentation at CARA Plastic Surgery & Laser Center Las Vegas. Let us help you redefine your features and unleash your full aesthetic potential."
         }
       />
-      <Section1
-        desc={what_is}
-        title={'What is Chin Augmentation?'}
-        img={'/detailpage/liposuction/liposuction_what_is.png'}
-      />
+      <Section1 desc={what_is} title={'What is Chin Augmentation?'} img="/detailpage/face/LowerEyelid.jpg" />
       <CardContainer title={'Benefits of Chin Augmentation'} benefits={benefits} theme="dark" />
       <BeforeAfter images_data={images_data} />
       <AboutSecondBanner mainDesc="Who Can Benefit from Chin Augmentation?" subDesc={who_needs} />

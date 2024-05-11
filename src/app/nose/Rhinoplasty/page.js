@@ -44,6 +44,7 @@ export default function Page() {
         title="Rhinoplasty"
         subtitle="Enhancing Your Facial Harmony, CARA Las Vegas"
         contents='The medical term for a nose job is "rhinoplasty." This surgical process requires complete personalization to achieve the utmost aesthetic balance in your facial features. Dr. Kahng is esteemed for his surgical proficiency and is recognized in the field for his skill and craftsmanship in facial cosmetic surgery, specifically in the domain of rhinoplasty procedures.'
+        img={'/detailpage/nose/Rhinoplasty1.jpg'}
       />
       <Intro
         title={'Rhinoplasty in Las Vegas'}
@@ -51,7 +52,7 @@ export default function Page() {
           'Rhinoplasty is a surgical procedure designed to enhance the appearance and functionality of the nose. At our office, CARA Las Vegas, we understand the importance of achieving facial harmony and are dedicated to providing personalized care to meet your aesthetic goals.'
         }
       />
-      <Section1 desc={whatIs} title={'What is Rhinoplasty?'} img={'/detailpage/liposuction/liposuction_what_is.png'} />
+      <Section1 desc={whatIs} title={'What is Rhinoplasty?'} img={'/detailpage/nose/Rhinoplasty2.jpg'} />
       <CardContainer title={'Benefits of Rhinoplasty'} benefits={benefits} />
       <WhoNeedNose
         title={'Who Needs Rhinoplasty?'}

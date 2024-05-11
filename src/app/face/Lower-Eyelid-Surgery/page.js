@@ -1,7 +1,5 @@
 import React from 'react';
 
-import BreastSample from '../../../../public/detailpage/breast/BreastAugmentationImg.jpg';
-
 import AboutSecondBanner from '@/components/about/AboutSecondBanner';
 import CommonTopBanner from '@/components/common/banner/CommonTopBanner';
 import BeforeAfter from '@/components/detail/common/BeforeAfter';
@@ -43,7 +41,7 @@ export default function Page() {
     <>
       <CommonTopBanner
         url="Face"
-        img={BreastSample}
+        img="/detailpage/face/FaceCommon.jpg"
         title="Lower Eyelid Surgery"
         contents="The eyes often make the first impression. However, excess, dark, or puffy skin beneath them can prematurely age or exhaust your appearance. Lower eyelid surgery offers a solution to rejuvenate your look, making you appear more youthful and refreshed in a natural manner."
       />
@@ -53,11 +51,7 @@ export default function Page() {
           "At CARA Plastic Surgery & Laser Center Las Vegas, we specialize in enhancing your natural beauty through advanced surgical techniques. If you're considering rejuvenating your appearance, particularly the delicate area around your eyes, our lower eyelid surgery might be the perfect solution for you."
         }
       />
-      <Section1
-        desc={what_is}
-        title={'What is Lower Eyelid Surgery?'}
-        img={'/detailpage/liposuction/liposuction_what_is.png'}
-      />
+      <Section1 desc={what_is} title={'What is Lower Eyelid Surgery?'} img="/detailpage/face/LowerEyelid.jpg" />
       <CardContainer title={'Benefits of Lower Eyelid Surgery'} benefits={benefits} theme="dark" />
       <BeforeAfter images_data={images_data} />
       <AboutSecondBanner mainDesc="Who Can Benefit from Lower Eyelid Surgery?" subDesc={who_needs} />

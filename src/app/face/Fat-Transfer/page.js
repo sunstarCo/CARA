@@ -1,7 +1,5 @@
 import React from 'react';
 
-import BreastSample from '../../../../public/detailpage/breast/BreastAugmentationImg.jpg';
-
 import AboutSecondBanner from '@/components/about/AboutSecondBanner';
 import CommonTopBanner from '@/components/common/banner/CommonTopBanner';
 import BeforeAfter from '@/components/detail/common/BeforeAfter';
@@ -43,7 +41,7 @@ export default function Page() {
     <>
       <CommonTopBanner
         url="Face"
-        img={BreastSample}
+        img="/detailpage/face/FatTransfer.jpg"
         title="Fat Transfer"
         contents="Many of our patients inquire about fat transfer, an innovative advancement in safe and natural plastic surgery. Unlike synthetic fillers, this procedure involves extracting, purifying, and injecting your own fat into facial areas to enhance volume, firmness, and contours. Fat transfer offers longer-lasting results compared to fillers."
       />
@@ -53,11 +51,7 @@ export default function Page() {
           "Many of us have excess fat in areas where we'd prefer not to, often wishing we could redistribute it to areas where it's lacking. Enter fat transfer – a revolutionary procedure that allows precisely that. This innovative technique involves extracting fat from one part of the body and strategically injecting it into another area that requires additional volume."
         }
       />
-      <Section1
-        desc={what_is}
-        title={'What is Fat Transfer?'}
-        img={'/detailpage/liposuction/liposuction_what_is.png'}
-      />
+      <Section1 desc={what_is} title={'What is Fat Transfer?'} img="/detailpage/face/LowerEyelid.jpg" />
       <CardContainer title={'Benefits of Fat Transfer'} benefits={benefits} theme="dark" />
       <BeforeAfter images_data={images_data} />
       <AboutSecondBanner mainDesc="Who Can Benefit from Fat Transfer?" subDesc={who_needs} />

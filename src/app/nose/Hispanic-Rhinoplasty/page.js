@@ -42,6 +42,7 @@ export default function Page() {
         title="Hispanic Rhinoplasty"
         subtitle="Celebrating Your Cultural Heritage, CARA Las Vegas"
         contents="Dr. Kahng specializes in customizing every rhinoplasty procedure to suit the distinct ethnic and cultural backgrounds of his patients. Throughout the process, he can address specific concerns regarding the nose's size or shape, all while preserving your cultural identity and working with you to determine the best care."
+        img={'/detailpage/nose/HispanicRhinoplasty1.jpg'}
       />
       <Intro
         title={'Hispanic Rhinoplasty in Las Vegas'}
