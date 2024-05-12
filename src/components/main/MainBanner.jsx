@@ -1,6 +1,6 @@
 import React from 'react';
 
-import MAINBANNER from '@img/banner/main/mainBanner.jpg';
+import MAINBANNER from '@img/banner/main/MainBanner.jpg';
 import Image from 'next/image';
 import Link from 'next/link';
 
