@@ -1,7 +1,7 @@
 import React from 'react';
 
 import TOP_BANNER_IMG from '@img/detailpage/breast/BreastAugmentationImg.jpg';
-import WHAT_IS_IMG from '@img/detailpage/breast/breastImg1.jpg';
+import WHAT_IS_IMG from '@img/detailpage/breast/BreastImg1.jpg';
 
 import CommonTopBanner from '@/components/common/banner/CommonTopBanner';
 import BeforeAfter from '@/components/detail/common/BeforeAfter';

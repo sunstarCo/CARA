@@ -16,7 +16,7 @@ function Section1({img, desc, title, reverse = false, benefits, no_bg = false}) 
         />
       )}
       <div className="flex flex-col-reverse justify-center items-center lg:flex-row gap-10 sm:gap-[6.25rem] max-w-[1556px] mx-auto">
-        {!reverse && <Image src={img} className="lg:w-1/2 object-cover" alt="why-choose" />}
+        {!reverse && <Image src={img} placeholder="blur" priority className="lg:w-1/2 object-cover" alt="why-choose" />}
         <div className="lg:w-1/2 flex flex-col items-center lg:items-start">
           <h3 className="text-4xl max-sm:text-center sm:text-48px leading-normal font-trajan">{title}</h3>
           <div className="h-2 w-[6.25rem] bg-[#BDB5AA] mt-10 mb-[3.125rem]" />
@@ -43,7 +43,7 @@ function Section1({img, desc, title, reverse = false, benefits, no_bg = false}) 
             </div>
           )}
         </div>
-        {reverse && <Image src={img} className="lg:w-1/2 object-cover" alt="why-choose" />}
+        {reverse && <Image src={img} className="lg:w-1/2 object-cover" placeholder="blur" priority alt="why-choose" />}
       </div>
     </div>
   );
