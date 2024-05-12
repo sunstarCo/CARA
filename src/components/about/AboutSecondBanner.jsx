@@ -11,7 +11,7 @@ export default function AboutSecondBanner({mainDesc, subDesc, contents, longText
         className={`max-w-[2100px] mx-auto flex flex-col items-center justify-center opacity-0 transition-all ${
           isVisible && 'animate-show_move_top'
         }`}>
-        {contents ? (
+        {contents !== undefined ? (
           <div ref={domRef} className="flex flex-col lg:flex-row">
             {contents.map((content, index) => (
               <Fragment key={content.title}>
@@ -28,10 +28,10 @@ export default function AboutSecondBanner({mainDesc, subDesc, contents, longText
           </div>
         ) : (
           <>
-            <div className="text-3xl leading-loose text-center text-wrap ">
+            <div className="text-4xl leading-loose text-center text-wrap ">
               {mainDesc.split('/').map(word => {
                 return (
-                  <p key={word} className={`${!longText && 'text-4xl font-trajan leading-normal'}`}>
+                  <p key={word} className={`${!longText && 'text-5xl leading-normal font-trajan'}`}>
                     {word}
                   </p>
                 );

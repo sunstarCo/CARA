@@ -1,6 +1,7 @@
 import React from 'react';
 
-import BreastSample from '../../../../public/detailpage/breast/BreastAugmentationImg.jpg';
+import TOP_BANNER_IMG from '@img/detailpage/face/Buccal-Fat-Removal.jpg';
+import WHAT_IS_IMG from '@img/detailpage/face/LowerEyelid.jpg';
 
 import AboutSecondBanner from '@/components/about/AboutSecondBanner';
 import CommonTopBanner from '@/components/common/banner/CommonTopBanner';
@@ -43,7 +44,7 @@ export default function Page() {
     <>
       <CommonTopBanner
         url="Face"
-        img={BreastSample}
+        img={TOP_BANNER_IMG}
         title="Buccal Fat Removal"
         contents={`While chubby cheeks may be endearing in children and infants, as adults, they can give the impression of a rounder face than desired. Buccal fat removal specifically targets the fat beneath the cheeks to achieve a slimmer appearance. This procedure is particularly beneficial for individuals with a "baby face," helping them achieve a more refined and sophisticated look.`}
       />
@@ -53,11 +54,7 @@ export default function Page() {
           "Unlock the potential of your cheekbones and achieve a more sculpted facial appearance with buccal fat removal at CARA Plastic Surgery & Laser Center Las Vegas. If you're seeking to refine your facial contours and enhance your natural beauty, our skilled surgeons are here to help you achieve your aesthetic goals."
         }
       />
-      <Section1
-        desc={what_is}
-        title={'What is Buccal Fat Removal?'}
-        img={'/detailpage/liposuction/liposuction_what_is.png'}
-      />
+      <Section1 desc={what_is} title={'What is Buccal Fat Removal?'} img={WHAT_IS_IMG} />
       <CardContainer title={'Benefits of Buccal Fat Removal'} benefits={benefits} theme="dark" />
       <BeforeAfter images_data={images_data} />
       <AboutSecondBanner mainDesc="Who Can Benefit from Buccal Fat Removal?" subDesc={who_needs} />

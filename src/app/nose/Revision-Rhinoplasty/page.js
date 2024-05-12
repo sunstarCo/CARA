@@ -1,5 +1,7 @@
 import React from 'react';
 
+import TOP_BANNER_IMG from '@img/detailpage/nose/AsianRhinoplasty2.jpg';
+
 import AboutSecondBanner from '@/components/about/AboutSecondBanner';
 import CommonTopBanner from '@/components/common/banner/CommonTopBanner';
 import CardContainer from '@/components/detail/common/CardContainer';
@@ -26,14 +28,15 @@ const benefits = [
   },
 ];
 
+const whyChoose_desc =
+  'Las Vegas, our experienced team is committed to providing expert care and achieving optimal results for our patients who choose to undergo revision rhinoplasty. Contact us today to schedule a free consultation and take the first step towards restoring confidence and refining your nasal aesthetics with revision rhinoplasty.';
+const whoNeeds = [
+  'Have undergone previous rhinoplasty surgery and are dissatisfied with the outcomes or experience complications such as asymmetry, irregularities, or breathing difficulties.',
+  'Seek to address functional issues such as nasal obstruction, septal deviation, or collapse of nasal valves that have not been adequately corrected by previous surgeries.',
+  'Desire further refinement or enhancement of their nasal appearance to achieve their desired aesthetic goals.',
+];
+
 export default function Page() {
-  const whyChoose_desc =
-    'Las Vegas, our experienced team is committed to providing expert care and achieving optimal results for our patients who choose to undergo revision rhinoplasty. Contact us today to schedule a free consultation and take the first step towards restoring confidence and refining your nasal aesthetics with revision rhinoplasty.';
-  const whoNeeds = [
-    'Have undergone previous rhinoplasty surgery and are dissatisfied with the outcomes or experience complications such as asymmetry, irregularities, or breathing difficulties.',
-    'Seek to address functional issues such as nasal obstruction, septal deviation, or collapse of nasal valves that have not been adequately corrected by previous surgeries.',
-    'Desire further refinement or enhancement of their nasal appearance to achieve their desired aesthetic goals.',
-  ];
   return (
     <div>
       <CommonTopBanner
@@ -41,7 +44,7 @@ export default function Page() {
         title="Revision Rhinoplasty"
         subtitle="Restoring Confidence, Refining Results at CARA Las Vegas"
         contents="If you are dissatisfied with the outcome of a prior rhinoplasty procedure, it is imperative to seek the expertise of a skilled surgeon for corrective measures. With his knowledge and experience, Dr. Kahng possesses the necessary proficiency to address complications arising from previous surgeries. He will be able to restore optimal nasal function and ultimately ensure your satisfaction with the results."
-        img={'/detailpage/nose/AsianRhinoplasty2.jpg'}
+        img={TOP_BANNER_IMG}
       />
       <AboutSecondBanner
         mainDesc={

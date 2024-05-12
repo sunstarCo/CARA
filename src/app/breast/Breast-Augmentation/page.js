@@ -1,6 +1,7 @@
 import React from 'react';
 
-import BreastSample from '../../../../public/detailpage/breast/BreastAugmentationImg.jpg';
+import TOP_BANNER_IMG from '@img/detailpage/breast/BreastAugmentationImg.jpg';
+import WHAT_IS_IMG from '@img/detailpage/breast/breastImg1.jpg';
 
 import CommonTopBanner from '@/components/common/banner/CommonTopBanner';
 import BeforeAfter from '@/components/detail/common/BeforeAfter';
@@ -33,22 +34,23 @@ const benefits = [
   },
 ];
 
+const whyChoose_desc =
+  "At Cara Plastic Surgery & Laser Center Las Vegas, our commitment is to provide a personalized and supportive experience throughout your breast augmentation journey. Our skilled surgeons prioritize your safety, comfort, and satisfaction, utilizing state-of-the-art techniques to ensure optimal results. /If you're considering breast augmentation or have questions about the procedure, contact us today to schedule a consultation. Discover the possibilities and embark on the path to a more confident and enhanced self with Cara Plastic Surgery & Laser Center Las Vegas.";
+const whatIs =
+  'Breast augmentation, also known as augmentation mammoplasty, is a cosmetic surgical procedure aimed at increasing the size, fullness, and symmetry of the breasts. This is typically achieved through the use of implants placed either behind the breast tissue or beneath the chest muscle. At Cara Plastic Surgery & Laser Center Las Vegas, our board-certified plastic surgeons employ advanced techniques and FDA-approved implants to ensure natural-looking and proportionate results.';
+const whoNeeds =
+  "Breast augmentation is a suitable option for individuals who desire to enhance the size of their breasts for various reasons. Whether you have always felt self-conscious about the size of your breasts, experienced changes due to pregnancy or weight loss, or simply want to achieve a more balanced and proportionate figure, breast augmentation could be the solution you've been looking for.";
+
 export default function Page() {
-  const whyChoose_desc =
-    "At Cara Plastic Surgery & Laser Center Las Vegas, our commitment is to provide a personalized and supportive experience throughout your breast augmentation journey. Our skilled surgeons prioritize your safety, comfort, and satisfaction, utilizing state-of-the-art techniques to ensure optimal results. /If you're considering breast augmentation or have questions about the procedure, contact us today to schedule a consultation. Discover the possibilities and embark on the path to a more confident and enhanced self with Cara Plastic Surgery & Laser Center Las Vegas.";
-  const whatIs =
-    'Breast augmentation, also known as augmentation mammoplasty, is a cosmetic surgical procedure aimed at increasing the size, fullness, and symmetry of the breasts. This is typically achieved through the use of implants placed either behind the breast tissue or beneath the chest muscle. At Cara Plastic Surgery & Laser Center Las Vegas, our board-certified plastic surgeons employ advanced techniques and FDA-approved implants to ensure natural-looking and proportionate results.';
-  const whoNeeds =
-    "Breast augmentation is a suitable option for individuals who desire to enhance the size of their breasts for various reasons. Whether you have always felt self-conscious about the size of your breasts, experienced changes due to pregnancy or weight loss, or simply want to achieve a more balanced and proportionate figure, breast augmentation could be the solution you've been looking for.";
   return (
     <div>
       <CommonTopBanner
         url="breast"
-        img={BreastSample}
+        img={TOP_BANNER_IMG}
         title="Breast Augmentation"
         contents="Breast augmentation is a transformative procedure designed to enhance the size and shape of your breasts, providing a boost in confidence and a renewed sense of femininity."
       />
-      <Section1 desc={whatIs} title={'What is Breast Augmentation?'} img={'/detailpage/breast/breastImg1.jpg'} />
+      <Section1 desc={whatIs} title={'What is Breast Augmentation?'} img={WHAT_IS_IMG} />
       <WhoNeeds title={'Who Needs Breast Augmentation?'} desc={whoNeeds} />
       <CardContainer title={'Benefits of Breast augmentation'} benefits={benefits} />
       <BeforeAfter images_data={images_data} />

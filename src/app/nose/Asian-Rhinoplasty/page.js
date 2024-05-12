@@ -1,5 +1,7 @@
 import React from 'react';
 
+import TOP_BANNER_IMG from '@img/detailpage/nose/AsianRhinoplasty1.jpg';
+
 import CommonTopBanner from '@/components/common/banner/CommonTopBanner';
 import CardContainer from '@/components/detail/common/CardContainer';
 import WhyChoose from '@/components/detail/common/WhyChoose';
@@ -26,15 +28,16 @@ const benefits = [
   },
 ];
 
+const whyChoose_desc =
+  'At CARA Plastic Surgery & Laser Center in Las Vegas, our team of experienced surgeons specializes in Asian rhinoplasty, offering personalized care and natural-looking results tailored to your unique needs. Contact us today to schedule a free consultation and start on your journey towards enhanced facial harmony with Asian rhinoplasty.';
+const whoNeeds = [
+  'Desire to refine the shape, size, or projection of their nose while maintaining ethnic features.',
+  'Seek to improve facial balance and harmony by addressing nasal asymmetry or disproportion.',
+  'Experience functional issues such as nasal obstruction, breathing difficulties, or septal deviation.',
+  'Have undergone previous rhinoplasty surgery and require revision to address unsatisfactory results or complications.',
+];
+
 export default function Page() {
-  const whyChoose_desc =
-    'At CARA Plastic Surgery & Laser Center in Las Vegas, our team of experienced surgeons specializes in Asian rhinoplasty, offering personalized care and natural-looking results tailored to your unique needs. Contact us today to schedule a free consultation and start on your journey towards enhanced facial harmony with Asian rhinoplasty.';
-  const whoNeeds = [
-    'Desire to refine the shape, size, or projection of their nose while maintaining ethnic features.',
-    'Seek to improve facial balance and harmony by addressing nasal asymmetry or disproportion.',
-    'Experience functional issues such as nasal obstruction, breathing difficulties, or septal deviation.',
-    'Have undergone previous rhinoplasty surgery and require revision to address unsatisfactory results or complications.',
-  ];
   return (
     <div>
       <CommonTopBanner
@@ -42,7 +45,7 @@ export default function Page() {
         title="Asian Rhinoplasty"
         subtitle="Achieving Natural Facial Harmony, CARA Las Vegas"
         contents="Many individuals of Asian descent choose to change their nose's size and shape, often desiring adjustments to achieve a more harmonious and appealing facial appearance. Dr. Kahng is renowned for his exceptional skill in performing Asian rhinoplasty, crafting results that seamlessly enhance the overall facial structure while maintaining a natural aesthetic."
-        img={'/detailpage/nose/AsianRhinoplasty1.jpg'}
+        img={TOP_BANNER_IMG}
       />
       <Intro
         title={'Asian Rhinoplasty in Las Vegas'}
@@ -53,7 +56,7 @@ export default function Page() {
       <CardContainer title={'Benefits of Asian Rhinoplasty'} benefits={benefits} />
       <WhoNeedNose
         title={'Who Needs Asian Rhinoplasty?'}
-        subtitle={'Asian Rhinoplasty may be suitable for individuals who'}
+        subtitle={'Asian Rhinoplasty may be suitable for individuals who:'}
         desc={whoNeeds}
       />
       <NoseBeforeAfter />
