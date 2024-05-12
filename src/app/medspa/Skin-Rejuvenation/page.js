@@ -1,9 +1,9 @@
 import React from 'react';
 
 import TOP_BANNER_IMG from '@img/detailpage/medspa/Injectables.jpg';
-import IMG_1 from '@img/detailpage/medspa/medspa1.jpg';
-import IMG_2 from '@img/detailpage/medspa/medspa2.jpg';
-import IMG_3 from '@img/detailpage/medspa/medspa3.jpg';
+import IMG_1 from '@img/detailpage/medspa/Medspa1.jpg';
+import IMG_2 from '@img/detailpage/medspa/Medspa2.jpg';
+import IMG_3 from '@img/detailpage/medspa/Medspa3.jpg';
 
 import CommonTopBanner from '@/components/common/banner/CommonTopBanner';
 import Section1 from '@/components/detail/common/Section1';
