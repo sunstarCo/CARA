@@ -1,5 +1,8 @@
 import React from 'react';
 
+import TOP_BANNER_IMG from '@img/detailpage/body/Liposuction1.jpg';
+import WHAT_IS_IMG from '@img/detailpage/body/Mommy-Makeover.jpg';
+
 import AboutSecondBanner from '@/components/about/AboutSecondBanner';
 import CommonTopBanner from '@/components/common/banner/CommonTopBanner';
 import BeforeAfter from '@/components/detail/common/BeforeAfter';
@@ -44,11 +47,12 @@ const whoNeedsContents = [
   },
 ];
 
+const whyChoose_desc =
+  'Dr. David Kahng at Cara Plastic Surgery & Laser Center Las Vegas brings artistry and skill to every Mommy Makeover procedure. Our commitment is to help you restore not just your body but also your confidence, embracing the beauty that comes with motherhood. Schedule a consultation today to discuss your Mommy Makeover goals and embark on the journey to reclaiming your body and confidence in Las Vegas.';
+const whatIs =
+  'A Mommy Makeover is a comprehensive set of procedures tailored to address the physical changes that often accompany pregnancy and breastfeeding. Dr. David Kahng combines surgical techniques to enhance the breasts, abdomen, and other areas, providing a holistic approach to rejuvenating your post-pregnancy body.';
+
 export default function Page() {
-  const whyChoose_desc =
-    'Dr. David Kahng at Cara Plastic Surgery & Laser Center Las Vegas brings artistry and skill to every Mommy Makeover procedure. Our commitment is to help you restore not just your body but also your confidence, embracing the beauty that comes with motherhood. Schedule a consultation today to discuss your Mommy Makeover goals and embark on the journey to reclaiming your body and confidence in Las Vegas.';
-  const whatIs =
-    'A Mommy Makeover is a comprehensive set of procedures tailored to address the physical changes that often accompany pregnancy and breastfeeding. Dr. David Kahng combines surgical techniques to enhance the breasts, abdomen, and other areas, providing a holistic approach to rejuvenating your post-pregnancy body.';
   return (
     <div>
       <CommonTopBanner
@@ -56,13 +60,13 @@ export default function Page() {
         title="Mommy Makeover"
         subtitle="Restore Your Body After Pregnancy"
         contents="Motherhood is a beautiful journey, but it can take a toll on your body. Our Mommy Makeover combines various procedures tailored to address post-pregnancy changes. From breast enhancement and tummy tucks to liposuction, we can help you reclaim your pre-pregnancy body and feel rejuvenated."
-        img={'/detailpage/body/Liposuction1.jpg'}
+        img={TOP_BANNER_IMG}
       />
       <AboutSecondBanner
         longText
         mainDesc="Embracing motherhood is a joyous and fulfilling experience, yet it often comes with significant changes to the body. Many new mothers find themselves grappling with the physical toll that pregnancy and breastfeeding can take. At Cara Plastic Surgery & Laser Center Las Vegas, Dr. David Kahng specializes in mommy makeovers with artistry and skill, offering a transformative solution to help you regain a firm and youthful appearance after the beautiful journey of childbearing."
       />
-      <Section1 desc={whatIs} title={'What is Mommy Makeover?'} img={'/detailpage/body/Mommy-Makeover.jpg'} />
+      <Section1 desc={whatIs} title={'What is Mommy Makeover?'} img={WHAT_IS_IMG} />
       <WhoNeeds title={'who needs Mommy Makeover?'}>
         <ul className="flex flex-col lg:flex-row gap-16 mt-16 text-white">
           {whoNeedsContents.map((content, index) => (

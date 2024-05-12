@@ -1,5 +1,7 @@
 import React from 'react';
 
+import TOP_BANNER_IMG from '@img/detailpage/nose/HispanicRhinoplasty1.jpg';
+
 import CommonTopBanner from '@/components/common/banner/CommonTopBanner';
 import CardContainer from '@/components/detail/common/CardContainer';
 import WhyChoose from '@/components/detail/common/WhyChoose';
@@ -26,15 +28,16 @@ const benefits = [
   },
 ];
 
+const whyChoose_desc =
+  'Las Vegas, our team of experienced surgeons is dedicated to providing personalized care and natural-looking results tailored to your unique needs. Contact us today to schedule a free consultation and discover how Hispanic rhinoplasty can help you achieve a nose that celebrates your cultural heritage and enhances your natural beauty.';
+const whoNeeds = [
+  'Desire to refine the shape, size, or projection of their nose while celebrating their Hispanic heritage.',
+  'Seek to enhance facial balance and harmony by addressing nasal asymmetry or disproportion.',
+  'Experience functional issues such as nasal obstruction, breathing difficulties, or septal deviation.',
+  'Have undergone previous rhinoplasty surgery and require revision to address unsatisfactory results or complications.',
+];
+
 export default function Page() {
-  const whyChoose_desc =
-    'Las Vegas, our team of experienced surgeons is dedicated to providing personalized care and natural-looking results tailored to your unique needs. Contact us today to schedule a free consultation and discover how Hispanic rhinoplasty can help you achieve a nose that celebrates your cultural heritage and enhances your natural beauty.';
-  const whoNeeds = [
-    'Desire to refine the shape, size, or projection of their nose while celebrating their Hispanic heritage.',
-    'Seek to enhance facial balance and harmony by addressing nasal asymmetry or disproportion.',
-    'Experience functional issues such as nasal obstruction, breathing difficulties, or septal deviation.',
-    'Have undergone previous rhinoplasty surgery and require revision to address unsatisfactory results or complications.',
-  ];
   return (
     <div>
       <CommonTopBanner
@@ -42,7 +45,7 @@ export default function Page() {
         title="Hispanic Rhinoplasty"
         subtitle="Celebrating Your Cultural Heritage, CARA Las Vegas"
         contents="Dr. Kahng specializes in customizing every rhinoplasty procedure to suit the distinct ethnic and cultural backgrounds of his patients. Throughout the process, he can address specific concerns regarding the nose's size or shape, all while preserving your cultural identity and working with you to determine the best care."
-        img={'/detailpage/nose/HispanicRhinoplasty1.jpg'}
+        img={TOP_BANNER_IMG}
       />
       <Intro
         title={'Hispanic Rhinoplasty in Las Vegas'}

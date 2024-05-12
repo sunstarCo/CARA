@@ -1,5 +1,8 @@
 import React from 'react';
 
+import TOP_BANNER_IMG from '@img/detailpage/body/Mommy-Makeover.jpg';
+import WHAT_IS_IMG from '@img/detailpage/body/Tummy-Tuck1.jpg';
+
 import AboutSecondBanner from '@/components/about/AboutSecondBanner';
 import CommonTopBanner from '@/components/common/banner/CommonTopBanner';
 import BeforeAfter from '@/components/detail/common/BeforeAfter';
@@ -36,12 +39,13 @@ const whoHave = [
   'Have sufficient donor fat for the liposuction process',
 ];
 
+const whyChoose_desc =
+  'At Cara Plastic Surgery & Laser Center Las Vegas, our plastic surgeons prioritize your safety, comfort, and satisfaction. With a focus on artistic precision, we aim to provide you with the beautifully sculpted curves you desire, enhancing your confidence and overall well-being. Schedule a consultation today to discuss your Brazilian Butt Lift goals with our expert surgeons and embark on the journey to a more confident and enhanced silhouette.';
+const whatIs =
+  "The Brazilian Butt Lift is a transformative cosmetic procedure designed to enhance the shape and volume of the buttocks using your body's own fat. During the procedure, excess fat is harvested from areas such as the abdomen, flanks, or thighs through liposuction. This fat is then purified and strategically injected into the buttocks, creating a fuller, lifted, and more youthful appearance.";
+const whoNeeds = 'A Brazilian Butt Lift is ideal for individuals who';
+
 export default function Page() {
-  const whyChoose_desc =
-    'At Cara Plastic Surgery & Laser Center Las Vegas, our plastic surgeons prioritize your safety, comfort, and satisfaction. With a focus on artistic precision, we aim to provide you with the beautifully sculpted curves you desire, enhancing your confidence and overall well-being. Schedule a consultation today to discuss your Brazilian Butt Lift goals with our expert surgeons and embark on the journey to a more confident and enhanced silhouette.';
-  const whatIs =
-    "The Brazilian Butt Lift is a transformative cosmetic procedure designed to enhance the shape and volume of the buttocks using your body's own fat. During the procedure, excess fat is harvested from areas such as the abdomen, flanks, or thighs through liposuction. This fat is then purified and strategically injected into the buttocks, creating a fuller, lifted, and more youthful appearance.";
-  const whoNeeds = 'A Brazilian Butt Lift is ideal for individuals who';
   return (
     <div>
       <CommonTopBanner
@@ -49,6 +53,7 @@ export default function Page() {
         title="Brazilian Butt Lift"
         subtitle="Enhance Your Curves"
         contents="Achieve fuller and shapelier buttocks with our Brazilian Butt Lift procedure. Using your body's own fat, we can sculpt and enhance your buttocks for a natural-looking and lifted appearance. Our surgeons focus on creating harmonious proportions, ensuring beautiful and balanced results."
+        img={TOP_BANNER_IMG}
       />
       <AboutSecondBanner
         longText
@@ -56,11 +61,7 @@ export default function Page() {
           "In today's era, many women aspire to enhance the allure of their derriere. The Brazilian Butt Lift (BBL) is increasingly becoming a popular choice for buttocks augmentation, offering a less invasive option with several notable advantages. At Cara Plastic Surgery & Laser Center Las Vegas, our skilled plastic surgeons specialize in Brazilian Butt Lift procedures performed in an AAAASF-accredited facility. This accreditation ensures the highest standards of safety and comfort for our valued patients."
         }
       />
-      <Section1
-        desc={whatIs}
-        title={'What is Brazilian Butt Lift?'}
-        img={'/detailpage/liposuction/liposuction_what_is.png'}
-      />
+      <Section1 desc={whatIs} title={'What is Brazilian Butt Lift?'} img={WHAT_IS_IMG} />
       <WhoNeeds title={'Who Can Benefit from a Brazilian ButtLift?'} desc={whoNeeds}>
         <div className="flex flex-col mt-12 text-start text-[#808683]">
           <ul className="flex flex-col gap-8">
