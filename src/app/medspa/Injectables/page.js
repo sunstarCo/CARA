@@ -1,11 +1,11 @@
 import React from 'react';
 
 import TOP_BANNER_IMG from '@img/detailpage/medspa/Injectables.jpg';
-import IMG_1 from '@img/detailpage/medspa/medspa1.jpg';
-import IMG_2 from '@img/detailpage/medspa/medspa2.jpg';
-import IMG_3 from '@img/detailpage/medspa/medspa3.jpg';
-import IMG_4 from '@img/detailpage/medspa/medspa4.jpg';
-import IMG_5 from '@img/detailpage/medspa/medspa5.jpg';
+import IMG_1 from '@img/detailpage/medspa/Medspa1.jpg';
+import IMG_2 from '@img/detailpage/medspa/Medspa2.jpg';
+import IMG_3 from '@img/detailpage/medspa/Medspa3.jpg';
+import IMG_4 from '@img/detailpage/medspa/Medspa4.jpg';
+import IMG_5 from '@img/detailpage/medspa/Medspa5.jpg';
 
 import AboutSecondBanner from '@/components/about/AboutSecondBanner';
 import CommonTopBanner from '@/components/common/banner/CommonTopBanner';
