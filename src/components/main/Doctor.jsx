@@ -26,7 +26,12 @@ function Doctor() {
   const {isVisible, domRef} = useObserver();
   return (
     <>
-      <Image src={doctorPhoto} sizes="100" alt="doctor photo" className="h-[30rem] object-cover object-left" />
+      <Image
+        src={doctorPhoto}
+        sizes="100"
+        alt="doctor photo"
+        className="h-[30rem] object-cover object-left sm:hidden"
+      />
       <div className="relative w-full py-20 overflow-hidden md:pt-40">
         <Image src={doctorPhoto} alt="" fill sizes="100" className="object-cover object-left-top -z-10 max-sm:hidden" />
         <div className="absolute top-0 left-0 bg-black opacity-80 w-full h-full -z-10 sm:hidden" />
