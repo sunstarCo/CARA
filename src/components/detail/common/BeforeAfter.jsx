@@ -4,18 +4,20 @@ import React, {useEffect, useState} from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 
-function BeforeAfter({images_data}) {
+function BeforeAfter({images_data, heightStyle}) {
   const [curPage, setCurPage] = useState(1);
   const [pageSize, setPageSize] = useState(3);
   const [images, setImages] = useState(null);
+
+  const height = heightStyle || 'h-[13rem] lg:h-[14.5rem]';
 
   useEffect(() => {
     const handleResize = () => {
       setPageSize(() => {
         let page_size = 3;
-        if (window.innerWidth < 500) {
+        if (window.innerWidth < 768) {
           page_size = 1;
-        } else if (window.innerWidth < 1024) {
+        } else if (window.innerWidth < 1400) {
           page_size = 2;
         }
         setImages(images_data.slice(0, page_size));
@@ -48,30 +50,30 @@ function BeforeAfter({images_data}) {
   };
 
   return (
-    <div className="flex flex-col justify-center items-center px-8 py-20 sm:py-[8.75rem] max-w-[1800px] mx-auto">
+    <div className="flex flex-col justify-center items-center px-8 py-20 sm:py-[8.75rem] max-w-[1600px] mx-auto">
       <h3 className="leading-normal text-4xl sm:text-48px font-trajan">Before & After</h3>
       <div className="w-[6.25rem] h-2 bg-[#BDB5AA] my-[3.125rem]" />
-      <div className="flex flex-col sm:flex-row justify-center w-full items-center gap-10 mt-10 sm:mt-[6.25rem] px-4 ">
+      <div className="flex flex-col sm:flex-row justify-between w-full items-center gap-6 mt-10 sm:mt-[6.25rem]">
         <button disabled={curPage === 1} onClick={clickPrevSlide} className="max-sm:hidden">
           <Image src={'/icons/prev.svg'} alt="arrow left" width={30} height={30} sizes="100" className="w-12" />
         </button>
-        <div className="flex w-[95%] md:w-[80%] justify-center">
-          <div className={`card flex gap-10`}>
-            {images?.map((image, index) => (
-              <div key={index} className="w-full">
-                <Image
-                  src={image}
-                  alt="patient"
-                  width={492}
-                  height={279}
-                  sizes="100"
-                  priority
-                  className="object-cover w-full h-auto"
-                />
-              </div>
-            ))}
-          </div>
+        <div className={`flex gap-4 `}>
+          {images?.map((image, index) => (
+            <div key={index}>
+              <Image
+                src={image}
+                alt="Before & After Image"
+                width={492}
+                height={279}
+                sizes="100"
+                placeholder="blur"
+                blurDataURL="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAAFklEQVR42mN8//HLfwYiAOOoQvoqBABbWyZJf74GZgAAAABJRU5ErkJggg=="
+                className={`${height} object-cover mx-auto`}
+              />
+            </div>
+          ))}
         </div>
+
         <div className="flex gap-8">
           <button disabled={curPage === 1} onClick={clickPrevSlide} className="sm:hidden">
             <Image src={'/icons/prev.svg'} alt="arrow left" width={30} height={30} sizes="100" className="w-12" />

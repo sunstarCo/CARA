@@ -5,13 +5,10 @@ import TOP_BANNER_IMG from '@img/detailpage/face/LowerEyelid.jpg';
 
 import AboutSecondBanner from '@/components/about/AboutSecondBanner';
 import CommonTopBanner from '@/components/common/banner/CommonTopBanner';
-import BeforeAfter from '@/components/detail/common/BeforeAfter';
 import CardContainer from '@/components/detail/common/CardContainer';
 import Section1 from '@/components/detail/common/Section1';
 import WhyChoose from '@/components/detail/common/WhyChoose';
 import Intro from '@/components/detail/nose/Intro';
-
-const images_data = ['/B&A/example.jpg', '/B&A/example.jpg', '/B&A/example.jpg', '/B&A/example.jpg'];
 
 const benefits = [
   {
@@ -56,7 +53,6 @@ export default function Page() {
       />
       <Section1 desc={what_is} title={'What is Brow Lift?'} img={WHAT_IS_IMG} />
       <CardContainer title={'Benefits of Brow Lift'} benefits={benefits} theme="dark" />
-      <BeforeAfter images_data={images_data} />
       <AboutSecondBanner mainDesc="Who Can Benefit from Brow Lift?" subDesc={who_needs} />
       <WhyChoose desc={whyChoose_desc} />
     </>
