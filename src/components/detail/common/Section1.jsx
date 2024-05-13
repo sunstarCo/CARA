@@ -20,9 +20,9 @@ function Section1({img, desc, title, reverse = false, benefits, no_bg = false}) 
         />
       )}
       <div
-        className={`flex max-md:max-w-[500px] max-md:aspect-video ${
+        className={`flex max-md:max-w-[500px] flex-col justify-center items-center ${
           reverse ? 'md:flex-row-reverse' : 'md:flex-row'
-        } flex-col justify-center items-center gap-10 sm:gap-[6.25rem] max-w-[1556px] mx-auto`}>
+        } gap-10 sm:gap-[6.25rem] max-w-[1556px] mx-auto`}>
         <Image src={img} placeholder="blur" className="lg:w-1/2 object-cover" alt="example" />
         <div ref={domRef} className="lg:w-1/2 flex flex-col items-center lg:items-start">
           <h3 className="text-4xl max-sm:text-center sm:text-48px leading-normal font-trajan">{title}</h3>
