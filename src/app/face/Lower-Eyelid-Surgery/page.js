@@ -11,7 +11,9 @@ import Section1 from '@/components/detail/common/Section1';
 import WhyChoose from '@/components/detail/common/WhyChoose';
 import Intro from '@/components/detail/nose/Intro';
 
-const images_data = ['/B&A/example.jpg', '/B&A/example.jpg', '/B&A/example.jpg', '/B&A/example.jpg'];
+const img_count = 9;
+const img_name = 'lower-blepharoplasty';
+const images_data = [...Array(img_count)].map((_, i) => `/banner/gallery/${img_name}/${i + 1}.jpg`);
 
 const benefits = [
   {
@@ -56,7 +58,7 @@ export default function Page() {
       />
       <Section1 desc={what_is} title={'What is Lower Eyelid Surgery?'} img={WHAT_IS_IMG} />
       <CardContainer title={'Benefits of Lower Eyelid Surgery'} benefits={benefits} theme="dark" />
-      <BeforeAfter images_data={images_data} />
+      <BeforeAfter images_data={images_data} heightStyle={'h-[16rem] lg:h-[20rem]'} />
       <AboutSecondBanner mainDesc="Who Can Benefit from Lower Eyelid Surgery?" subDesc={who_needs} />
       <WhyChoose desc={whyChoose_desc} />
     </>

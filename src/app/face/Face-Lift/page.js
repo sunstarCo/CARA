@@ -11,7 +11,9 @@ import Section1 from '@/components/detail/common/Section1';
 import WhyChoose from '@/components/detail/common/WhyChoose';
 import Intro from '@/components/detail/nose/Intro';
 
-const images_data = ['/B&A/example.jpg', '/B&A/example.jpg', '/B&A/example.jpg', '/B&A/example.jpg'];
+const img_count = 13;
+const img_name = 'face-lift';
+const images_data = [...Array(img_count)].map((_, i) => `/banner/gallery/${img_name}/${i + 1}.jpg`);
 
 const benefits = [
   {

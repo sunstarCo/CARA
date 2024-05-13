@@ -43,4 +43,5 @@ const surgerys = [
   'Filler',
   'Laser Resurfacing',
   'Thread Lift',
+  'Lip Injection',
 ];

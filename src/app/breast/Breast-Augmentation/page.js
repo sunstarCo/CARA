@@ -9,7 +9,10 @@ import CardContainer from '@/components/detail/common/CardContainer';
 import Section1 from '@/components/detail/common/Section1';
 import WhoNeeds from '@/components/detail/common/WhoNeeds';
 import WhyChoose from '@/components/detail/common/WhyChoose';
-const images_data = ['/B&A/example.jpg', '/B&A/example.jpg', '/B&A/example.jpg', '/B&A/example.jpg'];
+
+const img_count = 9;
+const img_name = 'breast-augmentation';
+const images_data = [...Array(img_count)].map((_, i) => `/banner/gallery/${img_name}/${i + 1}.jpg`);
 
 const benefits = [
   {
