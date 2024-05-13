@@ -21,10 +21,8 @@ function SingleReview({number = 0}) {
   const {name, comment} = reviews[number];
   const {domRef, isVisible} = useObserver();
   return (
-    <div className="bg-[#EAE9E5] py-24 text-2xl px-8">
-      <div
-        className={`flex flex-col items-center opacity-0 transition-all ${isVisible && 'animate-show_move_top'}`}
-        ref={domRef}>
+    <div className="bg-[#EAE9E5] py-24 text-2xl px-8 " ref={domRef}>
+      <div className={`flex flex-col items-center opacity-0 transition-all ${isVisible && 'animate-show_move_top'}`}>
         <Image src={'/logo/quote.svg'} alt="quote icon" width={0} height={0} sizes="100" className="w-fit" />
         <p className="max-w-[1244px] my-5 leading-loose tracking-[0.5px] text-center text-22px font-light">{comment}</p>
         <div className="flex gap-2">

@@ -31,7 +31,7 @@ function IntroProcedure() {
   const currentData = procedureData.find(data => data.title === active);
   return (
     <>
-      <Image src={BANNER_IMG} sizes="100" alt="" className="h-[30rem] object-cover object-left" />
+      <Image src={BANNER_IMG} sizes="100" alt="" className="h-[30rem] object-cover object-left sm:hidden" />
       <div className="relative w-full overflow-hidden py-20 sm:py-40">
         <Image src={BANNER_IMG} alt="" fill sizes="100" className="object-cover object-left-top -z-10 max-sm:hidden" />
         <div className="absolute top-0 left-0 bg-black opacity-80 w-full h-full -z-10 sm:hidden" />
