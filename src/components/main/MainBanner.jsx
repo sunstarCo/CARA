@@ -18,8 +18,8 @@ function MainBanner() {
               </div>
               <Link
                 href={'/contact'}
-                className="block mx-auto px-2 mt-8 text-2xl font-bold leading-normal hover:text-[#bdb5a8]  w-fit">
-                <span className="border-b border-white hover:border-[#bdb5a8] pb-2">SCHEDULE CONSULTATION</span>
+                className="block mx-auto px-2 mt-8 text-2xl font-bold leading-normal hover:text-[#c6c3bc]  w-fit">
+                <span className="border-b border-white hover:border-[#c6c3bc] pb-2">SCHEDULE CONSULTATION</span>
               </Link>
             </div>
           </div>

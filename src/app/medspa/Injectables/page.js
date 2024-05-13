@@ -106,7 +106,7 @@ export default function Page() {
         contents={`Our injectable treatments offer subtle enhancements that can make a big impact on your appearance. Whether you're interested in smoothing fine lines and wrinkles, adding volume to your lips, or sculpting your cheekbones, our skilled practitioners will provide a treatment plan to address your unique needs and desires. With advanced techniques and premium products, we'll help you achieve natural-looking results that leave you looking refreshed and rejuvenated.`}
       />
       <Intro
-        title={'Injectables'}
+        title={'Injectables in Las Vegas'}
         desc={`At CARA Plastic Surgery & Laser Center Las Vegas, we offer a range of injectable treatments
           designed to address various cosmetic concerns and enhance your natural beauty. Explore our selection of injectables
           below to learn more about each option and discover how they can help you achieve your aesthetic goals.`}

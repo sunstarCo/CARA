@@ -78,7 +78,7 @@ export default function Page() {
         contents={`Using advanced technology, we stimulate collagen production to tighten and tone loose skin, reducing the appearance of wrinkles and fine lines. Whether you're targeting areas on your face, neck, or body, our non-invasive procedures will leave you with smoother, more radiant skin that exudes confidence.`}
       />
       <Intro
-        title={'Skin Tightening'}
+        title={'Skin Tightening in Las Vegas'}
         desc={`At CARA Plastic Surgery & Laser Center Las Vegas, we offer advanced skin tightening treatments to help you achieve firmer, smoother, and more youthful-looking skin. Explore our selection of innovative technologies below to learn more about each option and discover how they can help you achieve your aesthetic goals.`}
       />
       {what_is.map((item, index) => {

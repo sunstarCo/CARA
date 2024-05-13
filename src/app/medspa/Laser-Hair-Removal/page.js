@@ -35,7 +35,7 @@ export default function Page() {
         contents={`Experience the freedom of smooth, hair-free skin with our laser hair removal treatments.Our advanced laser technology targets hair follicles to inhibit future growth, leaving you with silky-smooth skin that's ready to be shown off. With quick, comfortable treatments and minimal downtime, you can enjoy the convenience of hair-free skin without the fuss.`}
       />
       <Intro
-        title={'Laser Hair Removal'}
+        title={'Laser Hair Removal in Las Vegas'}
         desc={`At CARA Plastic Surgery & Laser Center, we offer advanced and comfortable hair removal treatments to help you achieve smooth, hair-free skin with lasting results. Explore our premier laser technology below to learn more about our approach to laser hair removal.`}
       />
       <Section1

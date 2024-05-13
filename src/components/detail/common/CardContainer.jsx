@@ -41,7 +41,7 @@ function CardContainer({title, benefits, theme = 'default'}) {
         </div>
         {benefits[4] && (
           <div
-            className={`text-center p-6 sm:p-[3.75rem] w-[85%] mt-10 relative  ${
+            className={`text-center p-6 sm:p-[3.75rem] w-[85%] max-w-[1800px] mt-10 relative  ${
               isDark ? 'bg-[#302C29] bg-opacity-80 text-white' : 'bg-white'
             }`}>
             <Image

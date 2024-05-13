@@ -49,7 +49,7 @@ export default function Page() {
         contents="The eyes often make the first impression. However, excess, dark, or puffy skin beneath them can prematurely age or exhaust your appearance. Lower eyelid surgery offers a solution to rejuvenate your look, making you appear more youthful and refreshed in a natural manner."
       />
       <Intro
-        title={'Lower Eyelid Surgery'}
+        title={'Lower Eyelid Surgery in Las Vegas'}
         desc={
           "At CARA Plastic Surgery & Laser Center Las Vegas, we specialize in enhancing your natural beauty through advanced surgical techniques. If you're considering rejuvenating your appearance, particularly the delicate area around your eyes, our lower eyelid surgery might be the perfect solution for you."
         }

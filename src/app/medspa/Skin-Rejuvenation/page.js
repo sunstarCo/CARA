@@ -56,7 +56,7 @@ export default function Page() {
         contents={`Restore your skin's youthful glow and vitality with our rejuvenating skincare treatments. From skin booster to PRP, we offer a range of options to address various concerns such as acne scars, sun damage, and uneven skin tone.`}
       />
       <Intro
-        title={'Skin Rejuvenation'}
+        title={'Skin Rejuvenation in Las Vegas'}
         desc={`At CARA Plastic Surgery & Laser Center, we specialize in advanced skin rejuvenation treatments to help you achieve a radiant, youthful complexion. Explore our selection of state-of-the-art procedures below to learn more about each option and discover how they can revitalize your skin.`}
       />
       {what_is.map((item, index) => {

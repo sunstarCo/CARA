@@ -76,9 +76,9 @@ function PatientReview() {
   };
 
   return (
-    <div className="pt-40 pb-[12.5rem] flex flex-col items-center px-6">
+    <div className="pt-40 pb-[10rem] flex flex-col items-center px-6">
       <div className="text-[2.5rem] sm:text-54px leading-normal font-trajan">Real Patient Review</div>
-      <div className="flex flex-col sm:flex-row justify-center w-full items-center gap-12 mt-[6.25rem] px-4">
+      <div className="flex flex-col sm:flex-row justify-center w-full items-center sm:gap-12 mt-[6.25rem] px-4">
         <button onClick={clickPrevSlide}>
           <Image
             src={'/icons/prev.svg'}
@@ -89,7 +89,7 @@ function PatientReview() {
             className="min-w-10 min-h-10 bg-[#D9D5CC] flex items-center justify-center max-sm:hidden"
           />
         </button>
-        <div className="flex min-h-[360px]">
+        <div className="flex min-h-[300px]">
           <div className={`card flex gap-[1.875rem] w-full xl:w-1/2`}>
             <div className="max-sm:min-w-[20vw] sm:w-60 max-sm:max-h-[15rem]">
               <Image
@@ -166,7 +166,7 @@ function PatientReview() {
             </div>
           </div>
         </div>
-        <div className="flex gap-8">
+        <div className="flex gap-12">
           <button onClick={clickPrevSlide}>
             <Image
               src={'/icons/prev.svg'}
