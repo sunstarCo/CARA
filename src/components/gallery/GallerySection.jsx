@@ -43,7 +43,7 @@ export const menus = [
   },
   {
     title: 'MEDSPA',
-    sub: ['Filler', 'Laser Resurfacing', 'Thread Lift'],
+    sub: ['Filler', 'Laser Resurfacing', 'Thread Lift', 'Lip Injection'],
     img: MedspaImg,
   },
 ];
