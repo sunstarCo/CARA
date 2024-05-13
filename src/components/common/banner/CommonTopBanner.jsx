@@ -14,19 +14,21 @@ export default function CommonTopBanner({url, title, subtitle, contents, childre
     case 'right':
       imgPosition = 'object-right';
       break;
+    case 'top':
+      imgPosition = 'object-top';
+      break;
     default:
       imgPosition = 'center';
   }
   return (
-    <div className="flex flex-col w-full xl:flex-row">
-      <div className="relative py-16 md:pt-[11.1875rem] md:pb-20 xl:w-1/2 xl:min-h-[57rem]">
+    <div className="flex flex-col w-full xl:flex-row min-[1700px]:max-h-[57rem]">
+      <div className="relative py-16 md:pt-[7rem] min-[1700px]:pt-[11.1875rem] md:pb-20 xl:w-1/2">
         <Image
           src={AboutCommonBannerBGDeco}
           alt="backgroundDecoration"
           fill
           sizes="100"
-          className="object-cover -z-10 "
-          priority
+          className="object-cover -z-10"
         />
         <div className="md:px-32 px-10 flex-col justify-center items-start gap-[0.625rem] max-w-[1100px] mx-auto ">
           <div className="flex flex-col gap-[0.625rem] mb-10">
@@ -47,7 +49,7 @@ export default function CommonTopBanner({url, title, subtitle, contents, childre
         alt="doctorImage"
         placeholder="blur"
         priority
-        className={`object-cover ${imgPosition} min-h-[57rem] max-xl:hidden xl:w-1/2`}
+        className={`object-cover ${imgPosition} max-xl:hidden xl:w-1/2`}
       />
     </div>
   );

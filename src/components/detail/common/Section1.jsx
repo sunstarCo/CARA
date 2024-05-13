@@ -1,10 +1,14 @@
+'use client';
 import React from 'react';
 
 import Image from 'next/image';
 
+import {useObserver} from '@/hooks';
+
 function Section1({img, desc, title, reverse = false, benefits, no_bg = false}) {
+  const {isVisible, domRef} = useObserver();
   return (
-    <div className="relative py-[6.25rem] px-8 mx-auto w-fit">
+    <div className="relative py-16 sm:py-[6.25rem] px-8 mx-auto w-fit">
       {no_bg || (
         <Image
           src="/logo/BG_logo.svg"
@@ -15,9 +19,12 @@ function Section1({img, desc, title, reverse = false, benefits, no_bg = false}) 
           className="w-fit absolute bottom-0 right-0 -z-10"
         />
       )}
-      <div className="flex flex-col-reverse justify-center items-center lg:flex-row gap-10 sm:gap-[6.25rem] max-w-[1556px] mx-auto">
-        {!reverse && <Image src={img} placeholder="blur" priority className="lg:w-1/2 object-cover" alt="example" />}
-        <div className="lg:w-1/2 flex flex-col items-center lg:items-start">
+      <div
+        className={`flex max-md:max-w-[500px] max-md:aspect-video ${
+          reverse ? 'md:flex-row-reverse' : 'md:flex-row'
+        } flex-col justify-center items-center gap-10 sm:gap-[6.25rem] max-w-[1556px] mx-auto`}>
+        <Image src={img} placeholder="blur" className="lg:w-1/2 object-cover" alt="example" />
+        <div ref={domRef} className="lg:w-1/2 flex flex-col items-center lg:items-start">
           <h3 className="text-4xl max-sm:text-center sm:text-48px leading-normal font-trajan">{title}</h3>
           <div className="h-2 w-[6.25rem] bg-[#BDB5AA] mt-10 mb-[3.125rem]" />
           {desc.split('/').map(word => {
@@ -28,7 +35,7 @@ function Section1({img, desc, title, reverse = false, benefits, no_bg = false}) 
             );
           })}
           {benefits && (
-            <div className="mt-[3.125rem]">
+            <div className={`mt-[3.125rem] opacity-0 transition-all ${isVisible && 'animate-show_move_top'}`}>
               <p className="text-32px leading-loose font-trajan">Benefits:</p>
               {
                 <ul className="mt-4">
@@ -43,7 +50,6 @@ function Section1({img, desc, title, reverse = false, benefits, no_bg = false}) 
             </div>
           )}
         </div>
-        {reverse && <Image src={img} className="lg:w-1/2 object-cover" placeholder="blur" priority alt="example" />}
       </div>
     </div>
   );

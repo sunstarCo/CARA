@@ -6,13 +6,15 @@ import {useObserver} from '@/hooks/useObserver';
 export default function AboutSecondBanner({mainDesc, subDesc, contents, longText = false}) {
   const {isVisible, domRef} = useObserver();
   return (
-    <div className="py-16 md:py-[8.75rem] bg-[url('/banner/about/BGDeco.png')] bg-cover bg-center px-8 md:px-32 2xl:px-[16.375rem]">
+    <div
+      ref={domRef}
+      className="py-16 md:py-[8.75rem] bg-[url('/banner/about/BGDeco.png')] bg-cover bg-center px-8 md:px-32 2xl:px-[16.375rem]">
       <div
         className={`max-w-[2100px] mx-auto flex flex-col items-center justify-center opacity-0 transition-all ${
           isVisible && 'animate-show_move_top'
         }`}>
         {contents !== undefined ? (
-          <div ref={domRef} className="flex flex-col lg:flex-row">
+          <div className="flex flex-col lg:flex-row">
             {contents.map((content, index) => (
               <Fragment key={content.title}>
                 <div key={index} className=" flex flex-col items-center max-w-[660px]">
@@ -28,7 +30,7 @@ export default function AboutSecondBanner({mainDesc, subDesc, contents, longText
           </div>
         ) : (
           <>
-            <div className="text-4xl leading-loose text-center text-wrap ">
+            <div className="text-xl sm:text-3xl leading-loose sm:text-center text-wrap max-w-[1400px]">
               {mainDesc.split('/').map(word => {
                 return (
                   <p key={word} className={`${!longText && 'text-5xl leading-normal font-trajan'}`}>
@@ -37,7 +39,7 @@ export default function AboutSecondBanner({mainDesc, subDesc, contents, longText
                 );
               })}
             </div>
-            <div ref={domRef} className={`w-[6.25rem] h-2 bg-[#BDB5AA] mt-10 mb-[3.125rem] ${longText && 'hidden'}`} />
+            <div className={`w-[6.25rem] h-2 bg-[#BDB5AA] mt-10 mb-[3.125rem] ${longText && 'hidden'}`} />
             {subDesc && (
               <sub className="text-xl font-light leading-[2.8125rem] text-center max-w-[1400px] mx-auto">
                 {subDesc.includes('/') ? subDesc.split('/').map(a => <p key={a}>{a}</p>) : subDesc}

@@ -16,7 +16,7 @@ export default function ExpertBanner() {
       </div>
       <div ref={domRef} className={`py-[6.25rem]  bg-[#9D9892] 2xl:w-1/2 text-white`}>
         <div
-          className={`md:px-32 px-10 flex-col justify-center items-start gap-[0.625rem] ${
+          className={`md:px-32 px-10 flex-col justify-center items-start gap-[0.625rem] opacity-0 ${
             isVisible && 'animate-show_move_left'
           }`}>
           <h1 className="text-48px leading-normal mb-[1.875rem] font-trajan">

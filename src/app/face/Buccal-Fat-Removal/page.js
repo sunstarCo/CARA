@@ -45,11 +45,12 @@ export default function Page() {
       <CommonTopBanner
         url="Face"
         img={TOP_BANNER_IMG}
+        imgAlign="top"
         title="Buccal Fat Removal"
         contents={`While chubby cheeks may be endearing in children and infants, as adults, they can give the impression of a rounder face than desired. Buccal fat removal specifically targets the fat beneath the cheeks to achieve a slimmer appearance. This procedure is particularly beneficial for individuals with a "baby face," helping them achieve a more refined and sophisticated look.`}
       />
       <Intro
-        title={'Buccal Fat Removal'}
+        title={'Buccal Fat Removal in Las Vegas'}
         desc={
           "Unlock the potential of your cheekbones and achieve a more sculpted facial appearance with buccal fat removal at CARA Plastic Surgery & Laser Center Las Vegas. If you're seeking to refine your facial contours and enhance your natural beauty, our skilled surgeons are here to help you achieve your aesthetic goals."
         }

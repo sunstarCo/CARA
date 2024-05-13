@@ -55,7 +55,7 @@ export default function Page() {
         contents={`Restore your skin's youthful glow and vitality with our rejuvenating skincare treatments. From skin booster to PRP, we offer a range of options to address various concerns such as acne scars, sun damage, and uneven skin tone.`}
       />
       <Intro
-        title={'Body Contouring'}
+        title={'Body Contouring in Las Vegas'}
         desc={`At CARA Plastic Surgery & Laser Center, we offer innovative body contouring treatments to help you achieve the sculpted physique you desire. Explore our selection of state-of-the-art procedures below to learn more about each option and discover how they can help you achieve your aesthetic goals.`}
       />
       {what_is.map((item, index) => (
