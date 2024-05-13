@@ -4,13 +4,10 @@ import TOP_BANNER_IMG from '../../../../public/detailpage/breast/MaleBreast1.jpg
 import WHAT_IS_IMG from '../../../../public/detailpage/breast/MaleBreast2.jpg';
 
 import CommonTopBanner from '@/components/common/banner/CommonTopBanner';
-import BeforeAfter from '@/components/detail/common/BeforeAfter';
 import CardContainer from '@/components/detail/common/CardContainer';
 import Section1 from '@/components/detail/common/Section1';
 import WhoNeeds from '@/components/detail/common/WhoNeeds';
 import WhyChoose from '@/components/detail/common/WhyChoose';
-
-const images_data = ['/B&A/example.jpg', '/B&A/example.jpg', '/B&A/example.jpg', '/B&A/example.jpg'];
 
 const benefits = [
   {
@@ -55,7 +52,6 @@ export default function Page() {
       <Section1 desc={whatIs} title={'What is Male Breast Reduction?'} img={WHAT_IS_IMG} />
       <WhoNeeds title={'Who Needs Male Breast Reduction?'} desc={whoNeeds} />
       <CardContainer title={'Benefits of Male Breast Reduction'} benefits={benefits} />
-      <BeforeAfter images_data={images_data} />
       <WhyChoose desc={whyChoose_desc} />
     </div>
   );

@@ -5,13 +5,10 @@ import WHAT_IS_IMG from '@img/detailpage/body/Mommy-Makeover.jpg';
 
 import AboutSecondBanner from '@/components/about/AboutSecondBanner';
 import CommonTopBanner from '@/components/common/banner/CommonTopBanner';
-import BeforeAfter from '@/components/detail/common/BeforeAfter';
 import CardContainer from '@/components/detail/common/CardContainer';
 import Section1 from '@/components/detail/common/Section1';
 import WhoNeeds from '@/components/detail/common/WhoNeeds';
 import WhyChoose from '@/components/detail/common/WhyChoose';
-
-const images_data = ['/B&A/example.jpg', '/B&A/example.jpg', '/B&A/example.jpg', '/B&A/example.jpg'];
 
 const benefits = [
   {
@@ -78,7 +75,6 @@ export default function Page() {
         </ul>
       </WhoNeeds>
       <CardContainer title={'Key Benefits of a Mommy Makeover'} benefits={benefits} />
-      <BeforeAfter images_data={images_data} />
       <WhyChoose desc={whyChoose_desc} />
     </div>
   );
