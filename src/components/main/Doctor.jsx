@@ -26,10 +26,10 @@ function Doctor() {
   const {isVisible, domRef} = useObserver();
   return (
     <>
-      {/* <Image src={doctorPhoto} sizes="100" alt="doctor photo" className="h-[30rem] object-cover object-left" /> */}
+      <Image src={doctorPhoto} sizes="100" alt="doctor photo" className="h-[30rem] object-cover object-left" />
       <div className="relative w-full py-20 overflow-hidden md:pt-40">
-        <Image src={doctorPhoto} alt="" fill sizes="100" className="object-cover object-left-top -z-10" />
-        <div className="absolute top-0 left-0 bg-black opacity-50 w-full h-full -z-10" />
+        <Image src={doctorPhoto} alt="" fill sizes="100" className="object-cover object-left-top -z-10 max-sm:hidden" />
+        <div className="absolute top-0 left-0 bg-black opacity-80 w-full h-full -z-10 sm:hidden" />
         <div className={`flex justify-end md:px-16 max-w-[1700px] mx-auto`}>
           <div className="flex flex-col text-white max-w-[766px] px-8">
             <div className="flex">
@@ -44,7 +44,7 @@ function Doctor() {
                       {data.title}
                     </button>
                     {index !== doctorData.length - 1 && (
-                      <div className="mx-2 min-[400px]:mx-4 md:mx-14 w-[1px] h-6 bg-[#BDB5AA]" />
+                      <div className="mx-2 min-[400px]:mx-4 md:mx-14 w-[1px] h-6 bg-[#BDB5AA] max-sm:opacity-0" />
                     )}
                   </div>
                 </div>
@@ -52,12 +52,12 @@ function Doctor() {
             </div>
             <p
               ref={domRef}
-              className="mt-6 min-[400px]:mt-[4rem] 2xl:mt-[5rem] text-[3rem] sm:text-[4rem] leading-normal font-trajan">
+              className="mt-6 min-[400px]:mt-[4rem] 2xl:mt-[5rem] text-[2rem] sm:text-[4rem] sm:leading-normal font-trajan">
               David Kahng, MD
             </p>
             <div className="w-[6.25rem] h-2 bg-[#D9D5CC] mt-4 min-[400px]:mt-10" />
             <div
-              className={`opacity-0 text-[1.4rem] leading-loose min-h-[550px] mt-4 min-[400px]:mt-12 w-full ${
+              className={`opacity-0 text-[1.25rem] leading-loose sm:min-h-[550px] mt-4 min-[400px]:mt-12 w-full ${
                 isVisible && 'animate-show_move_top'
               } transition-opacity`}>
               {doctorData
