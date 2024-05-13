@@ -37,7 +37,7 @@ export default function GalleryDetailPN({surgeryInfo}) {
           </div>
         ))}
       </div>
-      <div className="flex mb-24 gap-60">
+      <div className="flex mb-24 gap-40">
         <button
           disabled={curPage === 1}
           onClick={() => {
@@ -75,7 +75,7 @@ function GalleryDetailPNCard({title, count}) {
   return (
     <Image
       alt="surgeryBeforeAfterImg"
-      className="max-h-[14rem] object-cover mx-auto"
+      className="max-h-[14rem] object-cover object-top mx-auto"
       width={493}
       height={225}
       src={filePath}

@@ -49,7 +49,7 @@ export default function Page() {
         contents="Endoscopic surgery offers a pathway to rejuvenating your overall facial appearance by repositioning the brow, resulting in a more youthful and refreshed look. This procedure avoids the need for cutting or shaving hair and has the potential to revitalize your entire appearance."
       />
       <Intro
-        title={'Brow Lift'}
+        title={'Brow Lift in Las Vegas'}
         desc={
           "At CARA Plastic Surgery & Laser Center Las Vegas, we specialize in helping you achieve your aesthetic goals with precision and expertise. If you're seeking to rejuvenate your appearance and restore a more youthful, lifted brow, our brow lift surgery may be the ideal solution for you."
         }

@@ -49,7 +49,7 @@ export default function Page() {
         contents="Many of our patients inquire about fat transfer, an innovative advancement in safe and natural plastic surgery. Unlike synthetic fillers, this procedure involves extracting, purifying, and injecting your own fat into facial areas to enhance volume, firmness, and contours. Fat transfer offers longer-lasting results compared to fillers."
       />
       <Intro
-        title={'Fat Transfer'}
+        title={'Fat Transfer in Las Vegas'}
         desc={
           "Many of us have excess fat in areas where we'd prefer not to, often wishing we could redistribute it to areas where it's lacking. Enter fat transfer – a revolutionary procedure that allows precisely that. This innovative technique involves extracting fat from one part of the body and strategically injecting it into another area that requires additional volume."
         }

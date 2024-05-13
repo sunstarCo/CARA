@@ -1,6 +1,7 @@
 'use client';
 import React, {useState} from 'react';
 
+import doctorPhoto from '@img/banner/main/DoctorPhoto1.jpg';
 import Image from 'next/image';
 
 import {useObserver} from '@/hooks/useObserver';
@@ -24,56 +25,54 @@ function Doctor() {
   const [active, setActive] = useState('Overview');
   const {isVisible, domRef} = useObserver();
   return (
-    <div className="relative w-full py-20 overflow-hidden md:pt-40">
-      <Image
-        src="/banner/main/DoctorPhoto1.jpg"
-        alt=""
-        fill
-        sizes="100"
-        className="object-cover object-left-top -z-10"
-      />
-      <div className={`flex justify-end md:px-16 max-w-[1700px] mx-auto`}>
-        <div className="flex flex-col text-white max-w-[766px] px-8">
-          <div className="flex">
-            {doctorData.map((data, index) => (
-              <div key={index}>
-                <div className={`text-xl sm:text-3xl flex text-center items-center leading-normal font-normal`}>
-                  <button
-                    className={`${active !== data.title && 'opacity-40'} font-trajan`}
-                    onClick={() => {
-                      setActive(data.title);
-                    }}>
-                    {data.title}
-                  </button>
-                  {index !== doctorData.length - 1 && (
-                    <div className="mx-2 min-[400px]:mx-4 md:mx-14 w-[1px] h-6 bg-[#BDB5AA]" />
-                  )}
+    <>
+      <Image src={doctorPhoto} sizes="100" alt="doctor photo" className="h-[30rem] object-cover object-left" />
+      <div className="relative w-full py-20 overflow-hidden md:pt-40">
+        <Image src={doctorPhoto} alt="" fill sizes="100" className="object-cover object-left-top -z-10 max-sm:hidden" />
+        <div className="absolute top-0 left-0 bg-black opacity-80 w-full h-full -z-10 sm:hidden" />
+        <div className={`flex justify-end md:px-16 max-w-[1700px] mx-auto`}>
+          <div className="flex flex-col text-white max-w-[766px] px-8">
+            <div className="flex">
+              {doctorData.map((data, index) => (
+                <div key={index}>
+                  <div className={`text-xl sm:text-3xl flex text-center items-center leading-normal font-normal`}>
+                    <button
+                      className={`${active !== data.title && 'opacity-40'} font-trajan`}
+                      onClick={() => {
+                        setActive(data.title);
+                      }}>
+                      {data.title}
+                    </button>
+                    {index !== doctorData.length - 1 && (
+                      <div className="mx-2 min-[400px]:mx-4 md:mx-14 w-[1px] h-6 bg-[#BDB5AA] max-sm:opacity-0" />
+                    )}
+                  </div>
                 </div>
-              </div>
-            ))}
-          </div>
-          <p
-            ref={domRef}
-            className="mt-6 min-[400px]:mt-[4rem] 2xl:mt-[5rem] text-[3rem] sm:text-[4rem] leading-normal font-trajan">
-            David Kahng, MD
-          </p>
-          <div className="w-[6.25rem] h-2 bg-[#D9D5CC] mt-4 min-[400px]:mt-10" />
-          <div
-            className={`opacity-0 text-[1.4rem] leading-loose min-h-[550px] mt-4 min-[400px]:mt-12 w-full ${
-              isVisible && 'animate-show_move_top'
-            } transition-opacity`}>
-            {doctorData
-              .find(data => data.title === active)
-              .desc.split('\n')
-              .map((line, index) => (
-                <p key={index} className="mb-4">
-                  {line}
-                </p>
               ))}
+            </div>
+            <p
+              ref={domRef}
+              className="mt-6 min-[400px]:mt-[4rem] 2xl:mt-[5rem] text-[2rem] sm:text-[4rem] sm:leading-normal font-trajan">
+              David Kahng, MD
+            </p>
+            <div className="w-[6.25rem] h-2 bg-[#D9D5CC] mt-4 min-[400px]:mt-10" />
+            <div
+              className={`opacity-0 text-[1.25rem] leading-loose sm:min-h-[550px] mt-4 min-[400px]:mt-12 w-full ${
+                isVisible && 'animate-show_move_top'
+              } transition-opacity`}>
+              {doctorData
+                .find(data => data.title === active)
+                .desc.split('\n')
+                .map((line, index) => (
+                  <p key={index} className="mb-4">
+                    {line}
+                  </p>
+                ))}
+            </div>
           </div>
         </div>
       </div>
-    </div>
+    </>
   );
 }
 

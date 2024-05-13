@@ -49,7 +49,7 @@ export default function Page() {
         contents="Every aspect of the face contributes to achieving facial harmony. A receding chin can detract from your profile's attractiveness and create a sense of disproportion among other features. Chin augmentation surgery offers a solution to enhance your facial appearance, restoring balance, harmony, and aesthetic appeal."
       />
       <Intro
-        title={'Chin Augmentation'}
+        title={'Chin Augmentation in Las Vegas'}
         desc={
           "A balanced and defined chin can greatly enhance your facial profile, enabling you to exude confidence and symmetry. If you're looking to achieve a more proportionate and harmonious appearance, consider chin augmentation at CARA Plastic Surgery & Laser Center Las Vegas. Let us help you redefine your features and unleash your full aesthetic potential."
         }

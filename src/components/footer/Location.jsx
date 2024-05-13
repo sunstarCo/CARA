@@ -6,7 +6,7 @@ function Location({locationData, i}) {
   return (
     <>
       <div className="sm:w-[15rem] 2xl:w-[17rem] text-center mx-auto">
-        <a href={url} target="_blank" className="text-2xl 2xl:text-[1.75rem] mb-4 font-trajan">
+        <a href={url} target="_blank" className="text-2xl 2xl:text-[1.75rem] mb-4 font-trajan text-nowrap">
           {region}
         </a>
         <p className="text-xl font-medium text-[#9D9892] mb-5">(855) 212-9901</p>
