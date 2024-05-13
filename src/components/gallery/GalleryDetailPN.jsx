@@ -75,9 +75,9 @@ function GalleryDetailPNCard({title, count}) {
   return (
     <Image
       alt="surgeryBeforeAfterImg"
-      className="max-h-[14rem] object-cover mx-auto"
+      className="h-[13rem] object-cover mx-auto"
       width={493}
-      height={225}
+      height={210}
       src={filePath}
       placeholder="blur"
       blurDataURL="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAAFklEQVR42mN8//HLfwYiAOOoQvoqBABbWyZJf74GZgAAAABJRU5ErkJggg=="
