@@ -6,19 +6,23 @@ import AboutCommonBannerBGDeco from '../../../../public/banner/about/AboutCommon
 import AboutCommonImg from '../../../../public/banner/about/AboutCommonImg.png';
 
 export default function CommonTopBanner({url, title, subtitle, contents, children, img, imgAlign = 'center'}) {
+  let imgPosition = 'center';
   switch (imgAlign) {
     case 'left':
-      imgAlign = 'object-left';
+      imgPosition = 'object-left';
       break;
     case 'right':
-      imgAlign = 'object-right';
+      imgPosition = 'object-right';
+      break;
+    case 'top':
+      imgPosition = 'object-top';
       break;
     default:
-      imgAlign = 'center';
+      imgPosition = 'center';
   }
   return (
-    <div className="flex flex-col w-full xl:flex-row">
-      <div className="relative py-16 md:pt-[11.1875rem] md:pb-20 xl:w-1/2 xl:min-h-[57rem]">
+    <div className="flex flex-col w-full xl:flex-row min-[1700px]:max-h-[57rem]">
+      <div className="relative py-16 md:pt-[7rem] min-[1700px]:pt-[11.1875rem] md:pb-20 xl:w-1/2">
         <Image
           src={AboutCommonBannerBGDeco}
           alt="backgroundDecoration"
@@ -40,9 +44,13 @@ export default function CommonTopBanner({url, title, subtitle, contents, childre
           {contents !== undefined ? <p className="text-2xl leading-[2.5rem] ">{contents}</p> : children}
         </div>
       </div>
-      <div className="relative min-h-[57rem] max-xl:hidden xl:w-1/2">
-        <Image src={img || AboutCommonImg} alt="doctorImage" fill sizes="100" className={`object-cover ${imgAlign}`} />
-      </div>
+      <Image
+        src={img || AboutCommonImg}
+        alt="doctorImage"
+        placeholder="blur"
+        priority
+        className={`object-cover ${imgPosition} max-xl:hidden xl:w-1/2`}
+      />
     </div>
   );
 }

@@ -24,7 +24,7 @@ export default function GalleryDetailMain({title}) {
 
   return (
     <div className="w-full">
-      <div className="flex justify-between max-[360px]:justify-center w-full px-5">
+      <div className="flex justify-between max-[360px]:justify-center w-full px-8">
         <select
           onChange={handleSelectChange}
           name="surgery"

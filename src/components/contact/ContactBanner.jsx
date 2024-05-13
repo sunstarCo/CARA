@@ -14,8 +14,16 @@ function ContactBanner() {
         alt=""
         fill
         sizes="100"
-        className="object-cover object-right-top -z-10 "
+        className="object-cover object-right-top -z-10 max-sm:hidden"
       />
+      <Image
+        src={'/banner/contact/DoctorMobile.jpg'}
+        alt=""
+        fill
+        sizes="100"
+        className="object-cover sm:hidden -z-10 "
+      />
+      <div className="absolute top-0 left-0 w-full h-full opacity-40 bg-black -z-10 sm:hidden" />
       <div className={`flex items-center text-white max-w-[2100px] mx-auto `}>
         <div className="max-w-[80rem] w-full px-8 2xl:px-64 flex justify-start ite flex-col">
           <h3 className=" text-[2.5rem] sm:text-54px leading-normal font-trajan">

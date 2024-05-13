@@ -37,7 +37,7 @@ export default function GalleryDetailPN({surgeryInfo}) {
           </div>
         ))}
       </div>
-      <div className="flex mb-24 gap-60">
+      <div className="flex gap-40 mb-24">
         <button
           disabled={curPage === 1}
           onClick={() => {
