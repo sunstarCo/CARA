@@ -15,7 +15,7 @@ function Gallery() {
         alt=""
         fill
         sizes="100"
-        className="object-cover object-left-top max-sm:opacity-40 -z-10"
+        className="object-cover object-left-top max-sm:opacity-60 -z-10"
       />
       <div className="bg-white opacity-10 w-full h-full absolute top-0 left-0 -z-10" />
       <div

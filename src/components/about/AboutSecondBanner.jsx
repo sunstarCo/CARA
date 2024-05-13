@@ -10,23 +10,28 @@ export default function AboutSecondBanner({mainDesc, subDesc, contents, longText
       ref={domRef}
       className="py-16 md:py-[8.75rem] bg-[url('/banner/about/BGDeco.png')] bg-cover bg-center px-8 md:px-32 2xl:px-[16.375rem]">
       <div
-        className={`max-w-[2100px] mx-auto flex flex-col items-center justify-center opacity-0 transition-all ${
-          isVisible && 'animate-show_move_top'
+        className={`max-w-[2100px] mx-auto flex flex-col items-center justify-center transition-all ${
+          isVisible & !contents ? 'opacity-0 animate-show_move_top' : ''
         }`}>
         {contents !== undefined ? (
           <div className="flex flex-col lg:flex-row">
-            {contents.map((content, index) => (
-              <Fragment key={content.title}>
-                <div key={index} className=" flex flex-col items-center max-w-[660px]">
-                  <p className={`text-4xl mt-4 font-trajan text-center leading-normal`}>{content.title}</p>
-                  <div className="w-[6.25rem] h-2 bg-[#BDB5AA] mt-10 mb-[3.125rem]" />
-                  <sub className="text-xl leading-loose text-center tracking-[0.5px]">{content.desc}</sub>
-                </div>
-                {index !== contents.length - 1 && (
-                  <div className="w-[1px] h-[12.5rem] max-lg:opacity-0 bg-[#BDB5AA] mx-[7.5rem]" />
-                )}
-              </Fragment>
-            ))}
+            {isVisible &&
+              contents.map((content, index) => (
+                <Fragment key={content.title}>
+                  <div
+                    key={index}
+                    className={`flex flex-col items-center max-w-[660px] opacity-0 ${
+                      isVisible && index === 0 ? 'animate-show_move_right' : 'animate-show_move_left'
+                    }`}>
+                    <p className={`text-4xl mt-4 font-trajan text-center leading-normal`}>{content.title}</p>
+                    <div className="w-[6.25rem] h-2 bg-[#BDB5AA] mt-10 mb-[3.125rem]" />
+                    <sub className="text-xl leading-loose text-center tracking-[0.5px]">{content.desc}</sub>
+                  </div>
+                  {index !== contents.length - 1 && (
+                    <div className="w-[1px] h-[12.5rem] max-lg:opacity-0 bg-[#BDB5AA] mx-[7.5rem]" />
+                  )}
+                </Fragment>
+              ))}
           </div>
         ) : (
           <>
