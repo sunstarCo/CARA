@@ -23,7 +23,7 @@ function ContactBanner() {
         sizes="100"
         className="object-cover sm:hidden -z-10 "
       />
-      <div className="absolute top-0 left-0 w-full h-full opacity-40 bg-black -z-10 sm:hidden" />
+      <div className="absolute top-0 left-0 w-full h-full bg-black opacity-40 -z-10 sm:hidden" />
       <div className={`flex items-center text-white max-w-[2100px] mx-auto `}>
         <div className="max-w-[80rem] w-full px-8 2xl:px-64 flex justify-start ite flex-col">
           <h3 className=" text-[2.5rem] sm:text-54px leading-normal font-trajan">
@@ -38,7 +38,7 @@ function ContactBanner() {
           </p>
           <Link
             href={'/contact'}
-            className="mt-[3.125rem] text-[#302c29] sm:text-lg sm:leading-loose font-semibold bg-[#EAE9E5] text-center px-4 min-[350px]:px-10 py-4 w-fit uppercase">
+            className="mt-[3.125rem] text-[#302c29] sm:text-lg sm:leading-loose font-semibold bg-[#EAE9E5] text-center px-4 min-[350px]:px-10 py-4 w-fit uppercase hover:opacity-75 transition-opacity duration-300 ">
             Schedule a Free Consultation
           </Link>
         </div>

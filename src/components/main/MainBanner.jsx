@@ -34,8 +34,11 @@ function MainBanner() {
               </div>
               <Link
                 href={'/contact'}
-                className="block mx-auto px-2 mt-8 text-2xl font-bold leading-normal hover:text-[#c6c3bc]  w-fit">
-                <span className="border-b border-white hover:border-[#c6c3bc] pb-2">SCHEDULE CONSULTATION</span>
+                className="block mx-auto px-2 mt-8 sm:mt-12 text-2xl sm:text-3xl font-bold leading-normal hover:text-[#4b4a49]  w-fit">
+                <div className="group">
+                  <p>SCHEDULE CONSULTATION</p>
+                  <div className="w-0 h-[2px] mt-2 transition-all duration-500 bg-[#4b4a49] group-hover:w-full " />
+                </div>
               </Link>
             </div>
           </div>

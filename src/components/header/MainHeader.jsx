@@ -249,9 +249,10 @@ function MainHeader({clickMenu, isOpen}) {
           </ul>
         </nav>
         <div className="text-[#2b2928] max-lg:hidden ">
-          <div className={`flex gap-2 text-black py-[17px] px-[19px] bg-[#EAE9E5] rounded-[30px]`}>
+          <div
+            className={`flex gap-2 text-black py-[17px] px-[19px] bg-[#EAE9E5] rounded-[30px] hover:bg-[#d3d2d1] transition-color duration-300`}>
             <Image src={'/icons/call.svg'} alt="" sizes="100" width={0} height={0} className="w-4" />
-            <Link href={'/contact'} className="leading-4 font-medium text-nowrap">
+            <Link href={'/contact'} className="font-medium leading-4 text-nowrap">
               855-212-9901
             </Link>
           </div>
