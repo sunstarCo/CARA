@@ -6,7 +6,7 @@ import Image from 'next/image';
 function WhoNeedNose({title, subtitle, desc, sub_font = false}) {
   return (
     <div className="relative w-full overflow-hidden py-24 sm:py-[10rem] px-8">
-      <Image src={WHO_NEEDS_IMG} alt="" fill sizes="100" className="object-cover object-top -z-10" />
+      <Image src={WHO_NEEDS_IMG} alt="" fill sizes="100" className="object-cover object-right-top -z-10" />
       <div className={`flex justify-end max-w-[1920px]`}>
         <div className="flex flex-col w-full max-w-[780px]">
           <p className="text-[2.5rem] sm:text-48px leading-normal font-trajan ">{title}</p>
