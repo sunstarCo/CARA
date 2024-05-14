@@ -65,7 +65,6 @@ function BeforeAfter({images_data, heightStyle}) {
                 alt="Before & After Image"
                 width={492}
                 height={279}
-                sizes="100"
                 placeholder="blur"
                 blurDataURL="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAAFklEQVR42mN8//HLfwYiAOOoQvoqBABbWyZJf74GZgAAAABJRU5ErkJggg=="
                 className={`${height} object-cover mx-auto`}

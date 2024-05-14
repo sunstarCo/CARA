@@ -8,7 +8,10 @@ function NavFooter() {
       <div className="justify-between hidden px-8 font-bold md:flex py-9 max-w-[100rem] mx-auto font-trajan">
         {menus.map(menu => {
           return (
-            <Link key={menu.link} href={menu.link}>
+            <Link
+              key={menu.link}
+              href={menu.link}
+              className="hover:border-black border-b-2 pb-1 transition-colors duration-300">
               {menu.title}
             </Link>
           );
