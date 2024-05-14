@@ -75,7 +75,7 @@ function GalleryDetailPNCard({title, count}) {
   return (
     <Image
       alt="surgeryBeforeAfterImg"
-      className="sm:h-[14.5rem] object-cover mx-auto object-right-top"
+      className="sm:h-[14.5rem] object-cover mx-auto object-center"
       width={493}
       height={210}
       src={filePath}

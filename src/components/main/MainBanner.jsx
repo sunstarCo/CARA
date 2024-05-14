@@ -1,6 +1,7 @@
 import React from 'react';
 
 import MAINBANNER from '@img/banner/main/MainBanner.jpg';
+import MAINBANNER_MOBILE from '@img/banner/main/MainBannerMobile.jpg';
 import Image from 'next/image';
 import Link from 'next/link';
 
@@ -10,7 +11,22 @@ function MainBanner() {
       <div className="relative w-full h-[calc(100vh-8.875rem)] overflow-hidden font-trajan">
         <div className="absolute top-0 left-0 flex">
           <div className={`w-screen h-[calc(100vh-8.875rem)] relative flex justify-center items-center`}>
-            <Image src={MAINBANNER} alt="" fill sizes="100" className="object-cover" priority />
+            <Image
+              src={MAINBANNER}
+              alt="Dr. David Khang"
+              fill
+              sizes="100"
+              className="object-cover max-[480px]:hidden"
+              priority
+            />
+            <Image
+              src={MAINBANNER_MOBILE}
+              alt="Dr. David Khang"
+              fill
+              sizes="100"
+              className="object-cover min-[480px]:hidden"
+              priority
+            />
             <div className="absolute text-white transition-opacity animate-show">
               <div className="text-4xl font-normal leading-normal text-center lg:text-5xl 2xl:text-7xl -tracking-tight ">
                 <p>A Leading of Plastic Sergeon</p>

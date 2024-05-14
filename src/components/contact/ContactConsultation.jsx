@@ -7,10 +7,10 @@ export default function ContactConsultation() {
   return (
     <div className="flex  flex-col lg:flex-row items-center justify-center w-full lg:h-[70.5rem]">
       <div className="lg:w-[50%] flex-col lg:flex-row h-full w-full bg-[url('/ContactScheduleBG.png')] bg-cover flex justify-center items-center">
-        <div className="lg:hidden leading-normal pt-5 text-[2.5rem] sm:text-48px text-start font-trajan text-white">
+        <div className="lg:hidden leading-normal pt-16 text-[2.5rem] sm:text-48px text-start font-trajan text-white">
           <p className="whitespace-nowrap">SCHEDULE A</p>
           <p>CONSULTATION</p>
-          <div className="bg-[#BDB5AA] w-[6.25rem] mx-auto h-2 my-10"></div>
+          <div className="bg-[#BDB5AA] w-[6.25rem] mx-auto h-2 mt-12"></div>
         </div>
         <ContactForm />
       </div>
@@ -25,7 +25,7 @@ export default function ContactConsultation() {
             <p className="text-[1.75rem] leading-[3.325rem]">HOURS:</p>
             {Hours.map(item => {
               return (
-                <div key={item.location} className="">
+                <div key={item.location} className="mb-3">
                   <p className="text-xl leading-[2.375rem]">{item.location}</p>
                   <div className="">
                     {item.hours.map(item => {
@@ -51,8 +51,8 @@ const Hours = [
   {
     location: 'LAS VEGAS',
     hours: [
-      {id: 0, day: 'MON, WED, THURS, FRI, SAT', hour: '10:00AM-6:00PM'},
-      {id: 1, day: 'THU & SUN', hour: 'Closed'},
+      {id: 0, day: 'MON, TUE, THURS, FRI, SAT', hour: '9:30AM-5:30PM'},
+      {id: 1, day: 'WED & SUN', hour: 'Closed'},
     ],
   },
   {
