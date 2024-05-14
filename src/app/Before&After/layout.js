@@ -12,7 +12,7 @@ export default function Layout({children}) {
         title="before & after"
         subtitle=""
         img={GalleryTopBannerImg}
-        contents="Say goodbye tostubborn pockets of fat that resist diet and exercise. Liposuction at CaraPlastic Surgery & Laser Center Las Vegas is a minimally invasive procedure thatprecisely targets and removes excess fat, revealing a more contoured andrefined figure. Whether you're looking to trim your waistline or sculpt yourthighs, our skilled surgeons can customize liposuction to meet your uniquegoals."
+        contents="Say goodbye to stubborn pockets of fat that resist diet and exercise. Liposuction at CaraPlastic Surgery & Laser Center Las Vegas is a minimally invasive procedure thatprecisely targets and removes excess fat, revealing a more contoured andrefined figure. Whether you're looking to trim your waistline or sculpt your thighs, our skilled surgeons can customize liposuction to meet your uniquegoals."
       />
       {children}
     </>
