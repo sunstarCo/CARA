@@ -5,8 +5,8 @@ import Image from 'next/image';
 import ContactLoctionImg1 from '../../../public/detailpage/contactus/ContactMap1.png';
 export default function LocationMapTop() {
   return (
-    <div>
-      <p className="pt-10 text-center text-48px md:pt-48 pb-14 font-trajan">
+    <div className="max-sm:hidden">
+      <p className="pt-10 text-3xl text-center lg:text-48px md:pt-48 pb-14 font-trajan">
         <a
           target="_blank"
           className="hover:text-gray-400"
@@ -32,7 +32,7 @@ export default function LocationMapTop() {
         src={ContactLoctionImg1}
         width={1560}
         height={880}
-        className="mx-auto"
+        className="px-5 mx-auto"
         sizes="100"
         alt="LocationMapImage"></Image>
     </div>

@@ -42,9 +42,7 @@ function CoreFooter() {
         </div>
       </div>
       <div className="py-6 text-center text-white bg-main-dark">
-        <h5 className="text-base">
-          ⓒ CARA PLASTIC SURGERY & LASER CENTER. ALL RIGHTS RESERVED. WEB DESIGN & INTERNET MARKETING BY SUNSTAR
-        </h5>
+        <h5 className="text-base">ⓒ CARA PLASTIC SURGERY & LASER CENTER. ALL RIGHTS RESERVED.</h5>
       </div>
     </>
   );
