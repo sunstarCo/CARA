@@ -6,8 +6,8 @@ import InsuranceImage from '../../../../public/banner/about/financing/InsuranceI
 export default function InsuranceBanner() {
   return (
     <div className="flex flex-col w-full 2xl:flex-row">
-      <div className="relative min-h-[63.6875rem] 2xl:w-1/2">
-        <Image src={InsuranceImage} alt="doctorImage" fill className="object-cover" />
+      <div className="relative max-sm:h-[30rem]  sm:min-h-[63.6875rem] 2xl:w-1/2">
+        <Image src={InsuranceImage} alt="doctorImage" fill className="object-cover " />
       </div>
       <div className="py-[6.25rem] bg-[#EAE9E5] 2xl:w-1/2 ">
         <div className="md:px-32 px-10 flex-col justify-center items-start gap-[0.625rem] ">
