@@ -3,6 +3,7 @@ import React, {useState} from 'react';
 import Image from 'next/image';
 
 import GalleryModal from './GalleryModal';
+
 export default function GalleryDetailPN({surgeryInfo}) {
   const [curPage, setCurPage] = useState(1);
   const pageSize = 9;
