@@ -1,21 +1,27 @@
-import React, {useEffect, useRef, useState} from 'react';
+import React, {useEffect, useMemo, useRef, useState} from 'react';
 
 import Image from 'next/image';
 import Link from 'next/link';
+import {usePathname} from 'next/navigation';
 
 import {menus} from './MainHeader';
 import {snsIcons} from '../footer/CoreFooter';
 
 import {useLockBodyScroll} from '@/hooks';
 
-function MenuList({menu, clickMenu}) {
-  const [isOpenSubmenu, setIsOpenSubmenu] = useState(false);
-  const {sub_menu} = menu;
+function MenuList({menu, clickMenu, curPath}) {
+  const {sub_menu, menu: menu_title} = menu;
+  const isIncludMenu = useMemo(() => curPath.includes(menu_title.toLowerCase()), [curPath, menu_title]);
+  const [isOpenSubmenu, setIsOpenSubmenu] = useState(isIncludMenu);
   return (
     <li className="w-full">
       <div className="flex justify-between w-full">
         <div onClick={clickMenu}>
-          <Link href={menu.default_path} className="text-lg font-trajan">
+          <Link
+            href={menu.default_path}
+            className={`text-lg font-trajan ${
+              isIncludMenu | (curPath === '/' && menu_title === 'Home') && 'font-bold'
+            }`}>
             {menu.menu}
           </Link>
         </div>
@@ -27,10 +33,12 @@ function MenuList({menu, clickMenu}) {
       </div>
       {isOpenSubmenu && (
         <ul className="flex flex-col gap-3 my-2">
-          {sub_menu.map((sub, i) => (
+          {sub_menu?.map((sub, i) => (
             <li key={i} className="w-full">
               <div onClick={clickMenu}>
-                <Link href={sub.path} className="block w-full pl-4 text-lg text-start">
+                <Link
+                  href={sub.path}
+                  className={`block w-full pl-4 text-lg text-start ${sub.path === curPath && 'font-bold'}`}>
                   {sub.menu}
                 </Link>
               </div>
@@ -42,9 +50,10 @@ function MenuList({menu, clickMenu}) {
   );
 }
 
-function MoblieHeader({clickMenu}) {
+export default function MoblieHeader({clickMenu}) {
   const {lockScroll, unlockScroll} = useLockBodyScroll();
   const menu = useRef(null);
+  const curPath = usePathname();
 
   useEffect(() => {
     lockScroll();
@@ -57,7 +66,7 @@ function MoblieHeader({clickMenu}) {
       className="bg-[#e5e5e5] w-screen md:w-[600px] h-screen py-[95px] lg:py-[142px] ml-auto overflow-y-scroll lg:hidden">
       <ul className="flex flex-col items-start gap-6 p-10 xl:gap-8">
         {menus.map((menu, i) => {
-          return <MenuList key={i} menu={menu} clickMenu={clickMenu} />;
+          return <MenuList key={i} menu={menu} clickMenu={clickMenu} curPath={curPath} />;
         })}
       </ul>
       <div className="flex gap-5 mx-auto mt-10 mb-10 text-nowrap w-fit">
@@ -80,5 +89,3 @@ function MoblieHeader({clickMenu}) {
     </div>
   );
 }
-
-export default MoblieHeader;
