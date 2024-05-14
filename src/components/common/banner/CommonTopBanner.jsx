@@ -37,9 +37,9 @@ export default function CommonTopBanner({url, title, subtitle, contents, childre
           priority
           fill
           sizes="100"
-          className="object-cover xl:hidden -z-10"
+          className="object-cover xl:hidden opacity-90 -z-10 blur-[1px]"
         />
-        <div className="absolute top-0 left-0 w-full h-full bg-white opacity-70 xl:hidden -z-10" />
+        <div className="absolute top-0 left-0 w-full h-full bg-gray-200 opacity-70 xl:hidden -z-10" />
         <div className="md:px-24 px-10 flex-col justify-center items-start gap-[0.625rem] max-w-[1100px] mx-auto ">
           <div className="flex flex-col gap-[0.625rem] mb-10">
             <p className=" text-[#716B63] text-xl font-trajan">Home · {url}</p>

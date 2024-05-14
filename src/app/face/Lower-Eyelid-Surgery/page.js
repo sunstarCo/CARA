@@ -58,7 +58,7 @@ export default function Page() {
       />
       <Section1 desc={what_is} title={'What is Lower Eyelid Surgery?'} img={WHAT_IS_IMG} />
       <CardContainer title={'Benefits of Lower Eyelid Surgery'} benefits={benefits} theme="dark" />
-      <BeforeAfter images_data={images_data} heightStyle={'h-[16rem] lg:h-[20rem]'} />
+      <BeforeAfter images_data={images_data} heightStyle={'h-[17rem] lg:h-[20rem]'} />
       <AboutSecondBanner mainDesc="Who Can Benefit from Lower Eyelid Surgery?" subDesc={who_needs} />
       <WhyChoose desc={whyChoose_desc} />
     </>
