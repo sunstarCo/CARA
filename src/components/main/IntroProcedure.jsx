@@ -32,11 +32,11 @@ function IntroProcedure() {
   return (
     <>
       <Image src={BANNER_IMG} sizes="100" alt="" className="h-[30rem] object-cover object-left sm:hidden" />
-      <div className="relative w-full overflow-hidden py-20 sm:py-40">
+      <div className="relative w-full py-20 overflow-hidden sm:py-40">
         <Image src={BANNER_IMG} alt="" fill sizes="100" className="object-cover object-left-top -z-10 max-sm:hidden" />
-        <div className="absolute top-0 left-0 bg-black opacity-80 w-full h-full -z-10 sm:hidden" />
+        <div className="absolute top-0 left-0 w-full h-full bg-black opacity-80 -z-10 sm:hidden" />
         <div className="flex justify-end h-full px-4 md:px-16 max-w-[1700px] mx-auto">
-          {/* <p className="w-1/2 text-white flex justify-start px-12 text-54px leading-normal -translate-y-1/3 h-full max-2xl:hidden font-trajan">
+          {/* <p className="flex justify-start w-1/2 h-full px-12 leading-normal text-white text-54px -translate-y-1/3 max-2xl:hidden font-trajan">
           {active}
         </p> */}
           <div className="flex flex-col max-w-[766px] text-white">
@@ -65,7 +65,7 @@ function IntroProcedure() {
             </p>
             <Link
               href={currentData.path}
-              className="px-10 py-4 bg-[#BDB5AA] w-fit text-black text-xl leading-normal  font-medium mt-8 sm:mt-[3.75rem] ">
+              className="px-10 py-4 bg-[#BDB5AA] hover:opacity-75 transition-opacity duration-300 w-fit text-black text-lg leading-normal uppercase  font-semibold mt-8 sm:mt-[3.75rem] ">
               Learn More
             </Link>
           </div>
