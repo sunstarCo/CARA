@@ -8,11 +8,11 @@ export default function AboutSecondBanner({mainDesc, subDesc, contents, longText
   return (
     <div
       ref={domRef}
-      className="py-16 md:py-[8.75rem] bg-[url('/banner/about/BGDeco.png')] bg-cover bg-center px-8 md:px-32 2xl:px-[16.375rem]">
+      className="py-20 md:py-[8.75rem] bg-[url('/banner/about/BGDeco.png')] bg-cover bg-left px-8 md:px-32 2xl:px-[16.375rem]">
       <div
-        className={`max-w-[2100px] mx-auto flex flex-col items-center justify-center transition-all ${
-          isVisible & !contents ? 'opacity-0 animate-show_move_top' : ''
-        }`}>
+        className={`max-w-[2100px] mx-auto flex flex-col items-center justify-center ${
+          !contents && 'opacity-0'
+        } transition-all ${isVisible & !contents && 'delay-300 animate-show_move_top'}`}>
         {contents !== undefined ? (
           <div className="flex flex-col lg:flex-row">
             {isVisible &&
@@ -38,7 +38,9 @@ export default function AboutSecondBanner({mainDesc, subDesc, contents, longText
             <div className="text-xl sm:text-3xl leading-loose sm:text-center text-wrap max-w-[1400px]">
               {mainDesc.split('/').map(word => {
                 return (
-                  <p key={word} className={`${!longText && 'text-5xl leading-normal font-trajan'}`}>
+                  <p
+                    key={word}
+                    className={`${!longText && 'text-3xl text-center sm:text-5xl leading-normal font-trajan'}`}>
                     {word}
                   </p>
                 );

@@ -22,7 +22,7 @@ export default function CommonTopBanner({url, title, subtitle, contents, childre
   }
   return (
     <div className="flex flex-col w-full xl:flex-row min-[1700px]:max-h-[57rem]">
-      <div className="relative py-16 md:pt-[7rem] min-[1700px]:pt-[11.1875rem] md:pb-20 xl:w-1/2">
+      <div className="relative py-16 md:pt-[6rem] min-[1920px]:pt-[11.1875rem] md:pb-20 xl:w-1/2">
         <Image
           src={AboutCommonBannerBGDeco}
           alt="backgroundDecoration"
@@ -30,7 +30,7 @@ export default function CommonTopBanner({url, title, subtitle, contents, childre
           sizes="100"
           className="object-cover -z-10"
         />
-        <div className="md:px-32 px-10 flex-col justify-center items-start gap-[0.625rem] max-w-[1100px] mx-auto ">
+        <div className="md:px-24 px-10 flex-col justify-center items-start gap-[0.625rem] max-w-[1100px] mx-auto ">
           <div className="flex flex-col gap-[0.625rem] mb-10">
             <p className=" text-[#716B63] text-xl font-trajan">Home · {url}</p>
             <h1 className="text-4xl sm:text-[3.125rem] font-trajan leading-normal">
