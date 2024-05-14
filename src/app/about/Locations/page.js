@@ -22,6 +22,7 @@ export default function Page() {
       <AboutSecondBanner
         mainDesc="Embark on your aesthetic journey/
 with confidence at Cara Plastic Surgery & Laser Center./Schedule a consultation today and let us help/you reveal the best version of yourself."
+        longText
       />
     </div>
   );

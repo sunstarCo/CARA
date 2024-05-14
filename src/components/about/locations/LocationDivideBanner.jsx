@@ -5,8 +5,8 @@ import LocationDivideCard from './LocationDivideCard';
 export default function LocationDivideBanner() {
   return (
     <>
-      <div className="bg-[#302C29] bg-[url('/banner/about/locations/LocationBGDeco.png')] bg-cover py-40">
-        <p className="text-white text-center text-48px mb-[3.75rem] leading-normal font-trajan">
+      <div className="bg-[#302C29] bg-[url('/banner/about/locations/LocationBGDeco.png')] bg-cover py-20 sm:py-40">
+        <p className="text-white text-center text-3xl sm:text-48px mb-[3.75rem] leading-normal font-trajan">
           Why Choose Cara Plastic Surgery & LaserCenter?
         </p>
         <div className="grid 2xl:grid-cols-2 gap-10 px-8 md:px-[11.375rem] ">

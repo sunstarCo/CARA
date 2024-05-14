@@ -14,12 +14,12 @@ export default function LocationCard({locationInfo}) {
       className={`flex flex-col w-full ${
         (id == 'LasVegas' || id == 'OrangeCounty') && `flex-col 2xl:flex-row-reverse`
       } 2xl:flex-row`}>
-      <div className="relative min-h-[63.6875rem] 2xl:w-1/2">
+      <div className="relative h-80 sm:min-h-[63.6875rem] 2xl:w-1/2">
         <Image src={imgFind(id)} alt="doctorImage" fill className="object-cover" />
       </div>
-      <div className="py-[6.25rem] flex items-center  bg-[#EAE9E5] 2xl:w-1/2 ">
+      <div className="pt-10 pb-[6.25rem] sm:py-[6.25rem] flex items-center bg-[#EAE9E5] 2xl:w-1/2 ">
         <div className="px-10 md:px-[10rem]  flex-col justify-center items-start gap-[0.625rem] ">
-          <h1 className="text-48px leading-normal mb-[1.875rem] font-trajan">
+          <h1 className="text-3xl sm:text-48px leading-normal mb-[1.875rem] font-trajan">
             <p>{region}</p>
           </h1>
           <div className="w-[6.25rem] h-2 mb-10 bg-[#9D9892]"></div>
