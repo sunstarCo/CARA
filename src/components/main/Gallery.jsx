@@ -17,7 +17,7 @@ function Gallery() {
         sizes="100"
         className="object-cover object-left-top max-sm:opacity-60 -z-10"
       />
-      <div className="bg-white opacity-10 w-full h-full absolute top-0 left-0 -z-10" />
+      <div className="absolute top-0 left-0 w-full h-full bg-white opacity-10 -z-10" />
       <div
         className={`flex justify-end max-w-[2100px] mx-auto transition-all opacity-0 ${
           isVisible && 'animate-show_move_top'
@@ -38,7 +38,7 @@ function Gallery() {
           </p>
           <Link
             href={'/Before&After'}
-            className="px-10 py-4 bg-[#585451] w-fit text-white text-lg leading-normal font-semibold mt-[3.75rem] uppercase hover:bg-opacity-75">
+            className="px-10 py-4 bg-[#585451] w-fit text-white text-lg leading-normal font-semibold mt-[3.75rem] uppercase hover:opacity-75 transition-opacity duration-300">
             View All Gallery
           </Link>
         </div>
