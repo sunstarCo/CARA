@@ -2,7 +2,7 @@ import React from 'react';
 
 import Image from 'next/image';
 
-import InsuranceImage from '../../../../public/banner/about/financing/InsuranceImage.png';
+import InsuranceImage from '../../../../public/banner/about/financing/InsuranceImage.jpg';
 export default function InsuranceBanner() {
   return (
     <div className="flex flex-col w-full 2xl:flex-row">
