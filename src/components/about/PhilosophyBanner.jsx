@@ -6,7 +6,7 @@ export default function PhilosophyBanner() {
   return (
     <div className="py-[8.75rem] max-w-[2100px] mx-auto relative">
       <Image
-        src={'/banner/about/cara_text_bg.jpg'}
+        src={'/banner/about/cara_text_bg.svg'}
         alt="CARA text"
         width={0}
         height={0}

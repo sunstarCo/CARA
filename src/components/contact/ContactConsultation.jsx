@@ -1,12 +1,16 @@
 'use client';
 import React from 'react';
 
+import BG_IMG from '@img/ContactScheduleBG.png';
+import Image from 'next/image';
+
 import ContactForm from './ContactForm';
 
 export default function ContactConsultation() {
   return (
     <div className="flex  flex-col lg:flex-row items-center justify-center w-full lg:h-[70.5rem]">
-      <div className="lg:w-[50%] flex-col lg:flex-row h-full w-full bg-[url('/ContactScheduleBG.png')] bg-cover flex justify-center items-center">
+      <div className="relative lg:w-[50%] flex-col lg:flex-row h-full w-full flex justify-center items-center">
+        <Image src={BG_IMG} alt="Contact Schedule Background" layout="fill" sizes="50vw" objectFit="cover" />
         <div className="lg:hidden leading-normal pt-16 text-[2.5rem] sm:text-48px text-start font-trajan text-white">
           <p className="whitespace-nowrap">SCHEDULE A</p>
           <p>CONSULTATION</p>
