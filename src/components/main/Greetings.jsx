@@ -1,6 +1,7 @@
 'use client';
 import React from 'react';
 
+import BG_DECO from '@img/banner/main/BGDeco.png';
 import Image from 'next/image';
 
 import {useObserver} from '@/hooks/useObserver';
@@ -11,7 +12,8 @@ function Greetings() {
   return (
     <div
       ref={domRef}
-      className="w-full bg-[url('/banner/main/BGDeco.png')] max-w-[2100px] mx-auto py-16 sm:py-[8.75rem] px-8 flex flex-col sm:flex-row items-center justify-evenly bg-no-repeat bg-cover">
+      className="relative w-full max-w-[2100px] mx-auto py-16 sm:py-[8.75rem] px-8 flex flex-col sm:flex-row items-center justify-evenly">
+      <Image src={BG_DECO} alt="bg-deco" fill sizes="50vw" className="object-cover object-left" />
       <div
         className={`w-full flex flex-col items-center opacity-0 ${
           isVisible && 'animate-show_move_top'

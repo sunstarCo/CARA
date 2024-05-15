@@ -1,8 +1,12 @@
 import React from 'react';
 
+import BG_DECO from '@img/banner/about/BGDeco.png';
+import Image from 'next/image';
+
 export default function AboutPaymentSecondBanner() {
   return (
-    <div className="py-20 sm:py-[8.75rem]  bg-[url('/banner/about/BGDeco.png')] bg-cover">
+    <div className="py-20 sm:py-[8.75rem] relative">
+      <Image src={BG_DECO} alt="" layout="fill" className="object-cover object-left" />
       <div className="w-full md:px-32 px-10 xl:px-[16.375rem] flex flex-col items-center">
         <main className="text-center text-4xl sm:text-[2.5rem]  lg:text-nowrap break-keep font-trajan">
           <p className="">For informational purposes only, you may access the</p>

@@ -13,7 +13,7 @@ export default function CreditBanner() {
             src={'/banner/financing/FinancingLogo0.png'}
             width={0}
             height={0}
-            sizes="100"
+            sizes="250px"
             className="w-[23.875rem] max-h-20 mx-auto"
             alt="CareCreditLogo"
           />
@@ -21,7 +21,7 @@ export default function CreditBanner() {
             src={'/banner/financing/FinancingLogo1.png'}
             width={0}
             height={0}
-            sizes="100"
+            sizes="250px"
             className="w-[25.6875rem] max-h-20 mx-auto"
             alt="CareCreditLogo"
           />
@@ -29,7 +29,7 @@ export default function CreditBanner() {
             src={'/banner/financing/FinancingLogo2.png'}
             width={0}
             height={0}
-            sizes="100"
+            sizes="250px"
             className="w-[16.5625rem] max-h-20 mx-auto"
             alt="CareCreditLogo"
           />
@@ -37,7 +37,7 @@ export default function CreditBanner() {
             src={'/banner/financing/FinancingLogo3.png'}
             width={0}
             height={0}
-            sizes="100"
+            sizes="250px"
             className="w-[17.5rem] max-h-20 mx-auto"
             alt="CareCreditLogo"
           />

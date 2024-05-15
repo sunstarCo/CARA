@@ -14,8 +14,7 @@ export default function DivideBoxBanner() {
         src={'/banner/about/AboutDivideBoxDeco.png'}
         alt=""
         fill
-        sizes="80"
-        priority
+        sizes="30vw"
         className="object-cover object-left-top"
       />
       <div

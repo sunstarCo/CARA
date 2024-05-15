@@ -1,13 +1,13 @@
 import React from 'react';
 
+import InsuranceImage from '@img/banner/about/financing/InsuranceImage.jpg';
 import Image from 'next/image';
 
-import InsuranceImage from '../../../../public/banner/about/financing/InsuranceImage.jpg';
 export default function InsuranceBanner() {
   return (
     <div className="flex flex-col w-full 2xl:flex-row">
       <div className="relative max-sm:h-[30rem]  sm:min-h-[63.6875rem] 2xl:w-1/2">
-        <Image src={InsuranceImage} alt="doctorImage" fill className="object-cover " />
+        <Image src={InsuranceImage} alt="doctorImage" fill sizes="40vw" className="object-cover " />
       </div>
       <div className="py-[6.25rem] bg-[#EAE9E5] 2xl:w-1/2 ">
         <div className="md:px-32 px-10 flex-col justify-center items-start gap-[0.625rem] ">

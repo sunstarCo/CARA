@@ -12,10 +12,10 @@ export default function ExpertBanner() {
   return (
     <div className="flex flex-col w-full overflow-hidden lg:flex-row">
       <div className="relative lg:w-1/2">
-        <Image src={DoctorImg} alt="doctorImage" fill sizes="50vw" className="object-cover object-top " />
+        <Image src={DoctorImg} alt="doctorImage" fill sizes="30vw" className="object-cover object-top " />
       </div>
       <div ref={domRef} className={`py-[6.25rem]   bg-[#9D9892] relative lg:w-1/2 text-white`}>
-        <Image src={DoctorImg} alt="doctorImage" fill sizes="100vw" className="object-cover lg:hidden" />
+        <Image src={DoctorImg} alt="doctorImage" fill sizes="30vw" className="object-cover lg:hidden" />
         <div className="absolute top-0 left-0 w-full h-full bg-black opacity-40 xl:hidden" />
         <div
           className={`md:px-32 px-10 flex-col justify-center items-start gap-[0.625rem] opacity-0 ${
