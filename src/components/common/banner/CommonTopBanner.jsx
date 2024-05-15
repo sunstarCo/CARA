@@ -27,7 +27,7 @@ export default function CommonTopBanner({url, title, subtitle, contents, childre
           src={AboutCommonBannerBGDeco}
           alt="backgroundDecoration"
           fill
-          sizes="100"
+          sizes="50vw"
           className="object-cover max-xl:hidden -z-10"
         />
         <Image
@@ -36,7 +36,7 @@ export default function CommonTopBanner({url, title, subtitle, contents, childre
           placeholder="blur"
           priority
           fill
-          sizes="100"
+          sizes="(max-width: 768px) 100vw, 33vw"
           className="object-cover xl:hidden opacity-90 -z-10 blur-[1px]"
         />
         <div className="absolute top-0 left-0 w-full h-full bg-gray-200 opacity-70 xl:hidden -z-10" />
@@ -56,8 +56,9 @@ export default function CommonTopBanner({url, title, subtitle, contents, childre
       </div>
       <Image
         src={img || AboutCommonImg}
-        alt="doctorImage"
+        alt="Banner Image"
         placeholder="blur"
+        sizes="40vw"
         priority
         className={`object-cover ${imgPosition} max-xl:hidden xl:w-1/2`}
       />

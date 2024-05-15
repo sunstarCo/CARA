@@ -1,14 +1,16 @@
 'use client';
 import React, {Fragment} from 'react';
 
+import BG_DECO from '@img/banner/main/BGDeco.png';
+import Image from 'next/image';
+
 import {useObserver} from '@/hooks/useObserver';
 
 export default function AboutSecondBanner({mainDesc, subDesc, contents, longText = false}) {
   const {isVisible, domRef} = useObserver();
   return (
-    <div
-      ref={domRef}
-      className="py-20 md:py-[8.75rem] bg-[url('/banner/about/BGDeco.png')] bg-cover bg-left px-8 md:px-32 2xl:px-[16.375rem]">
+    <div ref={domRef} className="relative py-20 md:py-[8.75rem] px-8 md:px-32 2xl:px-[16.375rem]">
+      <Image src={BG_DECO} alt="bg-deco" fill sizes="50vw" className="object-cover object-left" />
       <div
         className={`max-w-[2100px] mx-auto flex flex-col items-center justify-center ${
           !contents && 'opacity-0'

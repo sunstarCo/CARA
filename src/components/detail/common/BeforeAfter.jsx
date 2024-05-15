@@ -84,7 +84,7 @@ function BeforeAfter({images_data, heightStyle}) {
       </div>
       <Link
         href={'/Before&After'}
-        className="px-10 py-4 bg-[#d9d5cc] uppercase leading-loose font-semibold text-xl mt-20">
+        className="px-10 py-4 bg-[#d9d5cc] uppercase leading-loose font-semibold text-lg mt-20">
         view gallery
       </Link>
     </div>

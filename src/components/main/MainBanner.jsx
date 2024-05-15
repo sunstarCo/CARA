@@ -15,7 +15,7 @@ function MainBanner() {
               src={MAINBANNER}
               alt="Dr. David Khang"
               fill
-              sizes="100"
+              sizes="70vw"
               className="object-cover max-[480px]:hidden"
               priority
             />
@@ -23,7 +23,7 @@ function MainBanner() {
               src={MAINBANNER_MOBILE}
               alt="Dr. David Khang"
               fill
-              sizes="100"
+              sizes="70vw"
               className="object-cover min-[480px]:hidden"
               priority
             />
@@ -52,7 +52,7 @@ function MainBanner() {
             alt=""
             width={0}
             height={0}
-            sizes="100"
+            sizes="250px"
             className={`min-w-[120px] w-[14%] mx-auto ${
               i === 6 ? 'h-[2rem] max-w-[320px]' : 'h-[3.125rem] max-w-[120px]'
             } my-auto  object-contain`}

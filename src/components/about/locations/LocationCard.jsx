@@ -15,7 +15,7 @@ export default function LocationCard({locationInfo}) {
         (id == 'LasVegas' || id == 'OrangeCounty') && `flex-col 2xl:flex-row-reverse`
       } 2xl:flex-row`}>
       <div className="relative h-80 sm:min-h-[63.6875rem] 2xl:w-1/2">
-        <Image src={imgFind(id)} alt="doctorImage" fill className="object-cover" />
+        <Image src={imgFind(id)} alt="doctorImage" fill sizes="50vw" className="object-cover" />
       </div>
       <div className="pt-10 pb-[6.25rem] sm:py-[6.25rem] flex items-center bg-[#EAE9E5] 2xl:w-1/2 ">
         <div className="px-10 md:px-[10rem]  flex-col justify-center items-start gap-[0.625rem] ">

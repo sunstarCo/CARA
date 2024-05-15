@@ -15,7 +15,6 @@ function Section1({img, desc, title, reverse = false, benefits, no_bg = false}) 
           alt="bg-logo"
           width={0}
           height={0}
-          sizes="100"
           className="w-fit absolute bottom-0 right-0 -z-10"
         />
       )}
@@ -23,7 +22,7 @@ function Section1({img, desc, title, reverse = false, benefits, no_bg = false}) 
         className={`flex max-md:max-w-[500px] flex-col justify-center items-start ${
           reverse ? 'md:flex-row-reverse' : 'md:flex-row'
         } gap-10 lg:gap-[6.25rem] max-w-[1556px] mx-auto`}>
-        <Image src={img} placeholder="blur" className="md:w-1/2 object-cover" alt="example" />
+        <Image src={img} placeholder="blur" sizes="50vw" className="md:w-1/2 object-cover" alt="example" />
         <div ref={domRef} className="lg:w-1/2 flex flex-col items-center lg:items-start lg:mt-20">
           <h3 className="text-4xl max-sm:text-center sm:text-48px leading-normal font-trajan">{title}</h3>
           <div className="h-2 w-[6.25rem] bg-[#BDB5AA] mt-10 mb-[3.125rem]" />

@@ -10,7 +10,7 @@ function CardContainer({title, benefits, theme = 'default'}) {
         src={'/detailpage/bg/Liposuction_bg.png'}
         alt=""
         fill
-        sizes="100"
+        sizes="30vw"
         className={`object-cover object-left-top ${isDark && 'hidden'}`}
       />
       <div className={`flex flex-col items-center py-20 sm:py-40`}>

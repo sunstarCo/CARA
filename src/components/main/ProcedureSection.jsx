@@ -73,7 +73,7 @@ export default function ProcedureSection({section, reverse = false}) {
           alt=""
           width={760}
           height={720}
-          sizes="100"
+          sizes="800px"
           className="w-full md:w-1/2 md:min-w-[400px] max-w-[760px] object-cover"
         />
         <div className="max-w-[680px] w-full">

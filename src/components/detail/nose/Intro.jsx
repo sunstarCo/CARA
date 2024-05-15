@@ -6,11 +6,11 @@ function Intro({title, desc}) {
   return (
     <div className="relative">
       <Image
-        src={'/banner/about/cara_text_bg.jpg'}
+        src={'/banner/about/cara_text_bg.svg'}
         alt="CARA text"
         width={0}
         height={0}
-        sizes="100"
+        sizes="50vw"
         className="w-[50rem] absolute bottom-0 right-0 -z-10"
       />
       <div className="text-center flex flex-col items-center max-w-[80rem] mx-auto py-24 md:py-[8.75rem] px-8">

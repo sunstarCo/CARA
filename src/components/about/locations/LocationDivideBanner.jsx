@@ -1,11 +1,15 @@
 import React from 'react';
 
+import BG_DECO from '@img/banner/about/locations/LocationBGDeco.png';
+import Image from 'next/image';
+
 import LocationDivideCard from './LocationDivideCard';
 
 export default function LocationDivideBanner() {
   return (
     <>
-      <div className="bg-[#302C29] bg-[url('/banner/about/locations/LocationBGDeco.png')] bg-cover py-20 sm:py-40">
+      <div className="bg-[#302C29] relative py-20 sm:py-40">
+        <Image src={BG_DECO} alt="" layout="fill" sizes="50vw" className="object-cover" />
         <p className="text-white text-center text-3xl sm:text-48px mb-[3.75rem] leading-normal font-trajan">
           Why Choose Cara Plastic Surgery & LaserCenter?
         </p>

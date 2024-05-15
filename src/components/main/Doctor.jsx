@@ -28,12 +28,18 @@ function Doctor() {
     <>
       <Image
         src={doctorPhoto}
-        sizes="100"
+        sizes="70vw"
         alt="doctor photo"
-        className="h-[30rem] object-cover object-left sm:hidden"
+        className="h-[24rem] object-cover object-left sm:hidden -scale-x-100"
       />
       <div className="relative w-full py-20 overflow-hidden md:pt-40">
-        <Image src={doctorPhoto} alt="" fill sizes="100" className="object-cover object-left-top -z-10 max-sm:hidden" />
+        <Image
+          src={doctorPhoto}
+          alt=""
+          fill
+          sizes="70vw"
+          className="object-cover object-left-top -z-10 max-sm:hidden"
+        />
         <div className="absolute top-0 left-0 bg-black opacity-80 w-full h-full -z-10 sm:hidden" />
         <div className={`flex justify-end md:px-16 max-w-[1700px] mx-auto`}>
           <div className="flex flex-col text-white max-w-[766px] px-8">
