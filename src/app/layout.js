@@ -27,7 +27,7 @@ export async function generateMetadata() {
 
   return {
     ...meta_data,
-    metadataBase: new URL('https://https://cara-nu.vercel.app/'),
+    metadataBase: new URL('https://cara-nu.vercel.app/'),
     icons: {
       icon: '/logo/favicon.png',
     },
