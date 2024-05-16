@@ -24,10 +24,11 @@ export async function generateMetadata() {
     description: METADATA[mainTitle.toUpperCase()]?.description || METADATA.DEFAULT.description,
     image: METADATA[mainTitle.toUpperCase()]?.image || METADATA.DEFAULT.image,
   };
+  console.log(meta_data);
 
   return {
     ...meta_data,
-    metadataBase: new URL('https://https://cara-nu.vercel.app/'),
+    metadataBase: new URL('https://cara-nu.vercel.app/'),
     icons: {
       icon: '/logo/favicon.png',
     },
