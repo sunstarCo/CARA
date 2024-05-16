@@ -24,7 +24,6 @@ export async function generateMetadata() {
     description: METADATA[mainTitle.toUpperCase()]?.description || METADATA.DEFAULT.description,
     image: METADATA[mainTitle.toUpperCase()]?.image || METADATA.DEFAULT.image,
   };
-  console.log(meta_data);
 
   return {
     ...meta_data,
