@@ -80,7 +80,7 @@ function GalleryDetailPNCard({title, count}) {
       width={493}
       height={210}
       src={filePath}
-      sizes="250px"
+      sizes="500px"
       placeholder="blur"
       blurDataURL="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAAFklEQVR42mN8//HLfwYiAOOoQvoqBABbWyZJf74GZgAAAABJRU5ErkJggg=="
     />
