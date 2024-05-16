@@ -29,13 +29,13 @@ function Doctor() {
       <Image
         src={doctorPhoto}
         sizes="70vw"
-        alt="doctor photo"
+        alt="doctor"
         className="h-[24rem] object-cover object-left sm:hidden -scale-x-100"
       />
       <div className="relative w-full py-20 overflow-hidden md:pt-40">
         <Image
           src={doctorPhoto}
-          alt=""
+          alt="doctor"
           fill
           sizes="70vw"
           className="object-cover object-left-top -z-10 max-sm:hidden"
